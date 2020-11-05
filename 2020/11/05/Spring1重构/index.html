@@ -5,17 +5,19 @@
   
 
   
-  <title>藏经阁</title>
+  <title>Spring1重构 | 藏经阁</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="太多东西要学啦">
-<meta property="og:type" content="website">
-<meta property="og:title" content="藏经阁">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="​    1.javax 是由Tomcat提供的 2.Context 养成好习惯，用完记得close() 3.“一次性”的变量能省就省 1234protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &amp;#123;	WebAp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring1重构">
+<meta property="og:url" content="http://example.com/2020/11/05/Spring1%E9%87%8D%E6%9E%84/index.html">
 <meta property="og:site_name" content="藏经阁">
-<meta property="og:description" content="太多东西要学啦">
+<meta property="og:description" content="​    1.javax 是由Tomcat提供的 2.Context 养成好习惯，用完记得close() 3.“一次性”的变量能省就省 1234protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &amp;#123;	WebAp">
 <meta property="og:locale">
+<meta property="article:published_time" content="2020-11-05T13:23:17.000Z">
+<meta property="article:modified_time" content="2020-11-05T13:24:09.909Z">
 <meta property="article:author" content="FreeJim">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="藏经阁" type="application/atom+xml">
@@ -65,87 +67,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Hexo踩坑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/05/Hexo%E8%B8%A9%E5%9D%91/" class="article-date">
-  <time datetime="2020-11-05T13:24:29.000Z" itemprop="datePublished">2020-11-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Config/">Config</a>►<a class="article-category-link" href="/categories/Config/Hexo/">Hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/05/Hexo%E8%B8%A9%E5%9D%91/">Hexo踩坑</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.ssh密匙</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;邮件地址&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>找到<code>.ssh\id_rsa.pub</code>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
-<p>将刚复制的内容粘贴到key那里，title随便填，保存。</p>
-<p>Win10下的~目录就是对应User下</p>
-<p>然后，id_rsa.pub这个文件不能直接打开，需要命令行指令</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">more id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>2.常用指令</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
-
-<p>3.每篇文章的配置</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: Spring注解是怎么工作的</span><br><span class="line">date: 2020-11-05 17:05:39</span><br><span class="line">tags:</span><br><span class="line">- Spring</span><br><span class="line">- Java</span><br><span class="line">categories:</span><br><span class="line">- [Java,Spring]</span><br></pre></td></tr></table></figure>
-
-<p>4.配置文件的修改</p>
-<p>_config.yml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 藏经阁</span><br><span class="line">subtitle: &#39;&#39;</span><br><span class="line">description: &#39;太多东西要学啦&#39;</span><br><span class="line">keywords: Java</span><br><span class="line">author: FreeJim</span><br><span class="line">language: zh</span><br><span class="line">timezone: &#39;Asia&#x2F;Hong_Kong&#39;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;a1020151695&#x2F;a1020151695.github.io</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-
-<p>具体可查<a target="_blank" rel="noopener" href="https://hexo.io/docs/configuration">官方文档</a></p>
-<p>5.自定义域名</p>
-<p>Setting中设置自定义域名，然后Save保存</p>
-<p>阿里云域名管理，要添加两个纪录</p>
-<p>一个是CNAME www 把    把当前域名和xxx.github.io联系起来</p>
-<p>其实是把xxx.github.io指向你自己的域名</p>
-<p>第二个是@ 你自己的域名指向一个IP（即xxx.github.io的实际IP）</p>
-<p>这里我踩了坑！</p>
-<p>你不能在你自己电脑上Ping！！！！</p>
-<p>拿你的云服务器去ping才有用</p>
-<p>或者不需要服务器，直接网上找一个域名解析的网站，去查</p>
-<p>例如<a target="_blank" rel="noopener" href="https://site.ip138.com/">这个</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/05/Hexo%E8%B8%A9%E5%9D%91/" data-id="ckh4v4pdg00017sw3dodkhef5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Config/" rel="tag">Config</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Spring1重构" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Spring1重构" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/05/Spring1%E9%87%8D%E6%9E%84/" class="article-date">
   <time datetime="2020-11-05T13:23:17.000Z" itemprop="datePublished">2020-11-05</time>
@@ -162,8 +84,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/05/Spring1%E9%87%8D%E6%9E%84/">Spring1重构</a>
+    <h1 class="article-title" itemprop="name">
+      Spring1重构
     </h1>
   
 
@@ -232,174 +154,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-TagTest" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/05/TagTest/" class="article-date">
-  <time datetime="2020-11-05T09:58:54.000Z" itemprop="datePublished">2020-11-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2020/11/05/Hexo%E8%B8%A9%E5%9D%91/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/05/TagTest/">TagTest</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>This is a test</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/05/TagTest/" data-id="ckh4o0q4300009sw3d7nt00bn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Spring注解是怎么工作的" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/" class="article-date">
-  <time datetime="2020-11-05T09:05:39.000Z" itemprop="datePublished">2020-11-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>►<a class="article-category-link" href="/categories/Java/Spring/">Spring</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          Hexo踩坑
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/">Spring注解是怎么工作的</a>
-    </h1>
   
+    <a href="/2020/11/05/TagTest/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">TagTest</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>版本说明：Spring 5.2.9 </p>
-<p>本文侧重于源码的解读</p>
-<p>这里以@Autowired为例</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br><span class="line"><span class="class"><span class="keyword">implements</span> <span class="title">SmartInstantiationAwareBeanPostProcessor</span>, <span class="title">MergedBeanDefinitionPostProcessor</span>, <span class="title">PriorityOrdered</span>, <span class="title">BeanFactoryAware</span></span></span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanPostProcessor.html"><code>BeanPostProcessor</code></a> implementation that autowires annotated fields, setter methods, and arbitrary config methods. Such members to be injected are detected through annotations: by default, Spring’s <a target="_blank" rel="noopener" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html"><code>@Autowired</code></a> and <a target="_blank" rel="noopener" href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html"><code>@Value</code></a> annotations.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processInjection</span><span class="params">(Object bean)</span> <span class="keyword">throws</span> BeanCreationException </span>&#123;</span><br><span class="line">		Class&lt;?&gt; clazz = bean.getClass();</span><br><span class="line">		InjectionMetadata metadata = findAutowiringMetadata(clazz.getName(), clazz, <span class="keyword">null</span>);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			metadata.inject(bean, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (BeanCreationException ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> ex;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (Throwable ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> BeanCreationException(</span><br><span class="line">					<span class="string">&quot;Injection of autowired dependencies failed for class [&quot;</span> + clazz + <span class="string">&quot;]&quot;</span>, ex);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>获取AutowiringMetadata后，做inject</p>
-<p>其中的AutowiringMetadata，简单的说就是@Autowired</p>
-<blockquote>
-<p>an <strong>annotation</strong> is a form of syntactic <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Metadata">metadata</a> that can be added to Java <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Source_code">source code</a>.</p>
-</blockquote>
-<p>这是维基百科上的解释</p>
-<p>那Spring又是怎么确定是否存在@Autowired的呢</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> MergedAnnotation&lt;?&gt; findAutowiredAnnotation(AccessibleObject ao) &#123;</span><br><span class="line">	MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br><span class="line">	<span class="keyword">for</span> (Class&lt;? extends Annotation&gt; type : <span class="keyword">this</span>.autowiredAnnotationTypes) &#123;</span><br><span class="line">		MergedAnnotation&lt;?&gt; annotation = annotations.get(type);</span><br><span class="line">		<span class="keyword">if</span> (annotation.isPresent()) &#123;</span><br><span class="line">			<span class="keyword">return</span> annotation;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中的</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Set&lt;Class&lt;? extends Annotation&gt;&gt; autowiredAnnotationTypes = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.autowiredAnnotationTypes</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Autowired.class);</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Value.class);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">this</span>.autowiredAnnotationTypes.add((Class&lt;? extends Annotation&gt;)</span><br><span class="line">					ClassUtils.forName(<span class="string">&quot;javax.inject.Inject&quot;</span>, AutowiredAnnotationBeanPostProcessor.class.getClassLoader()));</span><br><span class="line">			logger.trace(<span class="string">&quot;JSR-330 &#x27;javax.inject.Inject&#x27; annotation found and supported for autowiring&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (ClassNotFoundException ex) &#123;</span><br><span class="line">			<span class="comment">// JSR-330 API not available - simply skip.</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>已经很清晰了，存放了Autowired.class</p>
-<p>则回到findAutowiredAnnotation()中，如果</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MergedAnnotations</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Iterable</span>&lt;<span class="title">MergedAnnotation</span>&lt;<span class="title">Annotation</span>&gt;&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Provides access to a collection of merged annotations, usually obtained from a source such as a <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true"><code>Class</code></a> or <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true"><code>Method</code></a>.</p>
-<p>获取这个Bean 的Annotations</p>
-<p>然后看其中是否存在Autowired</p>
-<p>那么确定是否有Autowired的问题解决了，之后就是inject了</p>
-<hr>
-<p>首先来看看调用inject()的InjectionMetadata</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InjectionMetadata</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br></pre></td></tr></table></figure>
-
-<p>Internal class for managing injection metadata. Not intended for direct use in applications.</p>
-<p>对的，这个就是依赖注入里的inject</p>
-<p>不过，我暂时没有想法去了解，有兴趣的同学可以继续往下了解</p>
-<hr>
-<p><a target="_blank" rel="noopener" href="http://www.avajava.com/tutorials/lessons/how-do-i-list-the-declared-fields-of-a-class.html">Field</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/" data-id="ckh4m2yfl0000dsw36t1i5uha" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-Hello" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/05/Hello/" class="article-date">
-  <time datetime="2020-11-05T04:32:59.000Z" itemprop="datePublished">2020-11-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/05/Hello/">Hello</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Hello World</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/05/Hello/" data-id="ckh4c9k3c0000okw3aphw818t" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
