@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Chinese Chess Conclusion</title>
+    <url>/2021/01/02/Chinese-Chess-Conclusion/</url>
+    <content><![CDATA[<p>1.Alpha-Beta Search</p>
+<p>Understand this algorithm in this way</p>
+<p>First is a question — how computer know the best move?</p>
+<p>Answer: This algorithm will evaluate the score, which represent the chance the computer will win</p>
+<p>So the best move is the move that make the highest score</p>
+<p>Second question — how computer know to protect it’s King?</p>
+<p>Answer: This algorithm will simulate the move for both red and black</p>
+<p>and it will simulate at least 2 depth, the algorithm will do the things follow:</p>
+<p>evaluate the current score then start to search (simulate)</p>
+<p>Simulate① – computer legal move “A”</p>
+<p>Keep on simulate② – people legal move “B”</p>
+<p>When reach the depth, start to evaluate the score again</p>
+<p>If Simulate② make the score reduce,</p>
+<p>Which means that the computer’s Simulate① move “A” makes computer be in dangerous</p>
+<p>And computer will avoid this kind of move</p>
+<p>That’s why computer knows to protect it’s King</p>
+<p>If it’s King is killed, it’s score will be super low</p>
+<p>Then the algorithm will tell the computer do not move in that way</p>
+<p>So that avoid the King be killed</p>
+<hr>
+<p>2.Object Oriented is a very idea</p>
+]]></content>
+      <categories>
+        <category>Project Conclusion</category>
+      </categories>
+      <tags>
+        <tag>Project Conclusion</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo踩坑</title>
     <url>/2020/11/05/Hexo%E8%B8%A9%E5%9D%91/</url>
     <content><![CDATA[<p>1.ssh密匙</p>
@@ -79,31 +111,13 @@
       </tags>
   </entry>
   <entry>
-    <title>Chinese Chess Conclusion</title>
-    <url>/2021/01/02/Chinese-Chess-Conclusion/</url>
-    <content><![CDATA[<p>1.Alpha-Beta Search</p>
-<p>Main idea: </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">We use this algorithm to help computor against with people</span><br><span class="line">The algorithm will simulate all leagal move for both</span><br><span class="line">And every move will change the score, which represent the chance computor will win</span><br><span class="line">The search is deep-search, and the depth at least 2</span><br><span class="line">Which means the algorithm should at least evaluate the score twice</span><br><span class="line">When computor simulate and finds that after a computor&#39;s leagal move(call it move &quot;A&quot;)</span><br><span class="line">People can eat computor&#39;s piece and let computor&#39;s score reduce</span><br><span class="line">then we stop searching move &quot;A&quot;, because move &quot;A&quot; will make computor be in dangerous</span><br><span class="line">so this is the key to avoid computor&#39;s King be killed !!</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>Python Dict</title>
+    <url>/2021/01/02/Python-Dict/</url>
+    <content><![CDATA[<p>Traverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
 
-<p>2.Object Oriented is a very idea</p>
-]]></content>
-      <categories>
-        <category>Project Conclusion</category>
-      </categories>
-      <tags>
-        <tag>Project Conclusion</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python File Operation</title>
-    <url>/2021/01/02/Python-File-Operation/</url>
-    <content><![CDATA[<p>Add content to file</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
-
-<p>Read content</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
-
-
+<p>Reverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -133,6 +147,46 @@
       </categories>
       <tags>
         <tag>Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python File Operation</title>
+    <url>/2021/01/02/Python-File-Operation/</url>
+    <content><![CDATA[<p>Add content to file</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
+
+<p>Read content</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python String</title>
+    <url>/2021/01/02/Python-String/</url>
+    <content><![CDATA[<p>List to String</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#x27;</span>.join(xxList))</span><br></pre></td></tr></table></figure>
+
+<p>String to List</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>=text.split(<span class="string">&#x27;,&#x27;</span>) <span class="comment"># split String by &#x27;,&#x27; to List</span></span><br><span class="line">    print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -210,72 +264,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Dict</title>
-    <url>/2021/01/02/Python-Dict/</url>
-    <content><![CDATA[<p>Traverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<p>Reverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python String</title>
-    <url>/2021/01/02/Python-String/</url>
-    <content><![CDATA[<p>List to String</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#x27;</span>.join(xxList))</span><br></pre></td></tr></table></figure>
-
-<p>String to List</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>=text.split(<span class="string">&#x27;,&#x27;</span>) <span class="comment"># split String by &#x27;,&#x27; to List</span></span><br><span class="line">    print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python module version</title>
-    <url>/2021/01/02/Python-module-version/</url>
-    <content><![CDATA[<p>Sometimes we will meet a situation:</p>
-<p>The version of project’s modules are lower than what we current installed</p>
-<p>Then shall we uninstall the current modules ?</p>
-<p>That’s not a good idea</p>
-<p>Actually, we can create a “Vitualenv” (Vitual Environment)</p>
-<p>Pycharm help us easily deal with it</p>
-<p>You can create a “Vitualenv “ in “Setting - Python Interpreter”</p>
-<p>Add a “New Environment”</p>
-<p>This Environment is totally pure </p>
-<p>You can install the module as you want </p>
-<p>And this  “Vitualenv” will not affect the modules you have installed</p>
-<p>It’s a separate Python environment just use for the project</p>
-<p>The new modules will be install in the project’s folder</p>
-<p>And more convenient thing is </p>
-<p>After you create a “Pure Environment”</p>
-<p>You can let Pycharm install the modules the project needed ! ! !</p>
-]]></content>
-      <categories>
-        <category>Config</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Config</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring1重构</title>
     <url>/2020/11/05/Spring1%E9%87%8D%E6%9E%84/</url>
     <content><![CDATA[<p>​    1.javax 是由Tomcat提供的</p>
@@ -334,6 +322,34 @@
       </categories>
       <tags>
         <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python module version</title>
+    <url>/2021/01/02/Python-module-version/</url>
+    <content><![CDATA[<p>Sometimes we will meet a situation:</p>
+<p>The version of project’s modules are lower than what we current installed</p>
+<p>Then shall we uninstall the current modules ?</p>
+<p>That’s not a good idea</p>
+<p>Actually, we can create a “Vitualenv” (Vitual Environment)</p>
+<p>Pycharm help us easily deal with it</p>
+<p>You can create a “Vitualenv “ in “Setting - Python Interpreter”</p>
+<p>Add a “New Environment”</p>
+<p>This Environment is totally pure </p>
+<p>You can install the module as you want </p>
+<p>And this  “Vitualenv” will not affect the modules you have installed</p>
+<p>It’s a separate Python environment just use for the project</p>
+<p>The new modules will be install in the project’s folder</p>
+<p>And more convenient thing is </p>
+<p>After you create a “Pure Environment”</p>
+<p>You can let Pycharm install the modules the project needed ! ! !</p>
+]]></content>
+      <categories>
+        <category>Config</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Config</tag>
       </tags>
   </entry>
   <entry>
