@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Android Add Views</title>
-    <url>/2021/01/06/Android-Add-Views/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Back Button</title>
     <url>/2021/01/04/Android-Back-Button/</url>
     <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onBackPressed()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -87,6 +69,52 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Add Views</title>
+    <url>/2021/01/06/Android-Add-Views/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Dialog Processing</title>
+    <url>/2021/01/04/Android-Dialog-Processing/</url>
+    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The circle is just a ProgressBar widget in dialog</p>
+<p>Note !</p>
+<p>1.Create and show a dialog should be done by UI Thread</p>
+<p>2.There are some callback functions about the dialog, you can check the document</p>
+<p>If you want to close the dialog by program </p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
+
+<p>Note !</p>
+<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
+<p>2.dialog = dialogBuilder.create()</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Fragment And Activity</title>
     <url>/2021/01/04/Android-Fragment-And-Activity/</url>
     <content><![CDATA[<p>Fragment’s feature is reusable</p>
@@ -116,34 +144,6 @@
       </categories>
       <tags>
         <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Dialog Processing</title>
-    <url>/2021/01/04/Android-Dialog-Processing/</url>
-    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>The circle is just a ProgressBar widget in dialog</p>
-<p>Note !</p>
-<p>1.Create and show a dialog should be done by UI Thread</p>
-<p>2.There are some callback functions about the dialog, you can check the document</p>
-<p>If you want to close the dialog by program </p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
-
-<p>Note !</p>
-<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
-<p>2.dialog = dialogBuilder.create()</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -361,16 +361,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Studio SDK config</title>
-    <url>/2021/03/08/Android-Studio-SDK-config/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
-
-
-
-<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Android Swip Refresh</title>
     <url>/2021/01/06/Android-Swip-Refresh/</url>
     <content><![CDATA[<p>XML</p>
@@ -390,30 +380,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Studio SDK config</title>
+    <url>/2021/03/08/Android-Studio-SDK-config/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
+
+
+
+<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Android Thread</title>
     <url>/2021/01/04/Android-Thread/</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Android Tool Bar (On Top)</title>
-    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>ConfigBackButton</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
   </entry>
   <entry>
     <title>Android Version</title>
@@ -481,6 +460,64 @@
       <tags>
         <tag>Android</tag>
         <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Tool Bar (On Top)</title>
+    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>ConfigBackButton</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android px dp sp</title>
+    <url>/2021/01/04/Android-px-dp-sp/</url>
+    <content><![CDATA[<p>px is for the general unit</p>
+<p>Note !</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
+
+
+
+<p>dp is usually use for layout</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note </p>
+<p>You can pass context as a parameter</p>
+<blockquote>
+<p>dpi: Dots Per Inch</p>
+</blockquote>
+<p>sp is usually use for text size</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Layout</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -554,40 +591,25 @@
       </tags>
   </entry>
   <entry>
-    <title>Android px dp sp</title>
-    <url>/2021/01/04/Android-px-dp-sp/</url>
-    <content><![CDATA[<p>px is for the general unit</p>
-<p>Note !</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
+    <title>Flask Cors</title>
+    <url>/2021/01/02/Flask-Cors/</url>
+    <content><![CDATA[<p>Cors solution</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask_cors import *</span><br><span class="line">CORS(app, supports_credentials&#x3D;True)</span><br></pre></td></tr></table></figure>
 
-
-
-<p>dp is usually use for layout</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Note </p>
-<p>You can pass context as a parameter</p>
-<blockquote>
-<p>dpi: Dots Per Inch</p>
-</blockquote>
-<p>sp is usually use for text size</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
-
-
-
-
+<p>Then Note ! ! !</p>
+<p>Flask default listen on localhost</p>
+<p>if you want to use Flask to deploy an application</p>
+<p>do the thing below :</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">5000</span>, debug=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
-        <category>Android</category>
-        <category>Layout</category>
+        <category>Config</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>Android</tag>
+        <tag>Config</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -629,47 +651,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Flask Cors</title>
-    <url>/2021/01/02/Flask-Cors/</url>
-    <content><![CDATA[<p>Cors solution</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask_cors import *</span><br><span class="line">CORS(app, supports_credentials&#x3D;True)</span><br></pre></td></tr></table></figure>
-
-<p>Then Note ! ! !</p>
-<p>Flask default listen on localhost</p>
-<p>if you want to use Flask to deploy an application</p>
-<p>do the thing below :</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">5000</span>, debug=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Config</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Config</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git Fix Conflict</title>
-    <url>/2021/01/04/Git-Fix-Conflict/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
-
-<p>Generally, you just need to delete the origin content , and use the new content</p>
-<p>Strongly recommend you to use “Github Desktop”</p>
-<p>It will clearly display all conflicts and you can fix them directly</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Git</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Github Basic Config</title>
     <url>/2021/01/04/Github-Basic-Config/</url>
     <content><![CDATA[<p>1.Usage of “.gitignore “ file</p>
@@ -690,6 +671,25 @@
       </categories>
       <tags>
         <tag>Tutorial</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git Fix Conflict</title>
+    <url>/2021/01/04/Git-Fix-Conflict/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+
+<p>Generally, you just need to delete the origin content , and use the new content</p>
+<p>Strongly recommend you to use “Github Desktop”</p>
+<p>It will clearly display all conflicts and you can fix them directly</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
         <tag>Github</tag>
       </tags>
   </entry>
@@ -909,33 +909,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Code</title>
-    <url>/2021/01/03/Python-Code/</url>
-    <content><![CDATA[<ol>
-<li><p>The Name of variable</p>
-<p>Not like Java — “dataSet”</p>
-<p>Python always use “data_set”</p>
-</li>
-<li><p>Comments</p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Coding</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python Class</title>
     <url>/2021/01/02/Python-Class/</url>
     <content><![CDATA[<p>simple example: (within the same package)</p>
@@ -980,20 +953,26 @@
       </tags>
   </entry>
   <entry>
-    <title>Python File Operation</title>
-    <url>/2021/01/02/Python-File-Operation/</url>
-    <content><![CDATA[<p>Add content to file</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
+    <title>Python Code</title>
+    <url>/2021/01/03/Python-Code/</url>
+    <content><![CDATA[<ol>
+<li><p>The Name of variable</p>
+<p>Not like Java — “dataSet”</p>
+<p>Python always use “data_set”</p>
+</li>
+<li><p>Comments</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
 
-<p>Read content</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
+
 
 
 
 ]]></content>
       <categories>
         <category>Python</category>
-        <category>Tutorial</category>
+        <category>Coding</category>
       </categories>
       <tags>
         <tag>Tutorial</tag>
@@ -1008,6 +987,27 @@
 
 <p>Reverse</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python File Operation</title>
+    <url>/2021/01/02/Python-File-Operation/</url>
+    <content><![CDATA[<p>Add content to file</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
+
+<p>Read content</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -1151,35 +1151,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python module version</title>
-    <url>/2021/01/02/Python-module-version/</url>
-    <content><![CDATA[<p>Sometimes we will meet a situation:</p>
-<p>The version of project’s modules are lower than what we current installed</p>
-<p>Then shall we uninstall the current modules ?</p>
-<p>That’s not a good idea</p>
-<p>Actually, we can create a “Vitualenv” (Vitual Environment)</p>
-<p>Pycharm help us easily deal with it</p>
-<p>You can create a “Vitualenv “ in “Setting - Python Interpreter”</p>
-<p>Add a “New Environment”</p>
-<p>This Environment is totally pure </p>
-<p>You can install the module as you want </p>
-<p>And this  “Vitualenv” will not affect the modules you have installed</p>
-<p>It’s a separate Python environment just use for the project</p>
-<p>The new modules will be install in the project’s folder</p>
-<p>And more convenient thing is </p>
-<p>After you create a “Pure Environment”</p>
-<p>You can let Pycharm install the modules the project needed ! ! !</p>
-]]></content>
-      <categories>
-        <category>Config</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Config</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Qin App Conclusion</title>
     <url>/2021/01/04/Qin-App-Conclusion/</url>
     <content><![CDATA[<p>1.API document</p>
@@ -1276,6 +1247,35 @@
       </categories>
       <tags>
         <tag>Project Conclusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python module version</title>
+    <url>/2021/01/02/Python-module-version/</url>
+    <content><![CDATA[<p>Sometimes we will meet a situation:</p>
+<p>The version of project’s modules are lower than what we current installed</p>
+<p>Then shall we uninstall the current modules ?</p>
+<p>That’s not a good idea</p>
+<p>Actually, we can create a “Vitualenv” (Vitual Environment)</p>
+<p>Pycharm help us easily deal with it</p>
+<p>You can create a “Vitualenv “ in “Setting - Python Interpreter”</p>
+<p>Add a “New Environment”</p>
+<p>This Environment is totally pure </p>
+<p>You can install the module as you want </p>
+<p>And this  “Vitualenv” will not affect the modules you have installed</p>
+<p>It’s a separate Python environment just use for the project</p>
+<p>The new modules will be install in the project’s folder</p>
+<p>And more convenient thing is </p>
+<p>After you create a “Pure Environment”</p>
+<p>You can let Pycharm install the modules the project needed ! ! !</p>
+]]></content>
+      <categories>
+        <category>Config</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Config</tag>
       </tags>
   </entry>
   <entry>
@@ -1626,7 +1626,7 @@
 <p>Solve </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/03/08/VS-Error/image-20201115190024960.PNG" alt="img1"></p>
+<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
 ]]></content>
   </entry>
   <entry>
