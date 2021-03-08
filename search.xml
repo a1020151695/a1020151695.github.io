@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Android DeviceId</title>
+    <url>/2021/01/04/Android-DeviceId/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Back Button</title>
     <url>/2021/01/04/Android-Back-Button/</url>
     <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onBackPressed()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -43,12 +61,22 @@
       </tags>
   </entry>
   <entry>
-    <title>Android DeviceId</title>
-    <url>/2021/01/04/Android-DeviceId/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
+    <title>Android Dialog Processing</title>
+    <url>/2021/01/04/Android-Dialog-Processing/</url>
+    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>The circle is just a ProgressBar widget in dialog</p>
+<p>Note !</p>
+<p>1.Create and show a dialog should be done by UI Thread</p>
+<p>2.There are some callback functions about the dialog, you can check the document</p>
+<p>If you want to close the dialog by program </p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
 
+<p>Note !</p>
+<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
+<p>2.dialog = dialogBuilder.create()</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -87,6 +115,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Fragment Tutorial</title>
+    <url>/2021/01/06/Android-Fragment-Tutorial/</url>
+    <content><![CDATA[<p>1.New A Fragment</p>
+<p>“New” – “Fragment” – “Fragment Blank”</p>
+<p>Then we can get an fragment activity and relative layout file</p>
+<p>2.Add Fragment To Activity</p>
+<p>In target xml file</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fragment</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/xxx&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">&quot;xxx&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> Note !</p>
+<p>Name and Id is essential ! ! !</p>
+<p>Name is the fragment activity you just created</p>
+<p>(Just the class name of the fragment activity)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">com.exmaple.BlankFragment</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class BlankFragment : Fragment()</span><br></pre></td></tr></table></figure>
+
+<p>Then you can name id as you like, but do not forget it, it is really important ! !</p>
+<hr>
+<p>After two steps, you can see a fragment is added to an activity</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Fragment And Activity</title>
     <url>/2021/01/04/Android-Fragment-And-Activity/</url>
     <content><![CDATA[<p>Fragment’s feature is reusable</p>
@@ -119,53 +178,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Fragment Tutorial</title>
-    <url>/2021/01/06/Android-Fragment-Tutorial/</url>
-    <content><![CDATA[<p>1.New A Fragment</p>
-<p>“New” – “Fragment” – “Fragment Blank”</p>
-<p>Then we can get an fragment activity and relative layout file</p>
-<p>2.Add Fragment To Activity</p>
-<p>In target xml file</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fragment</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/xxx&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:name</span>=<span class="string">&quot;xxx&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>Android Layout Parameter</title>
+    <url>/2021/01/06/Android-Layout-Parameter/</url>
+    <content><![CDATA[<p>Build</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> layoutParamsForInfoUnit: LinearLayout.LayoutParams? = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">buildLayoutParamsForInfoUnit</span><span class="params">(context: <span class="type">Context</span>?)</span></span>&#123;</span><br><span class="line">layoutParamsForInfoUnit =</span><br><span class="line">                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DpUtil.dip2px(context,<span class="number">100f</span>))</span><br><span class="line">layoutParamsForInfoUnit?.setMargins(DpUtil.dip2px(context, <span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), <span class="number">0</span>) <span class="comment">// left,top,right,bottom</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p> Note !</p>
-<p>Name and Id is essential ! ! !</p>
-<p>Name is the fragment activity you just created</p>
-<p>(Just the class name of the fragment activity)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">com.exmaple.BlankFragment</span><br></pre></td></tr></table></figure>
+<p>Use</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">signDataView!!.layoutParams &#x3D; LayoutUtil.layoutParamsForInfoUnit</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class BlankFragment : Fragment()</span><br></pre></td></tr></table></figure>
 
-<p>Then you can name id as you like, but do not forget it, it is really important ! !</p>
-<hr>
-<p>After two steps, you can see a fragment is added to an activity</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Dialog Processing</title>
-    <url>/2021/01/04/Android-Dialog-Processing/</url>
-    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>The circle is just a ProgressBar widget in dialog</p>
-<p>Note !</p>
-<p>1.Create and show a dialog should be done by UI Thread</p>
-<p>2.There are some callback functions about the dialog, you can check the document</p>
-<p>If you want to close the dialog by program </p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
-
-<p>Note !</p>
-<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
-<p>2.dialog = dialogBuilder.create()</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -242,11 +263,33 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Lifecycle Of Activity</title>
-    <url>/2021/01/04/Android-Lifecycle-Of-Activity/</url>
-    <content><![CDATA[<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Document</a></p>
-<p>onCreate() just be invoked one time</p>
-<p>onStart() will be </p>
+    <title>Android Navigation Tutorial</title>
+    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
+    <content><![CDATA[<p>1.New A Navigation</p>
+<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
+<p>Give your navigation a name, then click “OK”</p>
+<p>Then you will got a xml file of your navigation</p>
+<p>2.Add A NavHost To Your Activity</p>
+<p>Go to the xml file of your activity</p>
+<p>Use “Design” model </p>
+<p>“Palette” – “Container” – “NavHostFragment”</p>
+<p>Drag it to the phone</p>
+<p>And choose a navigation xml file for the container</p>
+<p>Then we finish the basic of navigation</p>
+<p>3.Add Fragments To Navigation</p>
+<p>Go to the xml file of your navigation </p>
+<p>Still use “Design” model</p>
+<p>Then “New Destination”</p>
+<p>4.Use Navigation</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
+
+<p>Then you will be navigate to a fragment named “hello”</p>
+<hr>
+<p>supportFragmentManager</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <categories>
         <category>Android</category>
@@ -254,7 +297,7 @@
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>Turorial</tag>
+        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -302,33 +345,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Navigation Tutorial</title>
-    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
-    <content><![CDATA[<p>1.New A Navigation</p>
-<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
-<p>Give your navigation a name, then click “OK”</p>
-<p>Then you will got a xml file of your navigation</p>
-<p>2.Add A NavHost To Your Activity</p>
-<p>Go to the xml file of your activity</p>
-<p>Use “Design” model </p>
-<p>“Palette” – “Container” – “NavHostFragment”</p>
-<p>Drag it to the phone</p>
-<p>And choose a navigation xml file for the container</p>
-<p>Then we finish the basic of navigation</p>
-<p>3.Add Fragments To Navigation</p>
-<p>Go to the xml file of your navigation </p>
-<p>Still use “Design” model</p>
-<p>Then “New Destination”</p>
-<p>4.Use Navigation</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
-
-<p>Then you will be navigate to a fragment named “hello”</p>
-<hr>
-<p>supportFragmentManager</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
-
-
-
+    <title>Android Lifecycle Of Activity</title>
+    <url>/2021/01/04/Android-Lifecycle-Of-Activity/</url>
+    <content><![CDATA[<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Document</a></p>
+<p>onCreate() just be invoked one time</p>
+<p>onStart() will be </p>
 ]]></content>
       <categories>
         <category>Android</category>
@@ -336,19 +357,17 @@
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>Tutorial</tag>
+        <tag>Turorial</tag>
       </tags>
   </entry>
   <entry>
-    <title>Android Layout Parameter</title>
-    <url>/2021/01/06/Android-Layout-Parameter/</url>
-    <content><![CDATA[<p>Build</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> layoutParamsForInfoUnit: LinearLayout.LayoutParams? = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">buildLayoutParamsForInfoUnit</span><span class="params">(context: <span class="type">Context</span>?)</span></span>&#123;</span><br><span class="line">layoutParamsForInfoUnit =</span><br><span class="line">                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DpUtil.dip2px(context,<span class="number">100f</span>))</span><br><span class="line">layoutParamsForInfoUnit?.setMargins(DpUtil.dip2px(context, <span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), <span class="number">0</span>) <span class="comment">// left,top,right,bottom</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>Android Swip Refresh</title>
+    <url>/2021/01/06/Android-Swip-Refresh/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">&quot;@+id/location_swipe_for_student&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">&quot;100dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>Use</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">signDataView!!.layoutParams &#x3D; LayoutUtil.layoutParamsForInfoUnit</span><br></pre></td></tr></table></figure>
-
-
+<p>Config</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configSwipeRefresh</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> swipe =</span><br><span class="line">        view?.findViewById&lt;SwipeRefreshLayout&gt;(R.id.location_swipe_for_student)</span><br><span class="line">    swipe?.setOnRefreshListener &#123;</span><br><span class="line">        MapUtil.mLocationClient?.startLocation()</span><br><span class="line">        refreshActivity()</span><br><span class="line">        swipe.isRefreshing = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -369,6 +388,11 @@
 
 <p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Android Thread</title>
+    <url>/2021/01/04/Android-Thread/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Android Version</title>
@@ -428,51 +452,6 @@
 <p>But you can’t use the new feature of the SDK</p>
 <p>It depends on you</p>
 <p>Haha</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Swip Refresh</title>
-    <url>/2021/01/06/Android-Swip-Refresh/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">&quot;@+id/location_swipe_for_student&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">&quot;100dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Config</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configSwipeRefresh</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> swipe =</span><br><span class="line">        view?.findViewById&lt;SwipeRefreshLayout&gt;(R.id.location_swipe_for_student)</span><br><span class="line">    swipe?.setOnRefreshListener &#123;</span><br><span class="line">        MapUtil.mLocationClient?.startLocation()</span><br><span class="line">        refreshActivity()</span><br><span class="line">        swipe.isRefreshing = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Thread</title>
-    <url>/2021/01/04/Android-Thread/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Android Tool Bar (On Top)</title>
-    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>ConfigBackButton</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
 ]]></content>
       <categories>
         <category>Android</category>
@@ -591,6 +570,27 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Tool Bar (On Top)</title>
+    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>ConfigBackButton</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Flask Cors</title>
     <url>/2021/01/02/Flask-Cors/</url>
     <content><![CDATA[<p>Cors solution</p>
@@ -610,40 +610,6 @@
       <tags>
         <tag>Config</tag>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github SSH Deploy Key</title>
-    <url>/2021/01/04/Github-SSH-Deploy-Key/</url>
-    <content><![CDATA[<p>With Deploy key you can push directly, do not need to input username and password every time</p>
-<p>Generate SSH key</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -f deploy_key_blog -C &quot;1020151695@qq.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p> Then press “Enter” twice is OK</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E-mail address like an &quot;id&quot;</span><br><span class="line">So that Github repository know who you are</span><br><span class="line">And you don&#39;t need to input username and password again</span><br></pre></td></tr></table></figure>
-
-<p>Then it will create a new file named “deploy_key_blog.pub”</p>
-<p>Check it’s content use the command:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more deploy_key_blog.pub</span><br></pre></td></tr></table></figure>
-
-<p>Then copy the content and go to the project in Github</p>
-<p>“Setting”–”Deploy keys”</p>
-<p>Just do it !</p>
-<p>And SSH key absolutely just support the ssh way</p>
-<p>If you use HTTPS remote address, you need to switch it </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote rm origin      &#x2F;&#x2F; delete origin remote address </span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:nickchou&#x2F;gocode.git  &#x2F;&#x2F; apply new remote address</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Github</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Git</tag>
-        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -728,6 +694,40 @@
       </tags>
   </entry>
   <entry>
+    <title>Github SSH Deploy Key</title>
+    <url>/2021/01/04/Github-SSH-Deploy-Key/</url>
+    <content><![CDATA[<p>With Deploy key you can push directly, do not need to input username and password every time</p>
+<p>Generate SSH key</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -f deploy_key_blog -C &quot;1020151695@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p> Then press “Enter” twice is OK</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E-mail address like an &quot;id&quot;</span><br><span class="line">So that Github repository know who you are</span><br><span class="line">And you don&#39;t need to input username and password again</span><br></pre></td></tr></table></figure>
+
+<p>Then it will create a new file named “deploy_key_blog.pub”</p>
+<p>Check it’s content use the command:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more deploy_key_blog.pub</span><br></pre></td></tr></table></figure>
+
+<p>Then copy the content and go to the project in Github</p>
+<p>“Setting”–”Deploy keys”</p>
+<p>Just do it !</p>
+<p>And SSH key absolutely just support the ssh way</p>
+<p>If you use HTTPS remote address, you need to switch it </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote rm origin      &#x2F;&#x2F; delete origin remote address </span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:nickchou&#x2F;gocode.git  &#x2F;&#x2F; apply new remote address</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Github</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Google E-mail Gmail</title>
     <url>/2021/03/08/Google-E-mail-Gmail/</url>
     <content><![CDATA[<p>QQ邮箱中选择gmail注册</p>
@@ -763,62 +763,6 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Theme</title>
-    <url>/2021/03/08/Hexo-Theme/</url>
-    <content><![CDATA[<p>Next主题</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-
-
-<p>_config.yml新增</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-
-
-
-<p>在Next主题的配置文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
-
-<p>把local_search enable 置true就好了</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python Code</title>
-    <url>/2021/01/03/Python-Code/</url>
-    <content><![CDATA[<ol>
-<li><p>The Name of variable</p>
-<p>Not like Java — “dataSet”</p>
-<p>Python always use “data_set”</p>
-</li>
-<li><p>Comments</p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Coding</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -903,36 +847,32 @@
       </tags>
   </entry>
   <entry>
-    <title>Leetcode Rule</title>
-    <url>/2021/03/08/Leetcode-Rule/</url>
-    <content><![CDATA[<p>1</p>
-<p>don’t</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">x:<span class="built_in">int</span></span>)</span></span><br></pre></td></tr></table></figure>
+    <title>Hexo Theme</title>
+    <url>/2021/03/08/Hexo-Theme/</url>
+    <content><![CDATA[<p>Next主题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
 
 
 
-<p>2</p>
-<p>自定义数据结构</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br></pre></td></tr></table></figure>
+<p>_config.yml新增</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
 
-<p>3</p>
-<p>set hash 导致输出导致OJ上不一致</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">太狠了</span><br></pre></td></tr></table></figure>
 
-<p>4</p>
-<p>leetcode 全局还是传参</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">传参！</span><br></pre></td></tr></table></figure>
 
-<p>5</p>
-<p>库</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findOrder</span>(<span class="params">self, numCourses, prerequisites</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numCourses: int</span></span><br><span class="line"><span class="string">        :type prerequisites: List[List[int]]</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+<p>在Next主题的配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
+
+<p>把local_search enable 置true就好了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
-        <category>note</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Leetcode</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -980,24 +920,63 @@
       </tags>
   </entry>
   <entry>
-    <title>Python File Operation</title>
-    <url>/2021/01/02/Python-File-Operation/</url>
-    <content><![CDATA[<p>Add content to file</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
+    <title>Python Code</title>
+    <url>/2021/01/03/Python-Code/</url>
+    <content><![CDATA[<ol>
+<li><p>The Name of variable</p>
+<p>Not like Java — “dataSet”</p>
+<p>Python always use “data_set”</p>
+</li>
+<li><p>Comments</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
 
-<p>Read content</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
+
 
 
 
 ]]></content>
       <categories>
         <category>Python</category>
-        <category>Tutorial</category>
+        <category>Coding</category>
       </categories>
       <tags>
         <tag>Tutorial</tag>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Leetcode Rule</title>
+    <url>/2021/03/08/Leetcode-Rule/</url>
+    <content><![CDATA[<p>1</p>
+<p>don’t</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">x:<span class="built_in">int</span></span>)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>2</p>
+<p>自定义数据结构</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br></pre></td></tr></table></figure>
+
+<p>3</p>
+<p>set hash 导致输出导致OJ上不一致</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">太狠了</span><br></pre></td></tr></table></figure>
+
+<p>4</p>
+<p>leetcode 全局还是传参</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">传参！</span><br></pre></td></tr></table></figure>
+
+<p>5</p>
+<p>库</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findOrder</span>(<span class="params">self, numCourses, prerequisites</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numCourses: int</span></span><br><span class="line"><span class="string">        :type prerequisites: List[List[int]]</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>Leetcode</tag>
       </tags>
   </entry>
   <entry>
@@ -1038,6 +1017,62 @@
       <tags>
         <tag>Python</tag>
         <tag>Flask</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python File Operation</title>
+    <url>/2021/01/02/Python-File-Operation/</url>
+    <content><![CDATA[<p>Add content to file</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
+
+<p>Read content</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python JSON</title>
+    <url>/2021/01/02/Python-JSON/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.json&quot;</span>)</span><br><span class="line">jsonString = file.read()</span><br><span class="line">file.close()</span><br><span class="line">jsons=json.loads(jsonString)</span><br><span class="line"><span class="keyword">for</span> json <span class="keyword">in</span> jsons:</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Log</title>
+    <url>/2021/01/03/Python-Log/</url>
+    <content><![CDATA[<p>Sometimes the error messages will be to long </p>
+<p>Then the console is not big enough to display all messages</p>
+<p>And we can’t see the root cause</p>
+<p>The solution is output the error messages to a log file</p>
+<p>Here is the example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"> </span><br><span class="line">logging.basicConfig(filename=<span class="string">&#x27;log.log&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error_func</span>():</span></span><br><span class="line">  b = <span class="number">1</span> / <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    error_func()</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">    s = traceback.format_exc()</span><br><span class="line">    logging.error(s)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1095,9 +1130,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Python JSON</title>
-    <url>/2021/01/02/Python-JSON/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.json&quot;</span>)</span><br><span class="line">jsonString = file.read()</span><br><span class="line">file.close()</span><br><span class="line">jsons=json.loads(jsonString)</span><br><span class="line"><span class="keyword">for</span> json <span class="keyword">in</span> jsons:</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
+    <title>Python String</title>
+    <url>/2021/01/02/Python-String/</url>
+    <content><![CDATA[<p>List to String</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#x27;</span>.join(xxList))</span><br></pre></td></tr></table></figure>
+
+<p>String to List</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>=text.split(<span class="string">&#x27;,&#x27;</span>) <span class="comment"># split String by &#x27;,&#x27; to List</span></span><br><span class="line">    print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -1238,65 +1279,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python String</title>
-    <url>/2021/01/02/Python-String/</url>
-    <content><![CDATA[<p>List to String</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#x27;</span>.join(xxList))</span><br></pre></td></tr></table></figure>
-
-<p>String to List</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>=text.split(<span class="string">&#x27;,&#x27;</span>) <span class="comment"># split String by &#x27;,&#x27; to List</span></span><br><span class="line">    print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python Log</title>
-    <url>/2021/01/03/Python-Log/</url>
-    <content><![CDATA[<p>Sometimes the error messages will be to long </p>
-<p>Then the console is not big enough to display all messages</p>
-<p>And we can’t see the root cause</p>
-<p>The solution is output the error messages to a log file</p>
-<p>Here is the example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"> </span><br><span class="line">logging.basicConfig(filename=<span class="string">&#x27;log.log&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error_func</span>():</span></span><br><span class="line">  b = <span class="number">1</span> / <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    error_func()</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">    s = traceback.format_exc()</span><br><span class="line">    logging.error(s)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Refactor Notes</title>
-    <url>/2021/01/03/Refactor-Notes/</url>
-    <content><![CDATA[<p>1.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Code will be more clear if you use keyword &quot;else if&quot;</span><br></pre></td></tr></table></figure>
-
-<p>2.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Use more of constant</span><br><span class="line"></span><br><span class="line">example:(Kotlin)</span><br><span class="line"></span><br><span class="line">const val FAIL &#x3D; 0</span><br><span class="line">if(state &#x3D;&#x3D; FAIL)&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Code will be much more clear</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Refactor</category>
-        <category>Notes</category>
-      </categories>
-      <tags>
-        <tag>Refactor</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring MVC Tutorial</title>
     <url>/2021/01/07/Spring-MVC-Tutorial/</url>
     <content><![CDATA[<p>1.New a Empty Maven project</p>
@@ -1342,6 +1324,24 @@
       <tags>
         <tag>Tutorial</tag>
         <tag>SpringMVC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Refactor Notes</title>
+    <url>/2021/01/03/Refactor-Notes/</url>
+    <content><![CDATA[<p>1.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Code will be more clear if you use keyword &quot;else if&quot;</span><br></pre></td></tr></table></figure>
+
+<p>2.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Use more of constant</span><br><span class="line"></span><br><span class="line">example:(Kotlin)</span><br><span class="line"></span><br><span class="line">const val FAIL &#x3D; 0</span><br><span class="line">if(state &#x3D;&#x3D; FAIL)&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Code will be much more clear</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Refactor</category>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>Refactor</tag>
       </tags>
   </entry>
   <entry>
@@ -1461,37 +1461,6 @@
       <tags>
         <tag>Spring</tag>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Tensorflow Error Messages</title>
-    <url>/2021/01/03/Tensorflow-Error-Messages/</url>
-    <content><![CDATA[<p>1.</p>
-<p>Error</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: (&#39;Error when checking model target: expected no data, but got:&#39;, array([&#39;6947&#39;, &#39;7232&#39;, &#39;7967&#39;, ..., &#39;5646&#39;, &#39;3554&#39;, &#39;4656&#39;], dtype&#x3D;&#39;&lt;U4&#39;))</span><br></pre></td></tr></table></figure>
-
-<p>Reason</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">When using model.fit() the training data is not matching to the label array</span><br><span class="line">In other words, the length of training data array should be the same as label array</span><br></pre></td></tr></table></figure>
-
-
-
-<p>2.</p>
-<p>Error</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: Please provide as model inputs either a single array or a list of arrays.</span><br></pre></td></tr></table></figure>
-
-<p>Solution</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">training_data&#x3D;np.array(training_ataset)</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Machine Learn</category>
-        <category>Tensorflow</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Machine Learn</tag>
       </tags>
   </entry>
   <entry>
@@ -1619,6 +1588,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Tensorflow Error Messages</title>
+    <url>/2021/01/03/Tensorflow-Error-Messages/</url>
+    <content><![CDATA[<p>1.</p>
+<p>Error</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: (&#39;Error when checking model target: expected no data, but got:&#39;, array([&#39;6947&#39;, &#39;7232&#39;, &#39;7967&#39;, ..., &#39;5646&#39;, &#39;3554&#39;, &#39;4656&#39;], dtype&#x3D;&#39;&lt;U4&#39;))</span><br></pre></td></tr></table></figure>
+
+<p>Reason</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">When using model.fit() the training data is not matching to the label array</span><br><span class="line">In other words, the length of training data array should be the same as label array</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.</p>
+<p>Error</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: Please provide as model inputs either a single array or a list of arrays.</span><br></pre></td></tr></table></figure>
+
+<p>Solution</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">training_data&#x3D;np.array(training_ataset)</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Machine Learn</category>
+        <category>Tensorflow</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Machine Learn</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VS Error</title>
     <url>/2021/03/08/VS-Error/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
@@ -1626,7 +1626,7 @@
 <p>Solve </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
 
-<p><img src="G:\Blog\source_posts\VS-Error\image-20201115190024960.png" alt="img1"></p>
+<p><img src="image-20201115190024960.png" alt="img1"></p>
 ]]></content>
   </entry>
   <entry>
