@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Android Bundle</title>
+    <url>/2021/01/04/Android-Bundle/</url>
+    <content><![CDATA[<p>Bundle can be  use for transport data between Fragment</p>
+<p>Send</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Bundle()</span><br><span class="line">bundle.putString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;GFG :- Main Activity&quot;</span>)</span><br><span class="line">NavUtil.navController?.navigate(R.id.signStateForStudent,bundle)</span><br><span class="line"><span class="comment">// When you use navigation</span></span><br></pre></td></tr></table></figure>
+
+<p>Get</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Intent.getExtras()</span><br><span class="line">bundle.getString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;Default&quot;</span>) </span><br><span class="line"><span class="comment">// arg2 will be return when &quot;key1&quot; can&#x27;t be foud in bundle</span></span><br></pre></td></tr></table></figure>
+
+<p>But it can just be transported one time ! !</p>
+<p>When you back to the fragment, the bundle will gone </p>
+<p>Bundle just can be use for the “one-time” issue</p>
+<hr>
+<p>For the data you need to use many time </p>
+<p>You can use companion object {} to solve that problem</p>
+<p>All fragments can get the data directly from the companion object {} within an activity</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Transport Data</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Back Button</title>
     <url>/2021/01/04/Android-Back-Button/</url>
     <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onBackPressed()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -11,24 +37,6 @@
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// super.onBackPressed()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Add Views</title>
-    <url>/2021/01/06/Android-Add-Views/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -58,32 +66,6 @@
       <tags>
         <tag>Android</tag>
         <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Bundle</title>
-    <url>/2021/01/04/Android-Bundle/</url>
-    <content><![CDATA[<p>Bundle can be  use for transport data between Fragment</p>
-<p>Send</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Bundle()</span><br><span class="line">bundle.putString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;GFG :- Main Activity&quot;</span>)</span><br><span class="line">NavUtil.navController?.navigate(R.id.signStateForStudent,bundle)</span><br><span class="line"><span class="comment">// When you use navigation</span></span><br></pre></td></tr></table></figure>
-
-<p>Get</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Intent.getExtras()</span><br><span class="line">bundle.getString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;Default&quot;</span>) </span><br><span class="line"><span class="comment">// arg2 will be return when &quot;key1&quot; can&#x27;t be foud in bundle</span></span><br></pre></td></tr></table></figure>
-
-<p>But it can just be transported one time ! !</p>
-<p>When you back to the fragment, the bundle will gone </p>
-<p>Bundle just can be use for the “one-time” issue</p>
-<hr>
-<p>For the data you need to use many time </p>
-<p>You can use companion object {} to solve that problem</p>
-<p>All fragments can get the data directly from the companion object {} within an activity</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Transport Data</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -147,6 +129,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Add Views</title>
+    <url>/2021/01/06/Android-Add-Views/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Fragment Tutorial</title>
     <url>/2021/01/06/Android-Fragment-Tutorial/</url>
     <content><![CDATA[<p>1.New A Fragment</p>
@@ -167,6 +167,49 @@
 <p>Then you can name id as you like, but do not forget it, it is really important ! !</p>
 <hr>
 <p>After two steps, you can see a fragment is added to an activity</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Intent Transport Data</title>
+    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
+    <content><![CDATA[<p>Example:</p>
+<p>Send data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Get data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Note:</p>
+<p>Intent is like a build-in object in Kotlin</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Layout Parameter</title>
+    <url>/2021/01/06/Android-Layout-Parameter/</url>
+    <content><![CDATA[<p>Build</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> layoutParamsForInfoUnit: LinearLayout.LayoutParams? = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">buildLayoutParamsForInfoUnit</span><span class="params">(context: <span class="type">Context</span>?)</span></span>&#123;</span><br><span class="line">layoutParamsForInfoUnit =</span><br><span class="line">                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DpUtil.dip2px(context,<span class="number">100f</span>))</span><br><span class="line">layoutParamsForInfoUnit?.setMargins(DpUtil.dip2px(context, <span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), <span class="number">0</span>) <span class="comment">// left,top,right,bottom</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Use</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">signDataView!!.layoutParams &#x3D; LayoutUtil.layoutParamsForInfoUnit</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <categories>
         <category>Android</category>
@@ -217,87 +260,6 @@
       </categories>
       <tags>
         <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Intent Transport Data</title>
-    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
-    <content><![CDATA[<p>Example:</p>
-<p>Send data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Get data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Note:</p>
-<p>Intent is like a build-in object in Kotlin</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Layout Parameter</title>
-    <url>/2021/01/06/Android-Layout-Parameter/</url>
-    <content><![CDATA[<p>Build</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> layoutParamsForInfoUnit: LinearLayout.LayoutParams? = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">buildLayoutParamsForInfoUnit</span><span class="params">(context: <span class="type">Context</span>?)</span></span>&#123;</span><br><span class="line">layoutParamsForInfoUnit =</span><br><span class="line">                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DpUtil.dip2px(context,<span class="number">100f</span>))</span><br><span class="line">layoutParamsForInfoUnit?.setMargins(DpUtil.dip2px(context, <span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), <span class="number">0</span>) <span class="comment">// left,top,right,bottom</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Use</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">signDataView!!.layoutParams &#x3D; LayoutUtil.layoutParamsForInfoUnit</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Navigation Tutorial</title>
-    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
-    <content><![CDATA[<p>1.New A Navigation</p>
-<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
-<p>Give your navigation a name, then click “OK”</p>
-<p>Then you will got a xml file of your navigation</p>
-<p>2.Add A NavHost To Your Activity</p>
-<p>Go to the xml file of your activity</p>
-<p>Use “Design” model </p>
-<p>“Palette” – “Container” – “NavHostFragment”</p>
-<p>Drag it to the phone</p>
-<p>And choose a navigation xml file for the container</p>
-<p>Then we finish the basic of navigation</p>
-<p>3.Add Fragments To Navigation</p>
-<p>Go to the xml file of your navigation </p>
-<p>Still use “Design” model</p>
-<p>Then “New Destination”</p>
-<p>4.Use Navigation</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
-
-<p>Then you will be navigate to a fragment named “hello”</p>
-<hr>
-<p>supportFragmentManager</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -361,6 +323,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Studio SDK config</title>
+    <url>/2021/03/08/Android-Studio-SDK-config/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
+
+
+
+<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Android Thread</title>
+    <url>/2021/01/04/Android-Thread/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Android Swip Refresh</title>
     <url>/2021/01/06/Android-Swip-Refresh/</url>
     <content><![CDATA[<p>XML</p>
@@ -398,116 +375,6 @@
       <tags>
         <tag>Android</tag>
         <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Thread</title>
-    <url>/2021/01/04/Android-Thread/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Android Version</title>
-    <url>/2021/01/04/Android-Version/</url>
-    <content><![CDATA[<p>The API version and Android version are different</p>
-<p>API version is Android SDK version</p>
-<p>It’s usually for developer</p>
-<p>Developer need Android SDK when making App</p>
-<p>And different SDK version will have usage, developer need to check the relative document</p>
-<p>And Android version is usually for user</p>
-<p>Like we can check our Android version of our mobile phone</p>
-<hr>
-<p>Generally, Android version is associated with SDK version</p>
-<p>example:</p>
-<table>
-<thead>
-<tr>
-<th>API Level</th>
-<th>Android Version</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>30</td>
-<td>11</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>29</td>
-<td>10</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>28</td>
-<td>9</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>27</td>
-<td>8.1</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>26</td>
-<td>8.0</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>If you use lower version of API to write an App</p>
-<p>It will have better compatibility</p>
-<p>But you can’t use the new feature of the SDK</p>
-<p>It depends on you</p>
-<p>Haha</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android px dp sp</title>
-    <url>/2021/01/04/Android-px-dp-sp/</url>
-    <content><![CDATA[<p>px is for the general unit</p>
-<p>Note !</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
-
-
-
-<p>dp is usually use for layout</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Note </p>
-<p>You can pass context as a parameter</p>
-<blockquote>
-<p>dpi: Dots Per Inch</p>
-</blockquote>
-<p>sp is usually use for text size</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Layout</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -581,25 +448,71 @@
       </tags>
   </entry>
   <entry>
-    <title>Flask Cors</title>
-    <url>/2021/01/02/Flask-Cors/</url>
-    <content><![CDATA[<p>Cors solution</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask_cors import *</span><br><span class="line">CORS(app, supports_credentials&#x3D;True)</span><br></pre></td></tr></table></figure>
-
-<p>Then Note ! ! !</p>
-<p>Flask default listen on localhost</p>
-<p>if you want to use Flask to deploy an application</p>
-<p>do the thing below :</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">5000</span>, debug=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
+    <title>Android Version</title>
+    <url>/2021/01/04/Android-Version/</url>
+    <content><![CDATA[<p>The API version and Android version are different</p>
+<p>API version is Android SDK version</p>
+<p>It’s usually for developer</p>
+<p>Developer need Android SDK when making App</p>
+<p>And different SDK version will have usage, developer need to check the relative document</p>
+<p>And Android version is usually for user</p>
+<p>Like we can check our Android version of our mobile phone</p>
+<hr>
+<p>Generally, Android version is associated with SDK version</p>
+<p>example:</p>
+<table>
+<thead>
+<tr>
+<th>API Level</th>
+<th>Android Version</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>30</td>
+<td>11</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>8.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>8.0</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>If you use lower version of API to write an App</p>
+<p>It will have better compatibility</p>
+<p>But you can’t use the new feature of the SDK</p>
+<p>It depends on you</p>
+<p>Haha</p>
 ]]></content>
       <categories>
-        <category>Config</category>
-        <category>Python</category>
+        <category>Android</category>
+        <category>Tutorial</category>
       </categories>
       <tags>
-        <tag>Config</tag>
-        <tag>Python</tag>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -641,6 +554,43 @@
       </tags>
   </entry>
   <entry>
+    <title>Android px dp sp</title>
+    <url>/2021/01/04/Android-px-dp-sp/</url>
+    <content><![CDATA[<p>px is for the general unit</p>
+<p>Note !</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
+
+
+
+<p>dp is usually use for layout</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note </p>
+<p>You can pass context as a parameter</p>
+<blockquote>
+<p>dpi: Dots Per Inch</p>
+</blockquote>
+<p>sp is usually use for text size</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Layout</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git Fix Conflict</title>
     <url>/2021/01/04/Git-Fix-Conflict/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
@@ -657,6 +607,28 @@
         <tag>Tutorial</tag>
         <tag>Git</tag>
         <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Flask Cors</title>
+    <url>/2021/01/02/Flask-Cors/</url>
+    <content><![CDATA[<p>Cors solution</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask_cors import *</span><br><span class="line">CORS(app, supports_credentials&#x3D;True)</span><br></pre></td></tr></table></figure>
+
+<p>Then Note ! ! !</p>
+<p>Flask default listen on localhost</p>
+<p>if you want to use Flask to deploy an application</p>
+<p>do the thing below :</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">5000</span>, debug=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Config</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Config</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -718,6 +690,154 @@
       </tags>
   </entry>
   <entry>
+    <title>Google E-mail Gmail</title>
+    <url>/2021/03/08/Google-E-mail-Gmail/</url>
+    <content><![CDATA[<p>QQ邮箱中选择gmail注册</p>
+<p>中国的电话号码前加+86</p>
+]]></content>
+      <categories>
+        <category>Google</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Live2D</title>
+    <url>/2021/03/08/Hexo-Live2D/</url>
+    <content><![CDATA[<p><a href="https://github.com/EYHN/hexo-helper-live2d">github</a> (You can download model here)</p>
+<p>(1) Install hexo-helper-live2d</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>(2)prepare model file</p>
+<p>put the folder in “node_modules”</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">e.g. folder name &quot;live2d-widget-model-miku&quot;</span><br></pre></td></tr></table></figure>
+
+<p>(2) install model</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install &#123;your model&#39;s package name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(3) _config.yml in Hexo root folder add:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Theme</title>
+    <url>/2021/03/08/Hexo-Theme/</url>
+    <content><![CDATA[<p>Next主题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+
+
+<p>_config.yml新增</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在Next主题的配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
+
+<p>把local_search enable 置true就好了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo踩坑</title>
+    <url>/2020/11/05/Hexo%E8%B8%A9%E5%9D%91/</url>
+    <content><![CDATA[<p>1.ssh密匙</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;邮件地址&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>找到<code>.ssh\id_rsa.pub</code>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
+<p>将刚复制的内容粘贴到key那里，title随便填，保存。</p>
+<p>Win10下的~目录就是对应User下</p>
+<p>然后，id_rsa.pub这个文件不能直接打开，需要命令行指令</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">more id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>2.常用指令</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line"># 你先执行hexo clean 然后再删除文章就可以了</span><br></pre></td></tr></table></figure>
+
+<p>部署步骤：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>3.每篇文章的配置</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: Spring注解是怎么工作的</span><br><span class="line">date: 2020-11-05 17:05:39</span><br><span class="line">tags:</span><br><span class="line">- Spring</span><br><span class="line">- Java</span><br><span class="line">categories:</span><br><span class="line">- [Java,Spring]</span><br></pre></td></tr></table></figure>
+
+<p>4.配置文件的修改</p>
+<p>_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 藏经阁</span><br><span class="line">subtitle: &#39;&#39;</span><br><span class="line">description: &#39;太多东西要学啦&#39;</span><br><span class="line">keywords: Java</span><br><span class="line">author: FreeJim</span><br><span class="line">language: zh</span><br><span class="line">timezone: &#39;Asia&#x2F;Hong_Kong&#39;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;a1020151695&#x2F;a1020151695.github.io</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<p>具体可查<a href="https://hexo.io/docs/configuration">官方文档</a></p>
+<p>5.自定义域名</p>
+<p>Setting中设置自定义域名，然后Save保存</p>
+<p>阿里云域名管理，要添加两个纪录</p>
+<p>一个是CNAME www 把    把当前域名和xxx.github.io联系起来</p>
+<p>其实是把xxx.github.io指向你自己的域名</p>
+<p>CNAME content(Just the domain)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">freejim.icu </span><br></pre></td></tr></table></figure>
+
+<p>第二个是@ 你自己的域名指向一个IP（即xxx.github.io的实际IP）</p>
+<p>这里我踩了坑！</p>
+<p>你不能在你自己电脑上Ping！！！！</p>
+<p>拿你的云服务器去ping才有用</p>
+<p>或者不需要服务器，直接网上找一个域名解析的网站，去查</p>
+<p>例如<a href="https://site.ip138.com/">这个</a></p>
+<p>gtihub上看得见的文件都是在“source”文件夹里面的—CNAME–域名配置文件</p>
+<p>然后 如果要向google提交验证的话，我们用meta的方式</p>
+<p>如果用html的方式的话，hexo部署的时候会修改html文件里的内容</p>
+<p>导致google无法验证</p>
+<p>然后你也不能直接放到github中</p>
+<p>因为github仓库不完全等于hexo部署的服务器</p>
+<p>所以我们选择meta</p>
+<p>然后hexo是通过各主题模板来修改、生成各网页的</p>
+<p>和meta相关的head的模板在这</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">themes\landscape\layout\_partial\head.ejs</span><br></pre></td></tr></table></figure>
+
+<p>把google 给的meta 加进去就好了</p>
+<p>添加后可以在这里查看网站数据</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;search.google.com&#x2F;search-console&#x2F;about</span><br></pre></td></tr></table></figure>
+
+<p>查看是否验证成功</p>
+<p>几天后，google搜索：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">site:“你的网站”</span><br></pre></td></tr></table></figure>
+
+<p>之后我看了百度的验证</p>
+<p>不行！</p>
+<p>github把百度屏蔽掉了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">不到一分钟前freejim.icu使用HTML标签验证</span><br><span class="line">原因：服务器连接超时，请检查服务器设置或者稍后重试。</span><br><span class="line">问题分析&amp;解决办法： 连接网站时超时，可能是网络速度过慢，请检查服务器网络线路，或者稍后再试。</span><br></pre></td></tr></table></figure>
+
+<p>不允许百度去爬</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">对此github官方是这样说的 : 由于百度爬虫爬得太猛烈，已经对很多Github用户造成了可用性的问题了，而禁用百度爬虫这一举措可能会一直持续下去。</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Config</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Config</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python Class</title>
     <url>/2021/01/02/Python-Class/</url>
     <content><![CDATA[<p>simple example: (within the same package)</p>
@@ -762,81 +882,60 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo踩坑</title>
-    <url>/2020/11/05/Hexo%E8%B8%A9%E5%9D%91/</url>
-    <content><![CDATA[<p>1.ssh密匙</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;邮件地址&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Android Navigation Tutorial</title>
+    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
+    <content><![CDATA[<p>1.New A Navigation</p>
+<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
+<p>Give your navigation a name, then click “OK”</p>
+<p>Then you will got a xml file of your navigation</p>
+<p>2.Add A NavHost To Your Activity</p>
+<p>Go to the xml file of your activity</p>
+<p>Use “Design” model </p>
+<p>“Palette” – “Container” – “NavHostFragment”</p>
+<p>Drag it to the phone</p>
+<p>And choose a navigation xml file for the container</p>
+<p>Then we finish the basic of navigation</p>
+<p>3.Add Fragments To Navigation</p>
+<p>Go to the xml file of your navigation </p>
+<p>Still use “Design” model</p>
+<p>Then “New Destination”</p>
+<p>4.Use Navigation</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
 
-<p>找到<code>.ssh\id_rsa.pub</code>文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
-<p>将刚复制的内容粘贴到key那里，title随便填，保存。</p>
-<p>Win10下的~目录就是对应User下</p>
-<p>然后，id_rsa.pub这个文件不能直接打开，需要命令行指令</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">more id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>2.常用指令</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
-
-<p>部署步骤：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>3.每篇文章的配置</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: Spring注解是怎么工作的</span><br><span class="line">date: 2020-11-05 17:05:39</span><br><span class="line">tags:</span><br><span class="line">- Spring</span><br><span class="line">- Java</span><br><span class="line">categories:</span><br><span class="line">- [Java,Spring]</span><br></pre></td></tr></table></figure>
-
-<p>4.配置文件的修改</p>
-<p>_config.yml</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 藏经阁</span><br><span class="line">subtitle: &#39;&#39;</span><br><span class="line">description: &#39;太多东西要学啦&#39;</span><br><span class="line">keywords: Java</span><br><span class="line">author: FreeJim</span><br><span class="line">language: zh</span><br><span class="line">timezone: &#39;Asia&#x2F;Hong_Kong&#39;</span><br></pre></td></tr></table></figure>
+<p>Then you will be navigate to a fragment named “hello”</p>
+<hr>
+<p>supportFragmentManager</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
 
 
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;a1020151695&#x2F;a1020151695.github.io</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-
-<p>具体可查<a href="https://hexo.io/docs/configuration">官方文档</a></p>
-<p>5.自定义域名</p>
-<p>Setting中设置自定义域名，然后Save保存</p>
-<p>阿里云域名管理，要添加两个纪录</p>
-<p>一个是CNAME www 把    把当前域名和xxx.github.io联系起来</p>
-<p>其实是把xxx.github.io指向你自己的域名</p>
-<p>第二个是@ 你自己的域名指向一个IP（即xxx.github.io的实际IP）</p>
-<p>这里我踩了坑！</p>
-<p>你不能在你自己电脑上Ping！！！！</p>
-<p>拿你的云服务器去ping才有用</p>
-<p>或者不需要服务器，直接网上找一个域名解析的网站，去查</p>
-<p>例如<a href="https://site.ip138.com/">这个</a></p>
-<p>gtihub上看得见的文件都是在“source”文件夹里面的—CNAME–域名配置文件</p>
-<p>然后 如果要向google提交验证的话，我们用meta的方式</p>
-<p>如果用html的方式的话，hexo部署的时候会修改html文件里的内容</p>
-<p>导致google无法验证</p>
-<p>然后你也不能直接放到github中</p>
-<p>因为github仓库不完全等于hexo部署的服务器</p>
-<p>所以我们选择meta</p>
-<p>然后hexo是通过各主题模板来修改、生成各网页的</p>
-<p>和meta相关的head的模板在这</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">themes\landscape\layout\_partial\head.ejs</span><br></pre></td></tr></table></figure>
-
-<p>把google 给的meta 加进去就好了</p>
-<p>添加后可以在这里查看网站数据</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;search.google.com&#x2F;search-console&#x2F;about</span><br></pre></td></tr></table></figure>
-
-<p>查看是否验证成功</p>
-<p>几天后，google搜索：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">site:“你的网站”</span><br></pre></td></tr></table></figure>
-
-<p>之后我看了百度的验证</p>
-<p>不行！</p>
-<p>github把百度屏蔽掉了</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">不到一分钟前freejim.icu使用HTML标签验证</span><br><span class="line">原因：服务器连接超时，请检查服务器设置或者稍后重试。</span><br><span class="line">问题分析&amp;解决办法： 连接网站时超时，可能是网络速度过慢，请检查服务器网络线路，或者稍后再试。</span><br></pre></td></tr></table></figure>
-
-<p>不允许百度去爬</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">对此github官方是这样说的 : 由于百度爬虫爬得太猛烈，已经对很多Github用户造成了可用性的问题了，而禁用百度爬虫这一举措可能会一直持续下去。</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
-        <category>Config</category>
-        <category>Hexo</category>
+        <category>Android</category>
+        <category>Tutorial</category>
       </categories>
       <tags>
-        <tag>Config</tag>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Dict</title>
+    <url>/2021/01/02/Python-Dict/</url>
+    <content><![CDATA[<p>Traverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<p>Reverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -867,22 +966,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Dict</title>
-    <url>/2021/01/02/Python-Dict/</url>
-    <content><![CDATA[<p>Traverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+    <title>Leetcode Rule</title>
+    <url>/2021/03/08/Leetcode-Rule/</url>
+    <content><![CDATA[<p>1</p>
+<p>don’t</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">x:<span class="built_in">int</span></span>)</span></span><br></pre></td></tr></table></figure>
 
-<p>Reverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+
+
+<p>2</p>
+<p>自定义数据结构</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br></pre></td></tr></table></figure>
+
+<p>3</p>
+<p>set hash 导致输出导致OJ上不一致</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">太狠了</span><br></pre></td></tr></table></figure>
+
+<p>4</p>
+<p>leetcode 全局还是传参</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">传参！</span><br></pre></td></tr></table></figure>
+
+<p>5</p>
+<p>库</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findOrder</span>(<span class="params">self, numCourses, prerequisites</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numCourses: int</span></span><br><span class="line"><span class="string">        :type prerequisites: List[List[int]]</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
+        <category>note</category>
       </categories>
       <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
+        <tag>Leetcode</tag>
       </tags>
   </entry>
   <entry>
@@ -904,6 +1017,27 @@
       <tags>
         <tag>Tutorial</tag>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Flask</title>
+    <url>/2021/03/08/Python-Flask/</url>
+    <content><![CDATA[<p>1.Listener </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>2.Template</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span>():</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">   app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Flask</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Flask</tag>
       </tags>
   </entry>
   <entry>
@@ -949,6 +1083,17 @@
 
 <p>Right Example</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">nextState = State(self.player, self.agent) <span class="comment"># create a new object</span></span><br><span class="line">nextState.board = copy.deepcopy(current_state.board) </span><br><span class="line"><span class="comment"># create it&#x27;s own board instead of point to the same memory</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<ol start="4">
+<li>  2 dimension array</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">matrix = []</span><br><span class="line"> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">      matrix.append([<span class="number">0</span>] * <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Or</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n = <span class="number">3</span></span><br><span class="line">m = <span class="number">3</span></span><br><span class="line">dp = [[<span class="number">0</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n)] <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(m)]</span><br></pre></td></tr></table></figure>
+
+
 
 
 
@@ -1134,24 +1279,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Refactor Notes</title>
-    <url>/2021/01/03/Refactor-Notes/</url>
-    <content><![CDATA[<p>1.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Code will be more clear if you use keyword &quot;else if&quot;</span><br></pre></td></tr></table></figure>
-
-<p>2.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Use more of constant</span><br><span class="line"></span><br><span class="line">example:(Kotlin)</span><br><span class="line"></span><br><span class="line">const val FAIL &#x3D; 0</span><br><span class="line">if(state &#x3D;&#x3D; FAIL)&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Code will be much more clear</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Refactor</category>
-        <category>Notes</category>
-      </categories>
-      <tags>
-        <tag>Refactor</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring MVC Tutorial</title>
     <url>/2021/01/07/Spring-MVC-Tutorial/</url>
     <content><![CDATA[<p>1.New a Empty Maven project</p>
@@ -1197,6 +1324,24 @@
       <tags>
         <tag>Tutorial</tag>
         <tag>SpringMVC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Refactor Notes</title>
+    <url>/2021/01/03/Refactor-Notes/</url>
+    <content><![CDATA[<p>1.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Code will be more clear if you use keyword &quot;else if&quot;</span><br></pre></td></tr></table></figure>
+
+<p>2.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Use more of constant</span><br><span class="line"></span><br><span class="line">example:(Kotlin)</span><br><span class="line"></span><br><span class="line">const val FAIL &#x3D; 0</span><br><span class="line">if(state &#x3D;&#x3D; FAIL)&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Code will be much more clear</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Refactor</category>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>Refactor</tag>
       </tags>
   </entry>
   <entry>
@@ -1261,6 +1406,222 @@
       </tags>
   </entry>
   <entry>
+    <title>Tensorflow Error Messages</title>
+    <url>/2021/01/03/Tensorflow-Error-Messages/</url>
+    <content><![CDATA[<p>1.</p>
+<p>Error</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: (&#39;Error when checking model target: expected no data, but got:&#39;, array([&#39;6947&#39;, &#39;7232&#39;, &#39;7967&#39;, ..., &#39;5646&#39;, &#39;3554&#39;, &#39;4656&#39;], dtype&#x3D;&#39;&lt;U4&#39;))</span><br></pre></td></tr></table></figure>
+
+<p>Reason</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">When using model.fit() the training data is not matching to the label array</span><br><span class="line">In other words, the length of training data array should be the same as label array</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.</p>
+<p>Error</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: Please provide as model inputs either a single array or a list of arrays.</span><br></pre></td></tr></table></figure>
+
+<p>Solution</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">training_data&#x3D;np.array(training_ataset)</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Machine Learn</category>
+        <category>Tensorflow</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Machine Learn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Typora Shortcut</title>
+    <url>/2021/03/08/Typora-Shortcut/</url>
+    <content><![CDATA[<p>编辑</p>
+<table>
+<thead>
+<tr>
+<th><a href="https://defkey.com/what-means/ctrl-h">Ctrl + H</a></th>
+<th>Replace</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://defkey.com/what-means/ctrl-d">Ctrl + D</a></td>
+<td>Select Word</td>
+</tr>
+<tr>
+<td><a href="https://defkey.com/what-means/ctrl-l">Ctrl + L</a></td>
+<td>Select Line/Sentence</td>
+</tr>
+<tr>
+<td><a href="https://defkey.com/what-means/ctrl-home">Ctrl + Home</a></td>
+<td>Jump to Top</td>
+</tr>
+<tr>
+<td><a href="https://defkey.com/what-means/ctrl-end">Ctrl + End</a></td>
+<td>Jump to Bottom</td>
+</tr>
+<tr>
+<td><a href="https://defkey.com/what-means/f3">F3</a></td>
+<td>Find Next</td>
+</tr>
+<tr>
+<td><a href="https://defkey.com/what-means/shift-f3">↑  Shift + F3</a></td>
+<td>Find Previous</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>段落</p>
+<table>
+<thead>
+<tr>
+<th><a href="https://defkey.com/what-means/ctrl-1">Ctrl + 1</a>~6</th>
+<th>set Heading 1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://defkey.com/what-means/ctrl-t">Ctrl + T</a></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>格式</p>
+<table>
+<thead>
+<tr>
+<th>[Ctrl + ↑  Shift + <code>](https://defkey.com/what-means/ctrl-shift-</code>)</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://defkey.com/what-means/ctrl-k">Ctrl + K</a></td>
+<td>Hyperlink</td>
+</tr>
+<tr>
+<td>``</td>
+<td>代码</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>视图</p>
+<table>
+<thead>
+<tr>
+<th><a href="https://defkey.com/what-means/ctrl-shift-minus">Ctrl + ↑  Shift + -</a></th>
+<th>缩放</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+shift+l</td>
+<td>侧边栏</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Shortcut</category>
+      </categories>
+      <tags>
+        <tag>Shortcut</tag>
+        <tag>Typora</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VS Error</title>
+    <url>/2021/03/08/VS-Error/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
+
+<p>Solve </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
+
+<p><img src="G:\BlogLocal\Blogimg\image-20201115190024960-1615211750688.png" alt="img1"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>WSL conflict</title>
+    <url>/2021/03/08/WSL-conflict/</url>
+    <content><![CDATA[<p>“cmd” with “administrator”</p>
+<p>(Some simulator(e.g. Android simulator ) need to close hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
+
+<p>open WSL(WSL base on hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>cmd Shortcut</title>
+    <url>/2021/03/08/cmd-Shortcut/</url>
+    <content><![CDATA[<p>1.源文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere]</span><br><span class="line">&quot;ShowBasedOnVelocityId&quot;&#x3D;dword:00639bc8</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere\command]</span><br><span class="line">@&#x3D;&quot;cmd.exe &#x2F;s &#x2F;k pushd \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>2.想要Windows Terminal </p>
+<p>把其快捷方式放到System32下（即和cmd.exe一起）</p>
+<p>然后</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere]</span><br><span class="line">&quot;ShowBasedOnVelocityId&quot;&#x3D;dword:00639bc8</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere\command]</span><br><span class="line">@&#x3D;&quot;wt.exe cmd.exe &#x2F;s &#x2F;k pushd \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>pushd 相当于cd</p>
+<p>你也可以在cmd下输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cmd pushd g:</span><br></pre></td></tr></table></figure>
+
+<p>相当于</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd g:</span><br></pre></td></tr></table></figure>
+
+<p>具体原理我不是很想研究。。</p>
+<p>会用就好了 这玩意儿</p>
+<p>3.进入注册表</p>
+<p>win+r</p>
+<p>regedit </p>
+<p>你可以根据源代码找到注册表的对应位置</p>
+<p>4.这里是微软介绍reg的<a href="https://support.microsoft.com/en-us/help/310516/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg">文档</a></p>
+<p>虽然我看不太懂</p>
+<p>简单地说了最上面的version不是简单的注释</p>
+<p>而是对应了不同的windows版本</p>
+<p>然后下面的是具体的值的设置</p>
+<p>你也可以一GUI的形式到regedit下修改</p>
+]]></content>
+      <categories>
+        <category>Shortcut</category>
+      </categories>
+      <tags>
+        <tag>Shortcut</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring注解是怎么工作的</title>
     <url>/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/</url>
     <content><![CDATA[<p>版本说明：Spring 5.2.9 </p>
@@ -1316,37 +1677,6 @@
       <tags>
         <tag>Spring</tag>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Tensorflow Error Messages</title>
-    <url>/2021/01/03/Tensorflow-Error-Messages/</url>
-    <content><![CDATA[<p>1.</p>
-<p>Error</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: (&#39;Error when checking model target: expected no data, but got:&#39;, array([&#39;6947&#39;, &#39;7232&#39;, &#39;7967&#39;, ..., &#39;5646&#39;, &#39;3554&#39;, &#39;4656&#39;], dtype&#x3D;&#39;&lt;U4&#39;))</span><br></pre></td></tr></table></figure>
-
-<p>Reason</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">When using model.fit() the training data is not matching to the label array</span><br><span class="line">In other words, the length of training data array should be the same as label array</span><br></pre></td></tr></table></figure>
-
-
-
-<p>2.</p>
-<p>Error</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: Please provide as model inputs either a single array or a list of arrays.</span><br></pre></td></tr></table></figure>
-
-<p>Solution</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">training_data&#x3D;np.array(training_ataset)</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Machine Learn</category>
-        <category>Tensorflow</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Machine Learn</tag>
       </tags>
   </entry>
 </search>
