@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Android Add Views</title>
+    <url>/2021/01/06/Android-Add-Views/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Back Button</title>
     <url>/2021/01/04/Android-Back-Button/</url>
     <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onBackPressed()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -69,52 +87,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Add Views</title>
-    <url>/2021/01/06/Android-Add-Views/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Dialog Processing</title>
-    <url>/2021/01/04/Android-Dialog-Processing/</url>
-    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>The circle is just a ProgressBar widget in dialog</p>
-<p>Note !</p>
-<p>1.Create and show a dialog should be done by UI Thread</p>
-<p>2.There are some callback functions about the dialog, you can check the document</p>
-<p>If you want to close the dialog by program </p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
-
-<p>Note !</p>
-<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
-<p>2.dialog = dialogBuilder.create()</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Fragment And Activity</title>
     <url>/2021/01/04/Android-Fragment-And-Activity/</url>
     <content><![CDATA[<p>Fragment’s feature is reusable</p>
@@ -144,6 +116,34 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Dialog Processing</title>
+    <url>/2021/01/04/Android-Dialog-Processing/</url>
+    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The circle is just a ProgressBar widget in dialog</p>
+<p>Note !</p>
+<p>1.Create and show a dialog should be done by UI Thread</p>
+<p>2.There are some callback functions about the dialog, you can check the document</p>
+<p>If you want to close the dialog by program </p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
+
+<p>Note !</p>
+<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
+<p>2.dialog = dialogBuilder.create()</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -361,6 +361,16 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Studio SDK config</title>
+    <url>/2021/03/08/Android-Studio-SDK-config/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
+
+
+
+<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Android Swip Refresh</title>
     <url>/2021/01/06/Android-Swip-Refresh/</url>
     <content><![CDATA[<p>XML</p>
@@ -380,19 +390,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Studio SDK config</title>
-    <url>/2021/03/08/Android-Studio-SDK-config/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
-
-
-
-<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Android Thread</title>
     <url>/2021/01/04/Android-Thread/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Android Tool Bar (On Top)</title>
+    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>ConfigBackButton</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
   </entry>
   <entry>
     <title>Android Version</title>
@@ -452,27 +473,6 @@
 <p>But you can’t use the new feature of the SDK</p>
 <p>It depends on you</p>
 <p>Haha</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Tool Bar (On Top)</title>
-    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>ConfigBackButton</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
 ]]></content>
       <categories>
         <category>Android</category>
@@ -613,6 +613,52 @@
       </tags>
   </entry>
   <entry>
+    <title>Blockchain Example In JS</title>
+    <url>/2021/03/11/Blockchain-Example-In-JS/</url>
+    <content><![CDATA[<h2 id="1-preparation"><a href="#1-preparation" class="headerlink" title="1.preparation"></a>1.preparation</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Open source developers from every continent use npm to share and borrow packages</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">It&#39;s like &quot;pip&quot; in Python, which is use for install moudle</span><br></pre></td></tr></table></figure>
+
+<h4 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">As an asynchronous event-driven JavaScript runtime</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Use for running js program </span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html">Tutorial of installing node.js </a> （Support Windows、Linux、Mac, but  recommend Windows ）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于新版的nodejs已经集成了npm，所以之前npm也一并安装好了。</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.runoob.com/nodejs/nodejs-npm.html">Config npm</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install npm -g</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<p>This mirror is use for us to download modules with high speed</p>
+</blockquote>
+<h4 id="Necessary-Module"><a href="#Necessary-Module" class="headerlink" title="Necessary Module"></a>Necessary Module</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install --save crypto-js</span><br></pre></td></tr></table></figure>
+
+<p>Recommended Editor – <a href="https://code.visualstudio.com/">Vscode</a>（Support Windows、Linux、Mac）</p>
+<hr>
+<h2 id="2-Code"><a href="#2-Code" class="headerlink" title="2.Code"></a>2.Code</h2><p>Blockchain Valid</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">index,timestamp,data,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.data = data;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;  <span class="comment">// hash all elements in a block</span></span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.index+<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.data)).toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];  <span class="comment">// the first block called &quot;Genesis&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="number">0</span>,<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123; </span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.hash = newBlock.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;  	<span class="comment">// check weather the blockchain valid </span></span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i];  <span class="comment">// necessary to use &quot;const&quot; -- </span></span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;		<span class="comment">// check current block</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;      <span class="comment">// check previous block along the chain</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">1</span>,<span class="string">&quot;01/02/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">4</span>&#125;));</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">2</span>,<span class="string">&quot;01/03/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">10</span>&#125;));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(jtcoin,<span class="literal">null</span>,<span class="number">4</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Is the chain valid? &#x27;</span> + jtcoin.isChainValid());</span><br><span class="line"></span><br><span class="line">jtcoin.chain[<span class="number">1</span>].data = &#123;<span class="attr">amount</span>:<span class="number">5</span>&#125;;</span><br><span class="line">jtcoin.chain[<span class="number">1</span>].hash = jtcoin.chain[<span class="number">1</span>].caculateHash();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;tamper&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Is the chain valid? &#x27;</span> + jtcoin.isChainValid());</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(jtcoin,<span class="literal">null</span>,<span class="number">4</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>proof-of-work (It can also be called “mine”)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">index,timestamp,data,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.data = data;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.nonce = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.index+<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.data)+<span class="built_in">this</span>.nonce).toString();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">mineBlock</span>(<span class="params">difficulty</span>)</span>&#123;  <span class="comment">// proof of work</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">this</span>.hash.substring(<span class="number">0</span>,difficulty) !== <span class="built_in">Array</span>(difficulty+<span class="number">1</span>).join(<span class="string">&#x27;0&#x27;</span>))&#123;</span><br><span class="line">            <span class="built_in">this</span>.nonce++;   <span class="comment">// try to get correct hash by changing this variable  </span></span><br><span class="line">            <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();  <span class="comment">// &quot;correct hash&quot; is the correct amount &#x27;0&#x27; in the head of the hash value </span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Block mined hash:&quot;</span> + <span class="built_in">this</span>.hash);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];</span><br><span class="line">        <span class="built_in">this</span>.difficulty = <span class="number">5</span> <span class="comment">// means five &#x27;0&#x27; in the head of the hash</span></span><br><span class="line">        				  <span class="comment">// when &#x27;difficulty&#x27; is bigger, miner will spent more time to mine</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="number">0</span>,<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i];  <span class="comment">// necessary to use &quot;const&quot;</span></span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Mining...&quot;</span>);</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">1</span>,<span class="string">&quot;01/02/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">4</span>&#125;));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Mining...&quot;</span>);</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">2</span>,<span class="string">&quot;01/03/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">10</span>&#125;));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Balance (how many coins in you account)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Transaction</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">fromAddress,toAddress,amount</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.fromAddress = fromAddress;</span><br><span class="line">        <span class="built_in">this</span>.toAddress = toAddress;</span><br><span class="line">        <span class="built_in">this</span>.amount = amount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">timestamp,transactions,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.transactions = transactions;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.nonce = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.transactions)+<span class="built_in">this</span>.nonce).toString();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">mineBlock</span>(<span class="params">difficulty</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">this</span>.hash.substring(<span class="number">0</span>,difficulty) !== <span class="built_in">Array</span>(difficulty+<span class="number">1</span>).join(<span class="string">&#x27;0&#x27;</span>))&#123;</span><br><span class="line">            <span class="built_in">this</span>.nonce++;</span><br><span class="line">            <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Block mined hash:&quot;</span> + <span class="built_in">this</span>.hash);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];</span><br><span class="line">        <span class="built_in">this</span>.difficulty = <span class="number">2</span>;</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions = [];</span><br><span class="line">        <span class="built_in">this</span>.mineReward = <span class="number">100</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i];  <span class="comment">// necessary to use &quot;const&quot;</span></span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">minePendingTransactions</span>(<span class="params">mineRewardAddress</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> block = <span class="keyword">new</span> Block(<span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="built_in">this</span>.pendingTransactions);</span><br><span class="line">        block.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Block successfully minded!&#x27;</span>);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(block);</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions = [<span class="keyword">new</span> Transaction(<span class="literal">null</span>,mineRewardAddress,<span class="built_in">this</span>.mineReward)];</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">createTransaction</span>(<span class="params">transaction</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions.push(transaction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">getBalanceOfAddress</span>(<span class="params">address</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> balance = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> block <span class="keyword">of</span> <span class="built_in">this</span>.chain</span>)</span>&#123;  <span class="comment">// balance should be caculated everytime from the beginning of the chain</span></span><br><span class="line">            <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> trans <span class="keyword">of</span> block.transactions</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (trans.fromAddress == address)&#123;</span><br><span class="line">                    balance -= trans.amount;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="function"><span class="title">if</span>(<span class="params">trans.toAddress == address</span>)</span>&#123;</span><br><span class="line">                    balance += trans.amount;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> balance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line">jtcoin.createTransaction(<span class="keyword">new</span> Transaction(<span class="string">&#x27;address1&#x27;</span>,<span class="string">&#x27;address2&#x27;</span>,<span class="number">100</span>));</span><br><span class="line">jtcoin.createTransaction(<span class="keyword">new</span> Transaction(<span class="string">&#x27;address2&#x27;</span>,<span class="string">&#x27;address1&#x27;</span>,<span class="number">50</span>));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;\n Starting the miner...&#x27;</span>);</span><br><span class="line"></span><br><span class="line">jtcoin.minePendingTransactions(<span class="string">&#x27;jtaddress&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;jtaddress balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;jtaddress&#x27;</span>));</span><br><span class="line"></span><br><span class="line">jtcoin.minePendingTransactions(<span class="string">&#x27;jtaddress&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;jtaddress new balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;jtaddress&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;address1 balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;address2&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tutorial</category>
+        <category>Blockchain</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>Blockchain</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git Basic Commands</title>
     <url>/2021/01/04/Git-Basic-Commands/</url>
     <content><![CDATA[<p>1.Push</p>
@@ -651,6 +697,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Git Fix Conflict</title>
+    <url>/2021/01/04/Git-Fix-Conflict/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+
+<p>Generally, you just need to delete the origin content , and use the new content</p>
+<p>Strongly recommend you to use “Github Desktop”</p>
+<p>It will clearly display all conflicts and you can fix them directly</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github Basic Config</title>
     <url>/2021/01/04/Github-Basic-Config/</url>
     <content><![CDATA[<p>1.Usage of “.gitignore “ file</p>
@@ -671,25 +736,6 @@
       </categories>
       <tags>
         <tag>Tutorial</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git Fix Conflict</title>
-    <url>/2021/01/04/Git-Fix-Conflict/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
-
-<p>Generally, you just need to delete the origin content , and use the new content</p>
-<p>Strongly recommend you to use “Github Desktop”</p>
-<p>It will clearly display all conflicts and you can fix them directly</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Git</tag>
         <tag>Github</tag>
       </tags>
   </entry>
@@ -741,31 +787,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Live2D</title>
-    <url>/2021/03/08/Hexo-Live2D/</url>
-    <content><![CDATA[<p><a href="https://github.com/EYHN/hexo-helper-live2d">github</a> (You can download model here)</p>
-<p>(1) Install hexo-helper-live2d</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-
-<p>(2)prepare model file</p>
-<p>put the folder in “node_modules”</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">e.g. folder name &quot;live2d-widget-model-miku&quot;</span><br></pre></td></tr></table></figure>
-
-<p>(2) install model</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install &#123;your model&#39;s package name&#125;</span><br></pre></td></tr></table></figure>
-
-<p>(3) _config.yml in Hexo root folder add:</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo Theme</title>
     <url>/2021/03/08/Hexo-Theme/</url>
     <content><![CDATA[<p>Next主题</p>
@@ -785,6 +806,31 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Live2D</title>
+    <url>/2021/03/08/Hexo-Live2D/</url>
+    <content><![CDATA[<p><a href="https://github.com/EYHN/hexo-helper-live2d">github</a> (You can download model here)</p>
+<p>(1) Install hexo-helper-live2d</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>(2)prepare model file</p>
+<p>put the folder in “node_modules”</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">e.g. folder name &quot;live2d-widget-model-miku&quot;</span><br></pre></td></tr></table></figure>
+
+<p>(2) install model</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install &#123;your model&#39;s package name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(3) _config.yml in Hexo root folder add:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -876,39 +922,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Leetcode Rule</title>
-    <url>/2021/03/08/Leetcode-Rule/</url>
-    <content><![CDATA[<p>1</p>
-<p>don’t</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">x:<span class="built_in">int</span></span>)</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>2</p>
-<p>自定义数据结构</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br></pre></td></tr></table></figure>
-
-<p>3</p>
-<p>set hash 导致输出导致OJ上不一致</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">太狠了</span><br></pre></td></tr></table></figure>
-
-<p>4</p>
-<p>leetcode 全局还是传参</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">传参！</span><br></pre></td></tr></table></figure>
-
-<p>5</p>
-<p>库</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findOrder</span>(<span class="params">self, numCourses, prerequisites</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numCourses: int</span></span><br><span class="line"><span class="string">        :type prerequisites: List[List[int]]</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>note</category>
-      </categories>
-      <tags>
-        <tag>Leetcode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python Class</title>
     <url>/2021/01/02/Python-Class/</url>
     <content><![CDATA[<p>simple example: (within the same package)</p>
@@ -953,6 +966,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Python Dict</title>
+    <url>/2021/01/02/Python-Dict/</url>
+    <content><![CDATA[<p>Traverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<p>Reverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python Code</title>
     <url>/2021/01/03/Python-Code/</url>
     <content><![CDATA[<ol>
@@ -980,22 +1012,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Dict</title>
-    <url>/2021/01/02/Python-Dict/</url>
-    <content><![CDATA[<p>Traverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+    <title>Leetcode Rule</title>
+    <url>/2021/03/08/Leetcode-Rule/</url>
+    <content><![CDATA[<p>1</p>
+<p>don’t</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">x:<span class="built_in">int</span></span>)</span></span><br></pre></td></tr></table></figure>
 
-<p>Reverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+
+
+<p>2</p>
+<p>自定义数据结构</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br></pre></td></tr></table></figure>
+
+<p>3</p>
+<p>set hash 导致输出导致OJ上不一致</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">太狠了</span><br></pre></td></tr></table></figure>
+
+<p>4</p>
+<p>leetcode 全局还是传参</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">传参！</span><br></pre></td></tr></table></figure>
+
+<p>5</p>
+<p>库</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findOrder</span>(<span class="params">self, numCourses, prerequisites</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numCourses: int</span></span><br><span class="line"><span class="string">        :type prerequisites: List[List[int]]</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
+        <category>note</category>
       </categories>
       <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
+        <tag>Leetcode</tag>
       </tags>
   </entry>
   <entry>
