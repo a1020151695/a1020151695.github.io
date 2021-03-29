@@ -176,7 +176,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Android-Layout-Rule/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/14/Network-Layer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -190,7 +190,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/04/Android-Layout-Rule/" class="post-title-link" itemprop="url">Android Layout Rule</a>
+            <a href="/2021/03/14/Network-Layer/" class="post-title-link" itemprop="url">Network Layer</a>
         </h2>
 
         <div class="post-meta">
@@ -201,7 +201,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-01-04 23:15:12 / Modified: 23:50:53" itemprop="dateCreated datePublished" datetime="2021-01-04T23:15:12+08:00">2021-01-04</time>
+              <time title="Created: 2021-03-14 16:24:53 / Modified: 16:25:29" itemprop="dateCreated datePublished" datetime="2021-03-14T16:24:53+08:00">2021-03-14</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -209,11 +209,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+                  <a href="/categories/Network/" itemprop="url" rel="index"><span itemprop="name">Network</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/Layout/" itemprop="url" rel="index"><span itemprop="name">Layout</span></a>
+                  <a href="/categories/Network/Basic/" itemprop="url" rel="index"><span itemprop="name">Basic</span></a>
                 </span>
             </span>
 
@@ -228,36 +228,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>1.About Weight</p>
-<p>Allocate the rest space by it’s weight</p>
-<p>Pay attention to the “Rest Space”</p>
-<p>So it’s not right to use weight for all widgets</p>
-<p>For widget like TextView, we should give it a fixed value of height</p>
-<p>So that the text will not be strange</p>
-<p>But for the widget like ScrollView we’d better use weight</p>
-<p>because they should can be stretched</p>
-<p>Note !</p>
-<p>weight can be decimal ~</p>
-<hr>
-<p>2.Center</p>
-<p>If you want to put a image in the center of the whole page</p>
-<p>Do like this </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:orientation</span>=<span class="string">&quot;vertical&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_weight</span>=<span class="string">&quot;9&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span>&gt;</span></span><br><span class="line">            </span><br><span class="line">            <span class="tag">&lt;<span class="name">LinearLayout</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span>/&gt;</span></span><br><span class="line">            </span><br><span class="line">            <span class="tag">&lt;<span class="name">ImageView</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:src</span>=<span class="string">&quot;@drawable/success_sign&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">LinearLayout</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span>/&gt;</span></span><br><span class="line">            </span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">应用层（Application Layer），主要负责应用与网络之间的通信。</span><br><span class="line">运输层（Transport Layer），主要负责两台主机的进程间通信。</span><br><span class="line">网络层（Network Layer），主要负责网络中不同主机之间的通信。</span><br><span class="line">数据链路层（Data Link Layer），主要负责数据在链路中的传输。</span><br><span class="line">物理层（Physical Layer），主要负责数据与物理媒体之间转换。</span><br></pre></td></tr></table></figure>
 
-<p>That’s the power of weight</p>
-<p>With weight, the view can be stretched to fill the blank</p>
-<p>Beside this center </p>
-<p>If You just want to put a view to the center of a layout</p>
-<p>Then use the attribute “layout_gravity”, assign it “center”</p>
-<p>“layout_gravity”, decide the position of a widget within a layout</p>
-<p>“gravity”, decide the text position within a widget</p>
-<hr>
-<p>3.ViewGroup</p>
-<p>Like </p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>&lt;LinearLayout&gt;&lt;/LinearLayout&gt; is allow to add view into it</p>
-<p>&lt;/LinearLayout&gt; is not allow add view into it</p>
 
       
     </div>
@@ -277,7 +249,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Android-Fragment-And-Activity/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/X86-ARM-and-M1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -291,7 +263,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/04/Android-Fragment-And-Activity/" class="post-title-link" itemprop="url">Android Fragment And Activity</a>
+            <a href="/2021/03/13/X86-ARM-and-M1/" class="post-title-link" itemprop="url">X86,ARM and M1</a>
         </h2>
 
         <div class="post-meta">
@@ -302,7 +274,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-01-04 22:57:17 / Modified: 23:12:51" itemprop="dateCreated datePublished" datetime="2021-01-04T22:57:17+08:00">2021-01-04</time>
+              <time title="Created: 2021-03-13 12:13:23 / Modified: 12:31:44" itemprop="dateCreated datePublished" datetime="2021-03-13T12:13:23+08:00">2021-03-13</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -310,11 +282,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+                  <a href="/categories/Computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/Fragment/" itemprop="url" rel="index"><span itemprop="name">Fragment</span></a>
+                  <a href="/categories/Computer/Chip/" itemprop="url" rel="index"><span itemprop="name">Chip</span></a>
                 </span>
             </span>
 
@@ -329,26 +301,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Fragment’s feature is reusable</p>
-<p>A fragment is a completed page, and you can use a fragment tag(&lt;fragment/&gt;) to insert it to any Layout</p>
-<p>The code in fragment activity and normal activity is different</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes, fragment also has it&#39;s activity called &quot;Fragment Activity&quot;</span><br></pre></td></tr></table></figure>
-
-<p>Difference</p>
-<p>1.You can use “applicationContext” directly in normal activity </p>
-<p>But in Fragment Activity, you can’t !</p>
-<p>You need to invoke a method — getContext()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kotlin can use &quot;context&quot; directly, but in fact, it invoke the method getContext()</span><br></pre></td></tr></table></figure>
-
-<p>2.You can use “runOnUiThread” directly in normal activity </p>
-<p>But in Fragment Activity,  you can’t !</p>
-<p>You need to get the Activity which is connected to UI Thread</p>
-<p>Then </p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Conclusion:</p>
-<p>There are some difference, but that’s not a big deal</p>
-<p>Android SDK has solved that problem for us  </p>
+          <p>simple instruction set</p>
+<p>complex instruction set</p>
+<p>GPU inside M1</p>
 
       
     </div>
@@ -368,7 +323,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Android-Bundle/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/13/802-11ax-Wi-Fi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -382,7 +337,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/04/Android-Bundle/" class="post-title-link" itemprop="url">Android Bundle</a>
+            <a href="/2021/03/13/802-11ax-Wi-Fi/" class="post-title-link" itemprop="url">802.11ax Wi-Fi</a>
         </h2>
 
         <div class="post-meta">
@@ -392,14 +347,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-01-04 22:26:13" itemprop="dateCreated datePublished" datetime="2021-01-04T22:26:13+08:00">2021-01-04</time>
+              <time title="Created: 2021-03-13 11:04:52" itemprop="dateCreated datePublished" datetime="2021-03-13T11:04:52+08:00">2021-03-13</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-06 13:50:50" itemprop="dateModified" datetime="2021-01-06T13:50:50+08:00">2021-01-06</time>
+                <time title="Modified: 2021-03-14 18:04:50" itemprop="dateModified" datetime="2021-03-14T18:04:50+08:00">2021-03-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -407,11 +362,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+                  <a href="/categories/Network/" itemprop="url" rel="index"><span itemprop="name">Network</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/Transport-Data/" itemprop="url" rel="index"><span itemprop="name">Transport Data</span></a>
+                  <a href="/categories/Network/Wi-Fi/" itemprop="url" rel="index"><span itemprop="name">Wi-Fi</span></a>
                 </span>
             </span>
 
@@ -426,20 +381,73 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Bundle can be  use for transport data between Fragment</p>
-<p>Send</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Bundle()</span><br><span class="line">bundle.putString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;GFG :- Main Activity&quot;</span>)</span><br><span class="line">NavUtil.navController?.navigate(R.id.signStateForStudent,bundle)</span><br><span class="line"><span class="comment">// When you use navigation</span></span><br></pre></td></tr></table></figure>
-
-<p>Get</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Intent.getExtras()</span><br><span class="line">bundle.getString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;Default&quot;</span>) </span><br><span class="line"><span class="comment">// arg2 will be return when &quot;key1&quot; can&#x27;t be foud in bundle</span></span><br></pre></td></tr></table></figure>
-
-<p>But it can just be transported one time ! !</p>
-<p>When you back to the fragment, the bundle will gone </p>
-<p>Bundle just can be use for the “one-time” issue</p>
-<hr>
-<p>For the data you need to use many time </p>
-<p>You can use companion object {} to solve that problem</p>
-<p>All fragments can get the data directly from the companion object {} within an activity</p>
+          <p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/IEEE_802.11ax">Wikipedia</a></p>
+<table>
+<thead>
+<tr>
+<th align="center">Feature</th>
+<th align="center"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/802.11ac">802.11ac</a></th>
+<th align="center">802.11ax</th>
+<th align="center">Comment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/OFDMA">OFDMA</a></td>
+<td align="center">Not available</td>
+<td align="center">Centrally controlled medium access with dynamic assignment of 26, 52, 106, 242(?), 484(?), or 996(?) tones per station. Each tone consists of a single subcarrier of 78.125 kHz bandwidth. Therefore, bandwidth occupied by a single OFDMA transmission is between 2.03125 MHz and ca. 80 MHz bandwidth.</td>
+<td align="center">OFDMA segregates the spectrum in time-frequency <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Resource_Unit">resource units (RUs)</a>. A central coordinating entity (the AP in 802.11ax) assigns RUs for reception or transmission to associated stations. Through the central scheduling of the RUs contention overhead can be avoided, which increases efficiency in scenarios of dense deployments.</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Multi-user_MIMO">Multi-user MIMO (MU-MIMO)</a></td>
+<td align="center">Available in <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Telecommunications_link#Downlink">Downlink</a> direction</td>
+<td align="center">Available in Downlink and <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Telecommunications_link#Uplink">Uplink</a> direction</td>
+<td align="center">With Downlink MU MIMO an AP may transmit concurrently to multiple stations and with Uplink MU MIMO an AP may simultaneously receive from multiple stations. Whereas OFDMA separates receivers to different RUs, with MU MIMO the devices are separated to different spatial streams. In 802.11ax, MU MIMO and OFDMA technologies can be used simultaneously. To enable uplink MU transmissions, the AP transmits a new control frame (Trigger) which contains scheduling information (RUs allocations for stations, modulation and coding scheme (MCS) that shall be used for each station). Furthermore, Trigger also provides synchronization for an uplink transmission, since the transmission starts <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Short_Interframe_Space">SIFS</a> after the end of Trigger.</td>
+</tr>
+<tr>
+<td align="center">Trigger-based Random Access</td>
+<td align="center">Not available</td>
+<td align="center">Allows performing UL OFDMA transmissions by stations which are not allocated RUs directly.</td>
+<td align="center">In Trigger frame, the AP specifies scheduling information about subsequent UL MU transmission. However, several RUs can be assigned for random access. Stations which are not assigned RUs directly can perform transmissions within RUs assigned for random access. To reduce collision probability (i.e. situation when two or more stations select the same <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Resource_Unit">RU</a> for transmission), the 802.11ax amendment specifies special OFDMA back-off procedure. Random access is favorable for transmitting buffer status reports when the AP has no information about pending UL traffic at a station.</td>
+</tr>
+<tr>
+<td align="center">Spatial frequency reuse</td>
+<td align="center">Not available</td>
+<td align="center">Coloring enables devices to differentiate transmissions in their own network from transmissions in neighboring networks.Adaptive Power and Sensitivity Thresholds allows dynamically adjusting transmit power and signal detection threshold to increase spatial reuse.</td>
+<td align="center">Without spatial reuse capabilities devices refuse transmitting concurrently to transmissions ongoing in other, neighboring networks. With coloring, a wireless transmission is marked at its very beginning helping surrounding devices to decide if a simultaneous use of the wireless medium is permissible or not. A station is allowed to consider the wireless medium as idle and start a new transmission even if the detected signal level from a neighboring network exceeds legacy signal detection threshold, provided that the transmit power for the new transmission is appropriately decreased.</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Network_allocation_vector">NAV</a></td>
+<td align="center">Single NAV</td>
+<td align="center">Two NAVs</td>
+<td align="center">In dense deployment scenarios, NAV value set by a frame originated from one network may be easily reset by a frame originated from another network, which leads to misbehavior and collisions. To avoid this, each 802.11ax station will maintain two separate NAVs — one NAV is modified by frames originated from a network the station is associated with, the other NAV is modified by frames originated from overlapped networks.</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/IEEE_802.11ah#Target_Wake_Time">Target Wake Time (TWT)</a></td>
+<td align="center">Not available</td>
+<td align="center">TWT reduces power consumption and medium access contention.</td>
+<td align="center">TWT is a concept developed in <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/802.11ah">802.11ah</a>. It allows devices to wake up at other periods than the beacon transmission period. Furthermore, the AP may group device to different TWT period thereby reducing the number of devices contending simultaneously for the wireless medium.</td>
+</tr>
+<tr>
+<td align="center">Fragmentation</td>
+<td align="center">Static fragmentation</td>
+<td align="center">Dynamic fragmentation</td>
+<td align="center">With static fragmentation all fragments of a data packet are of equal size except for the last fragment. With dynamic fragmentation a device may fill available RUs of other opportunities to transmit up to the available maximum duration. Thus, dynamic fragmentation helps reduce overhead.</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Guard_interval">Guard interval</a> duration</td>
+<td align="center">0.4 µs or 0.8 µs</td>
+<td align="center">0.8 µs, 1.6 µs or 3.2 µs</td>
+<td align="center">Extended guard interval durations allow for better protection against signal delay spread as it occurs in outdoor environments.</td>
+</tr>
+<tr>
+<td align="center">Symbol duration</td>
+<td align="center">3.2 µs</td>
+<td align="center">12.8 µs</td>
+<td align="center">Since the subcarrier spacing is reduced by a factor of 4, the OFDM symbol duration is increased by a factor of 4 as well. Extended symbol durations allow for increased efficiency.[<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/IEEE_802.11ax#cite_note-LongerSymbolDuration-14">11]</a></td>
+</tr>
+</tbody></table>
+<p>OFDMA</p>
+<p>BSS Color</p>
 
       
     </div>
@@ -459,7 +467,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Android-Dialog-Processing/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/11/Blockchain-Example-In-JS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -473,7 +481,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/04/Android-Dialog-Processing/" class="post-title-link" itemprop="url">Android Dialog Processing</a>
+            <a href="/2021/03/11/Blockchain-Example-In-JS/" class="post-title-link" itemprop="url">Blockchain Example In JS</a>
         </h2>
 
         <div class="post-meta">
@@ -483,14 +491,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-01-04 22:11:27" itemprop="dateCreated datePublished" datetime="2021-01-04T22:11:27+08:00">2021-01-04</time>
+              <time title="Created: 2021-03-11 15:16:39" itemprop="dateCreated datePublished" datetime="2021-03-11T15:16:39+08:00">2021-03-11</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-06 13:45:35" itemprop="dateModified" datetime="2021-01-06T13:45:35+08:00">2021-01-06</time>
+                <time title="Modified: 2021-03-12 10:28:33" itemprop="dateModified" datetime="2021-03-12T10:28:33+08:00">2021-03-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -498,11 +506,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+                  <a href="/categories/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a>
+                  <a href="/categories/Tutorial/Blockchain/" itemprop="url" rel="index"><span itemprop="name">Blockchain</span></a>
                 </span>
             </span>
 
@@ -517,449 +525,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Display a circle in dialog when loading something</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Open source developers from every continent use npm to share and borrow packages</span><br></pre></td></tr></table></figure>
 
-<p>The circle is just a ProgressBar widget in dialog</p>
-<p>Note !</p>
-<p>1.Create and show a dialog should be done by UI Thread</p>
-<p>2.There are some callback functions about the dialog, you can check the document</p>
-<p>If you want to close the dialog by program </p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">It&#39;s like &quot;pip&quot; in Python, which is use for installing moudle</span><br></pre></td></tr></table></figure>
 
-<p>Note !</p>
-<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
-<p>2.dialog = dialogBuilder.create()</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">As an asynchronous event-driven JavaScript runtime</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use for running js program </span><br></pre></td></tr></table></figure>
 
-      
-    </div>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/nodejs/nodejs-install-setup.html">Tutorial of installing node.js </a> （Support Windows、Linux、Mac, but  recommend Windows ）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">由于新版的nodejs已经集成了npm，所以npm也一并安装好了</span><br></pre></td></tr></table></figure>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/nodejs/nodejs-npm.html">Config npm</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install npm -g</span><br></pre></td></tr></table></figure>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Android-Thread/">
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="FreeJim">
-      <meta itemprop="description" content="Hello World">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="藏经阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/04/Android-Thread/" class="post-title-link" itemprop="url">Android Thread</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-04 20:03:39" itemprop="dateCreated datePublished" datetime="2021-01-04T20:03:39+08:00">2021-01-04</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Android-Intent-Transport-Data/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="FreeJim">
-      <meta itemprop="description" content="Hello World">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="藏经阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/04/Android-Intent-Transport-Data/" class="post-title-link" itemprop="url">Android Intent Transport Data</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-04 19:59:36" itemprop="dateCreated datePublished" datetime="2021-01-04T19:59:36+08:00">2021-01-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-06 13:51:09" itemprop="dateModified" datetime="2021-01-06T13:51:09+08:00">2021-01-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Example:</p>
-<p>Send data</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Get data</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
-
+<blockquote>
 <p>Note:</p>
-<p>Intent is like a build-in object in Kotlin</p>
+<p>This mirror is use for us to download modules with high speed</p>
+</blockquote>
+<h4 id="Necessary-Module"><a href="#Necessary-Module" class="headerlink" title="Necessary Module"></a>Necessary Module</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save crypto-js</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Github-Basic-Config/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="FreeJim">
-      <meta itemprop="description" content="Hello World">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="藏经阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/04/Github-Basic-Config/" class="post-title-link" itemprop="url">Github Basic Config</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-04 19:54:48" itemprop="dateCreated datePublished" datetime="2021-01-04T19:54:48+08:00">2021-01-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-06 13:53:12" itemprop="dateModified" datetime="2021-01-06T13:53:12+08:00">2021-01-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Config/" itemprop="url" rel="index"><span itemprop="name">Config</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Config/Github/" itemprop="url" rel="index"><span itemprop="name">Github</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.Usage of “.gitignore “ file</p>
-<p>When you push, you can exclude some files using “.gitignore “ </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*.properties</span><br></pre></td></tr></table></figure>
-
-<p>means exclude all “.properties” file</p>
-<p>You can also exclude a single file, just type it’s whole file name</p>
-<p>Usually, “.gitignore “ file can’t work directly, you need to do this also</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br></pre></td></tr></table></figure>
-
-<p>Then push again</p>
+<p>Recommended Editor – <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Vscode</a>（Support Windows、Linux、Mac）</p>
 <hr>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>Blockchain Valid (check whether the blockchain is valid)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">index,timestamp,data,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.data = data;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;  <span class="comment">// hash all elements in a block</span></span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.index+<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.data)).toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];  <span class="comment">// the first block called &quot;Genesis&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="number">0</span>,<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123; </span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.hash = newBlock.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;  	</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i];</span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;		<span class="comment">// check current block</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;      <span class="comment">// check previous block along the chain</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">1</span>,<span class="string">&quot;01/02/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">4</span>&#125;));</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">2</span>,<span class="string">&quot;01/03/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">10</span>&#125;));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(jtcoin,<span class="literal">null</span>,<span class="number">4</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Is the chain valid? &#x27;</span> + jtcoin.isChainValid());</span><br><span class="line"></span><br><span class="line">jtcoin.chain[<span class="number">1</span>].data = &#123;<span class="attr">amount</span>:<span class="number">5</span>&#125;;</span><br><span class="line">jtcoin.chain[<span class="number">1</span>].hash = jtcoin.chain[<span class="number">1</span>].caculateHash();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;tamper&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Is the chain valid? &#x27;</span> + jtcoin.isChainValid());</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(jtcoin,<span class="literal">null</span>,<span class="number">4</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-      
-    </div>
+<p>proof-of-work (It can also be called “mine”)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">index,timestamp,data,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.data = data;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.nonce = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.index+<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.data)+<span class="built_in">this</span>.nonce).toString();</span><br><span class="line">        <span class="comment">// you need to update this hash method,</span></span><br><span class="line">        <span class="comment">// because you change the content of block</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">mineBlock</span>(<span class="params">difficulty</span>)</span>&#123;  <span class="comment">// proof of work</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">this</span>.hash.substring(<span class="number">0</span>,difficulty) !== <span class="built_in">Array</span>(difficulty+<span class="number">1</span>).join(<span class="string">&#x27;0&#x27;</span>))&#123;</span><br><span class="line">            <span class="built_in">this</span>.nonce++;   <span class="comment">// try to get correct hash by changing this variable  </span></span><br><span class="line">            <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();  </span><br><span class="line">            <span class="comment">// &quot;correct hash&quot; is the correct amount &#x27;0&#x27; in the head of the hash value </span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Block mined hash:&quot;</span> + <span class="built_in">this</span>.hash);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];</span><br><span class="line">        <span class="built_in">this</span>.difficulty = <span class="number">5</span> </span><br><span class="line">        <span class="comment">// which means five &#x27;0&#x27; in the head of the hash</span></span><br><span class="line">        <span class="comment">// when &#x27;difficulty&#x27; get bigger,</span></span><br><span class="line">        <span class="comment">// miner will spent more time to mine</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="number">0</span>,<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i]; </span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Mining...&quot;</span>);</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">1</span>,<span class="string">&quot;01/02/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">4</span>&#125;));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Mining...&quot;</span>);</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">2</span>,<span class="string">&quot;01/03/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">10</span>&#125;));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Git-Basic-Commands/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="FreeJim">
-      <meta itemprop="description" content="Hello World">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="藏经阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/04/Git-Basic-Commands/" class="post-title-link" itemprop="url">Git Basic Commands</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-04 19:52:08" itemprop="dateCreated datePublished" datetime="2021-01-04T19:52:08+08:00">2021-01-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-06 13:53:02" itemprop="dateModified" datetime="2021-01-06T13:53:02+08:00">2021-01-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.Push</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p>push master branch</p>
-<hr>
-<p>2.Pull</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3.Remote Address</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote show</span><br></pre></td></tr></table></figure>
-
-<p>Add remote address</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;fengcangjun&#x2F;learngit.git</span><br></pre></td></tr></table></figure>
-
-<p>Delete origin remote address</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Github-SSH-Deploy-Key/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="FreeJim">
-      <meta itemprop="description" content="Hello World">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="藏经阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/04/Github-SSH-Deploy-Key/" class="post-title-link" itemprop="url">Github SSH Deploy Key</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-04 19:35:50" itemprop="dateCreated datePublished" datetime="2021-01-04T19:35:50+08:00">2021-01-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-06 13:53:29" itemprop="dateModified" datetime="2021-01-06T13:53:29+08:00">2021-01-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Github/" itemprop="url" rel="index"><span itemprop="name">Github</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Github/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>With Deploy key you can push directly, do not need to input username and password every time</p>
-<p>Generate SSH key</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f deploy_key_blog -C &quot;1020151695@qq.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p> Then press “Enter” twice is OK</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E-mail address like an &quot;id&quot;</span><br><span class="line">So that Github repository know who you are</span><br><span class="line">And you don&#39;t need to input username and password again</span><br></pre></td></tr></table></figure>
-
-<p>Then it will create a new file named “deploy_key_blog.pub”</p>
-<p>Check it’s content use the command:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">more deploy_key_blog.pub</span><br></pre></td></tr></table></figure>
-
-<p>Then copy the content and go to the project in Github</p>
-<p>“Setting”–”Deploy keys”</p>
-<p>Just do it !</p>
-<p>And SSH key absolutely just support the ssh way</p>
-<p>If you use HTTPS remote address, you need to switch it </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin      &#x2F;&#x2F; delete origin remote address </span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:nickchou&#x2F;gocode.git  &#x2F;&#x2F; apply new remote address</span><br></pre></td></tr></table></figure>
-
-
+<p>Balance (how many coins in you account)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Transaction</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">fromAddress,toAddress,amount</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.fromAddress = fromAddress;</span><br><span class="line">        <span class="built_in">this</span>.toAddress = toAddress;</span><br><span class="line">        <span class="built_in">this</span>.amount = amount;  <span class="comment">// the amount of money</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">timestamp,transactions,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.transactions = transactions;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.nonce = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.transactions)+<span class="built_in">this</span>.nonce).toString(); </span><br><span class="line">        <span class="comment">// you need to update this hash method,</span></span><br><span class="line">        <span class="comment">// because you change the content of block</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">mineBlock</span>(<span class="params">difficulty</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">this</span>.hash.substring(<span class="number">0</span>,difficulty) !== <span class="built_in">Array</span>(difficulty+<span class="number">1</span>).join(<span class="string">&#x27;0&#x27;</span>))&#123;</span><br><span class="line">            <span class="built_in">this</span>.nonce++;</span><br><span class="line">            <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Block mined hash:&quot;</span> + <span class="built_in">this</span>.hash);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];</span><br><span class="line">        <span class="built_in">this</span>.difficulty = <span class="number">2</span>;</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions = [];</span><br><span class="line">        <span class="built_in">this</span>.mineReward = <span class="number">100</span>; <span class="comment">// reward for miner</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i];</span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">minePendingTransactions</span>(<span class="params">mineRewardAddress</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> block = <span class="keyword">new</span> Block(<span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="built_in">this</span>.pendingTransactions);</span><br><span class="line">        block.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Block successfully minded!&#x27;</span>);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(block);</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions = [<span class="keyword">new</span> Transaction(<span class="literal">null</span>,mineRewardAddress,<span class="built_in">this</span>.mineReward)];</span><br><span class="line">        <span class="comment">// send mineReward to miner</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">createTransaction</span>(<span class="params">transaction</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions.push(transaction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">getBalanceOfAddress</span>(<span class="params">address</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> balance = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> block <span class="keyword">of</span> <span class="built_in">this</span>.chain</span>)</span>&#123;  </span><br><span class="line">            <span class="comment">// balance should be caculated everytime from the beginning of the chain</span></span><br><span class="line">            <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> trans <span class="keyword">of</span> block.transactions</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (trans.fromAddress == address)&#123;</span><br><span class="line">                    balance -= trans.amount;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="function"><span class="title">if</span>(<span class="params">trans.toAddress == address</span>)</span>&#123;</span><br><span class="line">                    balance += trans.amount;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> balance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line">jtcoin.createTransaction(<span class="keyword">new</span> Transaction(<span class="string">&#x27;address1&#x27;</span>,<span class="string">&#x27;address2&#x27;</span>,<span class="number">100</span>));</span><br><span class="line">jtcoin.createTransaction(<span class="keyword">new</span> Transaction(<span class="string">&#x27;address2&#x27;</span>,<span class="string">&#x27;address1&#x27;</span>,<span class="number">50</span>));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;\n Starting the miner...&#x27;</span>);</span><br><span class="line"></span><br><span class="line">jtcoin.minePendingTransactions(<span class="string">&#x27;jtaddress&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;jtaddress balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;jtaddress&#x27;</span>));</span><br><span class="line"></span><br><span class="line">jtcoin.minePendingTransactions(<span class="string">&#x27;jtaddress&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;jtaddress new balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;jtaddress&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;address1 balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;address2&#x27;</span>));</span><br></pre></td></tr></table></figure>
 
 
       
@@ -980,7 +577,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/Git-Fix-Conflict/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/VS-Error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -994,7 +591,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/04/Git-Fix-Conflict/" class="post-title-link" itemprop="url">Git Fix Conflict</a>
+            <a href="/2021/03/08/VS-Error/" class="post-title-link" itemprop="url">VS Error</a>
         </h2>
 
         <div class="post-meta">
@@ -1003,27 +600,144 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-01-04 19:28:07" itemprop="dateCreated datePublished" datetime="2021-01-04T19:28:07+08:00">2021-01-04</time>
+              <time title="Created: 2021-03-08 21:52:12 / Modified: 22:31:27" itemprop="dateCreated datePublished" datetime="2021-03-08T21:52:12+08:00">2021-03-08</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-06 13:52:58" itemprop="dateModified" datetime="2021-01-06T13:52:58+08:00">2021-01-06</time>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
+
+<p>Solve </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/Android-Studio-SDK-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="FreeJim">
+      <meta itemprop="description" content="Hello World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏经阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/08/Android-Studio-SDK-config/" class="post-title-link" itemprop="url">Android Studio SDK config</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
               </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-08 21:39:26 / Modified: 21:40:24" itemprop="dateCreated datePublished" datetime="2021-03-08T21:39:26+08:00">2021-03-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
+
+
+
+<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/Google-E-mail-Gmail/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="FreeJim">
+      <meta itemprop="description" content="Hello World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏经阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/08/Google-E-mail-Gmail/" class="post-title-link" itemprop="url">Google E-mail Gmail</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-08 21:37:51 / Modified: 21:38:27" itemprop="dateCreated datePublished" datetime="2021-03-08T21:37:51+08:00">2021-03-08</time>
+            </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a>
+                  <a href="/categories/Google/" itemprop="url" rel="index"><span itemprop="name">Google</span></a>
                 </span>
             </span>
 
@@ -1038,11 +752,268 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+          <p>QQ邮箱中选择gmail注册</p>
+<p>中国的电话号码前加+86</p>
 
-<p>Generally, you just need to delete the origin content , and use the new content</p>
-<p>Strongly recommend you to use “Github Desktop”</p>
-<p>It will clearly display all conflicts and you can fix them directly</p>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/Hexo-Theme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="FreeJim">
+      <meta itemprop="description" content="Hello World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏经阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/08/Hexo-Theme/" class="post-title-link" itemprop="url">Hexo Theme</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-08 21:32:10 / Modified: 21:32:26" itemprop="dateCreated datePublished" datetime="2021-03-08T21:32:10+08:00">2021-03-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Next主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+
+
+<p>_config.yml新增</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在Next主题的配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
+
+<p>把local_search enable 置true就好了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/Hexo-Live2D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="FreeJim">
+      <meta itemprop="description" content="Hello World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏经阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/08/Hexo-Live2D/" class="post-title-link" itemprop="url">Hexo Live2D</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-08 21:31:03 / Modified: 21:36:59" itemprop="dateCreated datePublished" datetime="2021-03-08T21:31:03+08:00">2021-03-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d">github</a> (You can download model here)</p>
+<p>(1) Install hexo-helper-live2d</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>(2)prepare model file</p>
+<p>put the folder in “node_modules”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.g. folder name &quot;live2d-widget-model-miku&quot;</span><br></pre></td></tr></table></figure>
+
+<p>(2) install model</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &#123;your model&#39;s package name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(3) _config.yml in Hexo root folder add:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/cmd-Shortcut/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="FreeJim">
+      <meta itemprop="description" content="Hello World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏经阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/08/cmd-Shortcut/" class="post-title-link" itemprop="url">cmd Shortcut</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-08 21:28:30 / Modified: 21:29:02" itemprop="dateCreated datePublished" datetime="2021-03-08T21:28:30+08:00">2021-03-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Shortcut/" itemprop="url" rel="index"><span itemprop="name">Shortcut</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1.源文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere]</span><br><span class="line">&quot;ShowBasedOnVelocityId&quot;&#x3D;dword:00639bc8</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere\command]</span><br><span class="line">@&#x3D;&quot;cmd.exe &#x2F;s &#x2F;k pushd \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>2.想要Windows Terminal </p>
+<p>把其快捷方式放到System32下（即和cmd.exe一起）</p>
+<p>然后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere]</span><br><span class="line">&quot;ShowBasedOnVelocityId&quot;&#x3D;dword:00639bc8</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere\command]</span><br><span class="line">@&#x3D;&quot;wt.exe cmd.exe &#x2F;s &#x2F;k pushd \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>pushd 相当于cd</p>
+<p>你也可以在cmd下输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmd pushd g:</span><br></pre></td></tr></table></figure>
+
+<p>相当于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd g:</span><br></pre></td></tr></table></figure>
+
+<p>具体原理我不是很想研究。。</p>
+<p>会用就好了 这玩意儿</p>
+<p>3.进入注册表</p>
+<p>win+r</p>
+<p>regedit </p>
+<p>你可以根据源代码找到注册表的对应位置</p>
+<p>4.这里是微软介绍reg的<a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/help/310516/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg">文档</a></p>
+<p>虽然我看不太懂</p>
+<p>简单地说了最上面的version不是简单的注释</p>
+<p>而是对应了不同的windows版本</p>
+<p>然后下面的是具体的值的设置</p>
+<p>你也可以一GUI的形式到regedit下修改</p>
 
       
     </div>
@@ -1061,7 +1032,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1129,16 +1100,16 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">74</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
