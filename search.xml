@@ -1,74 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Android Back Button</title>
-    <url>/2021/01/04/Android-Back-Button/</url>
-    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onBackPressed()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>This function is what your Android do when you press the back button</p>
-<p>If you don’t want user use back button somewhere</p>
-<p>Just do like this</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// super.onBackPressed()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Bundle</title>
-    <url>/2021/01/04/Android-Bundle/</url>
-    <content><![CDATA[<p>Bundle can be  use for transport data between Fragment</p>
-<p>Send</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Bundle()</span><br><span class="line">bundle.putString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;GFG :- Main Activity&quot;</span>)</span><br><span class="line">NavUtil.navController?.navigate(R.id.signStateForStudent,bundle)</span><br><span class="line"><span class="comment">// When you use navigation</span></span><br></pre></td></tr></table></figure>
-
-<p>Get</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Intent.getExtras()</span><br><span class="line">bundle.getString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;Default&quot;</span>) </span><br><span class="line"><span class="comment">// arg2 will be return when &quot;key1&quot; can&#x27;t be foud in bundle</span></span><br></pre></td></tr></table></figure>
-
-<p>But it can just be transported one time ! !</p>
-<p>When you back to the fragment, the bundle will gone </p>
-<p>Bundle just can be use for the “one-time” issue</p>
-<hr>
-<p>For the data you need to use many time </p>
-<p>You can use companion object {} to solve that problem</p>
-<p>All fragments can get the data directly from the companion object {} within an activity</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Transport Data</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Add Views</title>
-    <url>/2021/01/06/Android-Add-Views/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>802.11ax Wi-Fi</title>
     <url>/2021/03/13/802-11ax-Wi-Fi/</url>
     <content><![CDATA[<p><a href="https://en.wikipedia.org/wiki/IEEE_802.11ax">Wikipedia</a></p>
@@ -148,6 +80,133 @@
       </tags>
   </entry>
   <entry>
+    <title>Ajax Tutorial</title>
+    <url>/2021/05/11/Ajax-Tutorial/</url>
+    <content><![CDATA[<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">            type: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line">            url: <span class="string">&quot;http://localhost:8080/getRecord?area=&quot;</span>+area,</span><br><span class="line">            dataType: <span class="string">&quot;json&quot;</span>,</span><br><span class="line">            jsonp: <span class="string">&quot;callback&quot;</span>,</span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">json</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(json);</span><br><span class="line">                <span class="keyword">let</span> mainBody = <span class="built_in">document</span>.getElementById(<span class="string">&quot;main-body&quot;</span>);</span><br><span class="line">                <span class="keyword">let</span> table = <span class="string">&quot;&lt;table class=&#x27;table&#x27;&gt;&quot;</span>;</span><br><span class="line">                <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> key <span class="keyword">in</span> json</span>)</span>&#123;</span><br><span class="line">                    table += <span class="string">&quot;&lt;tr&gt;&lt;td&gt;&quot;</span>+key+<span class="string">&quot;&lt;/td&gt;&lt;td&gt;&quot;</span>+json[key]+<span class="string">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">                table+=<span class="string">&quot;&lt;/table&gt;&quot;</span></span><br><span class="line">                mainBody.innerHTML=table;</span><br><span class="line">            &#125;,</span><br><span class="line">            error: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                alert(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Android Add Views</title>
+    <url>/2021/01/06/Android-Add-Views/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Back Button</title>
+    <url>/2021/01/04/Android-Back-Button/</url>
+    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onBackPressed()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This function is what your Android do when you press the back button</p>
+<p>If you don’t want user use back button somewhere</p>
+<p>Just do like this</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// super.onBackPressed()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Bundle</title>
+    <url>/2021/01/04/Android-Bundle/</url>
+    <content><![CDATA[<p>Bundle can be  use for transport data between Fragment</p>
+<p>Send</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Bundle()</span><br><span class="line">bundle.putString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;GFG :- Main Activity&quot;</span>)</span><br><span class="line">NavUtil.navController?.navigate(R.id.signStateForStudent,bundle)</span><br><span class="line"><span class="comment">// When you use navigation</span></span><br></pre></td></tr></table></figure>
+
+<p>Get</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Intent.getExtras()</span><br><span class="line">bundle.getString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;Default&quot;</span>) </span><br><span class="line"><span class="comment">// arg2 will be return when &quot;key1&quot; can&#x27;t be foud in bundle</span></span><br></pre></td></tr></table></figure>
+
+<p>But it can just be transported one time ! !</p>
+<p>When you back to the fragment, the bundle will gone </p>
+<p>Bundle just can be use for the “one-time” issue</p>
+<hr>
+<p>For the data you need to use many time </p>
+<p>You can use companion object {} to solve that problem</p>
+<p>All fragments can get the data directly from the companion object {} within an activity</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Transport Data</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android DeviceId</title>
+    <url>/2021/01/04/Android-DeviceId/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Dialog Processing</title>
+    <url>/2021/01/04/Android-Dialog-Processing/</url>
+    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The circle is just a ProgressBar widget in dialog</p>
+<p>Note !</p>
+<p>1.Create and show a dialog should be done by UI Thread</p>
+<p>2.There are some callback functions about the dialog, you can check the document</p>
+<p>If you want to close the dialog by program </p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
+
+<p>Note !</p>
+<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
+<p>2.dialog = dialogBuilder.create()</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Fragment And Activity</title>
     <url>/2021/01/04/Android-Fragment-And-Activity/</url>
     <content><![CDATA[<p>Fragment’s feature is reusable</p>
@@ -180,23 +239,17 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Dialog Processing</title>
-    <url>/2021/01/04/Android-Dialog-Processing/</url>
-    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>Android Intent Transport Data</title>
+    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
+    <content><![CDATA[<p>Example:</p>
+<p>Send data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>The circle is just a ProgressBar widget in dialog</p>
-<p>Note !</p>
-<p>1.Create and show a dialog should be done by UI Thread</p>
-<p>2.There are some callback functions about the dialog, you can check the document</p>
-<p>If you want to close the dialog by program </p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
+<p>Get data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Note !</p>
-<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
-<p>2.dialog = dialogBuilder.create()</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
-
+<p>Note:</p>
+<p>Intent is like a build-in object in Kotlin</p>
 ]]></content>
       <categories>
         <category>Android</category>
@@ -228,6 +281,27 @@
 <p>Then you can name id as you like, but do not forget it, it is really important ! !</p>
 <hr>
 <p>After two steps, you can see a fragment is added to an activity</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Layout Parameter</title>
+    <url>/2021/01/06/Android-Layout-Parameter/</url>
+    <content><![CDATA[<p>Build</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> layoutParamsForInfoUnit: LinearLayout.LayoutParams? = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">buildLayoutParamsForInfoUnit</span><span class="params">(context: <span class="type">Context</span>?)</span></span>&#123;</span><br><span class="line">layoutParamsForInfoUnit =</span><br><span class="line">                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DpUtil.dip2px(context,<span class="number">100f</span>))</span><br><span class="line">layoutParamsForInfoUnit?.setMargins(DpUtil.dip2px(context, <span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), <span class="number">0</span>) <span class="comment">// left,top,right,bottom</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Use</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">signDataView!!.layoutParams &#x3D; LayoutUtil.layoutParamsForInfoUnit</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <categories>
         <category>Android</category>
@@ -281,49 +355,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Layout Parameter</title>
-    <url>/2021/01/06/Android-Layout-Parameter/</url>
-    <content><![CDATA[<p>Build</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> layoutParamsForInfoUnit: LinearLayout.LayoutParams? = <span class="literal">null</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">buildLayoutParamsForInfoUnit</span><span class="params">(context: <span class="type">Context</span>?)</span></span>&#123;</span><br><span class="line">layoutParamsForInfoUnit =</span><br><span class="line">                LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DpUtil.dip2px(context,<span class="number">100f</span>))</span><br><span class="line">layoutParamsForInfoUnit?.setMargins(DpUtil.dip2px(context, <span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), DpUtil.dip2px(context,<span class="number">10f</span>), <span class="number">0</span>) <span class="comment">// left,top,right,bottom</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Use</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">signDataView!!.layoutParams &#x3D; LayoutUtil.layoutParamsForInfoUnit</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Intent Transport Data</title>
-    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
-    <content><![CDATA[<p>Example:</p>
-<p>Send data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Get data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Note:</p>
-<p>Intent is like a build-in object in Kotlin</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Lifecycle Of Activity</title>
     <url>/2021/01/04/Android-Lifecycle-Of-Activity/</url>
     <content><![CDATA[<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Document</a></p>
@@ -337,6 +368,44 @@
       <tags>
         <tag>Android</tag>
         <tag>Turorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Navigation Tutorial</title>
+    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
+    <content><![CDATA[<p>1.New A Navigation</p>
+<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
+<p>Give your navigation a name, then click “OK”</p>
+<p>Then you will got a xml file of your navigation</p>
+<p>2.Add A NavHost To Your Activity</p>
+<p>Go to the xml file of your activity</p>
+<p>Use “Design” model </p>
+<p>“Palette” – “Container” – “NavHostFragment”</p>
+<p>Drag it to the phone</p>
+<p>And choose a navigation xml file for the container</p>
+<p>Then we finish the basic of navigation</p>
+<p>3.Add Fragments To Navigation</p>
+<p>Go to the xml file of your navigation </p>
+<p>Still use “Design” model</p>
+<p>Then “New Destination”</p>
+<p>4.Use Navigation</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
+
+<p>Then you will be navigate to a fragment named “hello”</p>
+<hr>
+<p>supportFragmentManager</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -384,67 +453,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android DeviceId</title>
-    <url>/2021/01/04/Android-DeviceId/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Navigation Tutorial</title>
-    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
-    <content><![CDATA[<p>1.New A Navigation</p>
-<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
-<p>Give your navigation a name, then click “OK”</p>
-<p>Then you will got a xml file of your navigation</p>
-<p>2.Add A NavHost To Your Activity</p>
-<p>Go to the xml file of your activity</p>
-<p>Use “Design” model </p>
-<p>“Palette” – “Container” – “NavHostFragment”</p>
-<p>Drag it to the phone</p>
-<p>And choose a navigation xml file for the container</p>
-<p>Then we finish the basic of navigation</p>
-<p>3.Add Fragments To Navigation</p>
-<p>Go to the xml file of your navigation </p>
-<p>Still use “Design” model</p>
-<p>Then “New Destination”</p>
-<p>4.Use Navigation</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
-
-<p>Then you will be navigate to a fragment named “hello”</p>
-<hr>
-<p>supportFragmentManager</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Thread</title>
-    <url>/2021/01/04/Android-Thread/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Android Studio SDK config</title>
     <url>/2021/03/08/Android-Studio-SDK-config/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
@@ -462,6 +470,32 @@
 
 <p>Config</p>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configSwipeRefresh</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> swipe =</span><br><span class="line">        view?.findViewById&lt;SwipeRefreshLayout&gt;(R.id.location_swipe_for_student)</span><br><span class="line">    swipe?.setOnRefreshListener &#123;</span><br><span class="line">        MapUtil.mLocationClient?.startLocation()</span><br><span class="line">        refreshActivity()</span><br><span class="line">        swipe.isRefreshing = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Thread</title>
+    <url>/2021/01/04/Android-Thread/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Android Tool Bar (On Top)</title>
+    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>ConfigBackButton</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -531,27 +565,6 @@
 <p>But you can’t use the new feature of the SDK</p>
 <p>It depends on you</p>
 <p>Haha</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Tool Bar (On Top)</title>
-    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>ConfigBackButton</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
 ]]></content>
       <categories>
         <category>Android</category>
@@ -780,16 +793,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Blockchain Reference</title>
-    <url>/2021/03/20/Blockchain-Reference/</url>
-    <content><![CDATA[<p><a href="https://github.com/chaozh/awesome-blockchain-cn">Github1</a></p>
-<p><a href="https://github.com/LiuBoyu/blockchain">Github2</a></p>
-<p>BIP</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A Bitcoin Improvement Proposal (BIP) is a design document for introducing features or information to Bitcoin. This is the standard way of communicating ideas since Bitcoin has no formal structure.</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>Blockchain Example In JS</title>
     <url>/2021/03/11/Blockchain-Example-In-JS/</url>
     <content><![CDATA[<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Open source developers from every continent use npm to share and borrow packages</span><br></pre></td></tr></table></figure>
@@ -852,9 +855,56 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Daily Doubt</title>
-    <url>/2021/03/22/Daily-Doubt/</url>
-    <content><![CDATA[<p>bash is different env with cmd</p>
+    <title>Blockchain Reference</title>
+    <url>/2021/03/20/Blockchain-Reference/</url>
+    <content><![CDATA[<p><a href="https://github.com/chaozh/awesome-blockchain-cn">Github1</a></p>
+<p><a href="https://github.com/LiuBoyu/blockchain">Github2</a></p>
+<p>BIP</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A Bitcoin Improvement Proposal (BIP) is a design document for introducing features or information to Bitcoin. This is the standard way of communicating ideas since Bitcoin has no formal structure.</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Blockchain Transaction</title>
+    <url>/2021/03/22/Blockchain-Transaction/</url>
+    <content><![CDATA[<p>UTXO(unspend transaction output)</p>
+<p>Bitcoin Core decoded</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">&quot;locktime&quot;</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">&quot;vin&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;txid&quot;</span>: <span class="string">&quot;7957a35fe64f80d234d76d83a2a8f1a0d8149a41d81de548f0a65a8a999f6f18&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;vout&quot;</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">&quot;scriptSig&quot;</span> : <span class="string">&quot;3045022100884d142d86652a3f47ba4746ec719bbfbd040a570b1deccbb6498c75c4ae24cb02204b9f039ff08df09cbe9f6addac960298cad530a863ea8f53982c09db8f6e3813[ALL] 0484ecc0d46f1918b30928fa0e4ed99f16a0fb4fde0735e7ade8416ab9fe423cc5412336376789d172787ec3457eee41c04f4938de5cc17b4a10fa336a8d752adf&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;sequence&quot;</span>: <span class="number">4294967295</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;vout&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;value&quot;</span>: <span class="number">0.01500000</span>,</span><br><span class="line">      <span class="attr">&quot;scriptPubKey&quot;</span>: <span class="string">&quot;OP_DUP OP_HASH160 ab68025513c3dbd2f7b92a94e0581f5d50f654e7 OP_EQUALVERIFY OP_CHECKSIG&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;value&quot;</span>: <span class="number">0.08450000</span>,</span><br><span class="line">      <span class="attr">&quot;scriptPubKey&quot;</span>: <span class="string">&quot;OP_DUP OP_HASH160 7f9b1a7fb68d60c536c2fd8aeaa53a8f3cc025a8 OP_EQUALVERIFY OP_CHECKSIG&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note</p>
+<p>The cryptographic puzzle is also known as a <em>locking script</em>, a <em>witness script</em>, or a scriptPubKey.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">The bitcoin transaction script language, called Script, is a Forth-like reverse-polish notation stack-based execution language. </span><br></pre></td></tr></table></figure>
+
+<p>validate transaction</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Bitcoin transaction validation is not based on a static pattern, but instead is achieved through the execution of a scripting language.</span><br></pre></td></tr></table></figure>
+
+<p>Script</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A limited language prevents the transaction validation mechanism from being used as a vulnerability.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Therefore, all the information needed to execute a script is contained within the script. A script will predictably execute the same way on any system. </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Bitcoin’s transaction validation engine relies on two types of scripts to validate transactions: a locking script and an unlocking script.</span><br></pre></td></tr></table></figure>
+
+
+
+<p>why “UTXO back” </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if you have an UTXO worth 20 bitcoin and want to pay only 1 bitcoin, </span><br><span class="line">your transaction must consume the entire 20-bitcoin UTXO and produce two outputs: </span><br><span class="line">one paying 1 bitcoin to your desired recipient and </span><br><span class="line">another paying 19 bitcoin in change back to your wallet.</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Transaction outputs consist of two parts:</span><br><span class="line"></span><br><span class="line">An amount of bitcoin, denominated in satoshis, the smallest bitcoin unit</span><br><span class="line">A cryptographic puzzle that determines the conditions required to spend the output</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Bootstrap Tutorial</title>
+    <url>/2021/05/11/Bootstrap-Tutorial/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
   </entry>
   <entry>
@@ -928,46 +978,10 @@
       </tags>
   </entry>
   <entry>
-    <title>Dockerfile Basic</title>
-    <url>/2021/03/28/Dockerfile-Basic/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
-
-<p>will show the container id and container  name</p>
-<p>with name, you can start the container</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start container_name</span><br></pre></td></tr></table></figure>
-
-<p>then</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker stop container_name</span><br><span class="line">docker restart container_name</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build 会把当前目录下的文件映射进container</span><br></pre></td></tr></table></figure>
-
+    <title>Daily Doubt</title>
+    <url>/2021/03/22/Daily-Doubt/</url>
+    <content><![CDATA[<p>bash is different env with cmd</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Dockerfile Error</title>
-    <url>/2021/03/28/Dockerfile-Error/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Temporary failure resolving ‘archive.ubuntu.com’</span><br></pre></td></tr></table></figure>
-
-<p><strong>快速解决方法：</strong></p>
-<p>修改/etc/default/docker文件，取消如下行前边的注释：</p>
-<blockquote>
-<p>DOCKER_OPTS=”–dns 8.8.8.8 –dns 8.8.4.4”</p>
-</blockquote>
-<p>结果：</p>
-<p>修改配置并重新启动docker服务后，docker build命令正常。</p>
-<blockquote>
-<p>service docker restart</p>
-</blockquote>
-<hr>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">when docker build error</span><br><span class="line">when you fix it</span><br><span class="line">it will continue, not from begining</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
   </entry>
   <entry>
     <title>Docker Basic</title>
@@ -977,6 +991,9 @@
 
 <p>images list</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p>delete images</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker rmi id</span><br></pre></td></tr></table></figure>
 
 <p>container status</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
@@ -1021,38 +1038,49 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Blockchain Transaction</title>
-    <url>/2021/03/22/Blockchain-Transaction/</url>
-    <content><![CDATA[<p>UTXO(unspend transaction output)</p>
-<p>Bitcoin Core decoded</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">&quot;locktime&quot;</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">&quot;vin&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;txid&quot;</span>: <span class="string">&quot;7957a35fe64f80d234d76d83a2a8f1a0d8149a41d81de548f0a65a8a999f6f18&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;vout&quot;</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">&quot;scriptSig&quot;</span> : <span class="string">&quot;3045022100884d142d86652a3f47ba4746ec719bbfbd040a570b1deccbb6498c75c4ae24cb02204b9f039ff08df09cbe9f6addac960298cad530a863ea8f53982c09db8f6e3813[ALL] 0484ecc0d46f1918b30928fa0e4ed99f16a0fb4fde0735e7ade8416ab9fe423cc5412336376789d172787ec3457eee41c04f4938de5cc17b4a10fa336a8d752adf&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;sequence&quot;</span>: <span class="number">4294967295</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;vout&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;value&quot;</span>: <span class="number">0.01500000</span>,</span><br><span class="line">      <span class="attr">&quot;scriptPubKey&quot;</span>: <span class="string">&quot;OP_DUP OP_HASH160 ab68025513c3dbd2f7b92a94e0581f5d50f654e7 OP_EQUALVERIFY OP_CHECKSIG&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;value&quot;</span>: <span class="number">0.08450000</span>,</span><br><span class="line">      <span class="attr">&quot;scriptPubKey&quot;</span>: <span class="string">&quot;OP_DUP OP_HASH160 7f9b1a7fb68d60c536c2fd8aeaa53a8f3cc025a8 OP_EQUALVERIFY OP_CHECKSIG&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Note</p>
-<p>The cryptographic puzzle is also known as a <em>locking script</em>, a <em>witness script</em>, or a scriptPubKey.</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">The bitcoin transaction script language, called Script, is a Forth-like reverse-polish notation stack-based execution language. </span><br></pre></td></tr></table></figure>
-
-<p>validate transaction</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Bitcoin transaction validation is not based on a static pattern, but instead is achieved through the execution of a scripting language.</span><br></pre></td></tr></table></figure>
-
-<p>Script</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A limited language prevents the transaction validation mechanism from being used as a vulnerability.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Therefore, all the information needed to execute a script is contained within the script. A script will predictably execute the same way on any system. </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Bitcoin’s transaction validation engine relies on two types of scripts to validate transactions: a locking script and an unlocking script.</span><br></pre></td></tr></table></figure>
+    <title>Dockerfile Basic</title>
+    <url>/2021/03/28/Dockerfile-Basic/</url>
+    <content><![CDATA[<p>new a file named “Dockerfile”</p>
+<p>then</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build .  &#x2F;&#x2F; will exec the dockerfile auto</span><br></pre></td></tr></table></figure>
 
 
 
-<p>why “UTXO back” </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if you have an UTXO worth 20 bitcoin and want to pay only 1 bitcoin, </span><br><span class="line">your transaction must consume the entire 20-bitcoin UTXO and produce two outputs: </span><br><span class="line">one paying 1 bitcoin to your desired recipient and </span><br><span class="line">another paying 19 bitcoin in change back to your wallet.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<p>will show the container id and container  name</p>
+<p>with name, you can start the container</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start container_name</span><br></pre></td></tr></table></figure>
+
+<p>then</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker stop container_name</span><br><span class="line">docker restart container_name</span><br></pre></td></tr></table></figure>
 
 
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Transaction outputs consist of two parts:</span><br><span class="line"></span><br><span class="line">An amount of bitcoin, denominated in satoshis, the smallest bitcoin unit</span><br><span class="line">A cryptographic puzzle that determines the conditions required to spend the output</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Dockerfile Error</title>
+    <url>/2021/03/28/Dockerfile-Error/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Temporary failure resolving ‘archive.ubuntu.com’</span><br></pre></td></tr></table></figure>
+
+<p><strong>快速解决方法：</strong></p>
+<p>修改/etc/default/docker文件，取消如下行前边的注释：</p>
+<blockquote>
+<p>DOCKER_OPTS=”–dns 8.8.8.8 –dns 8.8.4.4”</p>
+</blockquote>
+<p>结果：</p>
+<p>修改配置并重新启动docker服务后，docker build命令正常。</p>
+<blockquote>
+<p>service docker restart</p>
+</blockquote>
+<hr>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">when docker build error</span><br><span class="line">when you fix it</span><br><span class="line">it will continue, not from begining</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
   </entry>
   <entry>
     <title>ECC</title>
@@ -1161,6 +1189,18 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Funny code</title>
+    <url>/2021/03/20/Funny-code/</url>
+    <content><![CDATA[<p>Python</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="built_in">bytes</span>(<span class="number">99999999</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>Flask Cors</title>
     <url>/2021/01/02/Flask-Cors/</url>
     <content><![CDATA[<p>Cors solution</p>
@@ -1181,18 +1221,6 @@
         <tag>Config</tag>
         <tag>Python</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Funny code</title>
-    <url>/2021/03/20/Funny-code/</url>
-    <content><![CDATA[<p>Python</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="built_in">bytes</span>(<span class="number">99999999</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
   </entry>
   <entry>
     <title>Git Basic Commands</title>
@@ -1239,6 +1267,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Git Fix Conflict</title>
+    <url>/2021/01/04/Git-Fix-Conflict/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+
+<p>Generally, you just need to delete the origin content , and use the new content</p>
+<p>Strongly recommend you to use “Github Desktop”</p>
+<p>It will clearly display all conflicts and you can fix them directly</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github Basic Config</title>
     <url>/2021/01/04/Github-Basic-Config/</url>
     <content><![CDATA[<p>1.Usage of “.gitignore “ file</p>
@@ -1259,25 +1306,6 @@
       </categories>
       <tags>
         <tag>Tutorial</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git Fix Conflict</title>
-    <url>/2021/01/04/Git-Fix-Conflict/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
-
-<p>Generally, you just need to delete the origin content , and use the new content</p>
-<p>Strongly recommend you to use “Github Desktop”</p>
-<p>It will clearly display all conflicts and you can fix them directly</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Git</tag>
         <tag>Github</tag>
       </tags>
   </entry>
@@ -1329,6 +1357,41 @@
       </tags>
   </entry>
   <entry>
+    <title>HTML Input</title>
+    <url>/2021/05/11/HTML-Input/</url>
+    <content><![CDATA[<p>get content</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> area = <span class="built_in">document</span>.getElementById(<span class="string">&quot;area&quot;</span>).value;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Hexo Live2D</title>
+    <url>/2021/03/08/Hexo-Live2D/</url>
+    <content><![CDATA[<p><a href="https://github.com/EYHN/hexo-helper-live2d">github</a> (You can download model here)</p>
+<p>(1) Install hexo-helper-live2d</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>(2)prepare model file</p>
+<p>put the folder in “node_modules”</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">e.g. folder name &quot;live2d-widget-model-miku&quot;</span><br></pre></td></tr></table></figure>
+
+<p>(2) install model</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install &#123;your model&#39;s package name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(3) _config.yml in Hexo root folder add:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo Theme</title>
     <url>/2021/03/08/Hexo-Theme/</url>
     <content><![CDATA[<p>Next主题</p>
@@ -1348,31 +1411,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Live2D</title>
-    <url>/2021/03/08/Hexo-Live2D/</url>
-    <content><![CDATA[<p><a href="https://github.com/EYHN/hexo-helper-live2d">github</a> (You can download model here)</p>
-<p>(1) Install hexo-helper-live2d</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-
-<p>(2)prepare model file</p>
-<p>put the folder in “node_modules”</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">e.g. folder name &quot;live2d-widget-model-miku&quot;</span><br></pre></td></tr></table></figure>
-
-<p>(2) install model</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install &#123;your model&#39;s package name&#125;</span><br></pre></td></tr></table></figure>
-
-<p>(3) _config.yml in Hexo root folder add:</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1464,6 +1502,12 @@
       </tags>
   </entry>
   <entry>
+    <title>Idea shortcut</title>
+    <url>/2021/04/26/Idea-shortcut/</url>
+    <content><![CDATA[<p>double click “Ctrl” – run any command</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Leetcode Rule</title>
     <url>/2021/03/08/Leetcode-Rule/</url>
     <content><![CDATA[<p>1</p>
@@ -1522,6 +1566,52 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Load Balance</title>
+    <url>/2021/04/26/Load-Balance/</url>
+    <content><![CDATA[<p><a href="https://spring.io/guides/gs/spring-cloud-loadbalancer/">Tutorial</a></p>
+<ol>
+<li><p>New two project</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">say-hello   &#x2F;&#x2F; real-service</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">user   &#x2F;&#x2F; balance-server</span><br></pre></td></tr></table></figure>
+
+<p>with maven</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">say-hello need modules: Spring Web</span><br><span class="line">user   need modules: Cloud Loadbalancer and Spring Reactive Web</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Implement</p>
+</li>
+</ol>
+<blockquote>
+<p>Note:</p>
+<p>refactor package name</p>
+</blockquote>
+<p>refactor application.properties</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">spring.application.name&#x3D;user</span><br><span class="line">server.port&#x3D;8888  &#x2F;&#x2F; app will run on the port</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Run App</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn spring-boot:run</span><br></pre></td></tr></table></figure>
+
+<p>run on multiple port</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn spring-boot:run -Dspring-boot.run.arguments&#x3D;--server.port&#x3D;9999</span><br></pre></td></tr></table></figure>
+
+<p>test in browser (8888 is balance server)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">localhost:8888&#x2F;hi</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> Flux&lt;List&lt;ServiceInstance&gt;&gt; get() &#123;</span><br><span class="line">    <span class="keyword">return</span> Flux.just(Arrays</span><br><span class="line">            .asList(<span class="keyword">new</span> DefaultServiceInstance(serviceId + <span class="string">&quot;1&quot;</span>, serviceId, <span class="string">&quot;localhost&quot;</span>, <span class="number">8090</span>, <span class="keyword">false</span>),</span><br><span class="line">                    <span class="keyword">new</span> DefaultServiceInstance(serviceId + <span class="string">&quot;2&quot;</span>, serviceId, <span class="string">&quot;localhost&quot;</span>, <span class="number">9092</span>, <span class="keyword">false</span>),</span><br><span class="line">                    <span class="keyword">new</span> DefaultServiceInstance(serviceId + <span class="string">&quot;3&quot;</span>, serviceId, <span class="string">&quot;localhost&quot;</span>, <span class="number">9999</span>, <span class="keyword">false</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>balance server will balance to these three ports</p>
+<p>once a target port got some problems, you may see browser will get error</p>
+<p>but refresh it, it will be ok, because it is balanced to another ok port</p>
+]]></content>
+      <tags>
+        <tag>Spring-Boot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mining</title>
     <url>/2021/03/22/Mining/</url>
     <content><![CDATA[<p>Mining process</p>
@@ -1551,20 +1641,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Network Layer</title>
-    <url>/2021/03/14/Network-Layer/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">应用层（Application Layer），主要负责应用与网络之间的通信。</span><br><span class="line">运输层（Transport Layer），主要负责两台主机的进程间通信。</span><br><span class="line">网络层（Network Layer），主要负责网络中不同主机之间的通信。</span><br><span class="line">数据链路层（Data Link Layer），主要负责数据在链路中的传输。</span><br><span class="line">物理层（Physical Layer），主要负责数据与物理媒体之间转换。</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Network</category>
-        <category>Basic</category>
-      </categories>
-      <tags>
-        <tag>Network</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Neural Network Tutorial</title>
     <url>/2021/03/15/Neural-Network-Tutorial/</url>
     <content><![CDATA[<p><img src="/2021/03/15/Neural-Network-Tutorial/image-20210315182943083.png" alt="image-20210315182943083"></p>
@@ -1586,6 +1662,47 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Random weights and bias, then seems like getting a new data array (mess image)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Network Layer</title>
+    <url>/2021/03/14/Network-Layer/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">应用层（Application Layer），主要负责应用与网络之间的通信。</span><br><span class="line">运输层（Transport Layer），主要负责两台主机的进程间通信。</span><br><span class="line">网络层（Network Layer），主要负责网络中不同主机之间的通信。</span><br><span class="line">数据链路层（Data Link Layer），主要负责数据在链路中的传输。</span><br><span class="line">物理层（Physical Layer），主要负责数据与物理媒体之间转换。</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Network</category>
+        <category>Basic</category>
+      </categories>
+      <tags>
+        <tag>Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Code</title>
+    <url>/2021/01/03/Python-Code/</url>
+    <content><![CDATA[<ol>
+<li><p>The Name of variable</p>
+<p>Not like Java — “dataSet”</p>
+<p>Python always use “data_set”</p>
+</li>
+<li><p>Comments</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
   </entry>
   <entry>
     <title>Python Class</title>
@@ -1632,6 +1749,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Python Dict</title>
+    <url>/2021/01/02/Python-Dict/</url>
+    <content><![CDATA[<p>Traverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<p>Reverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python File Operation</title>
     <url>/2021/01/02/Python-File-Operation/</url>
     <content><![CDATA[<p>Add content to file</p>
@@ -1653,56 +1789,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Code</title>
-    <url>/2021/01/03/Python-Code/</url>
-    <content><![CDATA[<ol>
-<li><p>The Name of variable</p>
-<p>Not like Java — “dataSet”</p>
-<p>Python always use “data_set”</p>
-</li>
-<li><p>Comments</p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
+    <title>Python Flask</title>
+    <url>/2021/03/08/Python-Flask/</url>
+    <content><![CDATA[<p>1.Listener </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-
+<p>2.Template</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span>():</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">   app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 
 
 ]]></content>
       <categories>
         <category>Python</category>
-        <category>Coding</category>
+        <category>Flask</category>
       </categories>
       <tags>
-        <tag>Tutorial</tag>
         <tag>Python</tag>
+        <tag>Flask</tag>
       </tags>
   </entry>
   <entry>
     <title>Python JSON</title>
     <url>/2021/01/02/Python-JSON/</url>
     <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.json&quot;</span>)</span><br><span class="line">jsonString = file.read()</span><br><span class="line">file.close()</span><br><span class="line">jsons=json.loads(jsonString)</span><br><span class="line"><span class="keyword">for</span> json <span class="keyword">in</span> jsons:</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python Log</title>
-    <url>/2021/01/03/Python-Log/</url>
-    <content><![CDATA[<p>Sometimes the error messages will be to long </p>
-<p>Then the console is not big enough to display all messages</p>
-<p>And we can’t see the root cause</p>
-<p>The solution is output the error messages to a log file</p>
-<p>Here is the example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"> </span><br><span class="line">logging.basicConfig(filename=<span class="string">&#x27;log.log&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error_func</span>():</span></span><br><span class="line">  b = <span class="number">1</span> / <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    error_func()</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">    s = traceback.format_exc()</span><br><span class="line">    logging.error(s)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1769,34 +1879,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Flask</title>
-    <url>/2021/03/08/Python-Flask/</url>
-    <content><![CDATA[<p>1.Listener </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>2.Template</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span>():</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">   app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Flask</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Flask</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python Dict</title>
-    <url>/2021/01/02/Python-Dict/</url>
-    <content><![CDATA[<p>Traverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<p>Reverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+    <title>Python Log</title>
+    <url>/2021/01/03/Python-Log/</url>
+    <content><![CDATA[<p>Sometimes the error messages will be to long </p>
+<p>Then the console is not big enough to display all messages</p>
+<p>And we can’t see the root cause</p>
+<p>The solution is output the error messages to a log file</p>
+<p>Here is the example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"> </span><br><span class="line">logging.basicConfig(filename=<span class="string">&#x27;log.log&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error_func</span>():</span></span><br><span class="line">  b = <span class="number">1</span> / <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    error_func()</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">    s = traceback.format_exc()</span><br><span class="line">    logging.error(s)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1828,6 +1918,11 @@
         <tag>Tutorial</tag>
         <tag>Python</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Python Project</title>
+    <url>/2021/03/27/Python-Project/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Python module version</title>
@@ -1958,11 +2053,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Project</title>
-    <url>/2021/03/27/Python-Project/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Refactor Notes</title>
     <url>/2021/01/03/Refactor-Notes/</url>
     <content><![CDATA[<p>1.</p>
@@ -1978,6 +2068,107 @@
       </categories>
       <tags>
         <tag>Refactor</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring Boot Cofiguration</title>
+    <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot Lib</title>
+    <url>/2021/03/30/Spring-Boot-Lib/</url>
+    <content><![CDATA[<p>1.CommandLineRunner</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import org.springframework.boot.CommandLineRunner;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Interface used to indicate that a bean should run when it is contained within a SpringApplication. </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CommandLineRunner <span class="title">commandLineRunner</span><span class="params">(ApplicationContext context)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> args -&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Beans in container :&quot;</span>);</span><br><span class="line">            String [] beanNames = context.getBeanDefinitionNames();</span><br><span class="line">            <span class="keyword">for</span>(String beanName:beanNames)&#123;</span><br><span class="line">                System.out.println(beanName);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210330112109868.png" alt="image-20210330112109868"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot Static Page</title>
+    <url>/2021/05/11/Spring-Boot-Static-Page/</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">/META-INF/resources/  </span><br><span class="line">/resources/  </span><br><span class="line">/<span class="keyword">static</span>/  </span><br><span class="line">/<span class="keyword">public</span>/</span><br></pre></td></tr></table></figure>
+
+<p>Then access directly</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot Return</title>
+    <url>/2021/05/11/Spring-Boot-Return/</url>
+    <content><![CDATA[<p>Map to Json</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ObjectMapper objectMapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">objectMapper.writeValueAsString(map);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot Test</title>
+    <url>/2021/03/30/Spring-Boot-Test/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">error</span><br><span class="line">MockMvc null pointer</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">solution</span><br><span class="line">add @RunWith(SpringRunner.class) before the class</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> freejim.icu.exp1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.junit.runner.RunWith;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"><span class="keyword">import</span> org.springframework.http.MediaType;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.context.junit4.SpringRunner;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.web.servlet.MockMvc;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.web.servlet.request.MockMvcRequestBuilders;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.hamcrest.Matchers.equalTo;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;</span><br><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="meta">@AutoConfigureMockMvc</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MvcTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MockMvc mvc;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        mvc.perform(MockMvcRequestBuilders.get(<span class="string">&quot;/&quot;</span>).accept(MediaType.APPLICATION_JSON))</span><br><span class="line">                .andExpect(status().isOk())</span><br><span class="line">                .andExpect(content().string(equalTo(<span class="string">&quot;Hello, world&quot;</span>)));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot cmd</title>
+    <url>/2021/03/30/Spring-Boot-cmd/</url>
+    <content><![CDATA[<p>run app</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn spring-boot:run</span><br></pre></td></tr></table></figure>
+
+<p>get jar</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean package</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Tip:</p>
+<p>execute mvn goal or configure env</p>
+</blockquote>
+<p>run jar</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot_exp2</title>
+    <url>/2021/04/28/Spring-Boot-exp2/</url>
+    <content><![CDATA[<p>list元素重复</p>
+<p>list元素数量不对</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot with Docker</title>
+    <url>/2021/04/26/Spring-Boot-with-Docker/</url>
+    <content><![CDATA[<ol>
+<li>Jar</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Dockerfile</li>
+</ol>
+<p>new a “Dockerfile”</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FROM openjdk:16-jdk-alpine</span><br><span class="line">EXPOSE 8080</span><br><span class="line">ADD docker_demo-0.0.1-SNAPSHOT.jar app.jar</span><br><span class="line">ENTRYPOINT [&quot;java&quot;,&quot;-jar&quot;,&quot;app.jar&quot;]</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Build images</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build -t demo&#x2F;hello .</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>Run App</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:8080 demo&#x2F;hello</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -2027,6 +2218,13 @@
         <tag>Tutorial</tag>
         <tag>SpringMVC</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Spring packing</title>
+    <url>/2021/04/26/Spring-packing/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>Spring1重构</title>
@@ -2179,156 +2377,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VS Error</title>
-    <url>/2021/03/08/VS-Error/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
-
-<p>Solve </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>WSL Mysql</title>
-    <url>/2021/03/27/WSL-Mysql/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install mysql-server</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql --version</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;mysql start</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>WSL Basic</title>
-    <url>/2021/03/27/WSL-Basic/</url>
-    <content><![CDATA[<p>switch to root</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>WSL Ngnix</title>
-    <url>/2021/03/27/WSL-Ngnix/</url>
-    <content><![CDATA[<p>以Ubuntu为例，它的软件库中已有Nginx安装包，可通过控制台安装，输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>X86,ARM and M1</title>
-    <url>/2021/03/13/X86-ARM-and-M1/</url>
-    <content><![CDATA[<p>simple instruction set</p>
-<p>complex instruction set</p>
-<p>GPU inside M1</p>
-]]></content>
-      <categories>
-        <category>Computer</category>
-        <category>Chip</category>
-      </categories>
-      <tags>
-        <tag>Computer</tag>
-        <tag>Chips</tag>
-        <tag>Apple</tag>
-        <tag>Intel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WSL conflict</title>
-    <url>/2021/03/08/WSL-conflict/</url>
-    <content><![CDATA[<p>“cmd” with “administrator”</p>
-<p>(Some simulator(e.g. Android simulator ) need to close hp-v virtual machine in win10)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
-
-<p>open WSL(WSL base on hp-v virtual machine in win10)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>cmd Shortcut</title>
-    <url>/2021/03/08/cmd-Shortcut/</url>
-    <content><![CDATA[<p>1.源文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere]</span><br><span class="line">&quot;ShowBasedOnVelocityId&quot;&#x3D;dword:00639bc8</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere\command]</span><br><span class="line">@&#x3D;&quot;cmd.exe &#x2F;s &#x2F;k pushd \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<p>2.想要Windows Terminal </p>
-<p>把其快捷方式放到System32下（即和cmd.exe一起）</p>
-<p>然后</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere]</span><br><span class="line">&quot;ShowBasedOnVelocityId&quot;&#x3D;dword:00639bc8</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere\command]</span><br><span class="line">@&#x3D;&quot;wt.exe cmd.exe &#x2F;s &#x2F;k pushd \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<p>pushd 相当于cd</p>
-<p>你也可以在cmd下输入</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cmd pushd g:</span><br></pre></td></tr></table></figure>
-
-<p>相当于</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd g:</span><br></pre></td></tr></table></figure>
-
-<p>具体原理我不是很想研究。。</p>
-<p>会用就好了 这玩意儿</p>
-<p>3.进入注册表</p>
-<p>win+r</p>
-<p>regedit </p>
-<p>你可以根据源代码找到注册表的对应位置</p>
-<p>4.这里是微软介绍reg的<a href="https://support.microsoft.com/en-us/help/310516/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg">文档</a></p>
-<p>虽然我看不太懂</p>
-<p>简单地说了最上面的version不是简单的注释</p>
-<p>而是对应了不同的windows版本</p>
-<p>然后下面的是具体的值的设置</p>
-<p>你也可以一GUI的形式到regedit下修改</p>
-]]></content>
-      <categories>
-        <category>Shortcut</category>
-      </categories>
-      <tags>
-        <tag>Shortcut</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pip</title>
-    <url>/2021/03/27/pip/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
-
-
-
-<p>update pip</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
-
-<p>use mirror</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install scrapy -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -r .&#x2F;requirements.txt -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple&#x2F;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">报错</span><br><span class="line">The repository located at pypi.douban.com is not a trusted or secure host and is being ignored. If this repository is available via HTTPS it is recommended to use HTTPS instead, otherwise you may silence this warning and allow it anyways with &#39;--trusted-host pypi.douban.com&#39;.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解决</span><br><span class="line">将url中的http修改为https</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux 下pip无法安装的，pip3支持</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>lms docker</title>
-    <url>/2021/03/28/lms-docker/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:80 -it lms:v1 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Typora Shortcut</title>
     <url>/2021/03/08/Typora-Shortcut/</url>
     <content><![CDATA[<p>编辑</p>
@@ -2451,5 +2499,155 @@
         <tag>Shortcut</tag>
         <tag>Typora</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>VS Error</title>
+    <url>/2021/03/08/VS-Error/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
+
+<p>Solve </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>WSL Basic</title>
+    <url>/2021/03/27/WSL-Basic/</url>
+    <content><![CDATA[<p>switch to root</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>WSL Mysql</title>
+    <url>/2021/03/27/WSL-Mysql/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install mysql-server</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql --version</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo &#x2F;etc&#x2F;init.d&#x2F;mysql start</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>WSL Ngnix</title>
+    <url>/2021/03/27/WSL-Ngnix/</url>
+    <content><![CDATA[<p>以Ubuntu为例，它的软件库中已有Nginx安装包，可通过控制台安装，输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>WSL conflict</title>
+    <url>/2021/03/08/WSL-conflict/</url>
+    <content><![CDATA[<p>“cmd” with “administrator”</p>
+<p>(Some simulator(e.g. Android simulator ) need to close hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
+
+<p>open WSL(WSL base on hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>X86,ARM and M1</title>
+    <url>/2021/03/13/X86-ARM-and-M1/</url>
+    <content><![CDATA[<p>simple instruction set</p>
+<p>complex instruction set</p>
+<p>GPU inside M1</p>
+]]></content>
+      <categories>
+        <category>Computer</category>
+        <category>Chip</category>
+      </categories>
+      <tags>
+        <tag>Computer</tag>
+        <tag>Chips</tag>
+        <tag>Apple</tag>
+        <tag>Intel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cmd Shortcut</title>
+    <url>/2021/03/08/cmd-Shortcut/</url>
+    <content><![CDATA[<p>1.源文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere]</span><br><span class="line">&quot;ShowBasedOnVelocityId&quot;&#x3D;dword:00639bc8</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere\command]</span><br><span class="line">@&#x3D;&quot;cmd.exe &#x2F;s &#x2F;k pushd \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>2.想要Windows Terminal </p>
+<p>把其快捷方式放到System32下（即和cmd.exe一起）</p>
+<p>然后</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere]</span><br><span class="line">&quot;ShowBasedOnVelocityId&quot;&#x3D;dword:00639bc8</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMDHere\command]</span><br><span class="line">@&#x3D;&quot;wt.exe cmd.exe &#x2F;s &#x2F;k pushd \&quot;%V\&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>pushd 相当于cd</p>
+<p>你也可以在cmd下输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cmd pushd g:</span><br></pre></td></tr></table></figure>
+
+<p>相当于</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd g:</span><br></pre></td></tr></table></figure>
+
+<p>具体原理我不是很想研究。。</p>
+<p>会用就好了 这玩意儿</p>
+<p>3.进入注册表</p>
+<p>win+r</p>
+<p>regedit </p>
+<p>你可以根据源代码找到注册表的对应位置</p>
+<p>4.这里是微软介绍reg的<a href="https://support.microsoft.com/en-us/help/310516/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg">文档</a></p>
+<p>虽然我看不太懂</p>
+<p>简单地说了最上面的version不是简单的注释</p>
+<p>而是对应了不同的windows版本</p>
+<p>然后下面的是具体的值的设置</p>
+<p>你也可以一GUI的形式到regedit下修改</p>
+]]></content>
+      <categories>
+        <category>Shortcut</category>
+      </categories>
+      <tags>
+        <tag>Shortcut</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>lms docker</title>
+    <url>/2021/03/28/lms-docker/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:80 -it lms:v1 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>pip</title>
+    <url>/2021/03/27/pip/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<p>update pip</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+
+<p>use mirror</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install scrapy -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -r .&#x2F;requirements.txt -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">报错</span><br><span class="line">The repository located at pypi.douban.com is not a trusted or secure host and is being ignored. If this repository is available via HTTPS it is recommended to use HTTPS instead, otherwise you may silence this warning and allow it anyways with &#39;--trusted-host pypi.douban.com&#39;.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解决</span><br><span class="line">将url中的http修改为https</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux 下pip无法安装的，pip3支持</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
   </entry>
 </search>
