@@ -161,24 +161,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android DeviceId</title>
-    <url>/2021/01/04/Android-DeviceId/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Dialog Processing</title>
     <url>/2021/01/04/Android-Dialog-Processing/</url>
     <content><![CDATA[<p>Display a circle in dialog when loading something</p>
@@ -195,6 +177,24 @@
 <p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
 <p>2.dialog = dialogBuilder.create()</p>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android DeviceId</title>
+    <url>/2021/01/04/Android-DeviceId/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -239,28 +239,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Intent Transport Data</title>
-    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
-    <content><![CDATA[<p>Example:</p>
-<p>Send data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Get data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Note:</p>
-<p>Intent is like a build-in object in Kotlin</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Fragment Tutorial</title>
     <url>/2021/01/06/Android-Fragment-Tutorial/</url>
     <content><![CDATA[<p>1.New A Fragment</p>
@@ -281,6 +259,28 @@
 <p>Then you can name id as you like, but do not forget it, it is really important ! !</p>
 <hr>
 <p>After two steps, you can see a fragment is added to an activity</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Intent Transport Data</title>
+    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
+    <content><![CDATA[<p>Example:</p>
+<p>Send data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Get data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Note:</p>
+<p>Intent is like a build-in object in Kotlin</p>
 ]]></content>
       <categories>
         <category>Android</category>
@@ -453,16 +453,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Studio SDK config</title>
-    <url>/2021/03/08/Android-Studio-SDK-config/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
-
-
-
-<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Android Swip Refresh</title>
     <url>/2021/01/06/Android-Swip-Refresh/</url>
     <content><![CDATA[<p>XML</p>
@@ -480,6 +470,16 @@
         <tag>Android</tag>
         <tag>Tutorial</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Android Studio SDK config</title>
+    <url>/2021/03/08/Android-Studio-SDK-config/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
+
+
+
+<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
+]]></content>
   </entry>
   <entry>
     <title>Android Thread</title>
@@ -899,15 +899,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Bootstrap Tutorial</title>
-    <url>/2021/05/11/Bootstrap-Tutorial/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Chinese Chess Conclusion</title>
     <url>/2021/01/02/Chinese-Chess-Conclusion/</url>
     <content><![CDATA[<p>1.Alpha-Beta Search</p>
@@ -976,6 +967,15 @@
       <tags>
         <tag>Project Conclusion</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Bootstrap Tutorial</title>
+    <url>/2021/05/11/Bootstrap-Tutorial/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>Daily Doubt</title>
@@ -1189,18 +1189,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Funny code</title>
-    <url>/2021/03/20/Funny-code/</url>
-    <content><![CDATA[<p>Python</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="built_in">bytes</span>(<span class="number">99999999</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Flask Cors</title>
     <url>/2021/01/02/Flask-Cors/</url>
     <content><![CDATA[<p>Cors solution</p>
@@ -1221,6 +1209,18 @@
         <tag>Config</tag>
         <tag>Python</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Funny code</title>
+    <url>/2021/03/20/Funny-code/</url>
+    <content><![CDATA[<p>Python</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="built_in">bytes</span>(<span class="number">99999999</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>Git Basic Commands</title>
@@ -1641,6 +1641,102 @@
 ]]></content>
   </entry>
   <entry>
+    <title>N-TCP</title>
+    <url>/2021/05/24/N-TCP/</url>
+    <content><![CDATA[<p>Transmission Control Protocol</p>
+<p>TCP连接的建立（三次握手）</p>
+<p>第一次握手（A发给B）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524084347239.png" alt="image-20210524084347239"></p>
+<p>然后SYN置为1（set）</p>
+<p>随机初始序号2319633865</p>
+<p>然后自己的序号sequence number为0 （自己的序号也可称为相对序号，relative sequence number）</p>
+<p>第二次握手（B回复A）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524084547340.png" alt="image-20210524084547340"></p>
+<p>首先看Ack部分</p>
+<p>ack=A自己序号+1即0+1=1 （relative ack number）</p>
+<p>然后下面的ack序号为A的初始随机序号+1即2319633865+1=231963386</p>
+<p>再是自己的序号从0开始</p>
+<p>又随机生成一个序号670416643发给A</p>
+<p>第三次握手（A回复B）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524084814392.png" alt="image-20210524084814392"></p>
+<p>A自己的序号=原序号+1即0+1=1</p>
+<p>然后随机序号也+1</p>
+<p>接下来是Ack部分</p>
+<p>ack=B自己的序号+1即0+1=1</p>
+<p>然后ack随机序号=B的随即序号+1即670416643+1=670416644</p>
+<p>以上数据确认都没问题的话，就可以分配端口资源（套接字）然后正式建立连接了</p>
+<p>Conclusion：</p>
+<p>随机序号的作用</p>
+<p>答：一定程度上防止TCP syn 攻击</p>
+<p>建立连接时的标志位</p>
+<p>答：涉及连接建立的TCP报文，SYN都置1，回复方的ACK置为1（第二次和第三次握手）</p>
+<p>ACK和ack是不一样的，一个是标志位，一个是序号</p>
+<p>ACK再标志位中的全称叫 Acknowledgment</p>
+<p>关于相对序号</p>
+<p>答:初始双方都是0，然后收到对方回复的ack后才有机会增加</p>
+<hr>
+<p> TCP连接的释放</p>
+<p>（1）A发给B（A准备关闭连接）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524212654486.png" alt="image-20210524212654486"></p>
+<p>主要是在标志位FIN置为1</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524212759858.png"></p>
+<p>Ps：SYN在连接释放时置为0</p>
+<p>（2）B回复A</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524213038001.png" alt="image-20210524213038001"></p>
+<p>ack加1</p>
+<p>但是！relative sequence number 并未做加1操作</p>
+<p>再看标志位</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524213208909.png" alt="image-20210524213208909"></p>
+<p>FIN置为0，ACK置为1</p>
+<p>此时，A的发送通道就关闭了，即A不能主动发送数据包到B了（但是可以被动回复B）</p>
+<p>（建立连接后有两条通路，分别是A和B的发送通道）</p>
+<p>（3）B发给A（B也准备关闭连接）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524213407417.png" alt="image-20210524213407417"></p>
+<p>relative sequence number 仍未做加1操作</p>
+<p>ack也没有做加1操作</p>
+<p>（也就是说，和之前B回复给A的数据包序号都一样）</p>
+<p>再看标志位</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524213548780.png" alt="image-20210524213548780"></p>
+<p>FIN置为了1</p>
+<p>（4）A回复B</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524213612152.png" alt="image-20210524213612152"></p>
+<p>relative sequence number 未做加1操作</p>
+<p>ack加1了</p>
+<p>再看标志位</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524213917593.png" alt="image-20210524213917593"></p>
+<p>关于ack的总结</p>
+<p>ack加1表示接收方确实受到了</p>
+<p>每次回复时，ack都会加1</p>
+<p>但是，连续发送两个TCP数据报，relative sequence number 是不会变化的（因为期间并没有收到对方的ack）</p>
+<p>只有收到了对方的ack，相对序号才有加的机会</p>
+<hr>
+<p>误区</p>
+<p>序号每次只会加1</p>
+<p>答：不对</p>
+<p>举个例子</p>
+<p>发送方，此时相对序号为769，发送了一个600字节数据</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524214756347.png" alt="image-20210524214756347"></p>
+<p>接收方的回复</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524214911160.png" alt="image-20210524214911160"></p>
+<p>ack=769+600=1369</p>
+<p>所以说，序号与发送数据的大小有关</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Network Layer</title>
+    <url>/2021/03/14/Network-Layer/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">应用层（Application Layer），主要负责应用与网络之间的通信。</span><br><span class="line">运输层（Transport Layer），主要负责两台主机的进程间通信。</span><br><span class="line">网络层（Network Layer），主要负责网络中不同主机之间的通信。</span><br><span class="line">数据链路层（Data Link Layer），主要负责数据在链路中的传输。</span><br><span class="line">物理层（Physical Layer），主要负责数据与物理媒体之间转换。</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Network</category>
+        <category>Basic</category>
+      </categories>
+      <tags>
+        <tag>Network</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Neural Network Tutorial</title>
     <url>/2021/03/15/Neural-Network-Tutorial/</url>
     <content><![CDATA[<p><img src="/2021/03/15/Neural-Network-Tutorial/image-20210315182943083.png" alt="image-20210315182943083"></p>
@@ -1662,47 +1758,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Random weights and bias, then seems like getting a new data array (mess image)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
-  </entry>
-  <entry>
-    <title>Network Layer</title>
-    <url>/2021/03/14/Network-Layer/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">应用层（Application Layer），主要负责应用与网络之间的通信。</span><br><span class="line">运输层（Transport Layer），主要负责两台主机的进程间通信。</span><br><span class="line">网络层（Network Layer），主要负责网络中不同主机之间的通信。</span><br><span class="line">数据链路层（Data Link Layer），主要负责数据在链路中的传输。</span><br><span class="line">物理层（Physical Layer），主要负责数据与物理媒体之间转换。</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Network</category>
-        <category>Basic</category>
-      </categories>
-      <tags>
-        <tag>Network</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python Code</title>
-    <url>/2021/01/03/Python-Code/</url>
-    <content><![CDATA[<ol>
-<li><p>The Name of variable</p>
-<p>Not like Java — “dataSet”</p>
-<p>Python always use “data_set”</p>
-</li>
-<li><p>Comments</p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Coding</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
   </entry>
   <entry>
     <title>Python Class</title>
@@ -1742,6 +1797,33 @@
       <categories>
         <category>Python</category>
         <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Code</title>
+    <url>/2021/01/03/Python-Code/</url>
+    <content><![CDATA[<ol>
+<li><p>The Name of variable</p>
+<p>Not like Java — “dataSet”</p>
+<p>Python always use “data_set”</p>
+</li>
+<li><p>Comments</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Coding</category>
       </categories>
       <tags>
         <tag>Tutorial</tag>
@@ -1899,6 +1981,11 @@
       </tags>
   </entry>
   <entry>
+    <title>Python Project</title>
+    <url>/2021/03/27/Python-Project/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Python String</title>
     <url>/2021/01/02/Python-String/</url>
     <content><![CDATA[<p>List to String</p>
@@ -1918,11 +2005,6 @@
         <tag>Tutorial</tag>
         <tag>Python</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Python Project</title>
-    <url>/2021/03/27/Python-Project/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Python module version</title>
@@ -2089,19 +2171,19 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Spring Boot Static Page</title>
-    <url>/2021/05/11/Spring-Boot-Static-Page/</url>
-    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">/META-INF/resources/  </span><br><span class="line">/resources/  </span><br><span class="line">/<span class="keyword">static</span>/  </span><br><span class="line">/<span class="keyword">public</span>/</span><br></pre></td></tr></table></figure>
-
-<p>Then access directly</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Spring Boot Return</title>
     <url>/2021/05/11/Spring-Boot-Return/</url>
     <content><![CDATA[<p>Map to Json</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ObjectMapper objectMapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">objectMapper.writeValueAsString(map);</span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot Static Page</title>
+    <url>/2021/05/11/Spring-Boot-Static-Page/</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">/META-INF/resources/  </span><br><span class="line">/resources/  </span><br><span class="line">/<span class="keyword">static</span>/  </span><br><span class="line">/<span class="keyword">public</span>/</span><br></pre></td></tr></table></figure>
+
+<p>Then access directly</p>
 ]]></content>
   </entry>
   <entry>
@@ -2220,13 +2302,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring packing</title>
-    <url>/2021/04/26/Spring-packing/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>Spring1重构</title>
     <url>/2020/11/05/Spring1%E9%87%8D%E6%9E%84/</url>
     <content><![CDATA[<p>​    1.javax 是由Tomcat提供的</p>
@@ -2286,6 +2361,13 @@
       <tags>
         <tag>Spring</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Spring packing</title>
+    <url>/2021/04/26/Spring-packing/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>Spring注解是怎么工作的</title>
@@ -2613,17 +2695,6 @@
       </tags>
   </entry>
   <entry>
-    <title>lms docker</title>
-    <url>/2021/03/28/lms-docker/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:80 -it lms:v1 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>pip</title>
     <url>/2021/03/27/pip/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
@@ -2645,6 +2716,17 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">解决</span><br><span class="line">将url中的http修改为https</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux 下pip无法安装的，pip3支持</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>lms docker</title>
+    <url>/2021/03/28/lms-docker/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:80 -it lms:v1 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
+
+
 
 
 
