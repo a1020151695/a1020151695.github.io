@@ -161,6 +161,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Android DeviceId</title>
+    <url>/2021/01/04/Android-DeviceId/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Dialog Processing</title>
     <url>/2021/01/04/Android-Dialog-Processing/</url>
     <content><![CDATA[<p>Display a circle in dialog when loading something</p>
@@ -177,24 +195,6 @@
 <p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
 <p>2.dialog = dialogBuilder.create()</p>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android DeviceId</title>
-    <url>/2021/01/04/Android-DeviceId/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
-
-
 
 ]]></content>
       <categories>
@@ -371,44 +371,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Navigation Tutorial</title>
-    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
-    <content><![CDATA[<p>1.New A Navigation</p>
-<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
-<p>Give your navigation a name, then click “OK”</p>
-<p>Then you will got a xml file of your navigation</p>
-<p>2.Add A NavHost To Your Activity</p>
-<p>Go to the xml file of your activity</p>
-<p>Use “Design” model </p>
-<p>“Palette” – “Container” – “NavHostFragment”</p>
-<p>Drag it to the phone</p>
-<p>And choose a navigation xml file for the container</p>
-<p>Then we finish the basic of navigation</p>
-<p>3.Add Fragments To Navigation</p>
-<p>Go to the xml file of your navigation </p>
-<p>Still use “Design” model</p>
-<p>Then “New Destination”</p>
-<p>4.Use Navigation</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
-
-<p>Then you will be navigate to a fragment named “hello”</p>
-<hr>
-<p>supportFragmentManager</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Request</title>
     <url>/2021/01/04/Android-Request/</url>
     <content><![CDATA[<p>How get data by request in Android?</p>
@@ -453,13 +415,32 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Swip Refresh</title>
-    <url>/2021/01/06/Android-Swip-Refresh/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">&quot;@+id/location_swipe_for_student&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">&quot;100dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>Android Navigation Tutorial</title>
+    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
+    <content><![CDATA[<p>1.New A Navigation</p>
+<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
+<p>Give your navigation a name, then click “OK”</p>
+<p>Then you will got a xml file of your navigation</p>
+<p>2.Add A NavHost To Your Activity</p>
+<p>Go to the xml file of your activity</p>
+<p>Use “Design” model </p>
+<p>“Palette” – “Container” – “NavHostFragment”</p>
+<p>Drag it to the phone</p>
+<p>And choose a navigation xml file for the container</p>
+<p>Then we finish the basic of navigation</p>
+<p>3.Add Fragments To Navigation</p>
+<p>Go to the xml file of your navigation </p>
+<p>Still use “Design” model</p>
+<p>Then “New Destination”</p>
+<p>4.Use Navigation</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
 
-<p>Config</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configSwipeRefresh</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> swipe =</span><br><span class="line">        view?.findViewById&lt;SwipeRefreshLayout&gt;(R.id.location_swipe_for_student)</span><br><span class="line">    swipe?.setOnRefreshListener &#123;</span><br><span class="line">        MapUtil.mLocationClient?.startLocation()</span><br><span class="line">        refreshActivity()</span><br><span class="line">        swipe.isRefreshing = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Then you will be navigate to a fragment named “hello”</p>
+<hr>
+<p>supportFragmentManager</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -480,6 +461,25 @@
 
 <p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Android Swip Refresh</title>
+    <url>/2021/01/06/Android-Swip-Refresh/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">&quot;@+id/location_swipe_for_student&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">&quot;100dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Config</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configSwipeRefresh</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> swipe =</span><br><span class="line">        view?.findViewById&lt;SwipeRefreshLayout&gt;(R.id.location_swipe_for_student)</span><br><span class="line">    swipe?.setOnRefreshListener &#123;</span><br><span class="line">        MapUtil.mLocationClient?.startLocation()</span><br><span class="line">        refreshActivity()</span><br><span class="line">        swipe.isRefreshing = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
   </entry>
   <entry>
     <title>Android Thread</title>
@@ -629,6 +629,52 @@
 
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Blockchain Example In JS</title>
+    <url>/2021/03/11/Blockchain-Example-In-JS/</url>
+    <content><![CDATA[<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Open source developers from every continent use npm to share and borrow packages</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">It&#39;s like &quot;pip&quot; in Python, which is use for installing moudle</span><br></pre></td></tr></table></figure>
+
+<h4 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">As an asynchronous event-driven JavaScript runtime</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Use for running js program </span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html">Tutorial of installing node.js </a> （Support Windows、Linux、Mac, but  recommend Windows ）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于新版的nodejs已经集成了npm，所以npm也一并安装好了</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.runoob.com/nodejs/nodejs-npm.html">Config npm</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install npm -g</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Note:</p>
+<p>This mirror is use for us to download modules with high speed</p>
+</blockquote>
+<h4 id="Necessary-Module"><a href="#Necessary-Module" class="headerlink" title="Necessary Module"></a>Necessary Module</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install --save crypto-js</span><br></pre></td></tr></table></figure>
+
+<p>Recommended Editor – <a href="https://code.visualstudio.com/">Vscode</a>（Support Windows、Linux、Mac）</p>
+<hr>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>Blockchain Valid (check whether the blockchain is valid)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">index,timestamp,data,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.data = data;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;  <span class="comment">// hash all elements in a block</span></span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.index+<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.data)).toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];  <span class="comment">// the first block called &quot;Genesis&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="number">0</span>,<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123; </span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.hash = newBlock.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;  	</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i];</span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;		<span class="comment">// check current block</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;      <span class="comment">// check previous block along the chain</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">1</span>,<span class="string">&quot;01/02/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">4</span>&#125;));</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">2</span>,<span class="string">&quot;01/03/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">10</span>&#125;));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(jtcoin,<span class="literal">null</span>,<span class="number">4</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Is the chain valid? &#x27;</span> + jtcoin.isChainValid());</span><br><span class="line"></span><br><span class="line">jtcoin.chain[<span class="number">1</span>].data = &#123;<span class="attr">amount</span>:<span class="number">5</span>&#125;;</span><br><span class="line">jtcoin.chain[<span class="number">1</span>].hash = jtcoin.chain[<span class="number">1</span>].caculateHash();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;tamper&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Is the chain valid? &#x27;</span> + jtcoin.isChainValid());</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(jtcoin,<span class="literal">null</span>,<span class="number">4</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>proof-of-work (It can also be called “mine”)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">index,timestamp,data,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.data = data;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.nonce = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.index+<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.data)+<span class="built_in">this</span>.nonce).toString();</span><br><span class="line">        <span class="comment">// you need to update this hash method,</span></span><br><span class="line">        <span class="comment">// because you change the content of block</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">mineBlock</span>(<span class="params">difficulty</span>)</span>&#123;  <span class="comment">// proof of work</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">this</span>.hash.substring(<span class="number">0</span>,difficulty) !== <span class="built_in">Array</span>(difficulty+<span class="number">1</span>).join(<span class="string">&#x27;0&#x27;</span>))&#123;</span><br><span class="line">            <span class="built_in">this</span>.nonce++;   <span class="comment">// try to get correct hash by changing this variable  </span></span><br><span class="line">            <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();  </span><br><span class="line">            <span class="comment">// &quot;correct hash&quot; is the correct amount &#x27;0&#x27; in the head of the hash value </span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Block mined hash:&quot;</span> + <span class="built_in">this</span>.hash);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];</span><br><span class="line">        <span class="built_in">this</span>.difficulty = <span class="number">5</span> </span><br><span class="line">        <span class="comment">// which means five &#x27;0&#x27; in the head of the hash</span></span><br><span class="line">        <span class="comment">// when &#x27;difficulty&#x27; get bigger,</span></span><br><span class="line">        <span class="comment">// miner will spent more time to mine</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="number">0</span>,<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i]; </span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Mining...&quot;</span>);</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">1</span>,<span class="string">&quot;01/02/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">4</span>&#125;));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Mining...&quot;</span>);</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">2</span>,<span class="string">&quot;01/03/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">10</span>&#125;));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Balance (how many coins in you account)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Transaction</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">fromAddress,toAddress,amount</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.fromAddress = fromAddress;</span><br><span class="line">        <span class="built_in">this</span>.toAddress = toAddress;</span><br><span class="line">        <span class="built_in">this</span>.amount = amount;  <span class="comment">// the amount of money</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">timestamp,transactions,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.transactions = transactions;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.nonce = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.transactions)+<span class="built_in">this</span>.nonce).toString(); </span><br><span class="line">        <span class="comment">// you need to update this hash method,</span></span><br><span class="line">        <span class="comment">// because you change the content of block</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">mineBlock</span>(<span class="params">difficulty</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">this</span>.hash.substring(<span class="number">0</span>,difficulty) !== <span class="built_in">Array</span>(difficulty+<span class="number">1</span>).join(<span class="string">&#x27;0&#x27;</span>))&#123;</span><br><span class="line">            <span class="built_in">this</span>.nonce++;</span><br><span class="line">            <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Block mined hash:&quot;</span> + <span class="built_in">this</span>.hash);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];</span><br><span class="line">        <span class="built_in">this</span>.difficulty = <span class="number">2</span>;</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions = [];</span><br><span class="line">        <span class="built_in">this</span>.mineReward = <span class="number">100</span>; <span class="comment">// reward for miner</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i];</span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">minePendingTransactions</span>(<span class="params">mineRewardAddress</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> block = <span class="keyword">new</span> Block(<span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="built_in">this</span>.pendingTransactions);</span><br><span class="line">        block.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Block successfully minded!&#x27;</span>);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(block);</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions = [<span class="keyword">new</span> Transaction(<span class="literal">null</span>,mineRewardAddress,<span class="built_in">this</span>.mineReward)];</span><br><span class="line">        <span class="comment">// send mineReward to miner</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">createTransaction</span>(<span class="params">transaction</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions.push(transaction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">getBalanceOfAddress</span>(<span class="params">address</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> balance = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> block <span class="keyword">of</span> <span class="built_in">this</span>.chain</span>)</span>&#123;  </span><br><span class="line">            <span class="comment">// balance should be caculated everytime from the beginning of the chain</span></span><br><span class="line">            <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> trans <span class="keyword">of</span> block.transactions</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (trans.fromAddress == address)&#123;</span><br><span class="line">                    balance -= trans.amount;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="function"><span class="title">if</span>(<span class="params">trans.toAddress == address</span>)</span>&#123;</span><br><span class="line">                    balance += trans.amount;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> balance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line">jtcoin.createTransaction(<span class="keyword">new</span> Transaction(<span class="string">&#x27;address1&#x27;</span>,<span class="string">&#x27;address2&#x27;</span>,<span class="number">100</span>));</span><br><span class="line">jtcoin.createTransaction(<span class="keyword">new</span> Transaction(<span class="string">&#x27;address2&#x27;</span>,<span class="string">&#x27;address1&#x27;</span>,<span class="number">50</span>));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;\n Starting the miner...&#x27;</span>);</span><br><span class="line"></span><br><span class="line">jtcoin.minePendingTransactions(<span class="string">&#x27;jtaddress&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;jtaddress balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;jtaddress&#x27;</span>));</span><br><span class="line"></span><br><span class="line">jtcoin.minePendingTransactions(<span class="string">&#x27;jtaddress&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;jtaddress new balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;jtaddress&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;address1 balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;address2&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tutorial</category>
+        <category>Blockchain</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>Blockchain</tag>
+      </tags>
   </entry>
   <entry>
     <title>Blockchain Doubt</title>
@@ -793,52 +839,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Blockchain Example In JS</title>
-    <url>/2021/03/11/Blockchain-Example-In-JS/</url>
-    <content><![CDATA[<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Open source developers from every continent use npm to share and borrow packages</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">It&#39;s like &quot;pip&quot; in Python, which is use for installing moudle</span><br></pre></td></tr></table></figure>
-
-<h4 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">As an asynchronous event-driven JavaScript runtime</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Use for running js program </span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html">Tutorial of installing node.js </a> （Support Windows、Linux、Mac, but  recommend Windows ）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">由于新版的nodejs已经集成了npm，所以npm也一并安装好了</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.runoob.com/nodejs/nodejs-npm.html">Config npm</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install npm -g</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Note:</p>
-<p>This mirror is use for us to download modules with high speed</p>
-</blockquote>
-<h4 id="Necessary-Module"><a href="#Necessary-Module" class="headerlink" title="Necessary Module"></a>Necessary Module</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install --save crypto-js</span><br></pre></td></tr></table></figure>
-
-<p>Recommended Editor – <a href="https://code.visualstudio.com/">Vscode</a>（Support Windows、Linux、Mac）</p>
-<hr>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>Blockchain Valid (check whether the blockchain is valid)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">index,timestamp,data,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.data = data;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;  <span class="comment">// hash all elements in a block</span></span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.index+<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.data)).toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];  <span class="comment">// the first block called &quot;Genesis&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="number">0</span>,<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123; </span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.hash = newBlock.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;  	</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i];</span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;		<span class="comment">// check current block</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;      <span class="comment">// check previous block along the chain</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">1</span>,<span class="string">&quot;01/02/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">4</span>&#125;));</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">2</span>,<span class="string">&quot;01/03/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">10</span>&#125;));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(jtcoin,<span class="literal">null</span>,<span class="number">4</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Is the chain valid? &#x27;</span> + jtcoin.isChainValid());</span><br><span class="line"></span><br><span class="line">jtcoin.chain[<span class="number">1</span>].data = &#123;<span class="attr">amount</span>:<span class="number">5</span>&#125;;</span><br><span class="line">jtcoin.chain[<span class="number">1</span>].hash = jtcoin.chain[<span class="number">1</span>].caculateHash();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;tamper&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Is the chain valid? &#x27;</span> + jtcoin.isChainValid());</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(jtcoin,<span class="literal">null</span>,<span class="number">4</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>proof-of-work (It can also be called “mine”)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">index,timestamp,data,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.index = index;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.data = data;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.nonce = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.index+<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.data)+<span class="built_in">this</span>.nonce).toString();</span><br><span class="line">        <span class="comment">// you need to update this hash method,</span></span><br><span class="line">        <span class="comment">// because you change the content of block</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">mineBlock</span>(<span class="params">difficulty</span>)</span>&#123;  <span class="comment">// proof of work</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">this</span>.hash.substring(<span class="number">0</span>,difficulty) !== <span class="built_in">Array</span>(difficulty+<span class="number">1</span>).join(<span class="string">&#x27;0&#x27;</span>))&#123;</span><br><span class="line">            <span class="built_in">this</span>.nonce++;   <span class="comment">// try to get correct hash by changing this variable  </span></span><br><span class="line">            <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();  </span><br><span class="line">            <span class="comment">// &quot;correct hash&quot; is the correct amount &#x27;0&#x27; in the head of the hash value </span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Block mined hash:&quot;</span> + <span class="built_in">this</span>.hash);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];</span><br><span class="line">        <span class="built_in">this</span>.difficulty = <span class="number">5</span> </span><br><span class="line">        <span class="comment">// which means five &#x27;0&#x27; in the head of the hash</span></span><br><span class="line">        <span class="comment">// when &#x27;difficulty&#x27; get bigger,</span></span><br><span class="line">        <span class="comment">// miner will spent more time to mine</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="number">0</span>,<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i]; </span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Mining...&quot;</span>);</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">1</span>,<span class="string">&quot;01/02/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">4</span>&#125;));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Mining...&quot;</span>);</span><br><span class="line">jtcoin.addBlock(<span class="keyword">new</span> Block(<span class="number">2</span>,<span class="string">&quot;01/03/2020&quot;</span>,&#123;<span class="attr">amount</span>:<span class="number">10</span>&#125;));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>Balance (how many coins in you account)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">SHA256 = <span class="built_in">require</span>(<span class="string">&#x27;crypto-js/sha256&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Transaction</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">fromAddress,toAddress,amount</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.fromAddress = fromAddress;</span><br><span class="line">        <span class="built_in">this</span>.toAddress = toAddress;</span><br><span class="line">        <span class="built_in">this</span>.amount = amount;  <span class="comment">// the amount of money</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Block</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">timestamp,transactions,previousHash=<span class="string">&#x27;&#x27;</span></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.timestamp = timestamp;</span><br><span class="line">        <span class="built_in">this</span>.transactions = transactions;</span><br><span class="line">        <span class="built_in">this</span>.previousHash = previousHash;</span><br><span class="line">        <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        <span class="built_in">this</span>.nonce = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">caculateHash</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> SHA256(<span class="built_in">this</span>.previousHash+<span class="built_in">this</span>.timestamp+<span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.transactions)+<span class="built_in">this</span>.nonce).toString(); </span><br><span class="line">        <span class="comment">// you need to update this hash method,</span></span><br><span class="line">        <span class="comment">// because you change the content of block</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">mineBlock</span>(<span class="params">difficulty</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">this</span>.hash.substring(<span class="number">0</span>,difficulty) !== <span class="built_in">Array</span>(difficulty+<span class="number">1</span>).join(<span class="string">&#x27;0&#x27;</span>))&#123;</span><br><span class="line">            <span class="built_in">this</span>.nonce++;</span><br><span class="line">            <span class="built_in">this</span>.hash = <span class="built_in">this</span>.caculateHash();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;Block mined hash:&quot;</span> + <span class="built_in">this</span>.hash);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Blockchain</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.chain = [<span class="built_in">this</span>.createGenesisBlock()];</span><br><span class="line">        <span class="built_in">this</span>.difficulty = <span class="number">2</span>;</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions = [];</span><br><span class="line">        <span class="built_in">this</span>.mineReward = <span class="number">100</span>; <span class="comment">// reward for miner</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">createGenesisBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Block(<span class="string">&quot;01/01/2020&quot;</span>,<span class="string">&quot;Genesis block&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">getLatesBlock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.chain[<span class="built_in">this</span>.chain.length-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">addBlock</span>(<span class="params">newBlock</span>)</span>&#123;</span><br><span class="line">        newBlock.previousHash = <span class="built_in">this</span>.getLatesBlock().hash;</span><br><span class="line">        newBlock.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(newBlock);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">isChainValid</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">let</span> i=<span class="number">1</span>; i&lt;<span class="built_in">this</span>.chain.length; i++</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">const</span> currentBlock = <span class="built_in">this</span>.chain[i];</span><br><span class="line">            <span class="keyword">const</span> previousBlock = <span class="built_in">this</span>.chain[i-<span class="number">1</span>];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (currentBlock.caculateHash() !== currentBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (currentBlock.previousHash !== previousBlock.hash)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">minePendingTransactions</span>(<span class="params">mineRewardAddress</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> block = <span class="keyword">new</span> Block(<span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="built_in">this</span>.pendingTransactions);</span><br><span class="line">        block.mineBlock(<span class="built_in">this</span>.difficulty);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Block successfully minded!&#x27;</span>);</span><br><span class="line">        <span class="built_in">this</span>.chain.push(block);</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions = [<span class="keyword">new</span> Transaction(<span class="literal">null</span>,mineRewardAddress,<span class="built_in">this</span>.mineReward)];</span><br><span class="line">        <span class="comment">// send mineReward to miner</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">createTransaction</span>(<span class="params">transaction</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.pendingTransactions.push(transaction);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="title">getBalanceOfAddress</span>(<span class="params">address</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> balance = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> block <span class="keyword">of</span> <span class="built_in">this</span>.chain</span>)</span>&#123;  </span><br><span class="line">            <span class="comment">// balance should be caculated everytime from the beginning of the chain</span></span><br><span class="line">            <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> trans <span class="keyword">of</span> block.transactions</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (trans.fromAddress == address)&#123;</span><br><span class="line">                    balance -= trans.amount;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="function"><span class="title">if</span>(<span class="params">trans.toAddress == address</span>)</span>&#123;</span><br><span class="line">                    balance += trans.amount;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> balance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> jtcoin = <span class="keyword">new</span> Blockchain();</span><br><span class="line">jtcoin.createTransaction(<span class="keyword">new</span> Transaction(<span class="string">&#x27;address1&#x27;</span>,<span class="string">&#x27;address2&#x27;</span>,<span class="number">100</span>));</span><br><span class="line">jtcoin.createTransaction(<span class="keyword">new</span> Transaction(<span class="string">&#x27;address2&#x27;</span>,<span class="string">&#x27;address1&#x27;</span>,<span class="number">50</span>));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;\n Starting the miner...&#x27;</span>);</span><br><span class="line"></span><br><span class="line">jtcoin.minePendingTransactions(<span class="string">&#x27;jtaddress&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;jtaddress balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;jtaddress&#x27;</span>));</span><br><span class="line"></span><br><span class="line">jtcoin.minePendingTransactions(<span class="string">&#x27;jtaddress&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;jtaddress new balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;jtaddress&#x27;</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;address1 balance is &#x27;</span> + jtcoin.getBalanceOfAddress(<span class="string">&#x27;address2&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Tutorial</category>
-        <category>Blockchain</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>Blockchain</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blockchain In Python</title>
     <url>/2021/03/20/Blockchain-In-Python/</url>
     <content><![CDATA[<p>Hash a object</p>
@@ -895,6 +895,15 @@
 
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Transaction outputs consist of two parts:</span><br><span class="line"></span><br><span class="line">An amount of bitcoin, denominated in satoshis, the smallest bitcoin unit</span><br><span class="line">A cryptographic puzzle that determines the conditions required to spend the output</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Bootstrap Tutorial</title>
+    <url>/2021/05/11/Bootstrap-Tutorial/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
   </entry>
@@ -967,15 +976,6 @@
       <tags>
         <tag>Project Conclusion</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Bootstrap Tutorial</title>
-    <url>/2021/05/11/Bootstrap-Tutorial/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
   </entry>
   <entry>
     <title>Daily Doubt</title>
@@ -1506,6 +1506,11 @@
     <url>/2021/04/26/Idea-shortcut/</url>
     <content><![CDATA[<p>double click “Ctrl” – run any command</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Java 重定向</title>
+    <url>/2021/05/25/Java-%E9%87%8D%E5%AE%9A%E5%90%91/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Leetcode Rule</title>
@@ -2302,6 +2307,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring Security Fliter</title>
+    <url>/2021/05/25/Spring-Security-Fliter/</url>
+    <content><![CDATA[<p>Difference from addBefore and addAfter</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Security Tutorial</title>
+    <url>/2021/05/25/Spring-Security-Tutorial/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Spring packing</title>
+    <url>/2021/04/26/Spring-packing/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Spring1重构</title>
     <url>/2020/11/05/Spring1%E9%87%8D%E6%9E%84/</url>
     <content><![CDATA[<p>​    1.javax 是由Tomcat提供的</p>
@@ -2361,13 +2384,6 @@
       <tags>
         <tag>Spring</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Spring packing</title>
-    <url>/2021/04/26/Spring-packing/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
-
-]]></content>
   </entry>
   <entry>
     <title>Spring注解是怎么工作的</title>
@@ -2695,6 +2711,17 @@
       </tags>
   </entry>
   <entry>
+    <title>lms docker</title>
+    <url>/2021/03/28/lms-docker/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:80 -it lms:v1 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>pip</title>
     <url>/2021/03/27/pip/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
@@ -2722,14 +2749,64 @@
 ]]></content>
   </entry>
   <entry>
-    <title>lms docker</title>
-    <url>/2021/03/28/lms-docker/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:80 -it lms:v1 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
+    <title>网络层</title>
+    <url>/2021/05/29/%E7%BD%91%E7%BB%9C%E5%B1%82/</url>
+    <content><![CDATA[<p>网络层功能</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">异构网络互联</span><br><span class="line"></span><br><span class="line">网络层的目的是实现两个端系统之间的数据透明传送，具体功能包括寻址和路由选择、连接的建立、保持和终止</span><br></pre></td></tr></table></figure>
+
+<p>中继设备</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">物理层的中继系统：中继器，集线器Hub</span><br><span class="line"></span><br><span class="line">数据链路层的中继系统：网桥，交换机</span><br><span class="line"></span><br><span class="line">网络层的中继系统：路由器</span><br><span class="line"></span><br><span class="line">网络层以上的中继系统：网关</span><br></pre></td></tr></table></figure>
+
+
+
+<p>流量控制</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">接收方告诉发送方，我接收不了那么多了，你待会再发</span><br></pre></td></tr></table></figure>
+
+
+
+<p>拥塞控制</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">首先是拥塞————网络负载增加但是吞吐量减小</span><br><span class="line">基于储存转发的机制而出现的现象</span><br></pre></td></tr></table></figure>
+
+<p>路由算法</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">距离-向量路由算法 例如：RIP</span><br><span class="line">链路状态路由算法 例如：OSPF</span><br></pre></td></tr></table></figure>
+
+<p>路由收敛</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">路由链路自学习到稳定</span><br></pre></td></tr></table></figure>
+
+
+
+<p>RIP</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">路由表:</span><br><span class="line">&lt; 目的网络，距离，下一跳路由器 &gt;</span><br><span class="line"></span><br><span class="line">简述：</span><br><span class="line">每30秒广播一次更新路由（只传给相邻的路由）</span><br><span class="line">对于从X传来的RIP报文，把所有下一跳的地址都改为X，并且距离都加1</span><br><span class="line">注意：</span><br><span class="line">1.是修改传过来的报文，而不是修改自己的表</span><br><span class="line">2.RIP报文中的内容其实是发送方的路由表</span><br><span class="line"></span><br><span class="line">接下来才是更新接收方的路由表：</span><br><span class="line">（1）如果RIP报文中有新的目的网络，则直接添加到路由表</span><br><span class="line">（2）如果RIP报文中出现已有目的网络，而且路由表中下一跳地址是X，则直接替换（更新状态）</span><br><span class="line">（3）如果RIP报文中出现已有目的网络，但是下一跳地址不是X，则路由表取最小值</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125158034.png" alt="image-20210529125158034"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125236146.png" alt="image-20210529125236146"></p>
+<p>RIP特点</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">优点：</span><br><span class="line">实现简单，开销小，收敛快</span><br><span class="line"></span><br><span class="line">缺点:</span><br><span class="line">当出现故障时，坏消息传播得慢，收敛慢</span><br><span class="line">（故障信息只能一跳一跳地传，远处路由知道得慢）</span><br><span class="line">最大距离为15（16表示不可达）</span><br><span class="line">储存的是完整的路由表，如果网络规模大的话，开销大</span><br><span class="line">RIP不管开销，认为跳数最少得就是最优</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>OSPF</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用Dijkstra算法构建最优链路</span><br><span class="line">每10秒发送一个Hello分组，验证可达性</span><br><span class="line">如果40秒没有收到某路由的Hello分组，则表示其不可达了</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>报文</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">不用UDP，直接用IP数据报传输</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125328527.png" alt="image-20210529125328527"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">区域标识符：看下图理解区域</span><br><span class="line">路由器标识符：发送方的IP</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125541423.png" alt="image-20210529125541423"></p>
+<p>OSPF特殊路由器</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">R6：自治系统边界路由器——与外界别的自治系统联系</span><br><span class="line">R3，R7，R4：区域边界路由器——把各区域与主干区域连接起来</span><br><span class="line">主干区域内的都叫主干路由器（包括上面提到的四个特殊路由器）</span><br></pre></td></tr></table></figure>
 
 
 
 
 
+<p>OSPF种类</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125831974.png" alt="image-20210529125831974"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125841175.png" alt="image-20210529125841175"></p>
 ]]></content>
   </entry>
 </search>
