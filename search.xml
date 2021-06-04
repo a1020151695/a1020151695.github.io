@@ -111,6 +111,30 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Back Button</title>
+    <url>/2021/01/04/Android-Back-Button/</url>
+    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onBackPressed()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This function is what your Android do when you press the back button</p>
+<p>If you don’t want user use back button somewhere</p>
+<p>Just do like this</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// super.onBackPressed()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Bundle</title>
     <url>/2021/01/04/Android-Bundle/</url>
     <content><![CDATA[<p>Bundle can be  use for transport data between Fragment</p>
@@ -134,30 +158,6 @@
       </categories>
       <tags>
         <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Back Button</title>
-    <url>/2021/01/04/Android-Back-Button/</url>
-    <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onBackPressed()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>This function is what your Android do when you press the back button</p>
-<p>If you don’t want user use back button somewhere</p>
-<p>Just do like this</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// super.onBackPressed()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -239,28 +239,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Intent Transport Data</title>
-    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
-    <content><![CDATA[<p>Example:</p>
-<p>Send data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Get data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Note:</p>
-<p>Intent is like a build-in object in Kotlin</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Fragment Tutorial</title>
     <url>/2021/01/06/Android-Fragment-Tutorial/</url>
     <content><![CDATA[<p>1.New A Fragment</p>
@@ -292,6 +270,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Intent Transport Data</title>
+    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
+    <content><![CDATA[<p>Example:</p>
+<p>Send data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Get data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Note:</p>
+<p>Intent is like a build-in object in Kotlin</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Layout Parameter</title>
     <url>/2021/01/06/Android-Layout-Parameter/</url>
     <content><![CDATA[<p>Build</p>
@@ -310,6 +310,22 @@
       <tags>
         <tag>Android</tag>
         <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Lifecycle Of Activity</title>
+    <url>/2021/01/04/Android-Lifecycle-Of-Activity/</url>
+    <content><![CDATA[<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Document</a></p>
+<p>onCreate() just be invoked one time</p>
+<p>onStart() will be </p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Turorial</tag>
       </tags>
   </entry>
   <entry>
@@ -352,22 +368,6 @@
       </categories>
       <tags>
         <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Lifecycle Of Activity</title>
-    <url>/2021/01/04/Android-Lifecycle-Of-Activity/</url>
-    <content><![CDATA[<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Document</a></p>
-<p>onCreate() just be invoked one time</p>
-<p>onStart() will be </p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Turorial</tag>
       </tags>
   </entry>
   <entry>
@@ -482,27 +482,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Tool Bar (On Top)</title>
-    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>ConfigBackButton</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Thread</title>
     <url>/2021/01/04/Android-Thread/</url>
     <content><![CDATA[]]></content>
@@ -565,6 +544,27 @@
 <p>But you can’t use the new feature of the SDK</p>
 <p>It depends on you</p>
 <p>Haha</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Tool Bar (On Top)</title>
+    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>ConfigBackButton</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <categories>
         <category>Android</category>
@@ -978,6 +978,12 @@
       </tags>
   </entry>
   <entry>
+    <title>Daily Doubt</title>
+    <url>/2021/03/22/Daily-Doubt/</url>
+    <content><![CDATA[<p>bash is different env with cmd</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Docker Basic</title>
     <url>/2021/03/28/Docker-Basic/</url>
     <content><![CDATA[<p>start docker daemon</p>
@@ -1029,12 +1035,6 @@
 
 
 <hr>
-]]></content>
-  </entry>
-  <entry>
-    <title>Daily Doubt</title>
-    <url>/2021/03/22/Daily-Doubt/</url>
-    <content><![CDATA[<p>bash is different env with cmd</p>
 ]]></content>
   </entry>
   <entry>
@@ -1211,6 +1211,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Funny code</title>
+    <url>/2021/03/20/Funny-code/</url>
+    <content><![CDATA[<p>Python</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="built_in">bytes</span>(<span class="number">99999999</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>Git Basic Commands</title>
     <url>/2021/01/04/Git-Basic-Commands/</url>
     <content><![CDATA[<p>1.Push</p>
@@ -1255,18 +1267,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Funny code</title>
-    <url>/2021/03/20/Funny-code/</url>
-    <content><![CDATA[<p>Python</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="built_in">bytes</span>(<span class="number">99999999</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Git Fix Conflict</title>
     <url>/2021/01/04/Git-Fix-Conflict/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
@@ -1299,6 +1299,14 @@
 
 <p>Then push again</p>
 <hr>
+<p>error</p>
+<blockquote>
+<p>OpenSSL SSL_read: Connection was reset, errno 10054</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>zip 和 git clone 的区别在于是否有.git的隐藏文件</p>
 ]]></content>
       <categories>
         <category>Config</category>
@@ -1367,6 +1375,18 @@
 ]]></content>
   </entry>
   <entry>
+    <title>HTTP</title>
+    <url>/2021/06/03/HTTP/</url>
+    <content><![CDATA[<h1 id="Content-Encoding"><a href="#Content-Encoding" class="headerlink" title="Content-Encoding"></a>Content-Encoding</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">浏览器发送请求时，通过 Accept-Encoding 带上自己支持的内容编码格式列表</span><br><span class="line">服务端从中挑选一种用来对正文进行编码，并通过 Content-Encoding 响应头指明选定的格式</span><br><span class="line">浏览器拿到响应正文后，依据 Content-Encoding 进行解压</span><br><span class="line">内容编码目的是优化传输内容大小，通俗地讲就是进行压缩</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Cache</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Web页面设计中，建少HTTP请求可以提高页面响应速度。浏览器在第一次访问页面时下载的资源会缓存起来，第二次访问时会判断在缓存中是否已有该资源并且有没有更新过，如果已有该资源且没有更新过，则去缓存去取，这样减少了下载资源的时间。原理上是通过HTTP Rquest Header中的 if-modified-since 和Response Headers中的last-modified来实现</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Hexo Live2D</title>
     <url>/2021/03/08/Hexo-Live2D/</url>
     <content><![CDATA[<p><a href="https://github.com/EYHN/hexo-helper-live2d">github</a> (You can download model here)</p>
@@ -1382,35 +1402,6 @@
 
 <p>(3) _config.yml in Hexo root folder add:</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Theme</title>
-    <url>/2021/03/08/Hexo-Theme/</url>
-    <content><![CDATA[<p>Next主题</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-
-
-<p>_config.yml新增</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-
-
-
-<p>在Next主题的配置文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
-
-<p>把local_search enable 置true就好了</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-
 
 ]]></content>
       <categories>
@@ -1499,6 +1490,35 @@
       </categories>
       <tags>
         <tag>Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Theme</title>
+    <url>/2021/03/08/Hexo-Theme/</url>
+    <content><![CDATA[<p>Next主题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+
+
+<p>_config.yml新增</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在Next主题的配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
+
+<p>把local_search enable 置true就好了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1809,25 +1829,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Dict</title>
-    <url>/2021/01/02/Python-Dict/</url>
-    <content><![CDATA[<p>Traverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<p>Reverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python Code</title>
     <url>/2021/01/03/Python-Code/</url>
     <content><![CDATA[<ol>
@@ -1864,6 +1865,25 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
 
 
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Dict</title>
+    <url>/2021/01/02/Python-Dict/</url>
+    <content><![CDATA[<p>Traverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<p>Reverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2181,6 +2201,12 @@
     <content><![CDATA[<p>Map to Json</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ObjectMapper objectMapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">objectMapper.writeValueAsString(map);</span><br></pre></td></tr></table></figure>
 
+<p>error:</p>
+<blockquote>
+<p>Check your ViewResolver setup!</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ResponseBody</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
@@ -2228,6 +2254,43 @@
     <content><![CDATA[<p>list元素重复</p>
 <p>list元素数量不对</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot fthl</title>
+    <url>/2021/06/01/Spring-Boot-fthl/</url>
+    <content><![CDATA[<p>数据传输</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">userIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ModelAndView mv = <span class="keyword">new</span> ModelAndView(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">    String info=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    mv.addObject(<span class="string">&quot;logInfo&quot;</span>, info);</span><br><span class="line">    <span class="keyword">return</span> mv;</span><br><span class="line">    <span class="comment">//return &quot;user&quot;;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot with Docker</title>
+    <url>/2021/04/26/Spring-Boot-with-Docker/</url>
+    <content><![CDATA[<ol>
+<li>Jar</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Dockerfile</li>
+</ol>
+<p>new a “Dockerfile”</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FROM openjdk:16-jdk-alpine</span><br><span class="line">EXPOSE 8080</span><br><span class="line">ADD docker_demo-0.0.1-SNAPSHOT.jar app.jar</span><br><span class="line">ENTRYPOINT [&quot;java&quot;,&quot;-jar&quot;,&quot;app.jar&quot;]</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Build images</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build -t demo&#x2F;hello .</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>Run App</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:8080 demo&#x2F;hello</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
   </entry>
   <entry>
     <title>Spring MVC Tutorial</title>
@@ -2282,35 +2345,6 @@
     <url>/2021/05/25/Spring-Security-Fliter/</url>
     <content><![CDATA[<p>Difference from addBefore and addAfter</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Spring Boot with Docker</title>
-    <url>/2021/04/26/Spring-Boot-with-Docker/</url>
-    <content><![CDATA[<ol>
-<li>Jar</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>Dockerfile</li>
-</ol>
-<p>new a “Dockerfile”</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FROM openjdk:16-jdk-alpine</span><br><span class="line">EXPOSE 8080</span><br><span class="line">ADD docker_demo-0.0.1-SNAPSHOT.jar app.jar</span><br><span class="line">ENTRYPOINT [&quot;java&quot;,&quot;-jar&quot;,&quot;app.jar&quot;]</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>Build images</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build -t demo&#x2F;hello .</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>Run App</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:8080 demo&#x2F;hello</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
   </entry>
   <entry>
     <title>Spring Security Tutorial</title>
@@ -2475,6 +2509,17 @@
       </tags>
   </entry>
   <entry>
+    <title>VS Error</title>
+    <url>/2021/03/08/VS-Error/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
+
+<p>Solve </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Typora Shortcut</title>
     <url>/2021/03/08/Typora-Shortcut/</url>
     <content><![CDATA[<p>编辑</p>
@@ -2599,21 +2644,116 @@
       </tags>
   </entry>
   <entry>
-    <title>VS Error</title>
-    <url>/2021/03/08/VS-Error/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
+    <title>Vue Tutorial</title>
+    <url>/2021/06/01/Vue-Tutorial/</url>
+    <content><![CDATA[<p><a href="https://blog.jetbrains.com/webstorm/2019/03/get-started-building-apps-with-vue-js-in-webstorm/">官方介绍</a></p>
+<h2 id="Vue目录结构"><a href="#Vue目录结构" class="headerlink" title="Vue目录结构"></a>Vue目录结构</h2><p><img src="https://www.runoob.com/wp-content/uploads/2017/01/B6E593E3-F284-4C58-A610-94C6ACDAD485.jpg" alt="img"></p>
+<table>
+<thead>
+<tr>
+<th>build</th>
+<th>项目构建(webpack)相关代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>config</td>
+<td>配置目录，包括端口号等。我们初学可以使用默认的。</td>
+</tr>
+<tr>
+<td>node_modules</td>
+<td>npm 加载的项目依赖模块</td>
+</tr>
+<tr>
+<td>src</td>
+<td>这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：assets: 放置一些图片，如logo等。components: 目录里面放了一个组件文件，可以不用。App.vue: 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录。main.js: 项目的核心文件。</td>
+</tr>
+<tr>
+<td>static</td>
+<td>静态资源目录，如图片、字体等。</td>
+</tr>
+<tr>
+<td>test</td>
+<td>初始测试目录，可删除</td>
+</tr>
+<tr>
+<td>.xxxx文件</td>
+<td>这些是一些配置文件，包括语法配置，git配置等。</td>
+</tr>
+<tr>
+<td>index.html</td>
+<td>首页入口文件，你可以添加一些 meta 信息或统计代码啥的。</td>
+</tr>
+<tr>
+<td>package.json</td>
+<td>项目配置文件。</td>
+</tr>
+</tbody></table>
+<p>Webstorm项目构建工具</p>
+<blockquote>
+<p>By default, all the apps generated with the Vue CLI use the webpack dev server</p>
+</blockquote>
+<p>Components</p>
+<blockquote>
+<p>Vue is a framework for building modularized front-end apps, so it considers files with the .vue extension as components.</p>
+</blockquote>
+<blockquote>
+<p>Components contain three sections for code: template (HTML), script (JavaScript or TypeScript), and styles (CSS or any stylesheet language).</p>
+</blockquote>
+<p>App.vue</p>
+<blockquote>
+<p>The project template creates a file called <em>App.vue</em> which is the primary component that is attached to the root element defined in the Vue instance.</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">    &lt;img alt&#x3D;&quot;Vue logo&quot; src&#x3D;&quot;.&#x2F;assets&#x2F;logo.png&quot;&gt;</span><br><span class="line">    &lt;HelloWorld&#x2F;&gt;  &#x2F;&#x2F; 创建好的组件可以当作自定义标签使用</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;  &#x2F;&#x2F; 导入Helloworld组件，下面两步都不可少</span><br><span class="line">import HelloWorld from &#39;.&#x2F;components&#x2F;HelloWorld.vue&#39; </span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;App&#39;,</span><br><span class="line">  components: &#123;  </span><br><span class="line">    HelloWorld</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 
-<p>Solve </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
+<p>Helloworld.vue</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;HelloWorld&#39;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    msg: String</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>WSL Basic</title>
-    <url>/2021/03/27/WSL-Basic/</url>
-    <content><![CDATA[<p>switch to root</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>reveals the <code>msg</code> variable as a property (called <code>props</code>) of the component, and that is how the message data is passed into the HelloWorld component.</p>
+</blockquote>
+<p>How to pass data</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">    &lt;img alt&#x3D;&quot;Vue logo&quot; src&#x3D;&quot;.&#x2F;assets&#x2F;logo.png&quot;&gt;</span><br><span class="line">    &lt;HelloWorld msg&#x3D;&quot;Jim&quot;&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>访问assert内的文件</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./assets/logo.png&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>export</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;App&#x27;</span>,  <span class="comment">// 其他文件import当前vue时用的名字</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>main.js</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span>  <span class="comment">// 从文件中导入App组件</span></span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span>  <span class="comment">// 关闭生产模式</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;  <span class="comment">// 创建了vue实例</span></span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</span><br><span class="line">&#125;).$mount(<span class="string">&#x27;#app&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>The call to $mount(‘#app’); attaches the Vue instance to the root DOM element, which is an element with an id of “app”. You can find the root element inside of public\index.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">noscript</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span>We&#x27;re sorry but <span class="tag">&lt;<span class="name">%=</span> <span class="attr">htmlWebpackPlugin.options.title</span> %&gt;</span> doesn&#x27;t work properly without JavaScript enabled. Please enable it to continue.<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- built files will be auto injected --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>method</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;HelloWorld&#39;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    &#x2F;&#x2F; msg: String</span><br><span class="line">  &#125;,</span><br><span class="line">  data: function () &#123;</span><br><span class="line">    return &#123;msg:&quot;Welcome!&quot;&#125;;  &#x2F;&#x2F; msg is like variable name</span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;</span><br><span class="line">    changeMessage:function () &#123;  &#x2F;&#x2F; changeMessage is like method name, which is used for invoke</span><br><span class="line">      this.msg&#x3D;&quot;Welcome man&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;button v-on:click&#x3D;&quot;changeMessage&quot;&gt;Change Message&lt;&#x2F;button&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>localhost显示的首页</p>
+<h2 id="默认首页"><a href="#默认首页" class="headerlink" title="默认首页"></a>默认首页</h2><p>其实就是 public 文件夹中的index.html</p>
+<p>然后其用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;app&quot;&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="WebStorm与Vue"><a href="#WebStorm与Vue" class="headerlink" title="WebStorm与Vue"></a>WebStorm与Vue</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">虽然最新版的前端开发利器WebStorm支持了Vue，但是大部分人的WebStorm依然是默认不支持Vue的老版本（比如之前的我），所以需要手动添加WebStorm对Vue的支持。要想让WebStorm支持Vue主要分两步，第一步是安装Vue.js插件，使得WebStorm能够对Vue语法进行提示；第二步是配置Vue模板，即快速创建Vue文件。</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -2631,6 +2771,14 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>WSL Basic</title>
+    <url>/2021/03/27/WSL-Basic/</url>
+    <content><![CDATA[<p>switch to root</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -2711,6 +2859,17 @@
       </tags>
   </entry>
   <entry>
+    <title>lms docker</title>
+    <url>/2021/03/28/lms-docker/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:80 -it lms:v1 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>pip</title>
     <url>/2021/03/27/pip/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
@@ -2738,14 +2897,35 @@
 ]]></content>
   </entry>
   <entry>
-    <title>lms docker</title>
-    <url>/2021/03/28/lms-docker/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -p 8080:80 -it lms:v1 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
+    <title>三角函数日常</title>
+    <url>/2021/05/30/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%97%A5%E5%B8%B8/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>不定积分</title>
+    <url>/2021/05/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
+    <content><![CDATA[<p><strong>二类换元</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">x&#x3D;sint</span><br></pre></td></tr></table></figure>
 
+<hr>
+<p><strong>一类换元</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">其实就是直接法，只是重在观察</span><br><span class="line">主要针对对数，三角函数</span><br></pre></td></tr></table></figure>
 
-
-
-
+<p>对数</p>
+<p>三角函数</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>定积分总结</title>
+    <url>/2021/05/30/%E5%AE%9A%E7%A7%AF%E5%88%86%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>s</p>
+<p>基础法：拆</p>
+<p>三角函数的积分</p>
+<hr>
+<p>变积分限：分部积分消x，先上再分部</p>
+<p>分部一下，直接大杀四方</p>
+<hr>
+<p>什么时候用换元x=sint</p>
 ]]></content>
   </entry>
   <entry>
@@ -2768,6 +2948,19 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090340075.png" alt="image-20210530090340075"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090348067.png" alt="image-20210530090348067"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090357204.png" alt="image-20210530090357204"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>西南科技大学</title>
+    <url>/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090901098.png" alt="image-20210530090901098"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091022080.png" alt="image-20210530091022080"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091033354.png" alt="image-20210530091033354"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091052640.png" alt="image-20210530091052640"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091102542.png" alt="image-20210530091102542"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091431085.png" alt="image-20210530091431085"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530195405472.png" alt="image-20210530195405472"></p>
+<p><img src="/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/Users\Jimmy\AppData\Roaming\Typora\typora-user-images\image-20210530195428120.png" alt="image-20210530195422207"></p>
 ]]></content>
   </entry>
   <entry>
@@ -2829,19 +3022,6 @@
 <p>OSPF种类</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125831974.png" alt="image-20210529125831974"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125841175.png" alt="image-20210529125841175"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>西南科技大学</title>
-    <url>/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090901098.png" alt="image-20210530090901098"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091022080.png" alt="image-20210530091022080"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091033354.png" alt="image-20210530091033354"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091052640.png" alt="image-20210530091052640"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091102542.png" alt="image-20210530091102542"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091431085.png" alt="image-20210530091431085"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530195405472.png" alt="image-20210530195405472"></p>
-<p><img src="/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/Users\Jimmy\AppData\Roaming\Typora\typora-user-images\image-20210530195428120.png" alt="image-20210530195422207"></p>
 ]]></content>
   </entry>
   <entry>
