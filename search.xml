@@ -239,6 +239,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Intent Transport Data</title>
+    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
+    <content><![CDATA[<p>Example:</p>
+<p>Send data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Get data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Note:</p>
+<p>Intent is like a build-in object in Kotlin</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Fragment Tutorial</title>
     <url>/2021/01/06/Android-Fragment-Tutorial/</url>
     <content><![CDATA[<p>1.New A Fragment</p>
@@ -270,28 +292,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Intent Transport Data</title>
-    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
-    <content><![CDATA[<p>Example:</p>
-<p>Send data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Get data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Note:</p>
-<p>Intent is like a build-in object in Kotlin</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Layout Parameter</title>
     <url>/2021/01/06/Android-Layout-Parameter/</url>
     <content><![CDATA[<p>Build</p>
@@ -310,22 +310,6 @@
       <tags>
         <tag>Android</tag>
         <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Lifecycle Of Activity</title>
-    <url>/2021/01/04/Android-Lifecycle-Of-Activity/</url>
-    <content><![CDATA[<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Document</a></p>
-<p>onCreate() just be invoked one time</p>
-<p>onStart() will be </p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Turorial</tag>
       </tags>
   </entry>
   <entry>
@@ -368,6 +352,22 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Lifecycle Of Activity</title>
+    <url>/2021/01/04/Android-Lifecycle-Of-Activity/</url>
+    <content><![CDATA[<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Document</a></p>
+<p>onCreate() just be invoked one time</p>
+<p>onStart() will be </p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Turorial</tag>
       </tags>
   </entry>
   <entry>
@@ -793,6 +793,32 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Blockchain In Python</title>
+    <url>/2021/03/20/Blockchain-In-Python/</url>
+    <content><![CDATA[<p>Hash a object</p>
+<p>Wrong example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(<span class="built_in">len</span>(sha256(<span class="built_in">str</span>(t()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()))  <span class="comment"># wrong!</span></span><br><span class="line">													 <span class="comment"># str(t()) is just a address</span></span><br></pre></td></tr></table></figure>
+
+<p>Correct example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256  <span class="comment"># need string</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>  </span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">print(sha256(<span class="built_in">str</span>(t().__hash__()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()) <span class="comment"># display in hex</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">output:   &#x2F;&#x2F; string length &#x3D; 64</span><br><span class="line">58c32e31cc29e9164710dc7571d83200d5f6ff044170e4b299ed8096b4de529e  </span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Blockchain Reference</title>
+    <url>/2021/03/20/Blockchain-Reference/</url>
+    <content><![CDATA[<p><a href="https://github.com/chaozh/awesome-blockchain-cn">Github1</a></p>
+<p><a href="https://github.com/LiuBoyu/blockchain">Github2</a></p>
+<p>BIP</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A Bitcoin Improvement Proposal (BIP) is a design document for introducing features or information to Bitcoin. This is the standard way of communicating ideas since Bitcoin has no formal structure.</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Blockchain Example In JS</title>
     <url>/2021/03/11/Blockchain-Example-In-JS/</url>
     <content><![CDATA[<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Open source developers from every continent use npm to share and borrow packages</span><br></pre></td></tr></table></figure>
@@ -839,32 +865,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Blockchain In Python</title>
-    <url>/2021/03/20/Blockchain-In-Python/</url>
-    <content><![CDATA[<p>Hash a object</p>
-<p>Wrong example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(<span class="built_in">len</span>(sha256(<span class="built_in">str</span>(t()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()))  <span class="comment"># wrong!</span></span><br><span class="line">													 <span class="comment"># str(t()) is just a address</span></span><br></pre></td></tr></table></figure>
-
-<p>Correct example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256  <span class="comment"># need string</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>  </span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">print(sha256(<span class="built_in">str</span>(t().__hash__()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()) <span class="comment"># display in hex</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">output:   &#x2F;&#x2F; string length &#x3D; 64</span><br><span class="line">58c32e31cc29e9164710dc7571d83200d5f6ff044170e4b299ed8096b4de529e  </span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Blockchain Reference</title>
-    <url>/2021/03/20/Blockchain-Reference/</url>
-    <content><![CDATA[<p><a href="https://github.com/chaozh/awesome-blockchain-cn">Github1</a></p>
-<p><a href="https://github.com/LiuBoyu/blockchain">Github2</a></p>
-<p>BIP</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A Bitcoin Improvement Proposal (BIP) is a design document for introducing features or information to Bitcoin. This is the standard way of communicating ideas since Bitcoin has no formal structure.</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>Blockchain Transaction</title>
     <url>/2021/03/22/Blockchain-Transaction/</url>
     <content><![CDATA[<p>UTXO(unspend transaction output)</p>
@@ -895,15 +895,6 @@
 
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Transaction outputs consist of two parts:</span><br><span class="line"></span><br><span class="line">An amount of bitcoin, denominated in satoshis, the smallest bitcoin unit</span><br><span class="line">A cryptographic puzzle that determines the conditions required to spend the output</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Bootstrap Tutorial</title>
-    <url>/2021/05/11/Bootstrap-Tutorial/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
 
 ]]></content>
   </entry>
@@ -978,9 +969,12 @@
       </tags>
   </entry>
   <entry>
-    <title>Daily Doubt</title>
-    <url>/2021/03/22/Daily-Doubt/</url>
-    <content><![CDATA[<p>bash is different env with cmd</p>
+    <title>Bootstrap Tutorial</title>
+    <url>/2021/05/11/Bootstrap-Tutorial/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
   </entry>
   <entry>
@@ -1038,6 +1032,29 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Dockerfile Error</title>
+    <url>/2021/03/28/Dockerfile-Error/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Temporary failure resolving ‘archive.ubuntu.com’</span><br></pre></td></tr></table></figure>
+
+<p><strong>快速解决方法：</strong></p>
+<p>修改/etc/default/docker文件，取消如下行前边的注释：</p>
+<blockquote>
+<p>DOCKER_OPTS=”–dns 8.8.8.8 –dns 8.8.4.4”</p>
+</blockquote>
+<p>结果：</p>
+<p>修改配置并重新启动docker服务后，docker build命令正常。</p>
+<blockquote>
+<p>service docker restart</p>
+</blockquote>
+<hr>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">when docker build error</span><br><span class="line">when you fix it</span><br><span class="line">it will continue, not from begining</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Dockerfile Basic</title>
     <url>/2021/03/28/Dockerfile-Basic/</url>
     <content><![CDATA[<p>new a file named “Dockerfile”</p>
@@ -1060,27 +1077,10 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Dockerfile Error</title>
-    <url>/2021/03/28/Dockerfile-Error/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Temporary failure resolving ‘archive.ubuntu.com’</span><br></pre></td></tr></table></figure>
-
-<p><strong>快速解决方法：</strong></p>
-<p>修改/etc/default/docker文件，取消如下行前边的注释：</p>
-<blockquote>
-<p>DOCKER_OPTS=”–dns 8.8.8.8 –dns 8.8.4.4”</p>
-</blockquote>
-<p>结果：</p>
-<p>修改配置并重新启动docker服务后，docker build命令正常。</p>
-<blockquote>
-<p>service docker restart</p>
-</blockquote>
-<hr>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">when docker build error</span><br><span class="line">when you fix it</span><br><span class="line">it will continue, not from begining</span><br></pre></td></tr></table></figure>
-
+    <title>Daily Doubt</title>
+    <url>/2021/03/22/Daily-Doubt/</url>
+    <content><![CDATA[<p>bash is different env with cmd</p>
 ]]></content>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
   </entry>
   <entry>
     <title>ECC</title>
@@ -1211,18 +1211,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Funny code</title>
-    <url>/2021/03/20/Funny-code/</url>
-    <content><![CDATA[<p>Python</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="built_in">bytes</span>(<span class="number">99999999</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Git Basic Commands</title>
     <url>/2021/01/04/Git-Basic-Commands/</url>
     <content><![CDATA[<p>1.Push</p>
@@ -1267,6 +1255,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Funny code</title>
+    <url>/2021/03/20/Funny-code/</url>
+    <content><![CDATA[<p>Python</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="built_in">bytes</span>(<span class="number">99999999</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>Git Fix Conflict</title>
     <url>/2021/01/04/Git-Fix-Conflict/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
@@ -1277,6 +1277,40 @@
 ]]></content>
       <categories>
         <category>Git</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github SSH Deploy Key</title>
+    <url>/2021/01/04/Github-SSH-Deploy-Key/</url>
+    <content><![CDATA[<p>With Deploy key you can push directly, do not need to input username and password every time</p>
+<p>Generate SSH key</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -f deploy_key_blog -C &quot;1020151695@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p> Then press “Enter” twice is OK</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E-mail address like an &quot;id&quot;</span><br><span class="line">So that Github repository know who you are</span><br><span class="line">And you don&#39;t need to input username and password again</span><br></pre></td></tr></table></figure>
+
+<p>Then it will create a new file named “deploy_key_blog.pub”</p>
+<p>Check it’s content use the command:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more deploy_key_blog.pub</span><br></pre></td></tr></table></figure>
+
+<p>Then copy the content and go to the project in Github</p>
+<p>“Setting”–”Deploy keys”</p>
+<p>Just do it !</p>
+<p>And SSH key absolutely just support the ssh way</p>
+<p>If you use HTTPS remote address, you need to switch it </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote rm origin      &#x2F;&#x2F; delete origin remote address </span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:nickchou&#x2F;gocode.git  &#x2F;&#x2F; apply new remote address</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Github</category>
         <category>Tutorial</category>
       </categories>
       <tags>
@@ -1318,40 +1352,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Github SSH Deploy Key</title>
-    <url>/2021/01/04/Github-SSH-Deploy-Key/</url>
-    <content><![CDATA[<p>With Deploy key you can push directly, do not need to input username and password every time</p>
-<p>Generate SSH key</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -f deploy_key_blog -C &quot;1020151695@qq.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p> Then press “Enter” twice is OK</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E-mail address like an &quot;id&quot;</span><br><span class="line">So that Github repository know who you are</span><br><span class="line">And you don&#39;t need to input username and password again</span><br></pre></td></tr></table></figure>
-
-<p>Then it will create a new file named “deploy_key_blog.pub”</p>
-<p>Check it’s content use the command:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more deploy_key_blog.pub</span><br></pre></td></tr></table></figure>
-
-<p>Then copy the content and go to the project in Github</p>
-<p>“Setting”–”Deploy keys”</p>
-<p>Just do it !</p>
-<p>And SSH key absolutely just support the ssh way</p>
-<p>If you use HTTPS remote address, you need to switch it </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote rm origin      &#x2F;&#x2F; delete origin remote address </span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:nickchou&#x2F;gocode.git  &#x2F;&#x2F; apply new remote address</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Github</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Git</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Google E-mail Gmail</title>
     <url>/2021/03/08/Google-E-mail-Gmail/</url>
     <content><![CDATA[<p>QQ邮箱中选择gmail注册</p>
@@ -1382,7 +1382,7 @@
 
 
 <p>Cache</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Web页面设计中，建少HTTP请求可以提高页面响应速度。浏览器在第一次访问页面时下载的资源会缓存起来，第二次访问时会判断在缓存中是否已有该资源并且有没有更新过，如果已有该资源且没有更新过，则去缓存去取，这样减少了下载资源的时间。原理上是通过HTTP Rquest Header中的 if-modified-since 和Response Headers中的last-modified来实现</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Web页面设计中，建少HTTP请求可以提高页面响应速度。</span><br><span class="line">浏览器在第一次访问页面时下载的资源会缓存起来</span><br><span class="line">第二次访问时会判断在缓存中是否已有该资源并且有没有更新过</span><br><span class="line">如果已有该资源且没有更新过，则去缓存去取</span><br><span class="line">这样减少了下载资源的时间。</span><br><span class="line">原理上是通过HTTP Rquest Header中的 if-modifaders中的last-modified来实现</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -1402,6 +1402,35 @@
 
 <p>(3) _config.yml in Hexo root folder add:</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Theme</title>
+    <url>/2021/03/08/Hexo-Theme/</url>
+    <content><![CDATA[<p>Next主题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+
+
+<p>_config.yml新增</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在Next主题的配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
+
+<p>把local_search enable 置true就好了</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -1493,38 +1522,23 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Theme</title>
-    <url>/2021/03/08/Hexo-Theme/</url>
-    <content><![CDATA[<p>Next主题</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-
-
-<p>_config.yml新增</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-
-
-
-<p>在Next主题的配置文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
-
-<p>把local_search enable 置true就好了</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Idea shortcut</title>
     <url>/2021/04/26/Idea-shortcut/</url>
     <content><![CDATA[<p>double click “Ctrl” – run any command</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Intellij 使用</title>
+    <url>/2021/06/08/Intellij-%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>有些函数没有解释，是需要先下载源码先</p>
+<h4 id="lombok报错"><a href="#lombok报错" class="headerlink" title="lombok报错"></a>lombok报错</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">java.lang.IllegalAccessError: class lombok.javac.apt.LombokProcessor cannot access class com.sun.tools.javac.processing.JavacProcessingEnvironment [duplicate]</span><br></pre></td></tr></table></figure>
+
+<p>解决</p>
+<p>Switch to at least the <code>1.18.20</code> version of Lombok that contains <a href="https://github.com/rzwitserloot/lombok/issues/2681">the fix</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.projectlombok&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;lombok&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;version&gt;1.18.20&lt;&#x2F;version&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
   </entry>
   <entry>
@@ -1856,27 +1870,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python File Operation</title>
-    <url>/2021/01/02/Python-File-Operation/</url>
-    <content><![CDATA[<p>Add content to file</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
-
-<p>Read content</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python Dict</title>
     <url>/2021/01/02/Python-Dict/</url>
     <content><![CDATA[<p>Traverse</p>
@@ -1896,24 +1889,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Flask</title>
-    <url>/2021/03/08/Python-Flask/</url>
-    <content><![CDATA[<p>1.Listener </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
+    <title>Python File Operation</title>
+    <url>/2021/01/02/Python-File-Operation/</url>
+    <content><![CDATA[<p>Add content to file</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
 
-<p>2.Template</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span>():</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">   app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>Read content</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
 
 
 
 ]]></content>
       <categories>
         <category>Python</category>
-        <category>Flask</category>
+        <category>Tutorial</category>
       </categories>
       <tags>
+        <tag>Tutorial</tag>
         <tag>Python</tag>
-        <tag>Flask</tag>
       </tags>
   </entry>
   <entry>
@@ -2006,30 +1999,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Project</title>
-    <url>/2021/03/27/Python-Project/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Python String</title>
-    <url>/2021/01/02/Python-String/</url>
-    <content><![CDATA[<p>List to String</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#x27;</span>.join(xxList))</span><br></pre></td></tr></table></figure>
+    <title>Python Flask</title>
+    <url>/2021/03/08/Python-Flask/</url>
+    <content><![CDATA[<p>1.Listener </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>String to List</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>=text.split(<span class="string">&#x27;,&#x27;</span>) <span class="comment"># split String by &#x27;,&#x27; to List</span></span><br><span class="line">    print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+<p>2.Template</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(&#x27;/&#x27;)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span>():</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">   app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
 
 
 ]]></content>
       <categories>
         <category>Python</category>
-        <category>Tutorial</category>
+        <category>Flask</category>
       </categories>
       <tags>
-        <tag>Tutorial</tag>
         <tag>Python</tag>
+        <tag>Flask</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Python Project</title>
+    <url>/2021/03/27/Python-Project/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Python module version</title>
@@ -2058,6 +2051,27 @@
       <tags>
         <tag>Tutorial</tag>
         <tag>Config</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python String</title>
+    <url>/2021/01/02/Python-String/</url>
+    <content><![CDATA[<p>List to String</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#x27;</span>.join(xxList))</span><br></pre></td></tr></table></figure>
+
+<p>String to List</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>=text.split(<span class="string">&#x27;,&#x27;</span>) <span class="comment"># split String by &#x27;,&#x27; to List</span></span><br><span class="line">    print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -2160,6 +2174,17 @@
       </tags>
   </entry>
   <entry>
+    <title>RSA加密</title>
+    <url>/2021/06/08/RSA%E5%8A%A0%E5%AF%86/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/48249182">解释</a></p>
+<p><a href="https://blog.csdn.net/weixin_43461520/article/details/107941983">demo</a></p>
+<h4 id="生成RSA文件"><a href="#生成RSA文件" class="headerlink" title="生成RSA文件"></a>生成RSA文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>Refactor Notes</title>
     <url>/2021/01/03/Refactor-Notes/</url>
     <content><![CDATA[<p>1.</p>
@@ -2229,6 +2254,13 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Spring Boot_exp2</title>
+    <url>/2021/04/28/Spring-Boot-exp2/</url>
+    <content><![CDATA[<p>list元素重复</p>
+<p>list元素数量不对</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Spring Boot cmd</title>
     <url>/2021/03/30/Spring-Boot-cmd/</url>
     <content><![CDATA[<p>run app</p>
@@ -2246,13 +2278,6 @@
 
 
 
-]]></content>
-  </entry>
-  <entry>
-    <title>Spring Boot_exp2</title>
-    <url>/2021/04/28/Spring-Boot-exp2/</url>
-    <content><![CDATA[<p>list元素重复</p>
-<p>list元素数量不对</p>
 ]]></content>
   </entry>
   <entry>
@@ -2341,6 +2366,14 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring Boot 前端</title>
+    <url>/2021/06/08/Spring-Boot-%E5%89%8D%E7%AB%AF/</url>
+    <content><![CDATA[<h4 id="spring-boot-Cannot-resolve-MVC-View"><a href="#spring-boot-Cannot-resolve-MVC-View" class="headerlink" title="spring boot Cannot resolve MVC View"></a>spring boot Cannot resolve MVC View</h4><p>添加依赖</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-freemarker&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Spring Security Fliter</title>
     <url>/2021/05/25/Spring-Security-Fliter/</url>
     <content><![CDATA[<p>Difference from addBefore and addAfter</p>
@@ -2349,13 +2382,70 @@
   <entry>
     <title>Spring Security Tutorial</title>
     <url>/2021/05/25/Spring-Security-Tutorial/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Spring packing</title>
-    <url>/2021/04/26/Spring-packing/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<p>创建项目时导入相关依赖，会有默认的http认证界面</p>
+<h4 id="禁用默认Security登录"><a href="#禁用默认Security登录" class="headerlink" title="禁用默认Security登录"></a>禁用默认Security登录</h4><p>找到Spring Boot启动类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@EnableAutoConfiguration(exclude = &#123;SecurityAutoConfiguration.class&#125;)</span></span><br></pre></td></tr></table></figure>
 
+
+
+<p><a href="https://blog.csdn.net/qq_43647821/article/details/111628821">数据库demo</a></p>
+<hr>
+<h4 id="密码有问题"><a href="#密码有问题" class="headerlink" title="密码有问题"></a>密码有问题</h4><p>密码的编码问题</p>
+<p>解决</p>
+<p>Add password storage format</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">     </span><br><span class="line">        auth.inMemoryAuthentication()</span><br><span class="line">                .withUser(<span class="string">&quot;user&quot;</span>).password(<span class="string">&quot;&#123;noop&#125;password&quot;</span>).roles(<span class="string">&quot;USER&quot;</span>)</span><br><span class="line">                .and()</span><br><span class="line">                .withUser(<span class="string">&quot;admin&quot;</span>).password(<span class="string">&quot;&#123;noop&#125;password&quot;</span>).roles(<span class="string">&quot;ADMIN&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h4 id="Spring-Security-配置数据库验证用户登录"><a href="#Spring-Security-配置数据库验证用户登录" class="headerlink" title="Spring Security 配置数据库验证用户登录"></a>Spring Security 配置数据库验证用户登录</h4><p><a href="https://github.com/a1020151695/Spring-Security-DEMO">Demo</a></p>
+<p>1.Security 过滤链</p>
+<p>继承WebSecurityConfigurerAdapter 重写其中的configure进行配置</p>
+<p>总共3种configure可重写</p>
+<p>1.HttpSecurity， 配置路由</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// 路由</span></span><br><span class="line">    http.antMatcher(<span class="string">&quot;/admin/**&quot;</span>)  <span class="comment">// 匹配这类请求</span></span><br><span class="line">            .authorizeRequests()  <span class="comment">// 这些请求需要授权</span></span><br><span class="line">            .anyRequest().hasAnyAuthority(<span class="string">&quot;ADMIN&quot;</span>).and()</span><br><span class="line">            .formLogin()  <span class="comment">// 开放登录界面，定制成功登录后的路由</span></span><br><span class="line">            .loginPage(<span class="string">&quot;/admin/login_backend&quot;</span>).permitAll()</span><br><span class="line">            .defaultSuccessUrl(<span class="string">&quot;/admin&quot;</span>).and()</span><br><span class="line">            .logout()  <span class="comment">// 开放退出界面，定制退出登录后的路由</span></span><br><span class="line">            .logoutUrl(<span class="string">&quot;/admin/logout&quot;</span>).permitAll()</span><br><span class="line">            .logoutSuccessUrl(<span class="string">&quot;/admin/login_backend?logout&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.AuthenticationManagerBuilder， 配置认证</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// 用内存中的定义的数据进行认证</span></span><br><span class="line">    auth.inMemoryAuthentication().</span><br><span class="line">        withUser(<span class="string">&quot;admin&quot;</span>).password(<span class="string">&quot;&#123;noop&#125;123456&quot;</span>).roles(<span class="string">&quot;ADMIN&quot;</span>).authorities(<span class="string">&quot;ADMIN&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.WebSecurity， 配置静态资源的访问</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(WebSecurity web)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// static resource</span></span><br><span class="line">    web.ignoring().antMatchers(<span class="string">&quot;/css/**&quot;</span>, <span class="string">&quot;/img/**&quot;</span>, <span class="string">&quot;/**/*.png&quot;</span>); <span class="comment">// 忽略对这些请求的拦截</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line">   <span class="meta">@Order(101)</span></span><br><span class="line">   <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">UserSecurityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span></span>&#123;</span><br><span class="line">       <span class="meta">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">           http.authorizeRequests()</span><br><span class="line">                   .antMatchers(<span class="string">&quot;/&quot;</span>).permitAll()  <span class="comment">// 匹配所有请求</span></span><br><span class="line">                   .anyRequest().hasAnyAuthority(<span class="string">&quot;USER&quot;</span>).and()</span><br><span class="line">               .formLogin()</span><br><span class="line">                   .loginPage(<span class="string">&quot;/user/login_frontend&quot;</span>).permitAll()  <span class="comment">// 自定义登录页面</span></span><br><span class="line">                   .defaultSuccessUrl(<span class="string">&quot;/user&quot;</span>).and()  <span class="comment">// 配置登陆成功后的跳转页面</span></span><br><span class="line">               .logout()</span><br><span class="line">                   .logoutUrl(<span class="string">&quot;/user/logout&quot;</span>)</span><br><span class="line">                   .logoutSuccessUrl(<span class="string">&quot;/user/login_frontend?logout&quot;</span>).and()</span><br><span class="line">               .exceptionHandling().accessDeniedHandler(UserSecurityConfig::accessDeniedHandle);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="meta">@Autowired</span></span><br><span class="line">       UserService userService;</span><br><span class="line">       <span class="meta">@Autowired</span></span><br><span class="line">       PasswordEncoder passwordEncoder;</span><br><span class="line">       <span class="meta">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">           auth.userDetailsService(userService);</span><br><span class="line">           auth.jdbcAuthentication().passwordEncoder(passwordEncoder);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">accessDeniedHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">           request.setAttribute(WebAttributes.ACCESS_DENIED_403,</span><br><span class="line">                   accessDeniedException);</span><br><span class="line">           response.setStatus(HttpStatus.FORBIDDEN.value());</span><br><span class="line">           response.setCharacterEncoding(Charset.defaultCharset().displayName());<span class="comment">// 解决中文乱码</span></span><br><span class="line">           response.addHeader(<span class="string">&quot;Content-Type&quot;</span>, MediaType.TEXT_HTML_VALUE);</span><br><span class="line">           response.getWriter().write(<span class="string">&quot;你的权限不够&quot;</span>);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>重点在对于认证的configure</p>
+<p>其中另外涉及到了两个东西</p>
+<p>UserService，PasswordEncoder</p>
+<p>UserService实现UserDetailsService接口，实现loadUserByUsername方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> freejim.icu.security_demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UserDetails;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UserDetailsService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UsernameNotFoundException;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.crypto.password.PasswordEncoder;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> <span class="keyword">implements</span> <span class="title">UserDetailsService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    UserRepository userRepository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    PasswordEncoder passwordEncoder;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> User <span class="title">insert</span><span class="params">(User user)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//存在数据库中的密码应该为密文</span></span><br><span class="line">        <span class="comment">// 不可少！不然密码编码错误，会导致正确的密码也无法登录</span></span><br><span class="line">        user.setPassword(passwordEncoder.encode(user.getPassword())); </span><br><span class="line">        <span class="keyword">return</span> userRepository.save(user);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> UserDetails <span class="title">loadUserByUsername</span><span class="params">(String name)</span> <span class="keyword">throws</span> UsernameNotFoundException </span>&#123;</span><br><span class="line">        User user = userRepository.findByName(name);  <span class="comment">// 从数据库中查询到用户名，密码，权限封装到User中</span></span><br><span class="line">        <span class="keyword">if</span> (user == <span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;nobody&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>PasswordEncoder</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> freejim.icu.security_demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.crypto.password.PasswordEncoder;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span>  <span class="comment">// 自动装配</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PasswordUtil</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function">PasswordEncoder <span class="title">passwordEncoder</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BCryptPasswordEncoder();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>上面又涉及到和数据库的交互</p>
+<p>即UserRepository 和User</p>
+<p>UserRepository 完成与数据库的交互</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> freejim.icu.security_demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.data.jpa.repository.JpaRepository;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Repository;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Repository</span>  <span class="comment">// 注解实现，依赖于jpa</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserRepository</span> <span class="keyword">extends</span> <span class="title">JpaRepository</span>&lt;<span class="title">User</span>,<span class="title">Long</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function">User <span class="title">findByName</span><span class="params">(String name)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>User 其实不只是实体类那么简单，其实现了很重要的UserDetails接口</p>
+<p>UserDetails 是在认证过程中负责用户信息储存的接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> freejim.icu.security_demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.GrantedAuthority;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.authority.SimpleGrantedAuthority;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UserDetails;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.persistence.Entity;</span><br><span class="line"><span class="keyword">import</span> javax.persistence.GeneratedValue;</span><br><span class="line"><span class="keyword">import</span> javax.persistence.GenerationType;</span><br><span class="line"><span class="keyword">import</span> javax.persistence.Id;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collection;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Entity(name = &quot;tb_user&quot;)</span>  <span class="comment">// tb_user 为表名</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> <span class="keyword">implements</span> <span class="title">UserDetails</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Id</span> <span class="comment">//标识为主键</span></span><br><span class="line">    <span class="meta">@GeneratedValue(strategy = GenerationType.IDENTITY)</span>  <span class="comment">//主键自增</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">    <span class="keyword">private</span> String role;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Collection&lt;? extends GrantedAuthority&gt; getAuthorities() &#123;</span><br><span class="line">        List&lt;SimpleGrantedAuthority&gt; simpleGrantedAuthorities = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        simpleGrantedAuthorities.add(<span class="keyword">new</span> SimpleGrantedAuthority(<span class="string">&quot;role&quot;</span>));</span><br><span class="line">        <span class="keyword">return</span> simpleGrantedAuthorities;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPassword</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> password;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getUsername</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAccountNonExpired</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAccountNonLocked</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isCredentialsNonExpired</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEnabled</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>然后是数据库的配置</p>
+<p>application.properties</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">spring.datasource.driver-class-name&#x3D;com.mysql.cj.jdbc.Driver</span><br><span class="line">spring.datasource.url&#x3D;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;db_authority?serverTimezone&#x3D;GMT%2B8</span><br><span class="line">spring.datasource.username&#x3D;root</span><br><span class="line">spring.datasource.password&#x3D;123456</span><br></pre></td></tr></table></figure>
+
+<p>mysql语句</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`tb_user`</span> (</span><br><span class="line">  <span class="string">`id`</span> <span class="built_in">bigint</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  <span class="string">`name`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">&#x27;用户名&#x27;</span>,</span><br><span class="line">  <span class="string">`password`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">&#x27;用户密码&#x27;</span>,</span><br><span class="line">  <span class="string">`role`</span> <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span> <span class="keyword">COMMENT</span> <span class="string">&#x27;用户角色，所拥有的权限&#x27;</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>配置完成</p>
+<hr>
 ]]></content>
   </entry>
   <entry>
@@ -2478,6 +2568,13 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring packing</title>
+    <url>/2021/04/26/Spring-packing/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn clean install</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Tensorflow Error Messages</title>
     <url>/2021/01/03/Tensorflow-Error-Messages/</url>
     <content><![CDATA[<p>1.</p>
@@ -2507,17 +2604,6 @@
         <tag>Python</tag>
         <tag>Machine Learn</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>VS Error</title>
-    <url>/2021/03/08/VS-Error/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
-
-<p>Solve </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
-]]></content>
   </entry>
   <entry>
     <title>Typora Shortcut</title>
@@ -2644,6 +2730,29 @@
       </tags>
   </entry>
   <entry>
+    <title>VS Error</title>
+    <url>/2021/03/08/VS-Error/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
+
+<p>Solve </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue localhost</title>
+    <url>/2021/06/06/Vue-localhost/</url>
+    <content><![CDATA[<h2 id="只能通过localhost访问"><a href="#只能通过localhost访问" class="headerlink" title="只能通过localhost访问"></a>只能通过localhost访问</h2><p>解决:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.查看&#96;config&#96;文件夹下的 &#96;index.js&#96;，将&#96;dev&#96;中将&#96;host&#96;重新定义为：&#96;0.0.0.0&#96;即可</span><br><span class="line"></span><br><span class="line">2.修改&#96;package.json&#96;中&#96;script&#96;下&#96;dev&#96;的值，在后面加入&#96;--host 0.0.0.0&#96; 也可以解决</span><br></pre></td></tr></table></figure>
+
+<p>Note</p>
+<blockquote>
+<p>别忘了把防火墙给关了</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
     <title>Vue Tutorial</title>
     <url>/2021/06/01/Vue-Tutorial/</url>
     <content><![CDATA[<p><a href="https://blog.jetbrains.com/webstorm/2019/03/get-started-building-apps-with-vue-js-in-webstorm/">官方介绍</a></p>
@@ -2758,6 +2867,114 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Vue 组件库使用</title>
+    <url>/2021/06/06/Vue-%E7%BB%84%E4%BB%B6%E5%BA%93%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="Element"><a href="#Element" class="headerlink" title="Element"></a>Element</h3><ol>
+<li>npm安装</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -S</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>main.js</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">&#x27;element-ui&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-ui/lib/theme-chalk/index.css&#x27;</span></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line">Vue.use(ElementUI)</span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  router,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>使用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;el-container style&#x3D;&quot;height: 500px; border: 1px solid #eee&quot;&gt;</span><br><span class="line">  &lt;el-aside width&#x3D;&quot;200px&quot; style&#x3D;&quot;background-color: rgb(238, 241, 246)&quot;&gt;</span><br><span class="line">    &lt;el-menu :default-openeds&#x3D;&quot;[&#39;1&#39;, &#39;3&#39;]&quot;&gt;</span><br><span class="line">      &lt;el-submenu index&#x3D;&quot;1&quot;&gt;</span><br><span class="line">        &lt;template slot&#x3D;&quot;title&quot;&gt;&lt;i class&#x3D;&quot;el-icon-s-data&quot;&gt;&lt;&#x2F;i&gt;主面板&lt;&#x2F;template&gt;</span><br><span class="line">        &lt;el-menu-item-group&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-submenu index&#x3D;&quot;1-4&quot;&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-4-1&quot;&gt;选项4-1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;el-submenu index&#x3D;&quot;2&quot;&gt;</span><br><span class="line">        &lt;template slot&#x3D;&quot;title&quot;&gt;&lt;i class&#x3D;&quot;el-icon-menu&quot;&gt;&lt;&#x2F;i&gt;导航二&lt;&#x2F;template&gt;</span><br><span class="line">        &lt;el-menu-item-group&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-submenu index&#x3D;&quot;2-4&quot;&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-4-1&quot;&gt;选项4-1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;el-submenu index&#x3D;&quot;3&quot;&gt;</span><br><span class="line">        &lt;template slot&#x3D;&quot;title&quot;&gt;&lt;i class&#x3D;&quot;el-icon-setting&quot;&gt;&lt;&#x2F;i&gt;导航三&lt;&#x2F;template&gt;</span><br><span class="line">        &lt;el-menu-item-group&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-submenu index&#x3D;&quot;3-4&quot;&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-4-1&quot;&gt;选项4-1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;&#x2F;el-submenu&gt;</span><br><span class="line">    &lt;&#x2F;el-menu&gt;</span><br><span class="line">  &lt;&#x2F;el-aside&gt;</span><br><span class="line"></span><br><span class="line">  &lt;el-container&gt;</span><br><span class="line">    &lt;el-header style&#x3D;&quot;text-align: right; font-size: 12px&quot;&gt;</span><br><span class="line">      &lt;el-dropdown&gt;</span><br><span class="line">        &lt;i class&#x3D;&quot;el-icon-setting&quot; style&#x3D;&quot;margin-right: 15px&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">        &lt;el-dropdown-menu slot&#x3D;&quot;dropdown&quot;&gt;</span><br><span class="line">          &lt;el-dropdown-item&gt;查看&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">          &lt;el-dropdown-item&gt;新增&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">          &lt;el-dropdown-item&gt;删除&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">        &lt;&#x2F;el-dropdown-menu&gt;</span><br><span class="line">      &lt;&#x2F;el-dropdown&gt;</span><br><span class="line">      &lt;span&gt;王小虎&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;el-header&gt;</span><br><span class="line"></span><br><span class="line">    &lt;el-main&gt;</span><br><span class="line">      &lt;el-table :data&#x3D;&quot;tableData&quot;&gt;</span><br><span class="line">        &lt;el-table-column prop&#x3D;&quot;date&quot; label&#x3D;&quot;日期&quot; width&#x3D;&quot;140&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-table-column&gt;</span><br><span class="line">        &lt;el-table-column prop&#x3D;&quot;name&quot; label&#x3D;&quot;姓名&quot; width&#x3D;&quot;120&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-table-column&gt;</span><br><span class="line">        &lt;el-table-column prop&#x3D;&quot;address&quot; label&#x3D;&quot;地址&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-table-column&gt;</span><br><span class="line">      &lt;&#x2F;el-table&gt;</span><br><span class="line">    &lt;&#x2F;el-main&gt;</span><br><span class="line">  &lt;&#x2F;el-container&gt;</span><br><span class="line">&lt;&#x2F;el-container&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">  .el-header &#123;</span><br><span class="line">    background-color: #B3C0D1;</span><br><span class="line">    color: #333;</span><br><span class="line">    line-height: 60px;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .el-aside &#123;</span><br><span class="line">    color: #333;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;Mainpage&#39;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    const item &#x3D; &#123;</span><br><span class="line">      date: &#39;2016-05-02&#39;,</span><br><span class="line">      name: &#39;王小虎&#39;,</span><br><span class="line">      address: &#39;上海市普陀区金沙江路 1518 弄&#39;</span><br><span class="line">    &#125;</span><br><span class="line">    return &#123;</span><br><span class="line">      tableData: Array(20).fill(item)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue 路由</title>
+    <url>/2021/06/04/Vue-%E8%B7%AF%E7%94%B1/</url>
+    <content><![CDATA[<h2 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;hello.html&quot;</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>hello.html和index.html同级</p>
+<hr>
+<h2 id="组件切换-初始化时没有routers-js的情况"><a href="#组件切换-初始化时没有routers-js的情况" class="headerlink" title="组件切换(初始化时没有routers.js的情况)"></a>组件切换(初始化时没有routers.js的情况)</h2><p><a href="https://github.com/a1020151695/vue-component-shift">DEMO</a></p>
+<p>1.引入VueRouter，统一管理路由</p>
+<p>main.js</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> routers <span class="keyword">from</span> <span class="string">&#x27;./routers&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  mode: <span class="string">&#x27;history&#x27;</span>,</span><br><span class="line">  routes: routers</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  router,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.新建routers.js（和main.js同级）</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">&#x27;./components/Home.vue&#x27;</span>  <span class="comment">// 引入要显示的组件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> routers = [</span><br><span class="line">    &#123;</span><br><span class="line">        path: <span class="string">&#x27;/home&#x27;</span>,  <span class="comment">// 设置好route</span></span><br><span class="line">        name: <span class="string">&#x27;home&#x27;</span>,</span><br><span class="line">        component: Home</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> routers</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>4.自定义组件 Home.vue（在components/）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;p&gt;xxxxxx&lt;&#x2F;p&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    export default &#123;</span><br><span class="line">        name: &quot;Home&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.App.vue</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">    &lt;img alt&#x3D;&quot;Vue logo&quot; src&#x3D;&quot;.&#x2F;assets&#x2F;logo.png&quot;&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    &lt;router-link to&#x3D;&quot;&#x2F;home&quot;&gt;Test&lt;&#x2F;router-link&gt;</span><br><span class="line">    &lt;router-view&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>初始化有router的话，直接在其index.js下改就行了</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue model</title>
+    <url>/2021/06/07/Vue-model/</url>
+    <content><![CDATA[<blockquote>
+<p>子组件和父组件数据的双向绑定</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue 跨域</title>
+    <url>/2021/06/07/Vue-%E8%B7%A8%E5%9F%9F/</url>
+    <content><![CDATA[<p>找到devServer配置项</p>
+<p>其所在位置分两种情况</p>
+<p>1.如果使用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vue init webpack projectName</span><br></pre></td></tr></table></figure>
+
+<p>构建vue项目，则再/build/webpack.dev.conf.js中</p>
+<p>然后其引用了/config/index中的value</p>
+<p>2.如果使用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue create &lt;project-name&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">   	port:<span class="number">8081</span>,</span><br><span class="line">   	host: <span class="string">&#x27;0.0.0.0&#x27;</span>,</span><br><span class="line">       proxy:&#123;</span><br><span class="line">           <span class="string">&#x27;/health-post&#x27;</span>:&#123;</span><br><span class="line">       		target:<span class="string">&#x27;http://localhost:8080/&#x27;</span>,</span><br><span class="line">       		changeOrigin:<span class="literal">true</span>,</span><br><span class="line">       		pathRewrite: &#123;</span><br><span class="line">         		<span class="string">&#x27;^/health-post&#x27;</span>: <span class="string">&#x27;/health-post&#x27;</span>  <span class="comment">// 不可省</span></span><br><span class="line">       &#125;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue-项目创建-VsCode</title>
+    <url>/2021/06/06/Vue-%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA-VsCode/</url>
+    <content><![CDATA[<p>所需插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vetur  &#x2F;&#x2F; Vue开发插件</span><br><span class="line">ESLint &#x2F;&#x2F; 代码校验</span><br></pre></td></tr></table></figure>
+
+<p>工具：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g vue-cli</span><br></pre></td></tr></table></figure>
+
+<p>命令:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack projectName</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<hr>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">You seem to be using old vue-cli and </span><br><span class="line">scaffolded your project using vue init webpack &lt;project-name&gt;.</span><br><span class="line"></span><br><span class="line">Since it all evolved into vue cli 3</span><br><span class="line">old vue-cli is deprecated</span><br><span class="line">we are now using @vue&#x2F;cli</span><br><span class="line">vue create &lt;project-name&gt; for scaffolding out projects.</span><br><span class="line"></span><br><span class="line">It&#39;s perfectly fine for you to use the old way(and I still do sometimes)</span><br><span class="line">vue.config.js is the global configuration file for your project </span><br><span class="line">when you are using @vue&#x2F;cli. Check more about it here.</span><br><span class="line"></span><br><span class="line">For webpack configurations when using vue-cli</span><br><span class="line">in projects scaffolded using npm init command</span><br><span class="line">check the &#x2F;build directory in the root of the project folder.</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>WSL Basic</title>
+    <url>/2021/03/27/WSL-Basic/</url>
+    <content><![CDATA[<p>switch to root</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>WSL Mysql</title>
     <url>/2021/03/27/WSL-Mysql/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
@@ -2771,14 +2988,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>WSL Basic</title>
-    <url>/2021/03/27/WSL-Basic/</url>
-    <content><![CDATA[<p>switch to root</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -2821,6 +3030,22 @@
       </tags>
   </entry>
   <entry>
+    <title>axois</title>
+    <url>/2021/06/07/axois/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">        name: &quot;Register&quot;,</span><br><span class="line">        data()&#123;</span><br><span class="line">            return&#123;</span><br><span class="line">                messageInfo:&quot;&quot;,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        methods:&#123;</span><br><span class="line">            register()&#123;</span><br><span class="line">                axios.post(&#39;&#x2F;register&#39;, &#123;</span><br><span class="line">                    &quot;username&quot;:this.username,</span><br><span class="line">                    &quot;password&quot;:this.password,</span><br><span class="line">                    &quot;password1&quot;:this.password,</span><br><span class="line">                &#125;).then((res)&#x3D;&gt;&#123;</span><br><span class="line">                    console.log(res)</span><br><span class="line">                    this.messageInfo&#x3D;res.data.message</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;	</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	axios(&#123;</span><br><span class="line">        method: &#39;post&#39;,</span><br><span class="line">        url: &#39;http:&#x2F;&#x2F;localhost:8080&#x2F;health-post&#39;,</span><br><span class="line">        headers: &#123;</span><br><span class="line">          &#39;Content-Type&#39;: &#39;multipart&#x2F;form-data&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        withCredentials: true,</span><br><span class="line">        data: formData</span><br><span class="line">      &#125;).then((res) &#x3D;&gt; &#123;</span><br><span class="line">      &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Spring Boot 接收数据</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RequestMapping(&quot;/health-post&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">healthPost</span><span class="params">(<span class="meta">@RequestParam</span> Map&lt;String,String&gt; params)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (String key : params.keySet())&#123;</span><br><span class="line">        System.out.println(key+<span class="string">&quot;is&quot;</span>+params.get(key));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;Good&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>cmd Shortcut</title>
     <url>/2021/03/08/cmd-Shortcut/</url>
     <content><![CDATA[<p>1.源文件</p>
@@ -2857,6 +3082,15 @@
       <tags>
         <tag>Shortcut</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>html width</title>
+    <url>/2021/06/06/html-width/</url>
+    <content><![CDATA[<p>有些标签自带width属性，可以直接设置</p>
+<p>但是有些标签需要借助style才可以设置宽度</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:400px;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>lms docker</title>
@@ -2902,6 +3136,19 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>定积分总结</title>
+    <url>/2021/05/30/%E5%AE%9A%E7%A7%AF%E5%88%86%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>s</p>
+<p>基础法：拆</p>
+<p>三角函数的积分</p>
+<hr>
+<p>变积分限：分部积分消x，先上再分部</p>
+<p>分部一下，直接大杀四方</p>
+<hr>
+<p>什么时候用换元x=sint</p>
+]]></content>
+  </entry>
+  <entry>
     <title>不定积分</title>
     <url>/2021/05/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
     <content><![CDATA[<p><strong>二类换元</strong></p>
@@ -2913,19 +3160,6 @@
 
 <p>对数</p>
 <p>三角函数</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>定积分总结</title>
-    <url>/2021/05/30/%E5%AE%9A%E7%A7%AF%E5%88%86%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>s</p>
-<p>基础法：拆</p>
-<p>三角函数的积分</p>
-<hr>
-<p>变积分限：分部积分消x，先上再分部</p>
-<p>分部一下，直接大杀四方</p>
-<hr>
-<p>什么时候用换元x=sint</p>
 ]]></content>
   </entry>
   <entry>
@@ -2948,19 +3182,6 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090340075.png" alt="image-20210530090340075"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090348067.png" alt="image-20210530090348067"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090357204.png" alt="image-20210530090357204"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>西南科技大学</title>
-    <url>/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090901098.png" alt="image-20210530090901098"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091022080.png" alt="image-20210530091022080"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091033354.png" alt="image-20210530091033354"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091052640.png" alt="image-20210530091052640"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091102542.png" alt="image-20210530091102542"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091431085.png" alt="image-20210530091431085"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530195405472.png" alt="image-20210530195405472"></p>
-<p><img src="/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/Users\Jimmy\AppData\Roaming\Typora\typora-user-images\image-20210530195428120.png" alt="image-20210530195422207"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3022,6 +3243,19 @@
 <p>OSPF种类</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125831974.png" alt="image-20210529125831974"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125841175.png" alt="image-20210529125841175"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>西南科技大学</title>
+    <url>/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090901098.png" alt="image-20210530090901098"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091022080.png" alt="image-20210530091022080"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091033354.png" alt="image-20210530091033354"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091052640.png" alt="image-20210530091052640"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091102542.png" alt="image-20210530091102542"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091431085.png" alt="image-20210530091431085"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530195405472.png" alt="image-20210530195405472"></p>
+<p><img src="/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/Users\Jimmy\AppData\Roaming\Typora\typora-user-images\image-20210530195428120.png" alt="image-20210530195422207"></p>
 ]]></content>
   </entry>
   <entry>
