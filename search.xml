@@ -82,33 +82,20 @@
   <entry>
     <title>Ajax Tutorial</title>
     <url>/2021/05/11/Ajax-Tutorial/</url>
-    <content><![CDATA[<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">            type: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line">            url: <span class="string">&quot;http://localhost:8080/getRecord?area=&quot;</span>+area,</span><br><span class="line">            dataType: <span class="string">&quot;json&quot;</span>,</span><br><span class="line">            jsonp: <span class="string">&quot;callback&quot;</span>,</span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">json</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(json);</span><br><span class="line">                <span class="keyword">let</span> mainBody = <span class="built_in">document</span>.getElementById(<span class="string">&quot;main-body&quot;</span>);</span><br><span class="line">                <span class="keyword">let</span> table = <span class="string">&quot;&lt;table class=&#x27;table&#x27;&gt;&quot;</span>;</span><br><span class="line">                <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> key <span class="keyword">in</span> json</span>)</span>&#123;</span><br><span class="line">                    table += <span class="string">&quot;&lt;tr&gt;&lt;td&gt;&quot;</span>+key+<span class="string">&quot;&lt;/td&gt;&lt;td&gt;&quot;</span>+json[key]+<span class="string">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">                table+=<span class="string">&quot;&lt;/table&gt;&quot;</span></span><br><span class="line">                mainBody.innerHTML=table;</span><br><span class="line">            &#125;,</span><br><span class="line">            error: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                alert(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
 
 
 
+<hr>
+<h4 id="ajax不发送请求"><a href="#ajax不发送请求" class="headerlink" title="ajax不发送请求"></a>ajax不发送请求</h4><p>原因：没有正确引入jquery</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-
+<p>虽然某些别的js脚本也有引入jquery</p>
+<p>但是那个版本可能不支持ajax</p>
+<p>以导致ajax失效</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Android Add Views</title>
-    <url>/2021/01/06/Android-Add-Views/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
   </entry>
   <entry>
     <title>Android Back Button</title>
@@ -135,10 +122,10 @@
       </tags>
   </entry>
   <entry>
-    <title>Android DeviceId</title>
-    <url>/2021/01/04/Android-DeviceId/</url>
+    <title>Android Add Views</title>
+    <url>/2021/01/06/Android-Add-Views/</url>
     <content><![CDATA[<p>Example</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -176,6 +163,24 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android DeviceId</title>
+    <url>/2021/01/04/Android-DeviceId/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -453,16 +458,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Studio SDK config</title>
-    <url>/2021/03/08/Android-Studio-SDK-config/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
-
-
-
-<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Android Swip Refresh</title>
     <url>/2021/01/06/Android-Swip-Refresh/</url>
     <content><![CDATA[<p>XML</p>
@@ -482,25 +477,19 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Tool Bar (On Top)</title>
-    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>ConfigBackButton</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>Android Studio SDK config</title>
+    <url>/2021/03/08/Android-Studio-SDK-config/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
 
 
 
+<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
 ]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
+  </entry>
+  <entry>
+    <title>Android Thread</title>
+    <url>/2021/01/04/Android-Thread/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Android Version</title>
@@ -571,6 +560,27 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Tool Bar (On Top)</title>
+    <url>/2021/01/06/Android-Tool-Bar-On-Top/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Toolbar</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">&quot;@+id/tool_bar_for_student_signState&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;0dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:navigationIcon</span>=<span class="string">&quot;@drawable/back&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">&quot;@color/xui_config_color_titlebar&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:titleTextColor</span>=<span class="string">&quot;@color/white&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_gravity</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;打卡&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textColor</span>=<span class="string">&quot;@color/white&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:textSize</span>=<span class="string">&quot;20sp&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Toolbar</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>ConfigBackButton</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android px dp sp</title>
     <url>/2021/01/04/Android-px-dp-sp/</url>
     <content><![CDATA[<p>px is for the general unit</p>
@@ -606,11 +616,6 @@
       <tags>
         <tag>Android</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Android Thread</title>
-    <url>/2021/01/04/Android-Thread/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Blockchain Digital Signature</title>
@@ -839,6 +844,16 @@
       </tags>
   </entry>
   <entry>
+    <title>Blockchain Reference</title>
+    <url>/2021/03/20/Blockchain-Reference/</url>
+    <content><![CDATA[<p><a href="https://github.com/chaozh/awesome-blockchain-cn">Github1</a></p>
+<p><a href="https://github.com/LiuBoyu/blockchain">Github2</a></p>
+<p>BIP</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A Bitcoin Improvement Proposal (BIP) is a design document for introducing features or information to Bitcoin. This is the standard way of communicating ideas since Bitcoin has no formal structure.</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Blockchain In Python</title>
     <url>/2021/03/20/Blockchain-In-Python/</url>
     <content><![CDATA[<p>Hash a object</p>
@@ -851,16 +866,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">output:   &#x2F;&#x2F; string length &#x3D; 64</span><br><span class="line">58c32e31cc29e9164710dc7571d83200d5f6ff044170e4b299ed8096b4de529e  </span><br></pre></td></tr></table></figure>
 
 
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Blockchain Reference</title>
-    <url>/2021/03/20/Blockchain-Reference/</url>
-    <content><![CDATA[<p><a href="https://github.com/chaozh/awesome-blockchain-cn">Github1</a></p>
-<p><a href="https://github.com/LiuBoyu/blockchain">Github2</a></p>
-<p>BIP</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A Bitcoin Improvement Proposal (BIP) is a design document for introducing features or information to Bitcoin. This is the standard way of communicating ideas since Bitcoin has no formal structure.</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -905,88 +910,6 @@
 
 
 
-]]></content>
-  </entry>
-  <entry>
-    <title>Daily Doubt</title>
-    <url>/2021/03/22/Daily-Doubt/</url>
-    <content><![CDATA[<p>bash is different env with cmd</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Dockerfile Basic</title>
-    <url>/2021/03/28/Dockerfile-Basic/</url>
-    <content><![CDATA[<p>new a file named “Dockerfile”</p>
-<p>then</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build .  &#x2F;&#x2F; will exec the dockerfile auto</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
-
-<p>will show the container id and container  name</p>
-<p>with name, you can start the container</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start container_name</span><br></pre></td></tr></table></figure>
-
-<p>then</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker stop container_name</span><br><span class="line">docker restart container_name</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Docker Basic</title>
-    <url>/2021/03/28/Docker-Basic/</url>
-    <content><![CDATA[<p>start docker daemon</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo service docker start</span><br></pre></td></tr></table></figure>
-
-<p>images list</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
-
-<p>delete images</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker rmi id</span><br></pre></td></tr></table></figure>
-
-<p>container status</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>Container</p>
-<p>run container</p>
-<p>1.check images</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
-
-<p>2.run images and attach it</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -i -t rastasheep&#x2F;ubuntu-sshd:18.04 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-t: 在新容器内指定一个伪终端或终端。</span><br><span class="line"></span><br><span class="line">-i: 允许你对容器内的标准输入 (STDIN) 进行交互。</span><br></pre></td></tr></table></figure>
-
-<p>3.exit</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
-
-<p>4.daemon model</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -itd --name ubuntu-test ubuntu &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-d daemon</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>container operation </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start (container id)</span><br><span class="line">docker stop (container id)</span><br><span class="line">docker restart (container id)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>Image</p>
-<p>Reuse</p>
-<p>1.export container</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker export 1e560fca3906 &gt; ubuntu.tar</span><br></pre></td></tr></table></figure>
-
-<p>2.import </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat .&#x2F;ubuntu.tar | docker import - test&#x2F;ubuntu:v1</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker import http:&#x2F;&#x2F;example.com&#x2F;exampleimage.tgz example&#x2F;imagerepo</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
 ]]></content>
   </entry>
   <entry>
@@ -1058,6 +981,88 @@
       <tags>
         <tag>Project Conclusion</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Daily Doubt</title>
+    <url>/2021/03/22/Daily-Doubt/</url>
+    <content><![CDATA[<p>bash is different env with cmd</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Docker Basic</title>
+    <url>/2021/03/28/Docker-Basic/</url>
+    <content><![CDATA[<p>start docker daemon</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo service docker start</span><br></pre></td></tr></table></figure>
+
+<p>images list</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p>delete images</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker rmi id</span><br></pre></td></tr></table></figure>
+
+<p>container status</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>Container</p>
+<p>run container</p>
+<p>1.check images</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p>2.run images and attach it</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -i -t rastasheep&#x2F;ubuntu-sshd:18.04 &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-t: 在新容器内指定一个伪终端或终端。</span><br><span class="line"></span><br><span class="line">-i: 允许你对容器内的标准输入 (STDIN) 进行交互。</span><br></pre></td></tr></table></figure>
+
+<p>3.exit</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<p>4.daemon model</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -itd --name ubuntu-test ubuntu &#x2F;bin&#x2F;bash</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-d daemon</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>container operation </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start (container id)</span><br><span class="line">docker stop (container id)</span><br><span class="line">docker restart (container id)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>Image</p>
+<p>Reuse</p>
+<p>1.export container</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker export 1e560fca3906 &gt; ubuntu.tar</span><br></pre></td></tr></table></figure>
+
+<p>2.import </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat .&#x2F;ubuntu.tar | docker import - test&#x2F;ubuntu:v1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker import http:&#x2F;&#x2F;example.com&#x2F;exampleimage.tgz example&#x2F;imagerepo</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title>Dockerfile Basic</title>
+    <url>/2021/03/28/Dockerfile-Basic/</url>
+    <content><![CDATA[<p>new a file named “Dockerfile”</p>
+<p>then</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build .  &#x2F;&#x2F; will exec the dockerfile auto</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<p>will show the container id and container  name</p>
+<p>with name, you can start the container</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start container_name</span><br></pre></td></tr></table></figure>
+
+<p>then</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker stop container_name</span><br><span class="line">docker restart container_name</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>Dockerfile Error</title>
@@ -1223,6 +1228,25 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Git Fix Conflict</title>
+    <url>/2021/01/04/Git-Fix-Conflict/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+
+<p>Generally, you just need to delete the origin content , and use the new content</p>
+<p>Strongly recommend you to use “Github Desktop”</p>
+<p>It will clearly display all conflicts and you can fix them directly</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git Basic Commands</title>
     <url>/2021/01/04/Git-Basic-Commands/</url>
     <content><![CDATA[<p>1.Push</p>
@@ -1267,21 +1291,34 @@
       </tags>
   </entry>
   <entry>
-    <title>Git Fix Conflict</title>
-    <url>/2021/01/04/Git-Fix-Conflict/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+    <title>Github Basic Config</title>
+    <url>/2021/01/04/Github-Basic-Config/</url>
+    <content><![CDATA[<p>1.Usage of “.gitignore “ file</p>
+<p>When you push, you can exclude some files using “.gitignore “ </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.properties</span><br></pre></td></tr></table></figure>
 
-<p>Generally, you just need to delete the origin content , and use the new content</p>
-<p>Strongly recommend you to use “Github Desktop”</p>
-<p>It will clearly display all conflicts and you can fix them directly</p>
+<p>means exclude all “.properties” file</p>
+<p>You can also exclude a single file, just type it’s whole file name</p>
+<p>Usually, “.gitignore “ file can’t work directly, you need to do this also</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git rm -r --cached .</span><br></pre></td></tr></table></figure>
+
+<p>Then push again</p>
+<hr>
+<p>error</p>
+<blockquote>
+<p>OpenSSL SSL_read: Connection was reset, errno 10054</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>zip 和 git clone 的区别在于是否有.git的隐藏文件</p>
 ]]></content>
       <categories>
-        <category>Git</category>
-        <category>Tutorial</category>
+        <category>Config</category>
+        <category>Github</category>
       </categories>
       <tags>
         <tag>Tutorial</tag>
-        <tag>Git</tag>
         <tag>Github</tag>
       </tags>
   </entry>
@@ -1316,38 +1353,6 @@
       <tags>
         <tag>Tutorial</tag>
         <tag>Git</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github Basic Config</title>
-    <url>/2021/01/04/Github-Basic-Config/</url>
-    <content><![CDATA[<p>1.Usage of “.gitignore “ file</p>
-<p>When you push, you can exclude some files using “.gitignore “ </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.properties</span><br></pre></td></tr></table></figure>
-
-<p>means exclude all “.properties” file</p>
-<p>You can also exclude a single file, just type it’s whole file name</p>
-<p>Usually, “.gitignore “ file can’t work directly, you need to do this also</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git rm -r --cached .</span><br></pre></td></tr></table></figure>
-
-<p>Then push again</p>
-<hr>
-<p>error</p>
-<blockquote>
-<p>OpenSSL SSL_read: Connection was reset, errno 10054</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>zip 和 git clone 的区别在于是否有.git的隐藏文件</p>
-]]></content>
-      <categories>
-        <category>Config</category>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
         <tag>Github</tag>
       </tags>
   </entry>
@@ -1538,6 +1543,22 @@
 ]]></content>
   </entry>
   <entry>
+    <title>JPA error</title>
+    <url>/2021/06/16/JPA-error/</url>
+    <content><![CDATA[<h4 id="could-not-extract-ResultSet"><a href="#could-not-extract-ResultSet" class="headerlink" title="could not extract ResultSet"></a>could not extract ResultSet</h4><p>原因：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@Entity和数据库中的表字段对应不上</span><br></pre></td></tr></table></figure>
+
+<p>我的话是“温度”的字段英文拼错了</p>
+<p>一边是temperature，一边是temperture，差了个a</p>
+<p>一定要仔细对照一下</p>
+<p>下划线是没有影响的，对应好就行</p>
+<hr>
+<h4 id="could-not-execute-statement"><a href="#could-not-execute-statement" class="headerlink" title="could not execute statement"></a>could not execute statement</h4><p>原因：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">字段定义的类型和@Entity有悖</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Intellij 使用</title>
     <url>/2021/06/08/Intellij-%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p>有些函数没有解释，是需要先下载源码先</p>
@@ -1590,6 +1611,17 @@
       </tags>
   </entry>
   <entry>
+    <title>JPA tutorial</title>
+    <url>/2021/06/17/JPA-tutorial/</url>
+    <content><![CDATA[<h4 id="Query"><a href="#Query" class="headerlink" title="@Query"></a>@Query</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatus</span><span class="params">(Integer status)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1 and u.name = ?2&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatusAndName</span><span class="params">(Integer status, String name)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>For the above queries, the <em>status</em> method parameter will be assigned to the query parameter with index <em>1,</em> and the <em>name</em> method parameter will be assigned to the query parameter with index <em>2</em>.</p>
+<hr>
+<h4 id="JPA-批量查询id"><a href="#JPA-批量查询id" class="headerlink" title="JPA 批量查询id"></a>JPA 批量查询id</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(value = &quot;select * from info where userid in ?1&quot;,nativeQuery = true)</span></span><br><span class="line"><span class="function">List&lt;Info&gt; <span class="title">getInfoByIds</span><span class="params">(List&lt;Integer&gt; userids)</span></span>;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Linux Basic</title>
     <url>/2021/03/27/Linux-Basic/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unzip wwwroot.zip</span><br></pre></td></tr></table></figure>
@@ -1613,6 +1645,52 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alias pip&#x3D;pip3</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Load Balance</title>
+    <url>/2021/04/26/Load-Balance/</url>
+    <content><![CDATA[<p><a href="https://spring.io/guides/gs/spring-cloud-loadbalancer/">Tutorial</a></p>
+<ol>
+<li><p>New two project</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">say-hello   &#x2F;&#x2F; real-service</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">user   &#x2F;&#x2F; balance-server</span><br></pre></td></tr></table></figure>
+
+<p>with maven</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">say-hello need modules: Spring Web</span><br><span class="line">user   need modules: Cloud Loadbalancer and Spring Reactive Web</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Implement</p>
+</li>
+</ol>
+<blockquote>
+<p>Note:</p>
+<p>refactor package name</p>
+</blockquote>
+<p>refactor application.properties</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">spring.application.name&#x3D;user</span><br><span class="line">server.port&#x3D;8888  &#x2F;&#x2F; app will run on the port</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Run App</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn spring-boot:run</span><br></pre></td></tr></table></figure>
+
+<p>run on multiple port</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn spring-boot:run -Dspring-boot.run.arguments&#x3D;--server.port&#x3D;9999</span><br></pre></td></tr></table></figure>
+
+<p>test in browser (8888 is balance server)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">localhost:8888&#x2F;hi</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> Flux&lt;List&lt;ServiceInstance&gt;&gt; get() &#123;</span><br><span class="line">    <span class="keyword">return</span> Flux.just(Arrays</span><br><span class="line">            .asList(<span class="keyword">new</span> DefaultServiceInstance(serviceId + <span class="string">&quot;1&quot;</span>, serviceId, <span class="string">&quot;localhost&quot;</span>, <span class="number">8090</span>, <span class="keyword">false</span>),</span><br><span class="line">                    <span class="keyword">new</span> DefaultServiceInstance(serviceId + <span class="string">&quot;2&quot;</span>, serviceId, <span class="string">&quot;localhost&quot;</span>, <span class="number">9092</span>, <span class="keyword">false</span>),</span><br><span class="line">                    <span class="keyword">new</span> DefaultServiceInstance(serviceId + <span class="string">&quot;3&quot;</span>, serviceId, <span class="string">&quot;localhost&quot;</span>, <span class="number">9999</span>, <span class="keyword">false</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>balance server will balance to these three ports</p>
+<p>once a target port got some problems, you may see browser will get error</p>
+<p>but refresh it, it will be ok, because it is balanced to another ok port</p>
+]]></content>
+      <tags>
+        <tag>Spring-Boot</tag>
+      </tags>
   </entry>
   <entry>
     <title>Mining</title>
@@ -1641,6 +1719,14 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">To construct the coinbase transaction, Jing’s node first calculates the total amount of transaction fees by adding all the inputs and outputs of the 418 transactions that were added to the block. </span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>Mysql bench tutorial</title>
+    <url>/2021/06/16/Mysql-bench-tutorial/</url>
+    <content><![CDATA[<h4 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h4><p>Alert好用</p>
+<hr>
+<h4 id="添加外键"><a href="#添加外键" class="headerlink" title="添加外键"></a>添加外键</h4><p>字段类型对不上是会报错的</p>
 ]]></content>
   </entry>
   <entry>
@@ -1763,49 +1849,30 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Load Balance</title>
-    <url>/2021/04/26/Load-Balance/</url>
-    <content><![CDATA[<p><a href="https://spring.io/guides/gs/spring-cloud-loadbalancer/">Tutorial</a></p>
-<ol>
-<li><p>New two project</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">say-hello   &#x2F;&#x2F; real-service</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">user   &#x2F;&#x2F; balance-server</span><br></pre></td></tr></table></figure>
-
-<p>with maven</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">say-hello need modules: Spring Web</span><br><span class="line">user   need modules: Cloud Loadbalancer and Spring Reactive Web</span><br></pre></td></tr></table></figure>
+    <title>Python Code</title>
+    <url>/2021/01/03/Python-Code/</url>
+    <content><![CDATA[<ol>
+<li><p>The Name of variable</p>
+<p>Not like Java — “dataSet”</p>
+<p>Python always use “data_set”</p>
 </li>
-<li><p>Implement</p>
+<li><p>Comments</p>
 </li>
 </ol>
-<blockquote>
-<p>Note:</p>
-<p>refactor package name</p>
-</blockquote>
-<p>refactor application.properties</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">spring.application.name&#x3D;user</span><br><span class="line">server.port&#x3D;8888  &#x2F;&#x2F; app will run on the port</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>Run App</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn spring-boot:run</span><br></pre></td></tr></table></figure>
-
-<p>run on multiple port</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mvn spring-boot:run -Dspring-boot.run.arguments&#x3D;--server.port&#x3D;9999</span><br></pre></td></tr></table></figure>
-
-<p>test in browser (8888 is balance server)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">localhost:8888&#x2F;hi</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
 
 
 
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> Flux&lt;List&lt;ServiceInstance&gt;&gt; get() &#123;</span><br><span class="line">    <span class="keyword">return</span> Flux.just(Arrays</span><br><span class="line">            .asList(<span class="keyword">new</span> DefaultServiceInstance(serviceId + <span class="string">&quot;1&quot;</span>, serviceId, <span class="string">&quot;localhost&quot;</span>, <span class="number">8090</span>, <span class="keyword">false</span>),</span><br><span class="line">                    <span class="keyword">new</span> DefaultServiceInstance(serviceId + <span class="string">&quot;2&quot;</span>, serviceId, <span class="string">&quot;localhost&quot;</span>, <span class="number">9092</span>, <span class="keyword">false</span>),</span><br><span class="line">                    <span class="keyword">new</span> DefaultServiceInstance(serviceId + <span class="string">&quot;3&quot;</span>, serviceId, <span class="string">&quot;localhost&quot;</span>, <span class="number">9999</span>, <span class="keyword">false</span>)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>balance server will balance to these three ports</p>
-<p>once a target port got some problems, you may see browser will get error</p>
-<p>but refresh it, it will be ok, because it is balanced to another ok port</p>
+
 ]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Coding</category>
+      </categories>
       <tags>
-        <tag>Spring-Boot</tag>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1853,33 +1920,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Code</title>
-    <url>/2021/01/03/Python-Code/</url>
-    <content><![CDATA[<ol>
-<li><p>The Name of variable</p>
-<p>Not like Java — “dataSet”</p>
-<p>Python always use “data_set”</p>
-</li>
-<li><p>Comments</p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Coding</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python Dict</title>
     <url>/2021/01/02/Python-Dict/</url>
     <content><![CDATA[<p>Traverse</p>
@@ -1920,21 +1960,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python JSON</title>
-    <url>/2021/01/02/Python-JSON/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.json&quot;</span>)</span><br><span class="line">jsonString = file.read()</span><br><span class="line">file.close()</span><br><span class="line">jsons=json.loads(jsonString)</span><br><span class="line"><span class="keyword">for</span> json <span class="keyword">in</span> jsons:</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python Flask</title>
     <url>/2021/03/08/Python-Flask/</url>
     <content><![CDATA[<p>1.Listener </p>
@@ -1953,6 +1978,21 @@
       <tags>
         <tag>Python</tag>
         <tag>Flask</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python JSON</title>
+    <url>/2021/01/02/Python-JSON/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.json&quot;</span>)</span><br><span class="line">jsonString = file.read()</span><br><span class="line">file.close()</span><br><span class="line">jsons=json.loads(jsonString)</span><br><span class="line"><span class="keyword">for</span> json <span class="keyword">in</span> jsons:</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -2033,6 +2073,27 @@
     <title>Python Project</title>
     <url>/2021/03/27/Python-Project/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Python String</title>
+    <url>/2021/01/02/Python-String/</url>
+    <content><![CDATA[<p>List to String</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#x27;</span>.join(xxList))</span><br></pre></td></tr></table></figure>
+
+<p>String to List</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>=text.split(<span class="string">&#x27;,&#x27;</span>) <span class="comment"># split String by &#x27;,&#x27; to List</span></span><br><span class="line">    print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
   </entry>
   <entry>
     <title>Python module version</title>
@@ -2163,27 +2224,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python String</title>
-    <url>/2021/01/02/Python-String/</url>
-    <content><![CDATA[<p>List to String</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;&#x27;</span>.join(xxList))</span><br></pre></td></tr></table></figure>
-
-<p>String to List</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">list</span>=text.split(<span class="string">&#x27;,&#x27;</span>) <span class="comment"># split String by &#x27;,&#x27; to List</span></span><br><span class="line">    print(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RSA加密</title>
     <url>/2021/06/08/RSA%E5%8A%A0%E5%AF%86/</url>
     <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/48249182">解释</a></p>
@@ -2213,19 +2253,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot Lib</title>
-    <url>/2021/03/30/Spring-Boot-Lib/</url>
-    <content><![CDATA[<p>1.CommandLineRunner</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import org.springframework.boot.CommandLineRunner;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Interface used to indicate that a bean should run when it is contained within a SpringApplication. </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CommandLineRunner <span class="title">commandLineRunner</span><span class="params">(ApplicationContext context)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> args -&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Beans in container :&quot;</span>);</span><br><span class="line">            String [] beanNames = context.getBeanDefinitionNames();</span><br><span class="line">            <span class="keyword">for</span>(String beanName:beanNames)&#123;</span><br><span class="line">                System.out.println(beanName);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210330112109868.png" alt="image-20210330112109868"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Spring Boot Cofiguration</title>
     <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
     <content><![CDATA[]]></content>
@@ -2242,6 +2269,35 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@ResponseBody</span><br></pre></td></tr></table></figure>
 
+<hr>
+<h4 id="返回实体类-Vue-数据传输"><a href="#返回实体类-Vue-数据传输" class="headerlink" title="返回实体类 Vue 数据传输"></a>返回实体类 Vue 数据传输</h4><p>实体类的id你不另外赋值他也会传过去</p>
+<p>结合vue </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;el-button @click&#x3D;&quot;handleClick(scope.row)&quot; type&#x3D;&quot;text&quot; size&#x3D;&quot;small&quot;&gt;详细信息&lt;&#x2F;el-button&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(row.id)</span><br></pre></td></tr></table></figure>
+
+<p>很棒</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot Static Page</title>
+    <url>/2021/05/11/Spring-Boot-Static-Page/</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">/META-INF/resources/  </span><br><span class="line">/resources/  </span><br><span class="line">/<span class="keyword">static</span>/  </span><br><span class="line">/<span class="keyword">public</span>/</span><br></pre></td></tr></table></figure>
+
+<p>Then access directly</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot Lib</title>
+    <url>/2021/03/30/Spring-Boot-Lib/</url>
+    <content><![CDATA[<p>1.CommandLineRunner</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import org.springframework.boot.CommandLineRunner;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Interface used to indicate that a bean should run when it is contained within a SpringApplication. </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CommandLineRunner <span class="title">commandLineRunner</span><span class="params">(ApplicationContext context)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> args -&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Beans in container :&quot;</span>);</span><br><span class="line">            String [] beanNames = context.getBeanDefinitionNames();</span><br><span class="line">            <span class="keyword">for</span>(String beanName:beanNames)&#123;</span><br><span class="line">                System.out.println(beanName);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210330112109868.png" alt="image-20210330112109868"></p>
 ]]></content>
   </entry>
   <entry>
@@ -2253,14 +2309,6 @@
 
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> freejim.icu.exp1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.junit.runner.RunWith;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"><span class="keyword">import</span> org.springframework.http.MediaType;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.context.junit4.SpringRunner;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.web.servlet.MockMvc;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.web.servlet.request.MockMvcRequestBuilders;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.hamcrest.Matchers.equalTo;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;</span><br><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="meta">@AutoConfigureMockMvc</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MvcTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MockMvc mvc;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        mvc.perform(MockMvcRequestBuilders.get(<span class="string">&quot;/&quot;</span>).accept(MediaType.APPLICATION_JSON))</span><br><span class="line">                .andExpect(status().isOk())</span><br><span class="line">                .andExpect(content().string(equalTo(<span class="string">&quot;Hello, world&quot;</span>)));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-]]></content>
-  </entry>
-  <entry>
-    <title>Spring Boot Static Page</title>
-    <url>/2021/05/11/Spring-Boot-Static-Page/</url>
-    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">/META-INF/resources/  </span><br><span class="line">/resources/  </span><br><span class="line">/<span class="keyword">static</span>/  </span><br><span class="line">/<span class="keyword">public</span>/</span><br></pre></td></tr></table></figure>
-
-<p>Then access directly</p>
 ]]></content>
   </entry>
   <entry>
@@ -2288,22 +2336,6 @@
     <url>/2021/04/28/Spring-Boot-exp2/</url>
     <content><![CDATA[<p>list元素重复</p>
 <p>list元素数量不对</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Spring Boot fthl</title>
-    <url>/2021/06/01/Spring-Boot-fthl/</url>
-    <content><![CDATA[<p>数据传输</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">userIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ModelAndView mv = <span class="keyword">new</span> ModelAndView(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">    String info=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    mv.addObject(<span class="string">&quot;logInfo&quot;</span>, info);</span><br><span class="line">    <span class="keyword">return</span> mv;</span><br><span class="line">    <span class="comment">//return &quot;user&quot;;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Spring Boot 前端</title>
-    <url>/2021/06/08/Spring-Boot-%E5%89%8D%E7%AB%AF/</url>
-    <content><![CDATA[<h4 id="spring-boot-Cannot-resolve-MVC-View"><a href="#spring-boot-Cannot-resolve-MVC-View" class="headerlink" title="spring boot Cannot resolve MVC View"></a>spring boot Cannot resolve MVC View</h4><p>添加依赖</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-freemarker&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
   </entry>
   <entry>
@@ -2336,9 +2368,31 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Security Fliter</title>
-    <url>/2021/05/25/Spring-Security-Fliter/</url>
-    <content><![CDATA[<p>Difference from addBefore and addAfter</p>
+    <title>Spring Boot fthl</title>
+    <url>/2021/06/01/Spring-Boot-fthl/</url>
+    <content><![CDATA[<p>数据传输</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">userIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ModelAndView mv = <span class="keyword">new</span> ModelAndView(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">    String info=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    mv.addObject(<span class="string">&quot;logInfo&quot;</span>, info);</span><br><span class="line">    <span class="keyword">return</span> mv;</span><br><span class="line">    <span class="comment">//return &quot;user&quot;;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot 前端</title>
+    <url>/2021/06/08/Spring-Boot-%E5%89%8D%E7%AB%AF/</url>
+    <content><![CDATA[<h4 id="spring-boot-Cannot-resolve-MVC-View"><a href="#spring-boot-Cannot-resolve-MVC-View" class="headerlink" title="spring boot Cannot resolve MVC View"></a>spring boot Cannot resolve MVC View</h4><p>添加依赖</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-freemarker&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot 部署</title>
+    <url>/2021/06/19/Spring-Boot-%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h4 id="Spring-Boot打包"><a href="#Spring-Boot打包" class="headerlink" title="Spring Boot打包"></a>Spring Boot打包</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><a href="http://freejim.icu/2021/04/26/Spring-Boot-with-Docker/">Docker Spring Boot</a></p>
+<h4 id="Spring-Boot-云服务器-Mysql"><a href="#Spring-Boot-云服务器-Mysql" class="headerlink" title="Spring Boot 云服务器 Mysql"></a>Spring Boot 云服务器 Mysql</h4><p>docker拉镜像建立MySQL方便</p>
 ]]></content>
   </entry>
   <entry>
@@ -2390,6 +2444,12 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring Security Fliter</title>
+    <url>/2021/05/25/Spring-Security-Fliter/</url>
+    <content><![CDATA[<p>Difference from addBefore and addAfter</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Spring Security Tutorial</title>
     <url>/2021/05/25/Spring-Security-Tutorial/</url>
     <content><![CDATA[<p>创建项目时导入相关依赖，会有默认的http认证界面</p>
@@ -2413,17 +2473,13 @@
 <p>继承WebSecurityConfigurerAdapter 重写其中的configure进行配置</p>
 <p>总共3种configure可重写</p>
 <p>1.HttpSecurity， 配置路由</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// 路由</span></span><br><span class="line">    http.antMatcher(<span class="string">&quot;/admin/**&quot;</span>)  <span class="comment">// 匹配这类请求</span></span><br><span class="line">            .authorizeRequests()  <span class="comment">// 这些请求需要授权</span></span><br><span class="line">            .anyRequest().hasAnyRole(<span class="string">&quot;ADMIN&quot;</span>).and()</span><br><span class="line">            .formLogin()  <span class="comment">// 开放登录界面，定制成功登录后的路由</span></span><br><span class="line">            .loginPage(<span class="string">&quot;/admin/login_backend&quot;</span>).permitAll()</span><br><span class="line">            .defaultSuccessUrl(<span class="string">&quot;/admin&quot;</span>).and()</span><br><span class="line">            .logout()  <span class="comment">// 开放退出界面，定制退出登录后的路由</span></span><br><span class="line">            .logoutUrl(<span class="string">&quot;/admin/logout&quot;</span>).permitAll()</span><br><span class="line">            .logoutSuccessUrl(<span class="string">&quot;/admin/login_backend?logout&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    http.csrf().disable();</span><br><span class="line">    http.apply(<span class="keyword">new</span> JLoginConfigurer&lt;&gt;());</span><br><span class="line">    http.authorizeRequests()</span><br><span class="line">            .antMatchers(<span class="string">&quot;/user/login_frontend&quot;</span>).permitAll()</span><br><span class="line">            .anyRequest()</span><br><span class="line">            .hasAuthority(<span class="string">&quot;USER&quot;</span>).and()</span><br><span class="line">            .formLogin()</span><br><span class="line">            .loginPage(<span class="string">&quot;/user/login_frontend&quot;</span>)</span><br><span class="line">            .defaultSuccessUrl(<span class="string">&quot;http://localhost:8081/?state=user&quot;</span>,<span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>2.AuthenticationManagerBuilder， 配置认证</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// 用内存中的定义的数据进行认证</span></span><br><span class="line">    auth.inMemoryAuthentication().</span><br><span class="line">        withUser(<span class="string">&quot;admin&quot;</span>).password(<span class="string">&quot;&#123;noop&#125;123456&quot;</span>).roles(<span class="string">&quot;ADMIN&quot;</span>).authorities(<span class="string">&quot;ADMIN&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"><span class="comment">//        auth.inMemoryAuthentication().withUser(&quot;user&quot;).password(passwordEncoder.encode(&quot;123456&quot;)).roles(&quot;USER&quot;).authorities(&quot;USER&quot;);  </span></span><br><span class="line"><span class="comment">//        auth.inMemoryAuthentication().withUser(&quot;user1&quot;).password(passwordEncoder.encode(&quot;123456&quot;)).roles(&quot;USER&quot;).authorities(&quot;USER&quot;);</span></span><br><span class="line">          auth.userDetailsService(userService);</span><br><span class="line">          auth.jdbcAuthentication().passwordEncoder(passwordEncoder).rolePrefix(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
 <p>3.WebSecurity， 配置静态资源的访问</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(WebSecurity web)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// static resource</span></span><br><span class="line">    web.ignoring().antMatchers(<span class="string">&quot;/css/**&quot;</span>, <span class="string">&quot;/img/**&quot;</span>, <span class="string">&quot;/**/*.png&quot;</span>); <span class="comment">// 忽略对这些请求的拦截</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line">   <span class="meta">@Order(101)</span></span><br><span class="line">   <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">UserSecurityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span></span>&#123;</span><br><span class="line">       <span class="meta">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">           http.authorizeRequests()</span><br><span class="line">                   .antMatchers(<span class="string">&quot;/&quot;</span>).permitAll()  <span class="comment">// 匹配所有请求</span></span><br><span class="line">                   .anyRequest().hasAnyRole(<span class="string">&quot;USER&quot;</span>).and()</span><br><span class="line">               .formLogin()</span><br><span class="line">                   .loginPage(<span class="string">&quot;/user/login_frontend&quot;</span>).permitAll()  <span class="comment">// 自定义登录页面</span></span><br><span class="line">                   .defaultSuccessUrl(<span class="string">&quot;/user&quot;</span>).and()  <span class="comment">// 配置登陆成功后的跳转页面</span></span><br><span class="line">               .logout()</span><br><span class="line">                   .logoutUrl(<span class="string">&quot;/user/logout&quot;</span>)</span><br><span class="line">                   .logoutSuccessUrl(<span class="string">&quot;/user/login_frontend?logout&quot;</span>).and()</span><br><span class="line">               .exceptionHandling().accessDeniedHandler(UserSecurityConfig::accessDeniedHandle);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="meta">@Autowired</span></span><br><span class="line">       UserService userService;</span><br><span class="line">       <span class="meta">@Autowired</span></span><br><span class="line">       PasswordEncoder passwordEncoder;</span><br><span class="line">       <span class="meta">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">           auth.userDetailsService(userService);</span><br><span class="line">           auth.jdbcAuthentication().passwordEncoder(passwordEncoder);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">accessDeniedHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">           request.setAttribute(WebAttributes.ACCESS_DENIED_403,</span><br><span class="line">                   accessDeniedException);</span><br><span class="line">           response.setStatus(HttpStatus.FORBIDDEN.value());</span><br><span class="line">           response.setCharacterEncoding(Charset.defaultCharset().displayName());<span class="comment">// 解决中文乱码</span></span><br><span class="line">           response.addHeader(<span class="string">&quot;Content-Type&quot;</span>, MediaType.TEXT_HTML_VALUE);</span><br><span class="line">           response.getWriter().write(<span class="string">&quot;你的权限不够&quot;</span>);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -2431,7 +2487,7 @@
 <p>其中另外涉及到了两个东西</p>
 <p>UserService，PasswordEncoder</p>
 <p>UserService实现UserDetailsService接口，实现loadUserByUsername方法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> freejim.icu.security_demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UserDetails;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UserDetailsService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UsernameNotFoundException;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.crypto.password.PasswordEncoder;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> <span class="keyword">implements</span> <span class="title">UserDetailsService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    UserRepository userRepository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    PasswordEncoder passwordEncoder;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> User <span class="title">insert</span><span class="params">(User user)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//存在数据库中的密码应该为密文</span></span><br><span class="line">        <span class="comment">// 不可少！不然密码编码错误，会导致正确的密码也无法登录</span></span><br><span class="line">        user.setPassword(passwordEncoder.encode(user.getPassword())); </span><br><span class="line">        <span class="keyword">return</span> userRepository.save(user);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> UserDetails <span class="title">loadUserByUsername</span><span class="params">(String name)</span> <span class="keyword">throws</span> UsernameNotFoundException </span>&#123;</span><br><span class="line">        User user = userRepository.findByName(name);  <span class="comment">// 从数据库中查询到用户名，密码，权限封装到User中</span></span><br><span class="line">        <span class="keyword">if</span> (user == <span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;nobody&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> freejim.icu.security_demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UserDetails;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UserDetailsService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.core.userdetails.UsernameNotFoundException;</span><br><span class="line"><span class="keyword">import</span> org.springframework.security.crypto.password.PasswordEncoder;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> <span class="keyword">implements</span> <span class="title">UserDetailsService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    UserRepository userRepository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    PasswordEncoder passwordEncoder;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> User <span class="title">insert</span><span class="params">(User user)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//存在数据库中的密码应该为密文</span></span><br><span class="line">        <span class="comment">// 不可少！不然密码编码错误，会导致正确的密码也无法登录</span></span><br><span class="line">        user.setPassword(passwordEncoder.encode(user.getPassword())); </span><br><span class="line">        <span class="keyword">return</span> userRepository.save(user);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> UserDetails <span class="title">loadUserByUsername</span><span class="params">(String name)</span> <span class="keyword">throws</span> UsernameNotFoundException </span>&#123;</span><br><span class="line">        User user = userRepository.findByName(name);</span><br><span class="line">        System.out.println(<span class="string">&quot;认证中...&quot;</span>);</span><br><span class="line">        List&lt;SimpleGrantedAuthority&gt; authorities = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        authorities.add(<span class="keyword">new</span> SimpleGrantedAuthority(user.getRole()));</span><br><span class="line">        <span class="keyword">if</span> (user == <span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;nobody&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), authorities);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
@@ -2478,6 +2534,16 @@
 
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PasswordUtil</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function">PasswordEncoder <span class="title">passwordEncoder</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> BCryptPasswordEncoder();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<h4 id="Spring-Security-认证之后还是403"><a href="#Spring-Security-认证之后还是403" class="headerlink" title="Spring Security 认证之后还是403"></a>Spring Security 认证之后还是403</h4><p>除了的csrf问题，有可能是userDetailsService没写好</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">http.csrf().disable();</span><br></pre></td></tr></table></figure>
+
+<p>userDetailsService一定要把认证用户对应的权限加进去</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> UserDetails <span class="title">loadUserByUsername</span><span class="params">(String name)</span> <span class="keyword">throws</span> UsernameNotFoundException </span>&#123;</span><br><span class="line">    User user = userRepository.findByName(name);</span><br><span class="line">    System.out.println(<span class="string">&quot;认证中...&quot;</span>);</span><br><span class="line">    List&lt;SimpleGrantedAuthority&gt; authorities = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    authorities.add(<span class="keyword">new</span> SimpleGrantedAuthority(user.getRole()));</span><br><span class="line">    <span class="keyword">if</span> (user == <span class="keyword">null</span>)&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;nobody&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), authorities);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="Spring-Security-不起作用"><a href="#Spring-Security-不起作用" class="headerlink" title="Spring Security 不起作用"></a>Spring Security 不起作用</h4><p>只处理POST请求，GET请求无效</p>
 ]]></content>
   </entry>
   <entry>
@@ -2549,6 +2615,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Tensorflow Error Messages</title>
+    <url>/2021/01/03/Tensorflow-Error-Messages/</url>
+    <content><![CDATA[<p>1.</p>
+<p>Error</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: (&#39;Error when checking model target: expected no data, but got:&#39;, array([&#39;6947&#39;, &#39;7232&#39;, &#39;7967&#39;, ..., &#39;5646&#39;, &#39;3554&#39;, &#39;4656&#39;], dtype&#x3D;&#39;&lt;U4&#39;))</span><br></pre></td></tr></table></figure>
+
+<p>Reason</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">When using model.fit() the training data is not matching to the label array</span><br><span class="line">In other words, the length of training data array should be the same as label array</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.</p>
+<p>Error</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: Please provide as model inputs either a single array or a list of arrays.</span><br></pre></td></tr></table></figure>
+
+<p>Solution</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">training_data&#x3D;np.array(training_ataset)</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Machine Learn</category>
+        <category>Tensorflow</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Machine Learn</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring注解是怎么工作的</title>
     <url>/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/</url>
     <content><![CDATA[<p>版本说明：Spring 5.2.9 </p>
@@ -2605,48 +2702,6 @@
         <tag>Spring</tag>
         <tag>Java</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Tensorflow Error Messages</title>
-    <url>/2021/01/03/Tensorflow-Error-Messages/</url>
-    <content><![CDATA[<p>1.</p>
-<p>Error</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: (&#39;Error when checking model target: expected no data, but got:&#39;, array([&#39;6947&#39;, &#39;7232&#39;, &#39;7967&#39;, ..., &#39;5646&#39;, &#39;3554&#39;, &#39;4656&#39;], dtype&#x3D;&#39;&lt;U4&#39;))</span><br></pre></td></tr></table></figure>
-
-<p>Reason</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">When using model.fit() the training data is not matching to the label array</span><br><span class="line">In other words, the length of training data array should be the same as label array</span><br></pre></td></tr></table></figure>
-
-
-
-<p>2.</p>
-<p>Error</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: Please provide as model inputs either a single array or a list of arrays.</span><br></pre></td></tr></table></figure>
-
-<p>Solution</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">training_data&#x3D;np.array(training_ataset)</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Machine Learn</category>
-        <category>Tensorflow</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Machine Learn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VS Error</title>
-    <url>/2021/03/08/VS-Error/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
-
-<p>Solve </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
-]]></content>
   </entry>
   <entry>
     <title>Typora Shortcut</title>
@@ -2771,6 +2826,17 @@
         <tag>Shortcut</tag>
         <tag>Typora</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>VS Error</title>
+    <url>/2021/03/08/VS-Error/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Warning: The following VS instances are excluded because the English language pack is unavailable.</span><br></pre></td></tr></table></figure>
+
+<p>Solve </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I have re-installed vs2017 with English language pack to solve this problem.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
+]]></content>
   </entry>
   <entry>
     <title>Vue Cookie</title>
@@ -2899,17 +2965,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Vue error</title>
-    <url>/2021/06/09/Vue-error/</url>
-    <content><![CDATA[<blockquote>
-<p>Component template should contain exactly one root element</p>
-</blockquote>
-<p>解决</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用一个div把template内的多个标签包起来就行</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>Vue js</title>
     <url>/2021/06/12/Vue-js/</url>
     <content><![CDATA[<h4 id="Vue-页面加载时执行函数"><a href="#Vue-页面加载时执行函数" class="headerlink" title="Vue 页面加载时执行函数"></a>Vue 页面加载时执行函数</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;Redirect&#39;,</span><br><span class="line">  mounted: function () &#123;</span><br><span class="line">    this.$router.push(&#39;&#x2F;&#39;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
@@ -2917,6 +2972,17 @@
 
 
 
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue error</title>
+    <url>/2021/06/09/Vue-error/</url>
+    <content><![CDATA[<blockquote>
+<p>Component template should contain exactly one root element</p>
+</blockquote>
+<p>解决</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用一个div把template内的多个标签包起来就行</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -2933,14 +2999,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Vue 数据传输</title>
-    <url>/2021/06/11/Vue-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/</url>
-    <content><![CDATA[<h4 id="页面刷新后，prototype挂载的全局变量消失"><a href="#页面刷新后，prototype挂载的全局变量消失" class="headerlink" title="页面刷新后，prototype挂载的全局变量消失"></a>页面刷新后，prototype挂载的全局变量消失</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在页面刷新时</span><br><span class="line">vue实例对象被重新构造</span><br><span class="line">所有变量都被初始化</span><br></pre></td></tr></table></figure>
-
-<p>解决：</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Vue model</title>
     <url>/2021/06/07/Vue-model/</url>
     <content><![CDATA[<blockquote>
@@ -2949,8 +3007,28 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Vue 数据传输</title>
+    <url>/2021/06/11/Vue-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/</url>
+    <content><![CDATA[<h4 id="页面刷新后，prototype挂载的全局变量消失"><a href="#页面刷新后，prototype挂载的全局变量消失" class="headerlink" title="页面刷新后，prototype挂载的全局变量消失"></a>页面刷新后，prototype挂载的全局变量消失</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在页面刷新时</span><br><span class="line">vue实例对象被重新构造</span><br><span class="line">所有变量都被初始化</span><br></pre></td></tr></table></figure>
+
+<p>解决：</p>
+<hr>
+<h4 id="Vue-路由传递数据"><a href="#Vue-路由传递数据" class="headerlink" title="Vue 路由传递数据"></a>Vue 路由传递数据</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">handleClick (row) &#123;</span><br><span class="line">      <span class="built_in">this</span>.$router.push(&#123;</span><br><span class="line">        path: <span class="string">&#x27;/unpostInfo&#x27;</span>,</span><br><span class="line">        query: &#123;</span><br><span class="line">          unpostInfoId: <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>数据获取</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">this</span>.$route.query.unpostInfoId</span><br></pre></td></tr></table></figure>
+
+<p>Ps:是$route而不是router</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Vue 权限管理</title>
     <url>/2021/06/12/Vue-%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Vue 组件之间交互</title>
+    <url>/2021/06/15/Vue-%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BA%A4%E4%BA%92/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -3182,6 +3260,31 @@
       </tags>
   </entry>
   <entry>
+    <title>docker mysql</title>
+    <url>/2021/06/19/docker-mysql/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># docker 中下载 mysql</span><br><span class="line">docker pull mysql</span><br><span class="line"></span><br><span class="line">#启动</span><br><span class="line">docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD&#x3D;Lzslov123! -d mysql</span><br><span class="line"></span><br><span class="line">#进入容器</span><br><span class="line">docker exec -it mysql bash</span><br><span class="line"></span><br><span class="line">#登录mysql</span><br><span class="line">mysql -u root -p</span><br><span class="line">ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;Lzslov123!&#39;;</span><br><span class="line"></span><br><span class="line">#添加远程登录用户</span><br><span class="line">CREATE USER &#39;liaozesong&#39;@&#39;%&#39; IDENTIFIED WITH mysql_native_password BY &#39;Lzslov123!&#39;;</span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &#39;liaozesong&#39;@&#39;%&#39;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>说是mysql镜像，但是其实还是依赖于linux</p>
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title>docker tutorial</title>
+    <url>/2021/06/19/docker-tutorial/</url>
+    <content><![CDATA[<h4 id="docker-install"><a href="#docker-install" class="headerlink" title="docker install"></a>docker install</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">DRY_RUN=1 sh ./get-docker.sh</span><br><span class="line">sudo sh get-docker.sh</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h4 id="docker-导入文件"><a href="#docker-导入文件" class="headerlink" title="docker 导入文件"></a>docker 导入文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp 你的文件路径 容器长ID:docker容器路径</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp /var/backup/nginx.zip 68b99:/cert</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>html width</title>
     <url>/2021/06/06/html-width/</url>
     <content><![CDATA[<p>有些标签自带width属性，可以直接设置</p>
@@ -3189,6 +3292,33 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:400px;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>js 请求</title>
+    <url>/2021/06/18/js-%E8%AF%B7%E6%B1%82/</url>
+    <content><![CDATA[<h4 id="POST-请求"><a href="#POST-请求" class="headerlink" title="POST 请求"></a>POST 请求</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> username = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;username&#x27;</span>).value</span><br><span class="line">       <span class="keyword">let</span> password = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;password&#x27;</span>).value</span><br><span class="line">       <span class="keyword">var</span> httpRequest = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">       httpRequest.open(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;http://localhost:8080/user/login_frontend&#x27;</span>, <span class="literal">true</span>)</span><br><span class="line">       <span class="keyword">var</span> formData = <span class="keyword">new</span> FormData()</span><br><span class="line">       formData.append(<span class="string">&quot;username&quot;</span>,username)</span><br><span class="line">       formData.append(<span class="string">&quot;password&quot;</span>,password)</span><br><span class="line">       httpRequest.send(formData);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="重定向和转发"><a href="#重定向和转发" class="headerlink" title="重定向和转发"></a>重定向和转发</h4><p>重定向：服务器向浏览器发送一个302状态码以及一个location消息头，浏览器收到请求后会向重定向地址发出请求。</p>
+<p>转发：一个web组件将未完成的处理通过容器转交给另一个web组件继续完成</p>
+<hr>
+<h4 id="Preflight"><a href="#Preflight" class="headerlink" title="Preflight"></a>Preflight</h4><p>跨域请求可以正常发起，但是返回的结果被浏览器拦截了</p>
+<p>为了防止这种情况的发生，规范要求，对这种可能对服务器数据产生副作用的HTTP请求方法，浏览器必须先使用<code>OPTIONS</code>方法发起一个预检请求，从而获知服务器是否允许该跨域请求：如果允许，就发送带数据的真实请求；如果不允许，则阻止发送带数据的真实请求。</p>
+<hr>
+<p>####　jsonp</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addScriptTag</span>(<span class="params">src</span>) </span>&#123;</span><br><span class="line">       <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">       script.setAttribute(<span class="string">&quot;type&quot;</span>,<span class="string">&quot;text/javascript&quot;</span>);</span><br><span class="line">       script.src = src;</span><br><span class="line">       <span class="built_in">document</span>.body.appendChild(script);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>通过插入script标签实现GET请求（不可POST）</p>
+<p>src为请求地址，可携带params</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>js 页面跳转</title>
+    <url>/2021/06/18/js-%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>lms docker</title>
@@ -3229,11 +3359,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>三角函数日常</title>
-    <url>/2021/05/30/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%97%A5%E5%B8%B8/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>不定积分</title>
     <url>/2021/05/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
     <content><![CDATA[<p><strong>二类换元</strong></p>
@@ -3245,6 +3370,28 @@
 
 <p>对数</p>
 <p>三角函数</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>三角函数日常</title>
+    <url>/2021/05/30/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%97%A5%E5%B8%B8/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>云服务器 tutorial</title>
+    <url>/2021/06/19/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-tutorial/</url>
+    <content><![CDATA[<h4 id="云服务器文件传输"><a href="#云服务器文件传输" class="headerlink" title="云服务器文件传输"></a>云服务器文件传输</h4><p>Windows到Linux</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp D:\Resource\hello.txt root@192.168.0.1:&#x2F;home&#x2F;admin</span><br></pre></td></tr></table></figure>
+
+<p>Linux到Windows</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp root@:&#x2F;home&#x2F;admin&#x2F;hello.txt D:\resource\</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="云服务器-Connect-timed-out"><a href="#云服务器-Connect-timed-out" class="headerlink" title="云服务器 Connect timed out"></a>云服务器 Connect timed out</h4><p>mysql Connect timed out</p>
+<p>安全组得配置</p>
+<p>开放3306端口</p>
+<hr>
+<h4 id="云服务器和校园网"><a href="#云服务器和校园网" class="headerlink" title="云服务器和校园网"></a>云服务器和校园网</h4><p>云服务器是访问不到校园网的主机的</p>
 ]]></content>
   </entry>
   <entry>
@@ -3342,6 +3489,11 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125831974.png" alt="image-20210529125831974"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210529125841175.png" alt="image-20210529125841175"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>腾讯防水墙</title>
+    <url>/2021/06/19/%E8%85%BE%E8%AE%AF%E9%98%B2%E6%B0%B4%E5%A2%99/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>西南科技大学</title>
