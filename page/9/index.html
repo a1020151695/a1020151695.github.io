@@ -177,6 +177,363 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/20/Blockchain-Digital-Signature/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="FreeJim">
+      <meta itemprop="description" content="Hello World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏经阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/20/Blockchain-Digital-Signature/" class="post-title-link" itemprop="url">Blockchain Digital Signature</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-20 16:25:00 / Modified: 16:42:51" itemprop="dateCreated datePublished" datetime="2021-03-20T16:25:00+08:00">2021-03-20</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Store key</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br><span class="line"><span class="keyword">from</span> Crypto.Hash <span class="keyword">import</span> SHA256, SHA, SHA512</span><br><span class="line"><span class="keyword">from</span> Crypto.Signature <span class="keyword">import</span> PKCS1_PSS</span><br><span class="line">key = RSA.generate(<span class="number">2048</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pem&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(key.exportKey(<span class="string">&#x27;PEM&#x27;</span>))</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pub&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(key.publickey().exportKey(<span class="string">&#x27;PEM&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br><span class="line"><span class="keyword">from</span> Crypto.Hash <span class="keyword">import</span> SHA256, SHA, SHA512</span><br><span class="line"><span class="keyword">from</span> Crypto.Signature <span class="keyword">import</span> PKCS1_PSS</span><br><span class="line"></span><br><span class="line"><span class="comment"># Now is Sender&#x27;s turn</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;message.txt&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># get message file</span></span><br><span class="line">    message = f.read().encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pem&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># get private key</span></span><br><span class="line">    key = RSA.importKey(f.read())</span><br><span class="line">h = SHA256.new()</span><br><span class="line">h.update(message)  <span class="comment"># hash the message</span></span><br><span class="line">sgn = PKCS1_PSS.new(key)  <span class="comment"># RSA digital signature protocol</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mesg.sgn&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># new a signed message file</span></span><br><span class="line">    f.write(sgn.sign(h))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Now is the Receiver&#x27;s turn</span></span><br><span class="line">fname = <span class="string">&#x27;message.txt&#x27;</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(fname) <span class="keyword">as</span> f:</span><br><span class="line">    message = f.read().encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">h = SHA256.new()</span><br><span class="line">h.update(message)  <span class="comment"># hash message with the same method as the sender</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mesg.sgn&#x27;</span>,<span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    signature = f.read()</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pub&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    key = RSA.importKey(f.read())</span><br><span class="line">vfy = PKCS1_PSS.new(key)  <span class="comment"># verify the signed file whether valid</span></span><br><span class="line"><span class="keyword">if</span> vfy.verify(h, signature):</span><br><span class="line">    print(<span class="string">&#x27;signture matches.&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;signature problem.&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/20/Funny-code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="FreeJim">
+      <meta itemprop="description" content="Hello World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏经阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/20/Funny-code/" class="post-title-link" itemprop="url">Funny code</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-20 16:11:21 / Modified: 16:12:00" itemprop="dateCreated datePublished" datetime="2021-03-20T16:11:21+08:00">2021-03-20</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Python</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="built_in">bytes</span>(<span class="number">99999999</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/20/Blockchain-Doubt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="FreeJim">
+      <meta itemprop="description" content="Hello World">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="藏经阁">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/20/Blockchain-Doubt/" class="post-title-link" itemprop="url">Blockchain Doubt</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-20 14:51:15" itemprop="dateCreated datePublished" datetime="2021-03-20T14:51:15+08:00">2021-03-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-22 18:56:36" itemprop="dateModified" datetime="2021-03-22T18:56:36+08:00">2021-03-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>What if received two new, different block at the same time</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Nodes always consider the longest chain to be the correct one and will keep working on</span><br><span class="line">extending it.</span><br><span class="line"></span><br><span class="line">If two nodes broadcast different versions of the next block simultaneously, some</span><br><span class="line">nodes may receive one or the other first. In that case, they work on the first one they received,but save the other branch in case it becomes longer.</span><br><span class="line"></span><br><span class="line">The tie will be broken when the next proof-of-work is found and one branch becomes longer; the nodes that were working on the other</span><br><span class="line">branch will then switch to the longer one.</span><br></pre></td></tr></table></figure>
+
+<p>When to mine</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">After validating transactions, a bitcoin node will add them to the memory pool, or transaction pool, where transactions await until they can be included (mined) into a block.</span><br></pre></td></tr></table></figure>
+
+<p>The connection between transaction, block and miner</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">New transactions are broadcast to all nodes</span><br><span class="line">Each node collects new transactions into a block.</span><br><span class="line">Each node works on finding a difficult proof-of-work for its block.</span><br><span class="line">When a node finds a proof-of-work, it broadcasts the block to all nodes.</span><br><span class="line">Nodes accept the block only if all transactions in it are valid and not already spent.</span><br><span class="line">Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Public distributed ledger: A distributed ledger is a record of all transactions maintained in the blockchain network across the globe. In the network, the validation of transactions is done by bitcoin users.</span><br></pre></td></tr></table></figure>
+
+<p>Digital key</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The digital keys are not actually stored in the network, but are instead created and stored by users in a file, or simple database, called a wallet. </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The digital keys in a user’s wallet are completely independent of the bitcoin protocol and can be generated and managed by the user’s wallet software without reference to the blockchain or access to the internet. </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">That&#39;s true, beacuse the validation is decryption with public key string</span><br></pre></td></tr></table></figure>
+
+
+
+<p>What is public key and private key</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">help understand:</span><br><span class="line"></span><br><span class="line">Think of the public key as similar to a bank account number and the private key as similar to the secret PIN, or signature on a check, that provides control over the account. </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Relation between private key, public key and bitcoin address:</span><br><span class="line"></span><br><span class="line">From the private key, we use elliptic curve multiplication, a one-way cryptographic function, to generate a public key (K). From the public key (K), we use a one-way cryptographic hash function to generate a bitcoin address (A).</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">beneficiaries:</span><br><span class="line"></span><br><span class="line">However, not all bitcoin addresses represent public keys; they can also represent other beneficiaries such as scripts, as we will see later in this chapter. </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">key store:</span><br><span class="line"></span><br><span class="line">In most wallet implementations, the private and public keys are stored together as a key pair for convenience. However, the public key can be calculated from the private key, so storing only the private key is also possible.</span><br></pre></td></tr></table></figure>
+
+
+
+<p>How to make public key and private key</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">private key:</span><br><span class="line"></span><br><span class="line">The bitcoin private key is just a number. You can pick your private keys randomly using just a coin, pencil, and paper: toss a coin 256 times and you have the binary digits of a random private key you can use in a bitcoin wallet. The public key can then be generated from the private key.</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">The public key is calculated from the private key using elliptic curve multiplication</span><br><span class="line"></span><br><span class="line">Elliptic curve multiplication is a type of function that cryptographers </span><br><span class="line">call a &quot;one-way&quot; function: it is easy to do in one direction and </span><br><span class="line">impossible to do in the reverse direction</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>Then how verify signature with only public key?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>What is “beneficiaries”</p>
+<p><a target="_blank" rel="noopener" href="https://www.novixys.com/blog/python-crypto-basics-building-blockchain/">Digital Signature Tutorial</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Digital Signature:</span><br><span class="line">A digital signature is a method of cryptographically assuring a receiver (Bob) that the message is from a specified party (Alice). </span><br><span class="line"></span><br><span class="line">Alice prepares a data buffer, computes a secure checksum, encrypts the checksum using her private key, and sends the data buffer and the encrypted checksum to Bob. </span><br><span class="line"></span><br><span class="line">Bob unencrypts the checksum using Alice’s public key, computes the checksum of the data buffer with the same algorithm as used by Alice and compares the two checksums.</span><br><span class="line"></span><br><span class="line">If they match, the data buffer was prepared by Alice and has not been modified in-transit.</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>Blockchain is visual, is it unsecured?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The visible information is just public key, so don&#39;t worry</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Hack boardcast?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;boardcast&quot; is a action</span><br></pre></td></tr></table></figure>
+
+
+
+<p>How to get real-time balance</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double spend</span><br></pre></td></tr></table></figure>
+
+
+
+<p>What is timestamp use for?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">The timestamp proves that the data must have existed at the</span><br><span class="line">time, obviously, in order to get into the hash. Each timestamp includes the previous timestamp in</span><br><span class="line">its hash, forming a chain, with each additional timestamp reinforcing the ones before it.</span><br><span class="line"> -- from &quot;Bitcoin: A Peer-to-Peer Electronic Cash System&quot;</span><br></pre></td></tr></table></figure>
+
+<p>What if hack p2p server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useless, beacuse blockchain use public key and private key, not real ip address</span><br></pre></td></tr></table></figure>
+
+
+
+<p>When valid transaction, do we need send so many requests?</p>
+<p>save ip address in a table</p>
+<p>a transaction a block?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Good miners accept all transactions with the standard 0.0001 BTC fee (which is mainly a spam prevention measure). Bad miners are selfish and avoid including transactions to decrease their propogation time. For example, look at this block to see an example where a miner didn&#39;t include any transactions except for their own reward transaction.</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.blockchain.com/explorer">Trade Info</a></p>
+<p>Language</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">点对点网络的实现和并发处理才是开发的难点，所以对于那些网络编程能力强，对并发处理简单的语言，人们就特别偏爱。也因此，Nodejs开发区块链应用，逐渐变得更加流行，Go语言也在逐渐兴起。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Why say</p>
+<blockquote>
+<p>Wallets are really keychains containing pairs of private/public keys</p>
+</blockquote>
+<h4 id="Nondeterministic-Random-Wallets"><a href="#Nondeterministic-Random-Wallets" class="headerlink" title="Nondeterministic (Random) Wallets"></a>Nondeterministic (Random) Wallets</h4><p>from:<a target="_blank" rel="noopener" href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc">https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">The disadvantage of random keys is that if you generate many of them you must keep copies of all of them, meaning that the wallet must be backed up frequently.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A Type-0 nondeterministic wallet is a poor choice of wallet, especially if you want to avoid address reuse because it means managing many keys</span><br></pre></td></tr></table></figure>
+
+<h4 id="HD-Wallets-BIP-32-BIP-44"><a href="#HD-Wallets-BIP-32-BIP-44" class="headerlink" title="HD Wallets (BIP-32/BIP-44)"></a>HD Wallets (BIP-32/BIP-44)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HD wallets contain keys derived in a tree structure, such that a parent key can derive a sequence of children keys, each of which can derive a sequence of grandchildren keys, and so on, to an infinite depth. </span><br></pre></td></tr></table></figure>
+
+<p><img src="/2021/03/20/Blockchain-Doubt/Blog\source_posts\Blockchain-Doubt\Snipaste_2021-03-21_16-15-50.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">The second advantage of HD wallets is that users can create a sequence of public keys without having access to the corresponding private keys.</span><br><span class="line">this allows HD wallets to be used on an insecure server</span><br><span class="line">server doesn’t have the private keys that can spend the funds.</span><br></pre></td></tr></table></figure>
+
+<p>WTF???</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">you may notice a few things about this transaction, mostly the things that are missing! </span><br><span class="line">Where is Alice’s address? Where is Bob’s address? </span><br><span class="line">Where is the 0.1 input &quot;sent&quot; by Alice? </span><br><span class="line"></span><br><span class="line">In bitcoin, there are no coins, no senders, no recipients, no balances, no accounts, and no addresses. </span><br><span class="line"></span><br><span class="line">All those things are constructed at a higher level for the benefit of the user, to make things easier to understand.</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="What-Is-UTXO"><a href="#What-Is-UTXO" class="headerlink" title="What Is UTXO?"></a>What Is UTXO?</h2><p>The term UTXO refers to the amount of digital <a target="_blank" rel="noopener" href="https://www.investopedia.com/terms/c/currency.asp">currency</a> someone has left remaining after executing a <a target="_blank" rel="noopener" href="https://www.investopedia.com/terms/c/cryptocurrency.asp">cryptocurrency</a> transaction such as <a target="_blank" rel="noopener" href="https://www.investopedia.com/terms/b/bitcoin.asp">bitcoin</a>. The letters stand for unspent transaction output.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">When we say that a user’s wallet has &quot;received&quot; bitcoin, what we mean is that the wallet has detected an UTXO that can be spent with one of the keys controlled by that wallet. Thus, a user’s bitcoin &quot;balance&quot; is the sum of all UTXO that user’s wallet can spend and which may be scattered among hundreds of transactions and hundreds of blocks.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Conclusion, &quot;balance&quot; should be calculate from the blockchain</span><br></pre></td></tr></table></figure>
+
+<p>Will it hard to calculate the balance?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Most wallets maintain a database or use a database service to store a quick reference set of all the UTXO they can spend with the keys they control.</span><br></pre></td></tr></table></figure>
+
+<p>Understand “Soft Fork” after the “Consensus”</p>
+<p>Fee</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes. Transaction fees cover the mining network fees and the Blockchain infrastructure necessary to ensure fast and reliable transaction confirmation times. Miners prioritize transactions based on fees, so the higher the fee, the greater chance your transaction has of being completed quickly. A fee that’s too low runs the risk of never being confirmed. Your Blockchain wallet will recommend a fee for you to use based on the current network conditions and the size of your transaction. You can choose to set your own fee for bitcoin, but we only recommend that for more advanced users.</span><br></pre></td></tr></table></figure>
+
+
+
+<p>What distributed ledger</p>
+<p>amount of bitcoin </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">approximately the year 2140, when all bitcoin (20.99999998 million) will have been issued. After 2140, no new bitcoin will be issued.</span><br></pre></td></tr></table></figure>
+
+<p>what is public ledger</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Bitcoin has no central authority, yet somehow every full node has a complete copy of a public ledger that it can trust as the authoritative record. </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>what is “script “in blockchain</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Mining pool</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Their mining hardware remains connected to the pool server while mining, synchronizing their efforts with the other miners. Thus, the pool miners share the effort to mine a block and then share in the rewards.</span><br><span class="line"></span><br><span class="line">Successful blocks pay the reward to a pool bitcoin address, rather than individual miners. The pool server will periodically make payments to the miners&#39; bitcoin addresses</span><br></pre></td></tr></table></figure>
+
+<p>defect of pool server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">If the pool server is down or is slowed by a denial-of-service attack, the pool miners cannot mine. In 2011, to resolve these issues of centralization, a new pool mining method was proposed and implemented: P2Pool, a peer-to-peer mining pool without a central operator.</span><br></pre></td></tr></table></figure>
+
+<p>p2Pool</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">implementing a parallel blockchain-like system called a share chain</span><br><span class="line"></span><br><span class="line">the share chain allows all pool miners to keep track of all shares using a decentralized consensus mechanism like bitcoin’s blockchain consensus mechanism.</span><br><span class="line"></span><br><span class="line">undetermined...</span><br></pre></td></tr></table></figure>
+
+<p>what is Consensus Attacks</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>solo mining</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Or he might not find a block for 5 years and suffer a big financial loss. </span><br></pre></td></tr></table></figure>
+
+<p>“block height”</p>
+<p>“Bitcoin Core”</p>
+<p>“full node”</p>
+<p>output</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Transaction outputs consist of two parts:</span><br><span class="line"></span><br><span class="line">An amount of bitcoin, denominated in satoshis, the smallest bitcoin unit</span><br><span class="line"></span><br><span class="line">A cryptographic puzzle that determines the conditions required to spend the output</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/20/Blockchain-In-Python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -783,223 +1140,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/Android-Studio-SDK-config/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="FreeJim">
-      <meta itemprop="description" content="Hello World">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="藏经阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/08/Android-Studio-SDK-config/" class="post-title-link" itemprop="url">Android Studio SDK config</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-08 21:39:26 / Modified: 21:40:24" itemprop="dateCreated datePublished" datetime="2021-03-08T21:39:26+08:00">2021-03-08</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
-
-
-
-<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/Google-E-mail-Gmail/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="FreeJim">
-      <meta itemprop="description" content="Hello World">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="藏经阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/08/Google-E-mail-Gmail/" class="post-title-link" itemprop="url">Google E-mail Gmail</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-08 21:37:51 / Modified: 21:38:27" itemprop="dateCreated datePublished" datetime="2021-03-08T21:37:51+08:00">2021-03-08</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Google/" itemprop="url" rel="index"><span itemprop="name">Google</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>QQ邮箱中选择gmail注册</p>
-<p>中国的电话号码前加+86</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/08/Hexo-Theme/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="FreeJim">
-      <meta itemprop="description" content="Hello World">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="藏经阁">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/08/Hexo-Theme/" class="post-title-link" itemprop="url">Hexo Theme</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-08 21:32:10 / Modified: 21:32:26" itemprop="dateCreated datePublished" datetime="2021-03-08T21:32:10+08:00">2021-03-08</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Next主题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-
-
-<p>_config.yml新增</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-
-
-
-<p>在Next主题的配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # unescape html strings to the readable one</span><br><span class="line">  unescape: false</span><br></pre></td></tr></table></figure>
-
-<p>把local_search enable 置true就好了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1071,7 +1211,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">136</span>
+          <span class="site-state-item-count">139</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
