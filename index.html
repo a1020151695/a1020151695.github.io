@@ -200,10 +200,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-06-23 16:46:44 / Modified: 17:40:04" itemprop="dateCreated datePublished" datetime="2021-06-23T16:46:44+08:00">2021-06-23</time>
+              <time title="Created: 2021-06-23 16:46:44" itemprop="dateCreated datePublished" datetime="2021-06-23T16:46:44+08:00">2021-06-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-25 20:56:38" itemprop="dateModified" datetime="2021-06-25T20:56:38+08:00">2021-06-25</time>
+              </span>
 
           
 
@@ -217,45 +223,182 @@
 
       
           <h4 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0204.PNG" alt="IMG_0204"></p>
-<h4 id="5层网络体系结构"><a href="#5层网络体系结构" class="headerlink" title="5层网络体系结构"></a>5层网络体系结构</h4><h4 id="TCP-IP-4层协议"><a href="#TCP-IP-4层协议" class="headerlink" title="TCP/IP 4层协议"></a>TCP/IP 4层协议</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0202.PNG" alt="IMG_0202"></p>
+<h4 id="5层网络体系结构"><a href="#5层网络体系结构" class="headerlink" title="5层网络体系结构"></a>5层网络体系结构</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0202.PNG" alt="IMG_0202"></p>
+<h4 id="TCP-IP-4层协议"><a href="#TCP-IP-4层协议" class="headerlink" title="TCP/IP 4层协议"></a>TCP/IP 4层协议</h4><p>1、数据链路层；以处理数据在物理媒介上的传输</p>
+<p>2、网络层；实现数据包的选路和转发</p>
+<p>3、传输层；为两台主机上的应用程序提供端到端的通信</p>
+<p>4、应用层；负责处理应用程序的逻辑</p>
 <h4 id="OSI-7层协议"><a href="#OSI-7层协议" class="headerlink" title="OSI 7层协议"></a>OSI 7层协议</h4><h4 id="协议三要素"><a href="#协议三要素" class="headerlink" title="协议三要素"></a>协议三要素</h4><p>语法、语义、同步（事件顺序）</p>
 <h4 id="标准化工作"><a href="#标准化工作" class="headerlink" title="标准化工作"></a>标准化工作</h4><p>互联网草案==建议标准==互联网标准</p>
 <h2 id="一、物理层"><a href="#一、物理层" class="headerlink" title="一、物理层"></a>一、物理层</h2><h4 id="分组交换"><a href="#分组交换" class="headerlink" title="分组交换"></a>分组交换</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0200.PNG" alt="IMG_0200"></p>
+<p>分组交换在报文交换的基础上解决了中大文件的问题（报文大小没有限制，大文件容易出错）</p>
+<p>分组交换是把报文拆分后又有差错控制</p>
+<h4 id="虚电路"><a href="#虚电路" class="headerlink" title="虚电路"></a>虚电路</h4><p>数据报+电路交换</p>
+<p>虚 – 线路不是独占的，某一段线路可能被多条虚电路使用（多报文传输）</p>
+<p>两个端之间可能有多条虚电路为不同的进程服务</p>
 <h4 id="数据传输相参数"><a href="#数据传输相参数" class="headerlink" title="数据传输相参数"></a>数据传输相参数</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0201.PNG" alt="IMG_0201"></p>
 <p>总时延=发送时延+传播时延+处理时延+排队时延</p>
 <p>RTU 往返时间（Round-Trip Time）</p>
 <h4 id="香农公式"><a href="#香农公式" class="headerlink" title="香农公式"></a>香农公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0199.PNG" alt="IMG_0199"></p>
-<h4 id="调制和编码"><a href="#调制和编码" class="headerlink" title="调制和编码"></a>调制和编码</h4><h4 id="曼彻斯特编码"><a href="#曼彻斯特编码" class="headerlink" title="曼彻斯特编码"></a>曼彻斯特编码</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0205.PNG" alt="IMG_0205"></p>
+<p>例题：</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0238.PNG" alt="IMG_0238"></p>
+<h4 id="调制和编码"><a href="#调制和编码" class="headerlink" title="调制和编码"></a>调制和编码</h4><p>调制：数据变为模拟信号（波浪）</p>
+<p>编码：数据变为数字信号（01）</p>
+<h4 id="曼彻斯特编码"><a href="#曼彻斯特编码" class="headerlink" title="曼彻斯特编码"></a>曼彻斯特编码</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0205.PNG" alt="IMG_0205"></p>
+<p>额外的规定是为了同步信息</p>
 <h2 id="三、数据链路层"><a href="#三、数据链路层" class="headerlink" title="三、数据链路层"></a>三、数据链路层</h2><h4 id="信道复用技术"><a href="#信道复用技术" class="headerlink" title="信道复用技术"></a>信道复用技术</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210623173902101.png" alt="image-20210623173902101"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0207.PNG" alt="IMG_0207"></p>
+<p>CDMA（码分多址）为CMD的一种（NM数学的一种）</p>
 <h4 id="CRC"><a href="#CRC" class="headerlink" title="CRC"></a>CRC</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0208.PNG" alt="IMG_0208"></p>
-<h4 id="PPP协议"><a href="#PPP协议" class="headerlink" title="PPP协议"></a>PPP协议</h4><h4 id="CSMA-CD"><a href="#CSMA-CD" class="headerlink" title="CSMA/CD"></a>CSMA/CD</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0209.PNG" alt="IMG_0209"></p>
+<h4 id="PPP协议"><a href="#PPP协议" class="headerlink" title="PPP协议"></a>PPP协议</h4><p>链路层协议</p>
+<p>p2p</p>
+<p>SLIP基础上发展而来</p>
+<h4 id="CSMA-CD"><a href="#CSMA-CD" class="headerlink" title="CSMA/CD"></a>CSMA/CD</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0209.PNG" alt="IMG_0209"></p>
+<p>有3种分类</p>
+<p>1-坚持CSMA：监听到信道空闲立即发送数据，若信道忙则持续监听</p>
+<p>非坚持CSMA：监听到信道空闲立即发送数据，若信道忙则随机一段时间后再次监听</p>
+<p>p-坚持CSMA：监听到信道空闲以概率p发送数据，1-p的概率在下一个时隙发送数据，若信道忙则随即一段时间后再监听</p>
+<h4 id="争用期"><a href="#争用期" class="headerlink" title="争用期"></a>争用期</h4><p>RTU=2r</p>
+<p>r为单程传播时延</p>
+<p>这是最坏的情况，也就是A发送的数据刚到B时，B发送数据，然后发生碰撞</p>
+<p>碰撞信号传回A，加上之前A到B那一程的时间，正好为RTU</p>
+<p>所谓争用期，也就是抢占信道若RTU内没收到碰撞信号，则表示信道抢占成功</p>
+<p>之后B检测到信道不是空闲的，不会再发，之后A到B的传输也就不会有碰撞了</p>
+<p>（并不是真的抢占，只是B监听到A一直在给自己传输，然后B一直不发而已，看起来像A抢占了信道罢了）</p>
+<h4 id="最短帧长"><a href="#最短帧长" class="headerlink" title="最短帧长"></a>最短帧长</h4><p>接着上面，再结合图理解</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0240.PNG" alt="IMG_0240"></p>
+<p>由于这不是单向的信道</p>
+<p>B已经发送的数据还是会传到A</p>
+<p>所以CSMA设置一个最短帧长来过滤掉这些不完整的数据帧（CSMA规定检查到数据就立即停止发送，会产生残缺帧）</p>
+<p>最短帧长=2x单程传播时延x数据传输速率</p>
+<p>至于为什么要乘以2，则是因为碰撞信号传回发送方是需要时间的，在这段时间里发送方仍然在继续发送数据</p>
+<p>例题:</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0239.PNG" alt="IMG_0239"></p>
 <h4 id="CSMA-CA"><a href="#CSMA-CA" class="headerlink" title="CSMA/CA"></a>CSMA/CA</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0210.PNG" alt="IMG_0210"></p>
-<h4 id="交换机和Hub"><a href="#交换机和Hub" class="headerlink" title="交换机和Hub"></a>交换机和Hub</h4><h4 id="更快的以太网"><a href="#更快的以太网" class="headerlink" title="更快的以太网"></a>更快的以太网</h4><h2 id="四、网络层"><a href="#四、网络层" class="headerlink" title="四、网络层"></a>四、网络层</h2><h4 id="MTU"><a href="#MTU" class="headerlink" title="MTU"></a>MTU</h4><p>最大传送单元</p>
+<h4 id="交换机和Hub"><a href="#交换机和Hub" class="headerlink" title="交换机和Hub"></a>交换机和Hub</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0236.PNG" alt="IMG_0236"></p>
+<h4 id><a href="#" class="headerlink" title></a></h4><h3 id="更快的以太网"><a href="#更快的以太网" class="headerlink" title="更快的以太网"></a>更快的以太网</h3><h4 id="100BASE-T"><a href="#100BASE-T" class="headerlink" title="100BASE-T"></a>100BASE-T</h4><p>10BASE-T中的“10”表示信号在电缆上的传输速率为10MB/s</p>
+<p>“BASE”表示电缆上的信号是基带信号</p>
+<p>“T”代表双绞线星形网</p>
+<h2 id="四、网络层"><a href="#四、网络层" class="headerlink" title="四、网络层"></a>四、网络层</h2><h4 id="MTU"><a href="#MTU" class="headerlink" title="MTU"></a>MTU</h4><p>最大传送单元</p>
 <h4 id="片偏移"><a href="#片偏移" class="headerlink" title="片偏移"></a>片偏移</h4><p>每一分片的长度是8字节的整数倍</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0213.PNG" alt="IMG_0213"></p>
-<h3 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h3><h4 id="三级IP地址"><a href="#三级IP地址" class="headerlink" title="三级IP地址"></a>三级IP地址</h4><h4 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h4><h4 id="CIDR"><a href="#CIDR" class="headerlink" title="CIDR"></a>CIDR</h4><h4 id="特殊IP"><a href="#特殊IP" class="headerlink" title="特殊IP"></a>特殊IP</h4><h4 id="路由转发"><a href="#路由转发" class="headerlink" title="路由转发"></a>路由转发</h4><p>目的地址、子网掩码、下一跳地址</p>
-<p>题</p>
-<h4 id="RIP"><a href="#RIP" class="headerlink" title="RIP"></a>RIP</h4><p>题</p>
+<h3 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h3><h4 id="五类IP地址"><a href="#五类IP地址" class="headerlink" title="五类IP地址"></a>五类IP地址</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0241.PNG" alt="IMG_0241"></p>
+<p>IP地址=（类别位）网络号net-id，主机号host-id</p>
+<p>类别位：ABCDE</p>
+<p>一台主机允许有多个IP没错</p>
+<p>但是在同一网络下，主机只能有一个IP</p>
+<p>例如：</p>
+<p>学校的主机，除了有一个局域网IP（校园网内通信用）还有一个公网IP（NAT转换）</p>
+<h4 id="多播（组播）"><a href="#多播（组播）" class="headerlink" title="多播（组播）"></a>多播（组播）</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0252.PNG" alt="IMG_0252"></p>
+<p>给某个多播地址发数据，其实是给一个组的主机发数据（交由多播路由器完成）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A device can join a group by sending an IGMP “membership report” message to the group IP address.</span><br><span class="line">This packet is received by a multicast router on the segment</span><br><span class="line">the router does whatever is necessary to start forwarding the data stream to this device.</span><br></pre></td></tr></table></figure>
+
+<p>多播地址就类似于 QQ 群号，多播组相当于 QQ 群，一个个的主机就相当于群里面的成员</p>
+<p>一台主机也可以属于几个多播组</p>
+<h4 id="特殊IP"><a href="#特殊IP" class="headerlink" title="特殊IP"></a>特殊IP</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0242.PNG" alt="IMG_0242"></p>
+<p>关于多少个主机的话 – 减2</p>
+<p>分别是全0和全1</p>
+<h4 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a>子网掩码</h4><p>匹配则处于同一网络</p>
+<p>子网掩码010怎么办</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0247.PNG" alt="IMG_0247"></p>
+<h4 id="NAT"><a href="#NAT" class="headerlink" title="NAT"></a>NAT</h4><p>Network Address Translation</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0243.PNG" alt="IMG_0243"></p>
+<h4 id="CIDR"><a href="#CIDR" class="headerlink" title="CIDR"></a>CIDR</h4><p>作用：把小的网络汇聚成大的超网</p>
+<p>IP地址=网络前缀，主机号</p>
+<h4 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h4><p>网络层协议</p>
+<p>给网络中的主机动态分配IP地址</p>
+<p>过程:</p>
+<p>1.客户机广播找到DHCP服务器（DHCP发现）</p>
+<p>2.DHCP服务器进行广播，其中包含了分配的客户机IP及相关配置信息（DHCP提供）</p>
+<p>3.客户机如果接受DHCP服务器提供的IP，则通过广播向服务器请求该IP（DHCP请求）</p>
+<p>4.DHCP服务器广播确认消息，将IP分配给客户机（DHCP确认）</p>
+<h4 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h4><p>网络层协议</p>
+<p>对于特定的IP地址，查询其物理地址</p>
+<p>四种情景:</p>
+<p>1.主机到本网络的另一主机</p>
+<p>2.主机到另一网络的主机</p>
+<p>（主机先找到本网络一路由器的硬件地址，接下来的工作交给路由器完成）</p>
+<p>3.路由器到本网络的一主机</p>
+<p>4.路由器到另一网络的主机</p>
+<p>（路由器找到当前网络上的一个路由器的硬件地址，接下来的工作交给那个路由器）</p>
+<h4 id="RARP"><a href="#RARP" class="headerlink" title="RARP"></a>RARP</h4><p>硬件地址到IP地址</p>
+<h4 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h4><p>网络层协议</p>
+<p>作IP分组的数据部分，加上IP首部组成IP数据报</p>
+<p>共有5中类型：终点不可达，超时，重定向，源点抑制，参数问题</p>
+<p>ICMP协议是一种面向无连接的协议，用于传输出错报告控制信息</p>
+<p>例如:</p>
+<p>DF=1 但是分组大小又大于MTU时，丢弃该分组，并向源主机报告</p>
+<h4 id="路由转发"><a href="#路由转发" class="headerlink" title="路由转发"></a>路由转发</h4><p>目的地址、子网掩码、下一跳地址</p>
+<p>最长前缀匹配原则</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0245.PNG" alt="IMG_0245"></p>
+<h4 id="距离-向量路由"><a href="#距离-向量路由" class="headerlink" title="距离-向量路由"></a>距离-向量路由</h4><p>（RIP）</p>
+<p>定期把他们的整个路由表传送给直接相邻的节点</p>
+<h4 id="链路状态路由算法"><a href="#链路状态路由算法" class="headerlink" title="链路状态路由算法"></a>链路状态路由算法</h4><p>（OSPF）</p>
+<p>通过广播的方式与所有其他节点交流</p>
+<p>只有当链路状态发生改变的时候才发送</p>
+<h4 id="路径向量路由选择协议"><a href="#路径向量路由选择协议" class="headerlink" title="路径向量路由选择协议"></a>路径向量路由选择协议</h4><p>（BGP 边界网关协议）</p>
+<p>选择较好的路径即可</p>
+<h4 id="RIP"><a href="#RIP" class="headerlink" title="RIP"></a>RIP</h4><p>参考<a target="_blank" rel="noopener" href="http://freejim.icu/2021/05/29/%E7%BD%91%E7%BB%9C%E5%B1%82/">这篇文章</a></p>
+<p>下一跳如果是它，则无论如何都要换</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0251.PNG" alt="IMG_0251"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0250.PNG" alt="IMG_0250"></p>
 <p>好消息传播快，坏消息传播慢</p>
 <p>16</p>
 <p>定期交换路由表信息</p>
 <h4 id="OSPF"><a href="#OSPF" class="headerlink" title="OSPF"></a>OSPF</h4><p>洪泛法</p>
-<p>链路状态发生改变的时候交换路由表</p>
+<p>参考<a target="_blank" rel="noopener" href="http://freejim.icu/2021/05/29/%E7%BD%91%E7%BB%9C%E5%B1%82/">这篇文章</a></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0249.PNG" alt="IMG_0249"></p>
+<p>距离：在RIP即跳数</p>
+<hr>
+<h2 id="IP数据报字段"><a href="#IP数据报字段" class="headerlink" title="IP数据报字段"></a>IP数据报字段</h2><h4 id="DF（Don’t-Fragment）"><a href="#DF（Don’t-Fragment）" class="headerlink" title="DF（Don’t Fragment）"></a>DF（Don’t Fragment）</h4><h4 id="MF（More-Fragment）"><a href="#MF（More-Fragment）" class="headerlink" title="MF（More Fragment）"></a>MF（More Fragment）</h4><p>MF=1时表示还有别的分片</p>
+<h4 id="MTU（Maximum-Transmission-Unit，最大传输单元）"><a href="#MTU（Maximum-Transmission-Unit，最大传输单元）" class="headerlink" title="MTU（Maximum Transmission Unit，最大传输单元）"></a>MTU（Maximum Transmission Unit，最大传输单元）</h4><p>当IP分组的大小大于MTU时就需要进行分片</p>
+<p>（每个分片有自己的新头部）</p>
+<h4 id="生命期TTL"><a href="#生命期TTL" class="headerlink" title="生命期TTL"></a>生命期TTL</h4><p>避免循环</p>
+<p>转发分组之前把TTL减1</p>
+<h4 id="首部检验和"><a href="#首部检验和" class="headerlink" title="首部检验和"></a>首部检验和</h4><p>只校验分组的首部，而不检验数据部分</p>
+<hr>
+<h4 id="IPv6"><a href="#IPv6" class="headerlink" title="IPv6"></a>IPv6</h4><p>主要为了解决IPv4地址耗尽的问题</p>
+<p>首部长度固定</p>
+<p>取消了校验和字段（除了网络层，还有运输层会作差错检测）</p>
 <h2 id="五、传输层"><a href="#五、传输层" class="headerlink" title="五、传输层"></a>五、传输层</h2><h4 id="熟知端口号"><a href="#熟知端口号" class="headerlink" title="熟知端口号"></a>熟知端口号</h4><h4 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h4><h4 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h4><h4 id="停止等待协议"><a href="#停止等待协议" class="headerlink" title="停止等待协议"></a>停止等待协议</h4><p>超时重传</p>
 <h4 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h4><p>滑动窗口</p>
 <h4 id="拥塞"><a href="#拥塞" class="headerlink" title="拥塞"></a>拥塞</h4><p>负载越来越大，但是吞吐量反而越来越小</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0215.PNG" alt="IMG_0215"></p>
-<h4 id="拥塞控制"><a href="#拥塞控制" class="headerlink" title="拥塞控制"></a>拥塞控制</h4><p>满开始</p>
-<p>拥塞避免</p>
-<p>快重传</p>
-<p>快恢复</p>
-<h2 id="六、应用层"><a href="#六、应用层" class="headerlink" title="六、应用层"></a>六、应用层</h2><h4 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h4><p>过程</p>
-<p>HTTP</p>
-<p>FTP</p>
+<h3 id="拥塞控制"><a href="#拥塞控制" class="headerlink" title="拥塞控制"></a>拥塞控制</h3><h4 id="慢开始"><a href="#慢开始" class="headerlink" title="慢开始"></a>慢开始</h4><p>一开始拥塞窗口cwnd=1，然后接收到一个ACK的话，cwnd就加1</p>
+<p>例：</p>
+<p>1 – 2 – 4 – 8 （指数型增长）</p>
+<p>当达到阈值时改用拥塞避免算法</p>
+<h4 id="拥塞避免"><a href="#拥塞避免" class="headerlink" title="拥塞避免"></a>拥塞避免</h4><p>每经过一个RTU，cwnd才加1</p>
+<p>而当出现一次超时时，cwnd重置1，并把阈值设置成当前cwnd的一半</p>
+<p>tu</p>
+<h4 id="快重传"><a href="#快重传" class="headerlink" title="快重传"></a>快重传</h4><p>当发送方连续收到三个重复的ACK时</p>
+<p>（若接收方收到的报文不对劲，则发回的ACK是上一次的，发送方也就会收到重复的ACK）</p>
+<p>直接重传对方未收到的报文段，而不用等待计时器</p>
+<h4 id="快恢复"><a href="#快恢复" class="headerlink" title="快恢复"></a>快恢复</h4><p>收到三个冗余ACK时，把阈值设置为当前cwnd的一般，并且cwnd重置为原cwnd的一半，然后执行拥塞避免算法</p>
+<p>tu</p>
+<h2 id="六、应用层"><a href="#六、应用层" class="headerlink" title="六、应用层"></a>六、应用层</h2><h4 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h4><p>根域名服务器 </p>
+<p>顶级域名服务器 </p>
+<p>权限域名服务器 </p>
+<p>本地域名服务器</p>
+<p>=主机向本地域名服务器的查询一般都是采用递归查询。如果主机所询问的本地域名服务器不知道被查询域名的 IP 地址，那么本地域名服务器就以 DNS 客户的身份，向其他根域名服务器继续发出查询请求报文。（人大代表）</p>
+<p>=本地域名服务器向根域名服务器的查询通常是采用迭代查询。当根域名服务器收到本地域名服务器的迭代查询请求报文时，要么给出所要查询的 IP 地址，要么告诉本地域名服务器：“你下一步应当向哪一个域名服务器进行查询”。然后让本地域名服务器进行后续的查询。</p>
+<p>tu</p>
+<h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><p>两类：请求报文和响应报文</p>
+<h4 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h4><p>TCP</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0214.PNG" alt="IMG_0214"></p>
 <p>SMTP</p>
-<p>DHCP</p>
+<h4 id="万维网"><a href="#万维网" class="headerlink" title="万维网"></a>万维网</h4><p>并非某种特殊的计算机网络，而是一个大规模的、联机式的信息储藏所</p>
+<p>通过链接获取各种信息</p>
+<p>HTML则是可以把这些信息更好地展示</p>
+<h4 id="TELNET"><a href="#TELNET" class="headerlink" title="TELNET"></a>TELNET</h4><p>能将用户的击键传到远地主机</p>
+<p>同时也能将远地主机的输出通过 TCP 连接返回到用户屏幕</p>
+<p>这种服务是透明的，因为用户感觉到好像键盘和显示器是直接连在远地主机上</p>
+<h2 id="七、特殊设备"><a href="#七、特殊设备" class="headerlink" title="七、特殊设备"></a>七、特殊设备</h2><p>网络适配器（即网卡）来实现数据链路层和物理层这两层的协议的硬件和软件</p>
+<p>物理层中继系统：转发器(repeater)</p>
+<p>数据链路层中继系统：网桥或桥接器(bridge)</p>
+<p>网络层中继系统：路由器(router)</p>
+<p>网桥和路由器的混合物：桥路器(brouter)</p>
+<p>网络层以上的中继系统：网关(gateway)</p>
 
       
     </div>
@@ -300,7 +443,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-06-23 16:46:33 / Modified: 17:25:13" itemprop="dateCreated datePublished" datetime="2021-06-23T16:46:33+08:00">2021-06-23</time>
+              <time title="Created: 2021-06-23 16:46:33 / Modified: 18:17:38" itemprop="dateCreated datePublished" datetime="2021-06-23T16:46:33+08:00">2021-06-23</time>
             </span>
 
           
@@ -316,7 +459,13 @@
       
           <h4 id="导定积分"><a href="#导定积分" class="headerlink" title="导定积分"></a>导定积分</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0219.png" alt="IMG_0219"></p>
 <h4 id="定积分x和t"><a href="#定积分x和t" class="headerlink" title="定积分x和t"></a>定积分x和t</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210623172504701.png" alt="image-20210623172504701"></p>
-<h4 id="定积分常识"><a href="#定积分常识" class="headerlink" title="定积分常识"></a>定积分常识</h4><h4 id="定积分特殊性质"><a href="#定积分特殊性质" class="headerlink" title="定积分特殊性质"></a>定积分特殊性质</h4>
+<h4 id="定积分常识"><a href="#定积分常识" class="headerlink" title="定积分常识"></a>定积分常识</h4><h2 id="定积分的特殊性质"><a href="#定积分的特殊性质" class="headerlink" title="定积分的特殊性质"></a>定积分的特殊性质</h2><p>相关习题P</p>
+<h4 id="对称区间"><a href="#对称区间" class="headerlink" title="对称区间"></a>对称区间</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0226.PNG" alt="IMG_0226"></p>
+<h4 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0230.PNG" alt="IMG_0230"></p>
+<p>其中还要熟悉三角函数常见的积分，变形</p>
+<p>如：二次sec的积分、sin扔到后面变cos</p>
+<h4 id="周期函数"><a href="#周期函数" class="headerlink" title="周期函数"></a>周期函数</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210623181735432.png" alt="image-20210623181735432"></p>
+<h2 id="定积分的基本方法"><a href="#定积分的基本方法" class="headerlink" title="定积分的基本方法"></a>定积分的基本方法</h2><h4 id="换元积分"><a href="#换元积分" class="headerlink" title="换元积分"></a>换元积分</h4><h4 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h4>
       
     </div>
 
