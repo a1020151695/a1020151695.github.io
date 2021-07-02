@@ -184,34 +184,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Dialog Processing</title>
-    <url>/2021/01/04/Android-Dialog-Processing/</url>
-    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>The circle is just a ProgressBar widget in dialog</p>
-<p>Note !</p>
-<p>1.Create and show a dialog should be done by UI Thread</p>
-<p>2.There are some callback functions about the dialog, you can check the document</p>
-<p>If you want to close the dialog by program </p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
-
-<p>Note !</p>
-<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
-<p>2.dialog = dialogBuilder.create()</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Fragment And Activity</title>
     <url>/2021/01/04/Android-Fragment-And-Activity/</url>
     <content><![CDATA[<p>Fragment’s feature is reusable</p>
@@ -241,6 +213,34 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Dialog Processing</title>
+    <url>/2021/01/04/Android-Dialog-Processing/</url>
+    <content><![CDATA[<p>Display a circle in dialog when loading something</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configLoadingProgress</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br><span class="line">    <span class="keyword">val</span> loadingProgress = ProgressBar(<span class="keyword">this</span>)</span><br><span class="line">    loadingDialogBuilder.setView(loadingProgress)</span><br><span class="line">    loadingDialogBuilder.setTitle(<span class="string">&quot;正在登陆...&quot;</span>)</span><br><span class="line">    runOnUiThread &#123;</span><br><span class="line">        loadingDialog = loadingDialogBuilder.create()</span><br><span class="line">        loadingDialog!!.show()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The circle is just a ProgressBar widget in dialog</p>
+<p>Note !</p>
+<p>1.Create and show a dialog should be done by UI Thread</p>
+<p>2.There are some callback functions about the dialog, you can check the document</p>
+<p>If you want to close the dialog by program </p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">loadingDialog?.cancel()</span><br></pre></td></tr></table></figure>
+
+<p>Note !</p>
+<p>1.You should invoke cancel() from dialog but not dialogBuilder</p>
+<p>2.dialog = dialogBuilder.create()</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> loadingDialogBuilder = AlertDialog.Builder(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -458,16 +458,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Studio SDK config</title>
-    <url>/2021/03/08/Android-Studio-SDK-config/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
-
-
-
-<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Android Swip Refresh</title>
     <url>/2021/01/06/Android-Swip-Refresh/</url>
     <content><![CDATA[<p>XML</p>
@@ -485,6 +475,16 @@
         <tag>Android</tag>
         <tag>Tutorial</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Android Studio SDK config</title>
+    <url>/2021/03/08/Android-Studio-SDK-config/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
+
+
+
+<p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
+]]></content>
   </entry>
   <entry>
     <title>Android Thread</title>
@@ -510,6 +510,43 @@
       <tags>
         <tag>Android</tag>
         <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android px dp sp</title>
+    <url>/2021/01/04/Android-px-dp-sp/</url>
+    <content><![CDATA[<p>px is for the general unit</p>
+<p>Note !</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
+
+
+
+<p>dp is usually use for layout</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note </p>
+<p>You can pass context as a parameter</p>
+<blockquote>
+<p>dpi: Dots Per Inch</p>
+</blockquote>
+<p>sp is usually use for text size</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Layout</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -579,61 +616,6 @@
         <tag>Android</tag>
         <tag>Tutorial</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Android px dp sp</title>
-    <url>/2021/01/04/Android-px-dp-sp/</url>
-    <content><![CDATA[<p>px is for the general unit</p>
-<p>Note !</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
-
-
-
-<p>dp is usually use for layout</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Note </p>
-<p>You can pass context as a parameter</p>
-<blockquote>
-<p>dpi: Dots Per Inch</p>
-</blockquote>
-<p>sp is usually use for text size</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Layout</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blockchain Digital Signature</title>
-    <url>/2021/03/20/Blockchain-Digital-Signature/</url>
-    <content><![CDATA[<p>Store key</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br><span class="line"><span class="keyword">from</span> Crypto.Hash <span class="keyword">import</span> SHA256, SHA, SHA512</span><br><span class="line"><span class="keyword">from</span> Crypto.Signature <span class="keyword">import</span> PKCS1_PSS</span><br><span class="line">key = RSA.generate(<span class="number">2048</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pem&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(key.exportKey(<span class="string">&#x27;PEM&#x27;</span>))</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pub&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(key.publickey().exportKey(<span class="string">&#x27;PEM&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br><span class="line"><span class="keyword">from</span> Crypto.Hash <span class="keyword">import</span> SHA256, SHA, SHA512</span><br><span class="line"><span class="keyword">from</span> Crypto.Signature <span class="keyword">import</span> PKCS1_PSS</span><br><span class="line"></span><br><span class="line"><span class="comment"># Now is Sender&#x27;s turn</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;message.txt&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># get message file</span></span><br><span class="line">    message = f.read().encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pem&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># get private key</span></span><br><span class="line">    key = RSA.importKey(f.read())</span><br><span class="line">h = SHA256.new()</span><br><span class="line">h.update(message)  <span class="comment"># hash the message</span></span><br><span class="line">sgn = PKCS1_PSS.new(key)  <span class="comment"># RSA digital signature protocol</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mesg.sgn&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># new a signed message file</span></span><br><span class="line">    f.write(sgn.sign(h))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Now is the Receiver&#x27;s turn</span></span><br><span class="line">fname = <span class="string">&#x27;message.txt&#x27;</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(fname) <span class="keyword">as</span> f:</span><br><span class="line">    message = f.read().encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">h = SHA256.new()</span><br><span class="line">h.update(message)  <span class="comment"># hash message with the same method as the sender</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mesg.sgn&#x27;</span>,<span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    signature = f.read()</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pub&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    key = RSA.importKey(f.read())</span><br><span class="line">vfy = PKCS1_PSS.new(key)  <span class="comment"># verify the signed file whether valid</span></span><br><span class="line"><span class="keyword">if</span> vfy.verify(h, signature):</span><br><span class="line">    print(<span class="string">&#x27;signture matches.&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;signature problem.&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
   </entry>
   <entry>
     <title>Blockchain Doubt</title>
@@ -794,6 +776,24 @@
 <p>“full node”</p>
 <p>output</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Transaction outputs consist of two parts:</span><br><span class="line"></span><br><span class="line">An amount of bitcoin, denominated in satoshis, the smallest bitcoin unit</span><br><span class="line"></span><br><span class="line">A cryptographic puzzle that determines the conditions required to spend the output</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Blockchain Digital Signature</title>
+    <url>/2021/03/20/Blockchain-Digital-Signature/</url>
+    <content><![CDATA[<p>Store key</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br><span class="line"><span class="keyword">from</span> Crypto.Hash <span class="keyword">import</span> SHA256, SHA, SHA512</span><br><span class="line"><span class="keyword">from</span> Crypto.Signature <span class="keyword">import</span> PKCS1_PSS</span><br><span class="line">key = RSA.generate(<span class="number">2048</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pem&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(key.exportKey(<span class="string">&#x27;PEM&#x27;</span>))</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pub&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(key.publickey().exportKey(<span class="string">&#x27;PEM&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br><span class="line"><span class="keyword">from</span> Crypto.Hash <span class="keyword">import</span> SHA256, SHA, SHA512</span><br><span class="line"><span class="keyword">from</span> Crypto.Signature <span class="keyword">import</span> PKCS1_PSS</span><br><span class="line"></span><br><span class="line"><span class="comment"># Now is Sender&#x27;s turn</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;message.txt&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># get message file</span></span><br><span class="line">    message = f.read().encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pem&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># get private key</span></span><br><span class="line">    key = RSA.importKey(f.read())</span><br><span class="line">h = SHA256.new()</span><br><span class="line">h.update(message)  <span class="comment"># hash the message</span></span><br><span class="line">sgn = PKCS1_PSS.new(key)  <span class="comment"># RSA digital signature protocol</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mesg.sgn&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:  <span class="comment"># new a signed message file</span></span><br><span class="line">    f.write(sgn.sign(h))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Now is the Receiver&#x27;s turn</span></span><br><span class="line">fname = <span class="string">&#x27;message.txt&#x27;</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(fname) <span class="keyword">as</span> f:</span><br><span class="line">    message = f.read().encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">h = SHA256.new()</span><br><span class="line">h.update(message)  <span class="comment"># hash message with the same method as the sender</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mesg.sgn&#x27;</span>,<span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    signature = f.read()</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;mykey.pub&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    key = RSA.importKey(f.read())</span><br><span class="line">vfy = PKCS1_PSS.new(key)  <span class="comment"># verify the signed file whether valid</span></span><br><span class="line"><span class="keyword">if</span> vfy.verify(h, signature):</span><br><span class="line">    print(<span class="string">&#x27;signture matches.&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&#x27;signature problem.&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
 
 ]]></content>
   </entry>
@@ -983,6 +983,12 @@
       </tags>
   </entry>
   <entry>
+    <title>Daily Doubt</title>
+    <url>/2021/03/22/Daily-Doubt/</url>
+    <content><![CDATA[<p>bash is different env with cmd</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Docker Basic</title>
     <url>/2021/03/28/Docker-Basic/</url>
     <content><![CDATA[<p>start docker daemon</p>
@@ -1034,12 +1040,6 @@
 
 
 <hr>
-]]></content>
-  </entry>
-  <entry>
-    <title>Daily Doubt</title>
-    <url>/2021/03/22/Daily-Doubt/</url>
-    <content><![CDATA[<p>bash is different env with cmd</p>
 ]]></content>
   </entry>
   <entry>
@@ -1228,6 +1228,25 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Git Fix Conflict</title>
+    <url>/2021/01/04/Git-Fix-Conflict/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+
+<p>Generally, you just need to delete the origin content , and use the new content</p>
+<p>Strongly recommend you to use “Github Desktop”</p>
+<p>It will clearly display all conflicts and you can fix them directly</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git Basic Commands</title>
     <url>/2021/01/04/Git-Basic-Commands/</url>
     <content><![CDATA[<p>1.Push</p>
@@ -1272,21 +1291,34 @@
       </tags>
   </entry>
   <entry>
-    <title>Git Fix Conflict</title>
-    <url>/2021/01/04/Git-Fix-Conflict/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+    <title>Github Basic Config</title>
+    <url>/2021/01/04/Github-Basic-Config/</url>
+    <content><![CDATA[<p>1.Usage of “.gitignore “ file</p>
+<p>When you push, you can exclude some files using “.gitignore “ </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.properties</span><br></pre></td></tr></table></figure>
 
-<p>Generally, you just need to delete the origin content , and use the new content</p>
-<p>Strongly recommend you to use “Github Desktop”</p>
-<p>It will clearly display all conflicts and you can fix them directly</p>
+<p>means exclude all “.properties” file</p>
+<p>You can also exclude a single file, just type it’s whole file name</p>
+<p>Usually, “.gitignore “ file can’t work directly, you need to do this also</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git rm -r --cached .</span><br></pre></td></tr></table></figure>
+
+<p>Then push again</p>
+<hr>
+<p>error</p>
+<blockquote>
+<p>OpenSSL SSL_read: Connection was reset, errno 10054</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>zip 和 git clone 的区别在于是否有.git的隐藏文件</p>
 ]]></content>
       <categories>
-        <category>Git</category>
-        <category>Tutorial</category>
+        <category>Config</category>
+        <category>Github</category>
       </categories>
       <tags>
         <tag>Tutorial</tag>
-        <tag>Git</tag>
         <tag>Github</tag>
       </tags>
   </entry>
@@ -1325,38 +1357,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Github Basic Config</title>
-    <url>/2021/01/04/Github-Basic-Config/</url>
-    <content><![CDATA[<p>1.Usage of “.gitignore “ file</p>
-<p>When you push, you can exclude some files using “.gitignore “ </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.properties</span><br></pre></td></tr></table></figure>
-
-<p>means exclude all “.properties” file</p>
-<p>You can also exclude a single file, just type it’s whole file name</p>
-<p>Usually, “.gitignore “ file can’t work directly, you need to do this also</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git rm -r --cached .</span><br></pre></td></tr></table></figure>
-
-<p>Then push again</p>
-<hr>
-<p>error</p>
-<blockquote>
-<p>OpenSSL SSL_read: Connection was reset, errno 10054</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>zip 和 git clone 的区别在于是否有.git的隐藏文件</p>
-]]></content>
-      <categories>
-        <category>Config</category>
-        <category>Github</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Google E-mail Gmail</title>
     <url>/2021/03/08/Google-E-mail-Gmail/</url>
     <content><![CDATA[<p>QQ邮箱中选择gmail注册</p>
@@ -1376,6 +1376,18 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> area = <span class="built_in">document</span>.getElementById(<span class="string">&quot;area&quot;</span>).value;</span><br></pre></td></tr></table></figure>
 
 
+
+]]></content>
+  </entry>
+  <entry>
+    <title>HTTP</title>
+    <url>/2021/06/03/HTTP/</url>
+    <content><![CDATA[<h1 id="Content-Encoding"><a href="#Content-Encoding" class="headerlink" title="Content-Encoding"></a>Content-Encoding</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">浏览器发送请求时，通过 Accept-Encoding 带上自己支持的内容编码格式列表</span><br><span class="line">服务端从中挑选一种用来对正文进行编码，并通过 Content-Encoding 响应头指明选定的格式</span><br><span class="line">浏览器拿到响应正文后，依据 Content-Encoding 进行解压</span><br><span class="line">内容编码目的是优化传输内容大小，通俗地讲就是进行压缩</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Cache</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Web页面设计中，建少HTTP请求可以提高页面响应速度。</span><br><span class="line">浏览器在第一次访问页面时下载的资源会缓存起来</span><br><span class="line">第二次访问时会判断在缓存中是否已有该资源并且有没有更新过</span><br><span class="line">如果已有该资源且没有更新过，则去缓存去取</span><br><span class="line">这样减少了下载资源的时间。</span><br><span class="line">原理上是通过HTTP Rquest Header中的 if-modifaders中的last-modified来实现</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -1403,18 +1415,6 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>HTTP</title>
-    <url>/2021/06/03/HTTP/</url>
-    <content><![CDATA[<h1 id="Content-Encoding"><a href="#Content-Encoding" class="headerlink" title="Content-Encoding"></a>Content-Encoding</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">浏览器发送请求时，通过 Accept-Encoding 带上自己支持的内容编码格式列表</span><br><span class="line">服务端从中挑选一种用来对正文进行编码，并通过 Content-Encoding 响应头指明选定的格式</span><br><span class="line">浏览器拿到响应正文后，依据 Content-Encoding 进行解压</span><br><span class="line">内容编码目的是优化传输内容大小，通俗地讲就是进行压缩</span><br></pre></td></tr></table></figure>
-
-
-
-<p>Cache</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Web页面设计中，建少HTTP请求可以提高页面响应速度。</span><br><span class="line">浏览器在第一次访问页面时下载的资源会缓存起来</span><br><span class="line">第二次访问时会判断在缓存中是否已有该资源并且有没有更新过</span><br><span class="line">如果已有该资源且没有更新过，则去缓存去取</span><br><span class="line">这样减少了下载资源的时间。</span><br><span class="line">原理上是通过HTTP Rquest Header中的 if-modifaders中的last-modified来实现</span><br></pre></td></tr></table></figure>
-
-]]></content>
   </entry>
   <entry>
     <title>Hexo Theme</title>
@@ -1543,17 +1543,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>JPA tutorial</title>
-    <url>/2021/06/17/JPA-tutorial/</url>
-    <content><![CDATA[<h4 id="Query"><a href="#Query" class="headerlink" title="@Query"></a>@Query</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatus</span><span class="params">(Integer status)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1 and u.name = ?2&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatusAndName</span><span class="params">(Integer status, String name)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>For the above queries, the <em>status</em> method parameter will be assigned to the query parameter with index <em>1,</em> and the <em>name</em> method parameter will be assigned to the query parameter with index <em>2</em>.</p>
-<hr>
-<h4 id="JPA-批量查询id"><a href="#JPA-批量查询id" class="headerlink" title="JPA 批量查询id"></a>JPA 批量查询id</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(value = &quot;select * from info where userid in ?1&quot;,nativeQuery = true)</span></span><br><span class="line"><span class="function">List&lt;Info&gt; <span class="title">getInfoByIds</span><span class="params">(List&lt;Integer&gt; userids)</span></span>;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>Intellij 使用</title>
     <url>/2021/06/08/Intellij-%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p>有些函数没有解释，是需要先下载源码先</p>
@@ -1566,11 +1555,6 @@
 
 
 ]]></content>
-  </entry>
-  <entry>
-    <title>Java 重定向</title>
-    <url>/2021/05/25/Java-%E9%87%8D%E5%AE%9A%E5%90%91/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>JPA error</title>
@@ -1594,6 +1578,22 @@
 <hr>
 <h4 id="Executing-an-update-delete-query-with-root-cause"><a href="#Executing-an-update-delete-query-with-root-cause" class="headerlink" title="Executing an update/delete query] with root cause"></a>Executing an update/delete query] with root cause</h4><p>添加@Transactional注解</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>JPA tutorial</title>
+    <url>/2021/06/17/JPA-tutorial/</url>
+    <content><![CDATA[<h4 id="Query"><a href="#Query" class="headerlink" title="@Query"></a>@Query</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatus</span><span class="params">(Integer status)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1 and u.name = ?2&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatusAndName</span><span class="params">(Integer status, String name)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>For the above queries, the <em>status</em> method parameter will be assigned to the query parameter with index <em>1,</em> and the <em>name</em> method parameter will be assigned to the query parameter with index <em>2</em>.</p>
+<hr>
+<h4 id="JPA-批量查询id"><a href="#JPA-批量查询id" class="headerlink" title="JPA 批量查询id"></a>JPA 批量查询id</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(value = &quot;select * from info where userid in ?1&quot;,nativeQuery = true)</span></span><br><span class="line"><span class="function">List&lt;Info&gt; <span class="title">getInfoByIds</span><span class="params">(List&lt;Integer&gt; userids)</span></span>;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Java 重定向</title>
+    <url>/2021/05/25/Java-%E9%87%8D%E5%AE%9A%E5%90%91/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Leetcode Rule</title>
@@ -1864,6 +1864,33 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Python Code</title>
+    <url>/2021/01/03/Python-Code/</url>
+    <content><![CDATA[<ol>
+<li><p>The Name of variable</p>
+<p>Not like Java — “dataSet”</p>
+<p>Python always use “data_set”</p>
+</li>
+<li><p>Comments</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Coding</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python Class</title>
     <url>/2021/01/02/Python-Class/</url>
     <content><![CDATA[<p>simple example: (within the same package)</p>
@@ -1908,25 +1935,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Dict</title>
-    <url>/2021/01/02/Python-Dict/</url>
-    <content><![CDATA[<p>Traverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<p>Reverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python File Operation</title>
     <url>/2021/01/02/Python-File-Operation/</url>
     <content><![CDATA[<p>Add content to file</p>
@@ -1948,56 +1956,13 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Code</title>
-    <url>/2021/01/03/Python-Code/</url>
-    <content><![CDATA[<ol>
-<li><p>The Name of variable</p>
-<p>Not like Java — “dataSet”</p>
-<p>Python always use “data_set”</p>
-</li>
-<li><p>Comments</p>
-</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">&#x27;hello world&#x27;</span>)   <span class="comment"># note the blank space</span></span><br></pre></td></tr></table></figure>
+    <title>Python Dict</title>
+    <url>/2021/01/02/Python-Dict/</url>
+    <content><![CDATA[<p>Traverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
 
-
-
-
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Coding</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python JSON</title>
-    <url>/2021/01/02/Python-JSON/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.json&quot;</span>)</span><br><span class="line">jsonString = file.read()</span><br><span class="line">file.close()</span><br><span class="line">jsons=json.loads(jsonString)</span><br><span class="line"><span class="keyword">for</span> json <span class="keyword">in</span> jsons:</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python Log</title>
-    <url>/2021/01/03/Python-Log/</url>
-    <content><![CDATA[<p>Sometimes the error messages will be to long </p>
-<p>Then the console is not big enough to display all messages</p>
-<p>And we can’t see the root cause</p>
-<p>The solution is output the error messages to a log file</p>
-<p>Here is the example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"> </span><br><span class="line">logging.basicConfig(filename=<span class="string">&#x27;log.log&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error_func</span>():</span></span><br><span class="line">  b = <span class="number">1</span> / <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    error_func()</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">    s = traceback.format_exc()</span><br><span class="line">    logging.error(s)</span><br></pre></td></tr></table></figure>
+<p>Reverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2028,6 +1993,21 @@
       <tags>
         <tag>Python</tag>
         <tag>Flask</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python JSON</title>
+    <url>/2021/01/02/Python-JSON/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.json&quot;</span>)</span><br><span class="line">jsonString = file.read()</span><br><span class="line">file.close()</span><br><span class="line">jsons=json.loads(jsonString)</span><br><span class="line"><span class="keyword">for</span> json <span class="keyword">in</span> jsons:</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -2073,6 +2053,26 @@
 
 
 
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Log</title>
+    <url>/2021/01/03/Python-Log/</url>
+    <content><![CDATA[<p>Sometimes the error messages will be to long </p>
+<p>Then the console is not big enough to display all messages</p>
+<p>And we can’t see the root cause</p>
+<p>The solution is output the error messages to a log file</p>
+<p>Here is the example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"> </span><br><span class="line">logging.basicConfig(filename=<span class="string">&#x27;log.log&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error_func</span>():</span></span><br><span class="line">  b = <span class="number">1</span> / <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    error_func()</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">    s = traceback.format_exc()</span><br><span class="line">    logging.error(s)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2250,6 +2250,11 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Spring Boot Cofiguration</title>
+    <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Refactor Notes</title>
     <url>/2021/01/03/Refactor-Notes/</url>
     <content><![CDATA[<p>1.</p>
@@ -2268,9 +2273,17 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot Cofiguration</title>
-    <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
-    <content><![CDATA[]]></content>
+    <title>Spring Boot Lib</title>
+    <url>/2021/03/30/Spring-Boot-Lib/</url>
+    <content><![CDATA[<p>1.CommandLineRunner</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import org.springframework.boot.CommandLineRunner;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Interface used to indicate that a bean should run when it is contained within a SpringApplication. </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CommandLineRunner <span class="title">commandLineRunner</span><span class="params">(ApplicationContext context)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> args -&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Beans in container :&quot;</span>);</span><br><span class="line">            String [] beanNames = context.getBeanDefinitionNames();</span><br><span class="line">            <span class="keyword">for</span>(String beanName:beanNames)&#123;</span><br><span class="line">                System.out.println(beanName);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210330112109868.png" alt="image-20210330112109868"></p>
+]]></content>
   </entry>
   <entry>
     <title>Spring Boot Return</title>
@@ -2295,19 +2308,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Spring Boot Lib</title>
-    <url>/2021/03/30/Spring-Boot-Lib/</url>
-    <content><![CDATA[<p>1.CommandLineRunner</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import org.springframework.boot.CommandLineRunner;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Interface used to indicate that a bean should run when it is contained within a SpringApplication. </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> CommandLineRunner <span class="title">commandLineRunner</span><span class="params">(ApplicationContext context)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> args -&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;Beans in container :&quot;</span>);</span><br><span class="line">            String [] beanNames = context.getBeanDefinitionNames();</span><br><span class="line">            <span class="keyword">for</span>(String beanName:beanNames)&#123;</span><br><span class="line">                System.out.println(beanName);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210330112109868.png" alt="image-20210330112109868"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Spring Boot Static Page</title>
     <url>/2021/05/11/Spring-Boot-Static-Page/</url>
     <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">/META-INF/resources/  </span><br><span class="line">/resources/  </span><br><span class="line">/<span class="keyword">static</span>/  </span><br><span class="line">/<span class="keyword">public</span>/</span><br></pre></td></tr></table></figure>
@@ -2324,13 +2324,6 @@
 
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> freejim.icu.exp1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.junit.runner.RunWith;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"><span class="keyword">import</span> org.springframework.http.MediaType;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.context.junit4.SpringRunner;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.web.servlet.MockMvc;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.web.servlet.request.MockMvcRequestBuilders;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.hamcrest.Matchers.equalTo;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;</span><br><span class="line"><span class="meta">@RunWith(SpringRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="meta">@AutoConfigureMockMvc</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MvcTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MockMvc mvc;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hello</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        mvc.perform(MockMvcRequestBuilders.get(<span class="string">&quot;/&quot;</span>).accept(MediaType.APPLICATION_JSON))</span><br><span class="line">                .andExpect(status().isOk())</span><br><span class="line">                .andExpect(content().string(equalTo(<span class="string">&quot;Hello, world&quot;</span>)));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-]]></content>
-  </entry>
-  <entry>
-    <title>Spring Boot_exp2</title>
-    <url>/2021/04/28/Spring-Boot-exp2/</url>
-    <content><![CDATA[<p>list元素重复</p>
-<p>list元素数量不对</p>
 ]]></content>
   </entry>
   <entry>
@@ -2354,18 +2347,17 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Spring Boot_exp2</title>
+    <url>/2021/04/28/Spring-Boot-exp2/</url>
+    <content><![CDATA[<p>list元素重复</p>
+<p>list元素数量不对</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Spring Boot fthl</title>
     <url>/2021/06/01/Spring-Boot-fthl/</url>
     <content><![CDATA[<p>数据传输</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">userIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ModelAndView mv = <span class="keyword">new</span> ModelAndView(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">    String info=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    mv.addObject(<span class="string">&quot;logInfo&quot;</span>, info);</span><br><span class="line">    <span class="keyword">return</span> mv;</span><br><span class="line">    <span class="comment">//return &quot;user&quot;;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Spring Boot 前端</title>
-    <url>/2021/06/08/Spring-Boot-%E5%89%8D%E7%AB%AF/</url>
-    <content><![CDATA[<h4 id="spring-boot-Cannot-resolve-MVC-View"><a href="#spring-boot-Cannot-resolve-MVC-View" class="headerlink" title="spring boot Cannot resolve MVC View"></a>spring boot Cannot resolve MVC View</h4><p>添加依赖</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-freemarker&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -2399,6 +2391,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring Boot 前端</title>
+    <url>/2021/06/08/Spring-Boot-%E5%89%8D%E7%AB%AF/</url>
+    <content><![CDATA[<h4 id="spring-boot-Cannot-resolve-MVC-View"><a href="#spring-boot-Cannot-resolve-MVC-View" class="headerlink" title="spring boot Cannot resolve MVC View"></a>spring boot Cannot resolve MVC View</h4><p>添加依赖</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-freemarker&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot 目录结构</title>
+    <url>/2021/06/20/Spring-Boot-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h4 id="Spring-Boot保存文件"><a href="#Spring-Boot保存文件" class="headerlink" title="Spring Boot保存文件"></a>Spring Boot保存文件</h4><p>/ 根目录在static内</p>
+<p>不加的话，新建的文件在项目根目录</p>
+<p>外部请求文件</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">http://localhost:8080/data.csv</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Spring Boot 返回CSV</title>
     <url>/2021/06/20/Spring-Boot-%E8%BF%94%E5%9B%9ECSV/</url>
     <content><![CDATA[<p>最需要明确的一点: 不同于浏览器，axois是无法直接通过请求进行文件下载的</p>
@@ -2412,13 +2422,15 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Spring Boot 目录结构</title>
-    <url>/2021/06/20/Spring-Boot-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<h4 id="Spring-Boot保存文件"><a href="#Spring-Boot保存文件" class="headerlink" title="Spring Boot保存文件"></a>Spring Boot保存文件</h4><p>/ 根目录在static内</p>
-<p>不加的话，新建的文件在项目根目录</p>
-<p>外部请求文件</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">http://localhost:8080/data.csv</span><br></pre></td></tr></table></figure>
+    <title>Spring Boot 部署</title>
+    <url>/2021/06/19/Spring-Boot-%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h4 id="Spring-Boot打包"><a href="#Spring-Boot打包" class="headerlink" title="Spring Boot打包"></a>Spring Boot打包</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><a href="http://freejim.icu/2021/04/26/Spring-Boot-with-Docker/">Docker Spring Boot</a></p>
+<h4 id="Spring-Boot-云服务器-Mysql"><a href="#Spring-Boot-云服务器-Mysql" class="headerlink" title="Spring Boot 云服务器 Mysql"></a>Spring Boot 云服务器 Mysql</h4><p>docker拉镜像建立MySQL方便</p>
 ]]></content>
   </entry>
   <entry>
@@ -2468,18 +2480,6 @@
         <tag>Tutorial</tag>
         <tag>SpringMVC</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Spring Boot 部署</title>
-    <url>/2021/06/19/Spring-Boot-%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<h4 id="Spring-Boot打包"><a href="#Spring-Boot打包" class="headerlink" title="Spring Boot打包"></a>Spring Boot打包</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><a href="http://freejim.icu/2021/04/26/Spring-Boot-with-Docker/">Docker Spring Boot</a></p>
-<h4 id="Spring-Boot-云服务器-Mysql"><a href="#Spring-Boot-云服务器-Mysql" class="headerlink" title="Spring Boot 云服务器 Mysql"></a>Spring Boot 云服务器 Mysql</h4><p>docker拉镜像建立MySQL方便</p>
-]]></content>
   </entry>
   <entry>
     <title>Spring Security Fliter</title>
@@ -2687,6 +2687,64 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring注解是怎么工作的</title>
+    <url>/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/</url>
+    <content><![CDATA[<p>版本说明：Spring 5.2.9 </p>
+<p>本文侧重于源码的解读</p>
+<p>这里以@Autowired为例</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br><span class="line"><span class="class"><span class="keyword">implements</span> <span class="title">SmartInstantiationAwareBeanPostProcessor</span>, <span class="title">MergedBeanDefinitionPostProcessor</span>, <span class="title">PriorityOrdered</span>, <span class="title">BeanFactoryAware</span></span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanPostProcessor.html"><code>BeanPostProcessor</code></a> implementation that autowires annotated fields, setter methods, and arbitrary config methods. Such members to be injected are detected through annotations: by default, Spring’s <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html"><code>@Autowired</code></a> and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html"><code>@Value</code></a> annotations.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processInjection</span><span class="params">(Object bean)</span> <span class="keyword">throws</span> BeanCreationException </span>&#123;</span><br><span class="line">		Class&lt;?&gt; clazz = bean.getClass();</span><br><span class="line">		InjectionMetadata metadata = findAutowiringMetadata(clazz.getName(), clazz, <span class="keyword">null</span>);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			metadata.inject(bean, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (BeanCreationException ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> ex;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (Throwable ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> BeanCreationException(</span><br><span class="line">					<span class="string">&quot;Injection of autowired dependencies failed for class [&quot;</span> + clazz + <span class="string">&quot;]&quot;</span>, ex);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>获取AutowiringMetadata后，做inject</p>
+<p>其中的AutowiringMetadata，简单的说就是@Autowired</p>
+<blockquote>
+<p>an <strong>annotation</strong> is a form of syntactic <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a> that can be added to Java <a href="https://en.wikipedia.org/wiki/Source_code">source code</a>.</p>
+</blockquote>
+<p>这是维基百科上的解释</p>
+<p>那Spring又是怎么确定是否存在@Autowired的呢</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> MergedAnnotation&lt;?&gt; findAutowiredAnnotation(AccessibleObject ao) &#123;</span><br><span class="line">	MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br><span class="line">	<span class="keyword">for</span> (Class&lt;? extends Annotation&gt; type : <span class="keyword">this</span>.autowiredAnnotationTypes) &#123;</span><br><span class="line">		MergedAnnotation&lt;?&gt; annotation = annotations.get(type);</span><br><span class="line">		<span class="keyword">if</span> (annotation.isPresent()) &#123;</span><br><span class="line">			<span class="keyword">return</span> annotation;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中的</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Set&lt;Class&lt;? extends Annotation&gt;&gt; autowiredAnnotationTypes = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.autowiredAnnotationTypes</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Autowired.class);</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Value.class);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">this</span>.autowiredAnnotationTypes.add((Class&lt;? extends Annotation&gt;)</span><br><span class="line">					ClassUtils.forName(<span class="string">&quot;javax.inject.Inject&quot;</span>, AutowiredAnnotationBeanPostProcessor.class.getClassLoader()));</span><br><span class="line">			logger.trace(<span class="string">&quot;JSR-330 &#x27;javax.inject.Inject&#x27; annotation found and supported for autowiring&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (ClassNotFoundException ex) &#123;</span><br><span class="line">			<span class="comment">// JSR-330 API not available - simply skip.</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>已经很清晰了，存放了Autowired.class</p>
+<p>则回到findAutowiredAnnotation()中，如果</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MergedAnnotations</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Iterable</span>&lt;<span class="title">MergedAnnotation</span>&lt;<span class="title">Annotation</span>&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Provides access to a collection of merged annotations, usually obtained from a source such as a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true"><code>Class</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true"><code>Method</code></a>.</p>
+<p>获取这个Bean 的Annotations</p>
+<p>然后看其中是否存在Autowired</p>
+<p>那么确定是否有Autowired的问题解决了，之后就是inject了</p>
+<hr>
+<p>首先来看看调用inject()的InjectionMetadata</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InjectionMetadata</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br></pre></td></tr></table></figure>
+
+<p>Internal class for managing injection metadata. Not intended for direct use in applications.</p>
+<p>对的，这个就是依赖注入里的inject</p>
+<p>不过，我暂时没有想法去了解，有兴趣的同学可以继续往下了解</p>
+<hr>
+<p><a href="http://www.avajava.com/tutorials/lessons/how-do-i-list-the-declared-fields-of-a-class.html">Field</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Typora Shortcut</title>
     <url>/2021/03/08/Typora-Shortcut/</url>
     <content><![CDATA[<p>编辑</p>
@@ -2820,64 +2878,6 @@
 
 <p><img src="/2021/03/08/VS-Error/image-20201115190024960.png" alt="img1"></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Spring注解是怎么工作的</title>
-    <url>/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/</url>
-    <content><![CDATA[<p>版本说明：Spring 5.2.9 </p>
-<p>本文侧重于源码的解读</p>
-<p>这里以@Autowired为例</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br><span class="line"><span class="class"><span class="keyword">implements</span> <span class="title">SmartInstantiationAwareBeanPostProcessor</span>, <span class="title">MergedBeanDefinitionPostProcessor</span>, <span class="title">PriorityOrdered</span>, <span class="title">BeanFactoryAware</span></span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanPostProcessor.html"><code>BeanPostProcessor</code></a> implementation that autowires annotated fields, setter methods, and arbitrary config methods. Such members to be injected are detected through annotations: by default, Spring’s <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html"><code>@Autowired</code></a> and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html"><code>@Value</code></a> annotations.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processInjection</span><span class="params">(Object bean)</span> <span class="keyword">throws</span> BeanCreationException </span>&#123;</span><br><span class="line">		Class&lt;?&gt; clazz = bean.getClass();</span><br><span class="line">		InjectionMetadata metadata = findAutowiringMetadata(clazz.getName(), clazz, <span class="keyword">null</span>);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			metadata.inject(bean, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (BeanCreationException ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> ex;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (Throwable ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> BeanCreationException(</span><br><span class="line">					<span class="string">&quot;Injection of autowired dependencies failed for class [&quot;</span> + clazz + <span class="string">&quot;]&quot;</span>, ex);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>获取AutowiringMetadata后，做inject</p>
-<p>其中的AutowiringMetadata，简单的说就是@Autowired</p>
-<blockquote>
-<p>an <strong>annotation</strong> is a form of syntactic <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a> that can be added to Java <a href="https://en.wikipedia.org/wiki/Source_code">source code</a>.</p>
-</blockquote>
-<p>这是维基百科上的解释</p>
-<p>那Spring又是怎么确定是否存在@Autowired的呢</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> MergedAnnotation&lt;?&gt; findAutowiredAnnotation(AccessibleObject ao) &#123;</span><br><span class="line">	MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br><span class="line">	<span class="keyword">for</span> (Class&lt;? extends Annotation&gt; type : <span class="keyword">this</span>.autowiredAnnotationTypes) &#123;</span><br><span class="line">		MergedAnnotation&lt;?&gt; annotation = annotations.get(type);</span><br><span class="line">		<span class="keyword">if</span> (annotation.isPresent()) &#123;</span><br><span class="line">			<span class="keyword">return</span> annotation;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中的</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Set&lt;Class&lt;? extends Annotation&gt;&gt; autowiredAnnotationTypes = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.autowiredAnnotationTypes</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Autowired.class);</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Value.class);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">this</span>.autowiredAnnotationTypes.add((Class&lt;? extends Annotation&gt;)</span><br><span class="line">					ClassUtils.forName(<span class="string">&quot;javax.inject.Inject&quot;</span>, AutowiredAnnotationBeanPostProcessor.class.getClassLoader()));</span><br><span class="line">			logger.trace(<span class="string">&quot;JSR-330 &#x27;javax.inject.Inject&#x27; annotation found and supported for autowiring&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (ClassNotFoundException ex) &#123;</span><br><span class="line">			<span class="comment">// JSR-330 API not available - simply skip.</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>已经很清晰了，存放了Autowired.class</p>
-<p>则回到findAutowiredAnnotation()中，如果</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MergedAnnotations</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Iterable</span>&lt;<span class="title">MergedAnnotation</span>&lt;<span class="title">Annotation</span>&gt;&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Provides access to a collection of merged annotations, usually obtained from a source such as a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true"><code>Class</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true"><code>Method</code></a>.</p>
-<p>获取这个Bean 的Annotations</p>
-<p>然后看其中是否存在Autowired</p>
-<p>那么确定是否有Autowired的问题解决了，之后就是inject了</p>
-<hr>
-<p>首先来看看调用inject()的InjectionMetadata</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InjectionMetadata</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br></pre></td></tr></table></figure>
-
-<p>Internal class for managing injection metadata. Not intended for direct use in applications.</p>
-<p>对的，这个就是依赖注入里的inject</p>
-<p>不过，我暂时没有想法去了解，有兴趣的同学可以继续往下了解</p>
-<hr>
-<p><a href="http://www.avajava.com/tutorials/lessons/how-do-i-list-the-declared-fields-of-a-class.html">Field</a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>Java</tag>
-      </tags>
   </entry>
   <entry>
     <title>Vue Cookie</title>
@@ -3086,6 +3086,27 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>Vue 组件库使用</title>
+    <url>/2021/06/06/Vue-%E7%BB%84%E4%BB%B6%E5%BA%93%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h3 id="Element"><a href="#Element" class="headerlink" title="Element"></a>Element</h3><ol>
+<li>npm安装</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -S</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>main.js</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">&#x27;element-ui&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-ui/lib/theme-chalk/index.css&#x27;</span></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line">Vue.use(ElementUI)</span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  router,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>使用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;el-container style&#x3D;&quot;height: 500px; border: 1px solid #eee&quot;&gt;</span><br><span class="line">  &lt;el-aside width&#x3D;&quot;200px&quot; style&#x3D;&quot;background-color: rgb(238, 241, 246)&quot;&gt;</span><br><span class="line">    &lt;el-menu :default-openeds&#x3D;&quot;[&#39;1&#39;, &#39;3&#39;]&quot;&gt;</span><br><span class="line">      &lt;el-submenu index&#x3D;&quot;1&quot;&gt;</span><br><span class="line">        &lt;template slot&#x3D;&quot;title&quot;&gt;&lt;i class&#x3D;&quot;el-icon-s-data&quot;&gt;&lt;&#x2F;i&gt;主面板&lt;&#x2F;template&gt;</span><br><span class="line">        &lt;el-menu-item-group&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-submenu index&#x3D;&quot;1-4&quot;&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-4-1&quot;&gt;选项4-1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;el-submenu index&#x3D;&quot;2&quot;&gt;</span><br><span class="line">        &lt;template slot&#x3D;&quot;title&quot;&gt;&lt;i class&#x3D;&quot;el-icon-menu&quot;&gt;&lt;&#x2F;i&gt;导航二&lt;&#x2F;template&gt;</span><br><span class="line">        &lt;el-menu-item-group&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-submenu index&#x3D;&quot;2-4&quot;&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-4-1&quot;&gt;选项4-1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;el-submenu index&#x3D;&quot;3&quot;&gt;</span><br><span class="line">        &lt;template slot&#x3D;&quot;title&quot;&gt;&lt;i class&#x3D;&quot;el-icon-setting&quot;&gt;&lt;&#x2F;i&gt;导航三&lt;&#x2F;template&gt;</span><br><span class="line">        &lt;el-menu-item-group&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-submenu index&#x3D;&quot;3-4&quot;&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-4-1&quot;&gt;选项4-1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;&#x2F;el-submenu&gt;</span><br><span class="line">    &lt;&#x2F;el-menu&gt;</span><br><span class="line">  &lt;&#x2F;el-aside&gt;</span><br><span class="line"></span><br><span class="line">  &lt;el-container&gt;</span><br><span class="line">    &lt;el-header style&#x3D;&quot;text-align: right; font-size: 12px&quot;&gt;</span><br><span class="line">      &lt;el-dropdown&gt;</span><br><span class="line">        &lt;i class&#x3D;&quot;el-icon-setting&quot; style&#x3D;&quot;margin-right: 15px&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">        &lt;el-dropdown-menu slot&#x3D;&quot;dropdown&quot;&gt;</span><br><span class="line">          &lt;el-dropdown-item&gt;查看&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">          &lt;el-dropdown-item&gt;新增&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">          &lt;el-dropdown-item&gt;删除&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">        &lt;&#x2F;el-dropdown-menu&gt;</span><br><span class="line">      &lt;&#x2F;el-dropdown&gt;</span><br><span class="line">      &lt;span&gt;王小虎&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;el-header&gt;</span><br><span class="line"></span><br><span class="line">    &lt;el-main&gt;</span><br><span class="line">      &lt;el-table :data&#x3D;&quot;tableData&quot;&gt;</span><br><span class="line">        &lt;el-table-column prop&#x3D;&quot;date&quot; label&#x3D;&quot;日期&quot; width&#x3D;&quot;140&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-table-column&gt;</span><br><span class="line">        &lt;el-table-column prop&#x3D;&quot;name&quot; label&#x3D;&quot;姓名&quot; width&#x3D;&quot;120&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-table-column&gt;</span><br><span class="line">        &lt;el-table-column prop&#x3D;&quot;address&quot; label&#x3D;&quot;地址&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-table-column&gt;</span><br><span class="line">      &lt;&#x2F;el-table&gt;</span><br><span class="line">    &lt;&#x2F;el-main&gt;</span><br><span class="line">  &lt;&#x2F;el-container&gt;</span><br><span class="line">&lt;&#x2F;el-container&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">  .el-header &#123;</span><br><span class="line">    background-color: #B3C0D1;</span><br><span class="line">    color: #333;</span><br><span class="line">    line-height: 60px;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .el-aside &#123;</span><br><span class="line">    color: #333;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;Mainpage&#39;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    const item &#x3D; &#123;</span><br><span class="line">      date: &#39;2016-05-02&#39;,</span><br><span class="line">      name: &#39;王小虎&#39;,</span><br><span class="line">      address: &#39;上海市普陀区金沙江路 1518 弄&#39;</span><br><span class="line">    &#125;</span><br><span class="line">    return &#123;</span><br><span class="line">      tableData: Array(20).fill(item)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Vue 跨域</title>
     <url>/2021/06/07/Vue-%E8%B7%A8%E5%9F%9F/</url>
     <content><![CDATA[<p>找到devServer配置项</p>
@@ -3110,24 +3131,24 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Vue 组件库使用</title>
-    <url>/2021/06/06/Vue-%E7%BB%84%E4%BB%B6%E5%BA%93%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h3 id="Element"><a href="#Element" class="headerlink" title="Element"></a>Element</h3><ol>
-<li>npm安装</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -S</span><br></pre></td></tr></table></figure>
+    <title>Vue-项目创建-VsCode</title>
+    <url>/2021/06/06/Vue-%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA-VsCode/</url>
+    <content><![CDATA[<p>所需插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vetur  &#x2F;&#x2F; Vue开发插件</span><br><span class="line">ESLint &#x2F;&#x2F; 代码校验</span><br></pre></td></tr></table></figure>
 
-<ol start="2">
-<li>main.js</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">&#x27;element-ui&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;element-ui/lib/theme-chalk/index.css&#x27;</span></span><br><span class="line">Vue.config.productionTip = <span class="literal">false</span></span><br><span class="line">Vue.use(ElementUI)</span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  router,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">&#x27;&lt;App/&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>工具：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g vue-cli</span><br></pre></td></tr></table></figure>
 
-<ol start="3">
-<li><p>使用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;el-container style&#x3D;&quot;height: 500px; border: 1px solid #eee&quot;&gt;</span><br><span class="line">  &lt;el-aside width&#x3D;&quot;200px&quot; style&#x3D;&quot;background-color: rgb(238, 241, 246)&quot;&gt;</span><br><span class="line">    &lt;el-menu :default-openeds&#x3D;&quot;[&#39;1&#39;, &#39;3&#39;]&quot;&gt;</span><br><span class="line">      &lt;el-submenu index&#x3D;&quot;1&quot;&gt;</span><br><span class="line">        &lt;template slot&#x3D;&quot;title&quot;&gt;&lt;i class&#x3D;&quot;el-icon-s-data&quot;&gt;&lt;&#x2F;i&gt;主面板&lt;&#x2F;template&gt;</span><br><span class="line">        &lt;el-menu-item-group&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-submenu index&#x3D;&quot;1-4&quot;&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;1-4-1&quot;&gt;选项4-1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;el-submenu index&#x3D;&quot;2&quot;&gt;</span><br><span class="line">        &lt;template slot&#x3D;&quot;title&quot;&gt;&lt;i class&#x3D;&quot;el-icon-menu&quot;&gt;&lt;&#x2F;i&gt;导航二&lt;&#x2F;template&gt;</span><br><span class="line">        &lt;el-menu-item-group&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-submenu index&#x3D;&quot;2-4&quot;&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;2-4-1&quot;&gt;选项4-1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;el-submenu index&#x3D;&quot;3&quot;&gt;</span><br><span class="line">        &lt;template slot&#x3D;&quot;title&quot;&gt;&lt;i class&#x3D;&quot;el-icon-setting&quot;&gt;&lt;&#x2F;i&gt;导航三&lt;&#x2F;template&gt;</span><br><span class="line">        &lt;el-menu-item-group&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;分组一&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-1&quot;&gt;选项1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-2&quot;&gt;选项2&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-menu-item-group title&#x3D;&quot;分组2&quot;&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-3&quot;&gt;选项3&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-menu-item-group&gt;</span><br><span class="line">        &lt;el-submenu index&#x3D;&quot;3-4&quot;&gt;</span><br><span class="line">          &lt;template slot&#x3D;&quot;title&quot;&gt;选项4&lt;&#x2F;template&gt;</span><br><span class="line">          &lt;el-menu-item index&#x3D;&quot;3-4-1&quot;&gt;选项4-1&lt;&#x2F;el-menu-item&gt;</span><br><span class="line">        &lt;&#x2F;el-submenu&gt;</span><br><span class="line">      &lt;&#x2F;el-submenu&gt;</span><br><span class="line">    &lt;&#x2F;el-menu&gt;</span><br><span class="line">  &lt;&#x2F;el-aside&gt;</span><br><span class="line"></span><br><span class="line">  &lt;el-container&gt;</span><br><span class="line">    &lt;el-header style&#x3D;&quot;text-align: right; font-size: 12px&quot;&gt;</span><br><span class="line">      &lt;el-dropdown&gt;</span><br><span class="line">        &lt;i class&#x3D;&quot;el-icon-setting&quot; style&#x3D;&quot;margin-right: 15px&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">        &lt;el-dropdown-menu slot&#x3D;&quot;dropdown&quot;&gt;</span><br><span class="line">          &lt;el-dropdown-item&gt;查看&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">          &lt;el-dropdown-item&gt;新增&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">          &lt;el-dropdown-item&gt;删除&lt;&#x2F;el-dropdown-item&gt;</span><br><span class="line">        &lt;&#x2F;el-dropdown-menu&gt;</span><br><span class="line">      &lt;&#x2F;el-dropdown&gt;</span><br><span class="line">      &lt;span&gt;王小虎&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;el-header&gt;</span><br><span class="line"></span><br><span class="line">    &lt;el-main&gt;</span><br><span class="line">      &lt;el-table :data&#x3D;&quot;tableData&quot;&gt;</span><br><span class="line">        &lt;el-table-column prop&#x3D;&quot;date&quot; label&#x3D;&quot;日期&quot; width&#x3D;&quot;140&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-table-column&gt;</span><br><span class="line">        &lt;el-table-column prop&#x3D;&quot;name&quot; label&#x3D;&quot;姓名&quot; width&#x3D;&quot;120&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-table-column&gt;</span><br><span class="line">        &lt;el-table-column prop&#x3D;&quot;address&quot; label&#x3D;&quot;地址&quot;&gt;</span><br><span class="line">        &lt;&#x2F;el-table-column&gt;</span><br><span class="line">      &lt;&#x2F;el-table&gt;</span><br><span class="line">    &lt;&#x2F;el-main&gt;</span><br><span class="line">  &lt;&#x2F;el-container&gt;</span><br><span class="line">&lt;&#x2F;el-container&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">  .el-header &#123;</span><br><span class="line">    background-color: #B3C0D1;</span><br><span class="line">    color: #333;</span><br><span class="line">    line-height: 60px;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .el-aside &#123;</span><br><span class="line">    color: #333;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;Mainpage&#39;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    const item &#x3D; &#123;</span><br><span class="line">      date: &#39;2016-05-02&#39;,</span><br><span class="line">      name: &#39;王小虎&#39;,</span><br><span class="line">      address: &#39;上海市普陀区金沙江路 1518 弄&#39;</span><br><span class="line">    &#125;</span><br><span class="line">    return &#123;</span><br><span class="line">      tableData: Array(20).fill(item)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>命令:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack projectName</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<hr>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">You seem to be using old vue-cli and </span><br><span class="line">scaffolded your project using vue init webpack &lt;project-name&gt;.</span><br><span class="line"></span><br><span class="line">Since it all evolved into vue cli 3</span><br><span class="line">old vue-cli is deprecated</span><br><span class="line">we are now using @vue&#x2F;cli</span><br><span class="line">vue create &lt;project-name&gt; for scaffolding out projects.</span><br><span class="line"></span><br><span class="line">It&#39;s perfectly fine for you to use the old way(and I still do sometimes)</span><br><span class="line">vue.config.js is the global configuration file for your project </span><br><span class="line">when you are using @vue&#x2F;cli. Check more about it here.</span><br><span class="line"></span><br><span class="line">For webpack configurations when using vue-cli</span><br><span class="line">in projects scaffolded using npm init command</span><br><span class="line">check the &#x2F;build directory in the root of the project folder.</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
@@ -3167,39 +3188,10 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Vue-项目创建-VsCode</title>
-    <url>/2021/06/06/Vue-%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA-VsCode/</url>
-    <content><![CDATA[<p>所需插件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Vetur  &#x2F;&#x2F; Vue开发插件</span><br><span class="line">ESLint &#x2F;&#x2F; 代码校验</span><br></pre></td></tr></table></figure>
-
-<p>工具：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g vue-cli</span><br></pre></td></tr></table></figure>
-
-<p>命令:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack projectName</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-
-<hr>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">You seem to be using old vue-cli and </span><br><span class="line">scaffolded your project using vue init webpack &lt;project-name&gt;.</span><br><span class="line"></span><br><span class="line">Since it all evolved into vue cli 3</span><br><span class="line">old vue-cli is deprecated</span><br><span class="line">we are now using @vue&#x2F;cli</span><br><span class="line">vue create &lt;project-name&gt; for scaffolding out projects.</span><br><span class="line"></span><br><span class="line">It&#39;s perfectly fine for you to use the old way(and I still do sometimes)</span><br><span class="line">vue.config.js is the global configuration file for your project </span><br><span class="line">when you are using @vue&#x2F;cli. Check more about it here.</span><br><span class="line"></span><br><span class="line">For webpack configurations when using vue-cli</span><br><span class="line">in projects scaffolded using npm init command</span><br><span class="line">check the &#x2F;build directory in the root of the project folder.</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>WSL Basic</title>
     <url>/2021/03/27/WSL-Basic/</url>
     <content><![CDATA[<p>switch to root</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>WSL Ngnix</title>
-    <url>/2021/03/27/WSL-Ngnix/</url>
-    <content><![CDATA[<p>以Ubuntu为例，它的软件库中已有Nginx安装包，可通过控制台安装，输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -3221,6 +3213,26 @@
 ]]></content>
   </entry>
   <entry>
+    <title>WSL Ngnix</title>
+    <url>/2021/03/27/WSL-Ngnix/</url>
+    <content><![CDATA[<p>以Ubuntu为例，它的软件库中已有Nginx安装包，可通过控制台安装，输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>WSL conflict</title>
+    <url>/2021/03/08/WSL-conflict/</url>
+    <content><![CDATA[<p>“cmd” with “administrator”</p>
+<p>(Some simulator(e.g. Android simulator ) need to close hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
+
+<p>open WSL(WSL base on hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>X86,ARM and M1</title>
     <url>/2021/03/13/X86-ARM-and-M1/</url>
     <content><![CDATA[<p>simple instruction set</p>
@@ -3237,18 +3249,6 @@
         <tag>Apple</tag>
         <tag>Intel</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>WSL conflict</title>
-    <url>/2021/03/08/WSL-conflict/</url>
-    <content><![CDATA[<p>“cmd” with “administrator”</p>
-<p>(Some simulator(e.g. Android simulator ) need to close hp-v virtual machine in win10)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
-
-<p>open WSL(WSL base on hp-v virtual machine in win10)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
-
-]]></content>
   </entry>
   <entry>
     <title>axois</title>
@@ -3442,6 +3442,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>三角函数日常</title>
+    <url>/2021/05/30/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%97%A5%E5%B8%B8/</url>
+    <content><![CDATA[<h4 id="sec和tan"><a href="#sec和tan" class="headerlink" title="sec和tan"></a>sec和tan</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205142002.png"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205300517.png" alt="image-20210702205300517"></p>
+<h4 id="万能公式"><a href="#万能公式" class="headerlink" title="万能公式"></a>万能公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205643797.png" alt="image-20210702205643797"></p>
+<h4 id="降幂公式"><a href="#降幂公式" class="headerlink" title="降幂公式"></a>降幂公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210012319.png" alt="image-20210702210012319"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>不定积分</title>
     <url>/2021/05/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
     <content><![CDATA[<p><strong>二类换元</strong></p>
@@ -3456,9 +3465,56 @@
 ]]></content>
   </entry>
   <entry>
-    <title>三角函数日常</title>
-    <url>/2021/05/30/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%97%A5%E5%B8%B8/</url>
-    <content><![CDATA[]]></content>
+    <title>中值定理</title>
+    <url>/2021/06/28/%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<p>微分中值定理是一系列中值定理总称</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0266.PNG" alt="IMG_0266"><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0267.PNG" alt="IMG_0267"></p>
+<p>Ps：</p>
+<p>ab不一定取端点</p>
+<h4 id="介值定理"><a href="#介值定理" class="headerlink" title="介值定理"></a>介值定理</h4><p>如果定义域为[a，b]的连续函数f，那么在区间内的某个点，它可以在f（a）和f（b）之间取任何值</p>
+<p><a href="https://zhuanlan.zhihu.com/p/132668736">积分中值定理</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>云服务器 tutorial</title>
+    <url>/2021/06/19/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-tutorial/</url>
+    <content><![CDATA[<h4 id="云服务器文件传输"><a href="#云服务器文件传输" class="headerlink" title="云服务器文件传输"></a>云服务器文件传输</h4><p>Windows到Linux</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp D:\Resource\hello.txt root@192.168.0.1:&#x2F;home&#x2F;admin</span><br></pre></td></tr></table></figure>
+
+<p>Linux到Windows</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp root@:&#x2F;home&#x2F;admin&#x2F;hello.txt D:\resource\</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="云服务器-Connect-timed-out"><a href="#云服务器-Connect-timed-out" class="headerlink" title="云服务器 Connect timed out"></a>云服务器 Connect timed out</h4><p>mysql Connect timed out</p>
+<p>安全组得配置</p>
+<p>开放3306端口</p>
+<hr>
+<h4 id="云服务器和校园网"><a href="#云服务器和校园网" class="headerlink" title="云服务器和校园网"></a>云服务器和校园网</h4><p>云服务器是访问不到校园网的主机的</p>
+<hr>
+<h4 id="云服务器简陋部署vue"><a href="#云服务器简陋部署vue" class="headerlink" title="云服务器简陋部署vue"></a>云服务器简陋部署vue</h4><p>如果想要最快部署vue 的话</p>
+<p>利用git把项目部署到服务器是最快的</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>函数的连续性</title>
+    <url>/2021/06/30/%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/</url>
+    <content><![CDATA[<h4 id="重要定理"><a href="#重要定理" class="headerlink" title="重要定理"></a>重要定理</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630170017286.png" alt="image-20210630170017286"></p>
+<h4 id="间断点"><a href="#间断点" class="headerlink" title="间断点"></a>间断点</h4><p>参考</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>分段函数</title>
+    <url>/2021/06/28/%E5%88%86%E6%AE%B5%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p>连接处的左右导数是否相等来判断是否可导</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>反三角函数</title>
+    <url>/2021/06/30/%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h4 id="反三角函数图像"><a href="#反三角函数图像" class="headerlink" title="反三角函数图像"></a>反三角函数图像</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630200552384.png" alt="image-20210630200552384"></p>
+<p>（翻面再转90度）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630200612832.png" alt="image-20210630200612832"></p>
+]]></content>
   </entry>
   <entry>
     <title>定积分</title>
@@ -3471,7 +3527,68 @@
 <p>其中还要熟悉三角函数常见的积分，变形</p>
 <p>如：二次sec的积分、sin扔到后面变cos</p>
 <h4 id="周期函数"><a href="#周期函数" class="headerlink" title="周期函数"></a>周期函数</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210623181735432.png" alt="image-20210623181735432"></p>
-<h2 id="定积分的基本方法"><a href="#定积分的基本方法" class="headerlink" title="定积分的基本方法"></a>定积分的基本方法</h2><h4 id="换元积分"><a href="#换元积分" class="headerlink" title="换元积分"></a>换元积分</h4><h4 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h4>]]></content>
+<h2 id="定积分的基本方法"><a href="#定积分的基本方法" class="headerlink" title="定积分的基本方法"></a>定积分的基本方法</h2><h3 id="换元积分（提上去，一类换元）"><a href="#换元积分（提上去，一类换元）" class="headerlink" title="换元积分（提上去，一类换元）"></a>换元积分（提上去，一类换元）</h3><h4 id="x型"><a href="#x型" class="headerlink" title="x型"></a>x型</h4><p><strong>因为常为分式的形式，故要熟练掌握反三角函数的积分</strong></p>
+<p>1+1/(x^2)</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702112814733.png" alt="image-20210702112814733"></p>
+<p>x高次</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702112730971.png" alt="image-20210702112730971"></p>
+<p>括号高次</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702112759624.png" alt="image-20210702112759624"></p>
+<p>根号x作分母</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113755970.png" alt="image-20210702113755970"></p>
+<p>平分差</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113837273.png" alt="image-20210702113837273"></p>
+<h4 id="三角函数换元（也叫二类换元，一类换元解决不了时可考虑）"><a href="#三角函数换元（也叫二类换元，一类换元解决不了时可考虑）" class="headerlink" title="三角函数换元（也叫二类换元，一类换元解决不了时可考虑）"></a>三角函数换元（也叫二类换元，一类换元解决不了时可考虑）</h4><p>减法换sin</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114031386.png" alt="image-20210702114031386"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114142648.png" alt="image-20210702114142648"></p>
+<p>加法换tan（接sec）</p>
+<p>参考</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114106450.png" alt="image-20210702114106450"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114157944.png" alt="image-20210702114157944"></p>
+<h4 id="指数型（灵活变换指数）"><a href="#指数型（灵活变换指数）" class="headerlink" title="指数型（灵活变换指数）"></a>指数型（灵活变换指数）</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113025510.png" alt="image-20210702113025510"></p>
+<h4 id="对数ln型"><a href="#对数ln型" class="headerlink" title="对数ln型"></a>对数ln型</h4><p>1/x</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113206839.png" alt="image-20210702113206839"></p>
+<p>1+lnx</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113217696.png" alt="image-20210702113217696"></p>
+<p>1-lnx</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113255441.png" alt="image-20210702113255441"></p>
+<h4 id="三角函数-1"><a href="#三角函数-1" class="headerlink" title="三角函数"></a>三角函数</h4><p>sin和cos</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113352468.png" alt="image-20210702113352468"></p>
+<p>反三角函数</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113416362.png" alt="image-20210702113416362"></p>
+<h4 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h4><h5 id="x乘指数"><a href="#x乘指数" class="headerlink" title="x乘指数"></a>x乘指数</h5><p>x乘ex（e的指数为一次）这是最简单的分部积分</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702201749367.png" alt="image-20210702201749367"></p>
+<p>e的指数不为1（无法直接分部，要把e的指数换元成一次后才可）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702201900509.png" alt="image-20210702201900509"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702201904005.png" alt="image-20210702201904005"></p>
+<p>#####　x乘对数</p>
+<p>和指数型相反，这需要把ln留下，让他被动上去，然后把他导掉</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702202628850.png" alt="image-20210702202628850"></p>
+<h5 id="x乘三角函数"><a href="#x乘三角函数" class="headerlink" title="x乘三角函数"></a>x乘三角函数</h5><p>先把三角函数的幂降到一次（降幂公式），然后分部把三角函数提上去就解决了</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203111988.png" alt="image-20210702203111988"></p>
+<p>若三角函数在分母，则借助sec或者csc，不过还得熟悉tan和cot的积分</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203230575.png" alt="image-20210702203230575"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203814033.png" alt="image-20210702203814033"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203836515.png" alt="image-20210702203836515"></p>
+<h5 id="x乘反三角函数"><a href="#x乘反三角函数" class="headerlink" title="x乘反三角函数"></a>x乘反三角函数</h5><p>使反三角函数被动上，然后化乘x的式子后再继续积分</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702204034476.png" alt="image-20210702204034476"></p>
+<p>贴一个离谱到死的积分，长长见识就好了</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210653840.png" alt="image-20210702210653840"></p>
+<p>如果x无法直接上则试试拆项</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702204201018.png" alt="image-20210702204201018"></p>
+<p>反三角函数高次，则利用分部来降幂</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210525733.png" alt="image-20210702210525733"></p>
+<h5 id="指数乘三角函数"><a href="#指数乘三角函数" class="headerlink" title="指数乘三角函数"></a>指数乘三角函数</h5><p>多次提三角轮回</p>
+<p>Ps：还是要做一遍，最后关于I的处理要注意</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210756849.png" alt="image-20210702210756849"></p>
+<p>若三角函数为高次则需要降幂</p>
+<p>参考</p>
+<p>（指数如果不为一次则估计需要换元）</p>
+<p>千万要注意常数项，要实操</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210805245.png" alt="image-20210702210805245"></p>
+<h5 id="sec的奇数次方"><a href="#sec的奇数次方" class="headerlink" title="sec的奇数次方"></a>sec的奇数次方</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702212324510.png" alt="image-20210702212324510"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702212259649.png" alt="image-20210702212259649"></p>
+]]></content>
   </entry>
   <entry>
     <title>定积分总结</title>
@@ -3498,26 +3615,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>云服务器 tutorial</title>
-    <url>/2021/06/19/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8-tutorial/</url>
-    <content><![CDATA[<h4 id="云服务器文件传输"><a href="#云服务器文件传输" class="headerlink" title="云服务器文件传输"></a>云服务器文件传输</h4><p>Windows到Linux</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp D:\Resource\hello.txt root@192.168.0.1:&#x2F;home&#x2F;admin</span><br></pre></td></tr></table></figure>
-
-<p>Linux到Windows</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp root@:&#x2F;home&#x2F;admin&#x2F;hello.txt D:\resource\</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h4 id="云服务器-Connect-timed-out"><a href="#云服务器-Connect-timed-out" class="headerlink" title="云服务器 Connect timed out"></a>云服务器 Connect timed out</h4><p>mysql Connect timed out</p>
-<p>安全组得配置</p>
-<p>开放3306端口</p>
-<hr>
-<h4 id="云服务器和校园网"><a href="#云服务器和校园网" class="headerlink" title="云服务器和校园网"></a>云服务器和校园网</h4><p>云服务器是访问不到校园网的主机的</p>
-<hr>
-<h4 id="云服务器简陋部署vue"><a href="#云服务器简陋部署vue" class="headerlink" title="云服务器简陋部署vue"></a>云服务器简陋部署vue</h4><p>如果想要最快部署vue 的话</p>
-<p>利用git把项目部署到服务器是最快的</p>
-]]></content>
-  </entry>
-  <entry>
     <title>成都理工大学</title>
     <url>/2021/05/30/%E6%88%90%E9%83%BD%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/</url>
     <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090057651.png" alt="image-20210530090057651"></p>
@@ -3527,6 +3624,65 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090348067.png" alt="image-20210530090348067"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090357204.png" alt="image-20210530090357204"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>无穷小量</title>
+    <url>/2021/06/30/%E6%97%A0%E7%A9%B7%E5%B0%8F%E9%87%8F/</url>
+    <content><![CDATA[<h4 id="什么是无穷小量"><a href="#什么是无穷小量" class="headerlink" title="什么是无穷小量"></a>什么是无穷小量</h4><p>x-&gt;x0时，f(x)的极限为0，则称f(x)为x-&gt;x0时的无穷小量</p>
+<p>（无穷小量是极限中涉及到的知识）</p>
+<h4 id="无穷小量的阶数"><a href="#无穷小量的阶数" class="headerlink" title="无穷小量的阶数"></a>无穷小量的阶数</h4><p>求N阶导之后变成不是无穷小它就是N阶无穷小</p>
+<p>这样也就可以理解了</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630091757441.png" alt="image-20210630091757441"></p>
+<p>20年真题</p>
+<p>（求导时记得无穷小量的代换）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630091331826.png" alt="image-20210630091331826"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630091918464.png" alt="image-20210630091918464"></p>
+<p>这里需要注意的是x-&gt;0，x^-1其实是无穷大</p>
+<p>即比出来x的指数是复数，则结果为无穷大</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>极限</title>
+    <url>/2021/06/30/%E6%9E%81%E9%99%90/</url>
+    <content><![CDATA[<h3 id="求极限的方法总结"><a href="#求极限的方法总结" class="headerlink" title="求极限的方法总结"></a>求极限的方法总结</h3><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094814469.png" alt="image-20210630094814469"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094820296.png" alt="image-20210630094820296"></p>
+<p>单看是没用的，要通过做题熟练才可以</p>
+<h4 id="等价无穷小"><a href="#等价无穷小" class="headerlink" title="等价无穷小"></a>等价无穷小</h4><p>1-cosx</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094450777.png" alt="image-20210630094450777"></p>
+<p>arcsin，ln，ex</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100304066.png" alt="image-20210630100304066"></p>
+<p>x-sinx</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101158640.png" alt="image-20210630101158640"></p>
+<p>指数型求极限，tan</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101418183.png" alt="image-20210630101418183"></p>
+<p>指数型，ln</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630102311236.png" alt="image-20210630102311236"></p>
+<p>x作幂（指数型），括号内2化为1</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630102717834.png" alt="image-20210630102717834"></p>
+<p>配凑，ex，1-cosx，arcsin</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100343710.png" alt="image-20210630100343710"></p>
+<p>等价无穷小代换条件：乘除</p>
+<p>易错题:</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100140805.png" alt="image-20210630100140805"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100209423.png" alt="image-20210630100209423"></p>
+<h4 id="直接法"><a href="#直接法" class="headerlink" title="直接法"></a>直接法</h4><p>复杂式+根号</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101130034.png" alt="image-20210630101130034"></p>
+<h4 id="两个重要的极限求极限"><a href="#两个重要的极限求极限" class="headerlink" title="两个重要的极限求极限"></a>两个重要的极限求极限</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630092642627.png" alt="image-20210630092642627"></p>
+<p>内容其实包含在上面求极限的方法里了</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094804589.png" alt="image-20210630094804589"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>物理层</title>
+    <url>/2021/06/23/%E7%89%A9%E7%90%86%E5%B1%82/</url>
+    <content><![CDATA[<p>x香农公式：</p>
+<p>奈氏准则</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>无穷大量</title>
+    <url>/2021/06/30/%E6%97%A0%E7%A9%B7%E5%A4%A7%E9%87%8F/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>网络层</title>
@@ -3591,18 +3747,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>腾讯防水墙</title>
-    <url>/2021/06/19/%E8%85%BE%E8%AE%AF%E9%98%B2%E6%B0%B4%E5%A2%99/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>物理层</title>
-    <url>/2021/06/23/%E7%89%A9%E7%90%86%E5%B1%82/</url>
-    <content><![CDATA[<p>x香农公式：</p>
-<p>奈氏准则</p>
-]]></content>
-  </entry>
-  <entry>
     <title>西南科技大学</title>
     <url>/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/</url>
     <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090901098.png" alt="image-20210530090901098"></p>
@@ -3614,6 +3758,11 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530195405472.png" alt="image-20210530195405472"></p>
 <p><img src="/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/Users\Jimmy\AppData\Roaming\Typora\typora-user-images\image-20210530195428120.png" alt="image-20210530195422207"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>腾讯防水墙</title>
+    <url>/2021/06/19/%E8%85%BE%E8%AE%AF%E9%98%B2%E6%B0%B4%E5%A2%99/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>计算机网络期末复习</title>
@@ -3822,6 +3971,85 @@
 <p>SRAM和DRAM</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Static</span><br><span class="line">——常作Cache</span><br><span class="line">——触发器</span><br><span class="line"></span><br><span class="line">Dynamic</span><br><span class="line">——常作主存</span><br><span class="line">——电容</span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>间断点</title>
+    <url>/2021/06/30/%E9%97%B4%E6%96%AD%E7%82%B9/</url>
+    <content><![CDATA[<h4 id="间断点总结"><a href="#间断点总结" class="headerlink" title="间断点总结"></a>间断点总结</h4><p>归属于函数的连续性</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630200334001.png" alt="image-20210630200334001"></p>
+<p>key：符号正负</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630194734783.png" alt="image-20210630194734783"></p>
+<h4 id="第二类间断点易混淆的地方"><a href="#第二类间断点易混淆的地方" class="headerlink" title="第二类间断点易混淆的地方"></a>第二类间断点易混淆的地方</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">左右极限至少有一个不存在</span><br></pre></td></tr></table></figure>
+
+<p>那什么时候叫做左右极限不存在呢</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630194837869.png" alt="image-20210630194837869"></p>
+<p>左右极限为无穷时即视为不存在</p>
+<h5 id="间断点判断"><a href="#间断点判断" class="headerlink" title="间断点判断"></a>间断点判断</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630194409914.png" alt="image-20210630194409914"></p>
+<p>求间断点个数</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630171428082.png" alt="image-20210630171428082"></p>
+<p>错误解法：</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630171651371.png" alt="image-20210630171651371"></p>
+<p>注意，x-&gt;0时，sinx是趋近于0的</p>
+<p>即问题其实是∞·0</p>
+<p>不能用这样的暴力法</p>
+<p>正确的解法是遵循x-&gt;0的暗示，利用等价无穷小求x=0时的极限</p>
+<p>（求得出来即极限存在，也就是左右极限存在且相等）</p>
+<p>第二类间断点典型例题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630184128576.png" alt="image-20210630184128576"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630195549794.png" alt="image-20210630195549794"></p>
+<p>间断点的表达（x=1，而不是具体的点）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630192544080.png" alt="image-20210630192544080"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630195705889.png" alt="image-20210630195705889"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>高数-第三章-微分中值定理</title>
+    <url>/2021/06/28/%E9%AB%98%E6%95%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%BE%AE%E5%88%86%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<h4 id="题型一：利用导数证明等式"><a href="#题型一：利用导数证明等式" class="headerlink" title="题型一：利用导数证明等式"></a>题型一：利用导数证明等式</h4><p>经典题型</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0261.PNG" alt="IMG_0261"></p>
+<p>进阶</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210628212319587.png" alt="image-20210628212319587"></p>
+<p>两边求导，左右开弓，等式要硬</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0264.PNG" alt="IMG_0264"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0259.PNG" alt="IMG_0259"></p>
+<p><a href="http://freejim.icu/2021/06/23/%E5%AE%9A%E7%A7%AF%E5%88%86/">参考</a></p>
+<h4 id="题型二：中值定理"><a href="#题型二：中值定理" class="headerlink" title="题型二：中值定理"></a>题型二：中值定理</h4><p>知识储备</p>
+<p>验证拉格朗日中值定理</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0269.PNG" alt="IMG_0269"></p>
+<p>利用微分中值定理求ξ</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0270.PNG" alt="IMG_0270"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0271.PNG" alt="IMG_0271"></p>
+<p>微分中值定理的偏应用</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0272.PNG" alt="IMG_0272"></p>
+<h4 id="泰勒公式求未知数"><a href="#泰勒公式求未知数" class="headerlink" title="泰勒公式求未知数"></a>泰勒公式求未知数</h4><p>下面三题关于泰勒公式求未知数的值（难题）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210628210206835.png" alt="image-20210628210206835"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_02722225.PNG" alt="IMG_02722225"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210628210251510.png" alt="image-20210628210251510"></p>
+<h4 id="罗尔定理的简单应用"><a href="#罗尔定理的简单应用" class="headerlink" title="罗尔定理的简单应用"></a>罗尔定理的简单应用</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210629110638322.png" alt="image-20210629110638322"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210629110928144.png" alt="image-20210629110928144"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210629111017121.png" alt="image-20210629111017121"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210629110905254.png" alt="image-20210629110905254"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0283.PNG" alt="IMG_0283"></p>
+<h4 id="罗尔定理的进阶"><a href="#罗尔定理的进阶" class="headerlink" title="罗尔定理的进阶"></a>罗尔定理的进阶</h4><p>中值定理构造函数</p>
+<p>（像这种简单的就ln硬构）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0285.PNG" alt="IMG_0285"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0288.PNG" alt="IMG_0288"></p>
+<p>ln构造解决二阶导</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0286.PNG" alt="IMG_0286"></p>
+<p>ln构造解决g(x)</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210629201758809.png" alt="image-20210629201758809"></p>
+<p>结合积分中值定理</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0289.PNG" alt="IMG_0289"></p>
+<p>ln构造解决常数k</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210629201911837.png" alt="image-20210629201911837"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0291.PNG" alt="IMG_0291"></p>
+<p>ln构造解决阶数差2（先凑本体，再凑ln的积分形式）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0292.PNG" alt="IMG_0292"></p>
+<p>混g(x)巨复杂型，利用积分法</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210629202055676.png" alt="image-20210629202055676"></p>
+<p><a href="https://bingw.blog.csdn.net/article/details/53418680?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-2.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-2.control">卧槽</a></p>
+<p>还有<a href="https://zhuanlan.zhihu.com/p/33271753">微分方程法</a></p>
 ]]></content>
   </entry>
 </search>
