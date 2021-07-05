@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="求极限的方法总结  单看是没用的，要通过做题熟练才可以 等价无穷小1-cosx  arcsin，ln，ex  x-sinx  指数型求极限，tan  指数型，ln  x作幂（指数型），括号内2化为1  配凑，ex，1-cosx，arcsin  等价无穷小代换条件：乘除 易错题:   直接法复杂式+根号  两个重要的极限求极限 内容其实包含在上面求极限的方法里了">
+  <meta name="description" content="求极限的方法总结 常用结论绿色部分，证明利用指数型无穷小代换（转化成eln 下面有相关题目）  泰勒公式参考 单看是没用的，要通过做题熟练才可以 等价无穷小1-cosx  （其实可以利用上面常用结论中的绿色部分）  arcsin，ln，ex  x-sinx  注意1&#x2F;6*x^3里的x是代指  指数型求极限，tan  淦，ln里的根号也是可以提出来的  指数型，ln  这里是上面常用结论绿色部分的解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="极限">
 <meta property="og:url" content="http://example.com/2021/06/30/%E6%9E%81%E9%99%90/index.html">
 <meta property="og:site_name" content="藏经阁">
-<meta property="og:description" content="求极限的方法总结  单看是没用的，要通过做题熟练才可以 等价无穷小1-cosx  arcsin，ln，ex  x-sinx  指数型求极限，tan  指数型，ln  x作幂（指数型），括号内2化为1  配凑，ex，1-cosx，arcsin  等价无穷小代换条件：乘除 易错题:   直接法复杂式+根号  两个重要的极限求极限 内容其实包含在上面求极限的方法里了">
+<meta property="og:description" content="求极限的方法总结 常用结论绿色部分，证明利用指数型无穷小代换（转化成eln 下面有相关题目）  泰勒公式参考 单看是没用的，要通过做题熟练才可以 等价无穷小1-cosx  （其实可以利用上面常用结论中的绿色部分）  arcsin，ln，ex  x-sinx  注意1&#x2F;6*x^3里的x是代指  指数型求极限，tan  淦，ln里的根号也是可以提出来的  指数型，ln  这里是上面常用结论绿色部分的解">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210630094814469.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210630094820296.png">
@@ -42,7 +42,7 @@
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210630092642627.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210630094804589.png">
 <meta property="article:published_time" content="2021-06-30T01:25:40.000Z">
-<meta property="article:modified_time" content="2021-06-30T08:52:31.512Z">
+<meta property="article:modified_time" content="2021-07-04T02:12:43.770Z">
 <meta property="article:author" content="FreeJim">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -217,10 +217,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-06-30 09:25:40 / Modified: 16:52:31" itemprop="dateCreated datePublished" datetime="2021-06-30T09:25:40+08:00">2021-06-30</time>
+              <time title="Created: 2021-06-30 09:25:40" itemprop="dateCreated datePublished" datetime="2021-06-30T09:25:40+08:00">2021-06-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-07-04 10:12:43" itemprop="dateModified" datetime="2021-07-04T10:12:43+08:00">2021-07-04</time>
+              </span>
 
           
 
@@ -234,18 +240,28 @@
 
       
         <h3 id="求极限的方法总结"><a href="#求极限的方法总结" class="headerlink" title="求极限的方法总结"></a>求极限的方法总结</h3><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094814469.png" alt="image-20210630094814469"></p>
+<p>常用结论绿色部分，证明利用指数型无穷小代换（转化成eln 下面有相关题目）</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094820296.png" alt="image-20210630094820296"></p>
+<p>泰勒公式参考</p>
 <p>单看是没用的，要通过做题熟练才可以</p>
 <h4 id="等价无穷小"><a href="#等价无穷小" class="headerlink" title="等价无穷小"></a>等价无穷小</h4><p>1-cosx</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094450777.png" alt="image-20210630094450777"></p>
+<p>（其实可以利用上面常用结论中的绿色部分）</p>
+<hr>
 <p>arcsin，ln，ex</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100304066.png" alt="image-20210630100304066"></p>
 <p>x-sinx</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101158640.png" alt="image-20210630101158640"></p>
+<p>注意1/6*x^3里的x是代指</p>
+<hr>
 <p>指数型求极限，tan</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101418183.png" alt="image-20210630101418183"></p>
+<p>淦，ln里的根号也是可以提出来的</p>
+<hr>
 <p>指数型，ln</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630102311236.png" alt="image-20210630102311236"></p>
+<p>这里是上面常用结论绿色部分的解析</p>
+<hr>
 <p>x作幂（指数型），括号内2化为1</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630102717834.png" alt="image-20210630102717834"></p>
 <p>配凑，ex，1-cosx，arcsin</p>
@@ -253,9 +269,13 @@
 <p>等价无穷小代换条件：乘除</p>
 <p>易错题:</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100140805.png" alt="image-20210630100140805"></p>
+<p>提tanx</p>
+<hr>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100209423.png" alt="image-20210630100209423"></p>
 <h4 id="直接法"><a href="#直接法" class="headerlink" title="直接法"></a>直接法</h4><p>复杂式+根号</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101130034.png" alt="image-20210630101130034"></p>
+<p>无穷不好处理，把x化到分母趋于0好处理</p>
+<hr>
 <h4 id="两个重要的极限求极限"><a href="#两个重要的极限求极限" class="headerlink" title="两个重要的极限求极限"></a>两个重要的极限求极限</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630092642627.png" alt="image-20210630092642627"></p>
 <p>内容其实包含在上面求极限的方法里了</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094804589.png" alt="image-20210630094804589"></p>
@@ -355,7 +375,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-count">154</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
