@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Ajax Tutorial</title>
+    <url>/2021/05/11/Ajax-Tutorial/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">            type: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line">            url: <span class="string">&quot;http://localhost:8080/getRecord?area=&quot;</span>+area,</span><br><span class="line">            dataType: <span class="string">&quot;json&quot;</span>,</span><br><span class="line">            jsonp: <span class="string">&quot;callback&quot;</span>,</span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">json</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(json);</span><br><span class="line">                <span class="keyword">let</span> mainBody = <span class="built_in">document</span>.getElementById(<span class="string">&quot;main-body&quot;</span>);</span><br><span class="line">                <span class="keyword">let</span> table = <span class="string">&quot;&lt;table class=&#x27;table&#x27;&gt;&quot;</span>;</span><br><span class="line">                <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> key <span class="keyword">in</span> json</span>)</span>&#123;</span><br><span class="line">                    table += <span class="string">&quot;&lt;tr&gt;&lt;td&gt;&quot;</span>+key+<span class="string">&quot;&lt;/td&gt;&lt;td&gt;&quot;</span>+json[key]+<span class="string">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">                table+=<span class="string">&quot;&lt;/table&gt;&quot;</span></span><br><span class="line">                mainBody.innerHTML=table;</span><br><span class="line">            &#125;,</span><br><span class="line">            error: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                alert(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h4 id="ajax不发送请求"><a href="#ajax不发送请求" class="headerlink" title="ajax不发送请求"></a>ajax不发送请求</h4><p>原因：没有正确引入jquery</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>虽然某些别的js脚本也有引入jquery</p>
+<p>但是那个版本可能不支持ajax</p>
+<p>以导致ajax失效</p>
+]]></content>
+  </entry>
+  <entry>
     <title>802.11ax Wi-Fi</title>
     <url>/2021/03/13/802-11ax-Wi-Fi/</url>
     <content><![CDATA[<p><a href="https://en.wikipedia.org/wiki/IEEE_802.11ax">Wikipedia</a></p>
@@ -98,24 +116,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ajax Tutorial</title>
-    <url>/2021/05/11/Ajax-Tutorial/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">            type: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line">            url: <span class="string">&quot;http://localhost:8080/getRecord?area=&quot;</span>+area,</span><br><span class="line">            dataType: <span class="string">&quot;json&quot;</span>,</span><br><span class="line">            jsonp: <span class="string">&quot;callback&quot;</span>,</span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">json</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(json);</span><br><span class="line">                <span class="keyword">let</span> mainBody = <span class="built_in">document</span>.getElementById(<span class="string">&quot;main-body&quot;</span>);</span><br><span class="line">                <span class="keyword">let</span> table = <span class="string">&quot;&lt;table class=&#x27;table&#x27;&gt;&quot;</span>;</span><br><span class="line">                <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> key <span class="keyword">in</span> json</span>)</span>&#123;</span><br><span class="line">                    table += <span class="string">&quot;&lt;tr&gt;&lt;td&gt;&quot;</span>+key+<span class="string">&quot;&lt;/td&gt;&lt;td&gt;&quot;</span>+json[key]+<span class="string">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">                table+=<span class="string">&quot;&lt;/table&gt;&quot;</span></span><br><span class="line">                mainBody.innerHTML=table;</span><br><span class="line">            &#125;,</span><br><span class="line">            error: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                alert(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h4 id="ajax不发送请求"><a href="#ajax不发送请求" class="headerlink" title="ajax不发送请求"></a>ajax不发送请求</h4><p>原因：没有正确引入jquery</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>虽然某些别的js脚本也有引入jquery</p>
-<p>但是那个版本可能不支持ajax</p>
-<p>以导致ajax失效</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Android Back Button</title>
     <url>/2021/01/04/Android-Back-Button/</url>
     <content><![CDATA[<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onBackPressed()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -126,24 +126,6 @@
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onBackPressed</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// super.onBackPressed()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android DeviceId</title>
-    <url>/2021/01/04/Android-DeviceId/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
 
 
 
@@ -181,6 +163,24 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android DeviceId</title>
+    <url>/2021/01/04/Android-DeviceId/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var deviceId&#x3D; Settings.System.getString(contentResolver, Settings.System.ANDROID_ID);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -244,28 +244,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Intent Transport Data</title>
-    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
-    <content><![CDATA[<p>Example:</p>
-<p>Send data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Get data</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Note:</p>
-<p>Intent is like a build-in object in Kotlin</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Fragment Tutorial</title>
     <url>/2021/01/06/Android-Fragment-Tutorial/</url>
     <content><![CDATA[<p>1.New A Fragment</p>
@@ -297,6 +275,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Intent Transport Data</title>
+    <url>/2021/01/04/Android-Intent-Transport-Data/</url>
+    <content><![CDATA[<p>Example:</p>
+<p>Send data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">toStudentPage</span><span class="params">(loginInfo: <span class="type">JSONObject</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(<span class="keyword">this</span>, StudentActivity::<span class="keyword">class</span>.java).apply &#123;&#125;</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentId&quot;</span>, loginInfo[<span class="string">&quot;studentId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;studentName&quot;</span>, loginInfo[<span class="string">&quot;studentName&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;classId&quot;</span>, loginInfo[<span class="string">&quot;classId&quot;</span>].toString())</span><br><span class="line">    intent.putExtra(<span class="string">&quot;className&quot;</span>, loginInfo[<span class="string">&quot;className&quot;</span>].toString())</span><br><span class="line">    startActivity(intent)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Get data</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> studentId = intent.getStringExtra(<span class="string">&quot;studentId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> studentName = intent.getStringExtra(<span class="string">&quot;studentName&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> classId = intent.getStringExtra(<span class="string">&quot;classId&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> className = intent.getStringExtra(<span class="string">&quot;className&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Note:</p>
+<p>Intent is like a build-in object in Kotlin</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Layout Parameter</title>
     <url>/2021/01/06/Android-Layout-Parameter/</url>
     <content><![CDATA[<p>Build</p>
@@ -315,22 +315,6 @@
       <tags>
         <tag>Android</tag>
         <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Lifecycle Of Activity</title>
-    <url>/2021/01/04/Android-Lifecycle-Of-Activity/</url>
-    <content><![CDATA[<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Document</a></p>
-<p>onCreate() just be invoked one time</p>
-<p>onStart() will be </p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Turorial</tag>
       </tags>
   </entry>
   <entry>
@@ -373,6 +357,22 @@
       </categories>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android Lifecycle Of Activity</title>
+    <url>/2021/01/04/Android-Lifecycle-Of-Activity/</url>
+    <content><![CDATA[<p><a href="https://developer.android.com/guide/components/activities/activity-lifecycle">Document</a></p>
+<p>onCreate() just be invoked one time</p>
+<p>onStart() will be </p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Turorial</tag>
       </tags>
   </entry>
   <entry>
@@ -458,25 +458,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Swip Refresh</title>
-    <url>/2021/01/06/Android-Swip-Refresh/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">&quot;@+id/location_swipe_for_student&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">&quot;100dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Config</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configSwipeRefresh</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> swipe =</span><br><span class="line">        view?.findViewById&lt;SwipeRefreshLayout&gt;(R.id.location_swipe_for_student)</span><br><span class="line">    swipe?.setOnRefreshListener &#123;</span><br><span class="line">        MapUtil.mLocationClient?.startLocation()</span><br><span class="line">        refreshActivity()</span><br><span class="line">        swipe.isRefreshing = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Studio SDK config</title>
     <url>/2021/03/08/Android-Studio-SDK-config/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
@@ -513,40 +494,22 @@
       </tags>
   </entry>
   <entry>
-    <title>Android px dp sp</title>
-    <url>/2021/01/04/Android-px-dp-sp/</url>
-    <content><![CDATA[<p>px is for the general unit</p>
-<p>Note !</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
+    <title>Android Swip Refresh</title>
+    <url>/2021/01/06/Android-Swip-Refresh/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">&quot;@+id/location_swipe_for_student&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">&quot;100dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-
-
-<p>dp is usually use for layout</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Note </p>
-<p>You can pass context as a parameter</p>
-<blockquote>
-<p>dpi: Dots Per Inch</p>
-</blockquote>
-<p>sp is usually use for text size</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
-
-
-
-
+<p>Config</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configSwipeRefresh</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> swipe =</span><br><span class="line">        view?.findViewById&lt;SwipeRefreshLayout&gt;(R.id.location_swipe_for_student)</span><br><span class="line">    swipe?.setOnRefreshListener &#123;</span><br><span class="line">        MapUtil.mLocationClient?.startLocation()</span><br><span class="line">        refreshActivity()</span><br><span class="line">        swipe.isRefreshing = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
         <category>Android</category>
-        <category>Layout</category>
+        <category>Tutorial</category>
       </categories>
       <tags>
         <tag>Android</tag>
+        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -618,6 +581,43 @@
       </tags>
   </entry>
   <entry>
+    <title>Android px dp sp</title>
+    <url>/2021/01/04/Android-px-dp-sp/</url>
+    <content><![CDATA[<p>px is for the general unit</p>
+<p>Note !</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
+
+
+
+<p>dp is usually use for layout</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note </p>
+<p>You can pass context as a parameter</p>
+<blockquote>
+<p>dpi: Dots Per Inch</p>
+</blockquote>
+<p>sp is usually use for text size</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Layout</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blockchain Digital Signature</title>
     <url>/2021/03/20/Blockchain-Digital-Signature/</url>
     <content><![CDATA[<p>Store key</p>
@@ -630,22 +630,6 @@
 
 
 
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Blockchain In Python</title>
-    <url>/2021/03/20/Blockchain-In-Python/</url>
-    <content><![CDATA[<p>Hash a object</p>
-<p>Wrong example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(<span class="built_in">len</span>(sha256(<span class="built_in">str</span>(t()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()))  <span class="comment"># wrong!</span></span><br><span class="line">													 <span class="comment"># str(t()) is just a address</span></span><br></pre></td></tr></table></figure>
-
-<p>Correct example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256  <span class="comment"># need string</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>  </span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">print(sha256(<span class="built_in">str</span>(t().__hash__()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()) <span class="comment"># display in hex</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">output:   &#x2F;&#x2F; string length &#x3D; 64</span><br><span class="line">58c32e31cc29e9164710dc7571d83200d5f6ff044170e4b299ed8096b4de529e  </span><br></pre></td></tr></table></figure>
 
 
 
@@ -814,16 +798,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Blockchain Reference</title>
-    <url>/2021/03/20/Blockchain-Reference/</url>
-    <content><![CDATA[<p><a href="https://github.com/chaozh/awesome-blockchain-cn">Github1</a></p>
-<p><a href="https://github.com/LiuBoyu/blockchain">Github2</a></p>
-<p>BIP</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A Bitcoin Improvement Proposal (BIP) is a design document for introducing features or information to Bitcoin. This is the standard way of communicating ideas since Bitcoin has no formal structure.</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>Blockchain Example In JS</title>
     <url>/2021/03/11/Blockchain-Example-In-JS/</url>
     <content><![CDATA[<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Open source developers from every continent use npm to share and borrow packages</span><br></pre></td></tr></table></figure>
@@ -868,6 +842,41 @@
         <tag>js</tag>
         <tag>Blockchain</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Blockchain Reference</title>
+    <url>/2021/03/20/Blockchain-Reference/</url>
+    <content><![CDATA[<p><a href="https://github.com/chaozh/awesome-blockchain-cn">Github1</a></p>
+<p><a href="https://github.com/LiuBoyu/blockchain">Github2</a></p>
+<p>BIP</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A Bitcoin Improvement Proposal (BIP) is a design document for introducing features or information to Bitcoin. This is the standard way of communicating ideas since Bitcoin has no formal structure.</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Blockchain In Python</title>
+    <url>/2021/03/20/Blockchain-In-Python/</url>
+    <content><![CDATA[<p>Hash a object</p>
+<p>Wrong example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(<span class="built_in">len</span>(sha256(<span class="built_in">str</span>(t()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()))  <span class="comment"># wrong!</span></span><br><span class="line">													 <span class="comment"># str(t()) is just a address</span></span><br></pre></td></tr></table></figure>
+
+<p>Correct example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256  <span class="comment"># need string</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>  </span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">print(sha256(<span class="built_in">str</span>(t().__hash__()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()) <span class="comment"># display in hex</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">output:   &#x2F;&#x2F; string length &#x3D; 64</span><br><span class="line">58c32e31cc29e9164710dc7571d83200d5f6ff044170e4b299ed8096b4de529e  </span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Bootstrap Tutorial</title>
+    <url>/2021/05/11/Bootstrap-Tutorial/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>Blockchain Transaction</title>
@@ -980,9 +989,22 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Bootstrap Tutorial</title>
-    <url>/2021/05/11/Bootstrap-Tutorial/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>Dockerfile Basic</title>
+    <url>/2021/03/28/Dockerfile-Basic/</url>
+    <content><![CDATA[<p>new a file named “Dockerfile”</p>
+<p>then</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build .  &#x2F;&#x2F; will exec the dockerfile auto</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<p>will show the container id and container  name</p>
+<p>with name, you can start the container</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start container_name</span><br></pre></td></tr></table></figure>
+
+<p>then</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker stop container_name</span><br><span class="line">docker restart container_name</span><br></pre></td></tr></table></figure>
 
 
 
@@ -1043,28 +1065,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Dockerfile Basic</title>
-    <url>/2021/03/28/Dockerfile-Basic/</url>
-    <content><![CDATA[<p>new a file named “Dockerfile”</p>
-<p>then</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build .  &#x2F;&#x2F; will exec the dockerfile auto</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
-
-<p>will show the container id and container  name</p>
-<p>with name, you can start the container</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start container_name</span><br></pre></td></tr></table></figure>
-
-<p>then</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker stop container_name</span><br><span class="line">docker restart container_name</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Dockerfile Error</title>
     <url>/2021/03/28/Dockerfile-Error/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Temporary failure resolving ‘archive.ubuntu.com’</span><br></pre></td></tr></table></figure>
@@ -1085,6 +1085,28 @@
 ]]></content>
       <tags>
         <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Flask Cors</title>
+    <url>/2021/01/02/Flask-Cors/</url>
+    <content><![CDATA[<p>Cors solution</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask_cors import *</span><br><span class="line">CORS(app, supports_credentials&#x3D;True)</span><br></pre></td></tr></table></figure>
+
+<p>Then Note ! ! !</p>
+<p>Flask default listen on localhost</p>
+<p>if you want to use Flask to deploy an application</p>
+<p>do the thing below :</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">5000</span>, debug=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Config</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Config</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1194,28 +1216,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Flask Cors</title>
-    <url>/2021/01/02/Flask-Cors/</url>
-    <content><![CDATA[<p>Cors solution</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask_cors import *</span><br><span class="line">CORS(app, supports_credentials&#x3D;True)</span><br></pre></td></tr></table></figure>
-
-<p>Then Note ! ! !</p>
-<p>Flask default listen on localhost</p>
-<p>if you want to use Flask to deploy an application</p>
-<p>do the thing below :</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">5000</span>, debug=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Config</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Config</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Funny code</title>
     <url>/2021/03/20/Funny-code/</url>
     <content><![CDATA[<p>Python</p>
@@ -1226,6 +1226,25 @@
 
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Git Fix Conflict</title>
+    <url>/2021/01/04/Git-Fix-Conflict/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+
+<p>Generally, you just need to delete the origin content , and use the new content</p>
+<p>Strongly recommend you to use “Github Desktop”</p>
+<p>It will clearly display all conflicts and you can fix them directly</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+      </tags>
   </entry>
   <entry>
     <title>Git Basic Commands</title>
@@ -1263,59 +1282,6 @@
 ]]></content>
       <categories>
         <category>Git</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Git</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git Fix Conflict</title>
-    <url>/2021/01/04/Git-Fix-Conflict/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
-
-<p>Generally, you just need to delete the origin content , and use the new content</p>
-<p>Strongly recommend you to use “Github Desktop”</p>
-<p>It will clearly display all conflicts and you can fix them directly</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Git</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github SSH Deploy Key</title>
-    <url>/2021/01/04/Github-SSH-Deploy-Key/</url>
-    <content><![CDATA[<p>With Deploy key you can push directly, do not need to input username and password every time</p>
-<p>Generate SSH key</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -f deploy_key_blog -C &quot;1020151695@qq.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p> Then press “Enter” twice is OK</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E-mail address like an &quot;id&quot;</span><br><span class="line">So that Github repository know who you are</span><br><span class="line">And you don&#39;t need to input username and password again</span><br></pre></td></tr></table></figure>
-
-<p>Then it will create a new file named “deploy_key_blog.pub”</p>
-<p>Check it’s content use the command:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more deploy_key_blog.pub</span><br></pre></td></tr></table></figure>
-
-<p>Then copy the content and go to the project in Github</p>
-<p>“Setting”–”Deploy keys”</p>
-<p>Just do it !</p>
-<p>And SSH key absolutely just support the ssh way</p>
-<p>If you use HTTPS remote address, you need to switch it </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote rm origin      &#x2F;&#x2F; delete origin remote address </span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:nickchou&#x2F;gocode.git  &#x2F;&#x2F; apply new remote address</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Github</category>
         <category>Tutorial</category>
       </categories>
       <tags>
@@ -1370,6 +1336,40 @@
       </tags>
   </entry>
   <entry>
+    <title>Github SSH Deploy Key</title>
+    <url>/2021/01/04/Github-SSH-Deploy-Key/</url>
+    <content><![CDATA[<p>With Deploy key you can push directly, do not need to input username and password every time</p>
+<p>Generate SSH key</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -f deploy_key_blog -C &quot;1020151695@qq.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p> Then press “Enter” twice is OK</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">E-mail address like an &quot;id&quot;</span><br><span class="line">So that Github repository know who you are</span><br><span class="line">And you don&#39;t need to input username and password again</span><br></pre></td></tr></table></figure>
+
+<p>Then it will create a new file named “deploy_key_blog.pub”</p>
+<p>Check it’s content use the command:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">more deploy_key_blog.pub</span><br></pre></td></tr></table></figure>
+
+<p>Then copy the content and go to the project in Github</p>
+<p>“Setting”–”Deploy keys”</p>
+<p>Just do it !</p>
+<p>And SSH key absolutely just support the ssh way</p>
+<p>If you use HTTPS remote address, you need to switch it </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote rm origin      &#x2F;&#x2F; delete origin remote address </span><br><span class="line"></span><br><span class="line">git remote add origin git@github.com:nickchou&#x2F;gocode.git  &#x2F;&#x2F; apply new remote address</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Github</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML Input</title>
     <url>/2021/05/11/HTML-Input/</url>
     <content><![CDATA[<p>get content</p>
@@ -1392,6 +1392,31 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Hexo Live2D</title>
+    <url>/2021/03/08/Hexo-Live2D/</url>
+    <content><![CDATA[<p><a href="https://github.com/EYHN/hexo-helper-live2d">github</a> (You can download model here)</p>
+<p>(1) Install hexo-helper-live2d</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>(2)prepare model file</p>
+<p>put the folder in “node_modules”</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">e.g. folder name &quot;live2d-widget-model-miku&quot;</span><br></pre></td></tr></table></figure>
+
+<p>(2) install model</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install &#123;your model&#39;s package name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(3) _config.yml in Hexo root folder add:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo Theme</title>
     <url>/2021/03/08/Hexo-Theme/</url>
     <content><![CDATA[<p>Next主题</p>
@@ -1411,31 +1436,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Live2D</title>
-    <url>/2021/03/08/Hexo-Live2D/</url>
-    <content><![CDATA[<p><a href="https://github.com/EYHN/hexo-helper-live2d">github</a> (You can download model here)</p>
-<p>(1) Install hexo-helper-live2d</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-
-<p>(2)prepare model file</p>
-<p>put the folder in “node_modules”</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">e.g. folder name &quot;live2d-widget-model-miku&quot;</span><br></pre></td></tr></table></figure>
-
-<p>(2) install model</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install &#123;your model&#39;s package name&#125;</span><br></pre></td></tr></table></figure>
-
-<p>(3) _config.yml in Hexo root folder add:</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/xiazeyu/live2d-widget.js</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-miku</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">1</span></span><br><span class="line">    <span class="attr">hHeadPos:</span> <span class="number">0.5</span></span><br><span class="line">    <span class="attr">vHeadPos:</span> <span class="number">0.618</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">superSample:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-20</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.2</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1537,6 +1537,12 @@
       </tags>
   </entry>
   <entry>
+    <title>Idea shortcut</title>
+    <url>/2021/04/26/Idea-shortcut/</url>
+    <content><![CDATA[<p>double click “Ctrl” – run any command</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Intellij 使用</title>
     <url>/2021/06/08/Intellij-%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<p>有些函数没有解释，是需要先下载源码先</p>
@@ -1548,12 +1554,6 @@
 
 
 
-]]></content>
-  </entry>
-  <entry>
-    <title>Idea shortcut</title>
-    <url>/2021/04/26/Idea-shortcut/</url>
-    <content><![CDATA[<p>double click “Ctrl” – run any command</p>
 ]]></content>
   </entry>
   <entry>
@@ -1737,14 +1737,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Mysql bench tutorial</title>
-    <url>/2021/06/16/Mysql-bench-tutorial/</url>
-    <content><![CDATA[<h4 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h4><p>Alert好用</p>
-<hr>
-<h4 id="添加外键"><a href="#添加外键" class="headerlink" title="添加外键"></a>添加外键</h4><p>字段类型对不上是会报错的</p>
-]]></content>
-  </entry>
-  <entry>
     <title>N-TCP</title>
     <url>/2021/05/24/N-TCP/</url>
     <content><![CDATA[<p>Transmission Control Protocol</p>
@@ -1824,6 +1816,14 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210524214911160.png" alt="image-20210524214911160"></p>
 <p>ack=769+600=1369</p>
 <p>所以说，序号与发送数据的大小有关</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Mysql bench tutorial</title>
+    <url>/2021/06/16/Mysql-bench-tutorial/</url>
+    <content><![CDATA[<h4 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h4><p>Alert好用</p>
+<hr>
+<h4 id="添加外键"><a href="#添加外键" class="headerlink" title="添加外键"></a>添加外键</h4><p>字段类型对不上是会报错的</p>
 ]]></content>
   </entry>
   <entry>
@@ -1908,25 +1908,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Dict</title>
-    <url>/2021/01/02/Python-Dict/</url>
-    <content><![CDATA[<p>Traverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<p>Reverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python Code</title>
     <url>/2021/01/03/Python-Code/</url>
     <content><![CDATA[<ol>
@@ -1975,6 +1956,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Python Dict</title>
+    <url>/2021/01/02/Python-Dict/</url>
+    <content><![CDATA[<p>Traverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+<p>Reverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python Flask</title>
     <url>/2021/03/08/Python-Flask/</url>
     <content><![CDATA[<p>1.Listener </p>
@@ -1999,26 +1999,6 @@
     <title>Python JSON</title>
     <url>/2021/01/02/Python-JSON/</url>
     <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&quot;xxx.json&quot;</span>)</span><br><span class="line">jsonString = file.read()</span><br><span class="line">file.close()</span><br><span class="line">jsons=json.loads(jsonString)</span><br><span class="line"><span class="keyword">for</span> json <span class="keyword">in</span> jsons:</span><br><span class="line">	...</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python Log</title>
-    <url>/2021/01/03/Python-Log/</url>
-    <content><![CDATA[<p>Sometimes the error messages will be to long </p>
-<p>Then the console is not big enough to display all messages</p>
-<p>And we can’t see the root cause</p>
-<p>The solution is output the error messages to a log file</p>
-<p>Here is the example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"> </span><br><span class="line">logging.basicConfig(filename=<span class="string">&#x27;log.log&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error_func</span>():</span></span><br><span class="line">  b = <span class="number">1</span> / <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    error_func()</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">    s = traceback.format_exc()</span><br><span class="line">    logging.error(s)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2073,6 +2053,26 @@
 
 
 
+
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Log</title>
+    <url>/2021/01/03/Python-Log/</url>
+    <content><![CDATA[<p>Sometimes the error messages will be to long </p>
+<p>Then the console is not big enough to display all messages</p>
+<p>And we can’t see the root cause</p>
+<p>The solution is output the error messages to a log file</p>
+<p>Here is the example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> traceback</span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"> </span><br><span class="line">logging.basicConfig(filename=<span class="string">&#x27;log.log&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">error_func</span>():</span></span><br><span class="line">  b = <span class="number">1</span> / <span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    error_func()</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">    s = traceback.format_exc()</span><br><span class="line">    logging.error(s)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2250,11 +2250,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Spring Boot Cofiguration</title>
-    <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Refactor Notes</title>
     <url>/2021/01/03/Refactor-Notes/</url>
     <content><![CDATA[<p>1.</p>
@@ -2271,6 +2266,11 @@
       <tags>
         <tag>Refactor</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Spring Boot Cofiguration</title>
+    <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Spring Boot Lib</title>
@@ -2354,14 +2354,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Spring Boot fthl</title>
-    <url>/2021/06/01/Spring-Boot-fthl/</url>
-    <content><![CDATA[<p>数据传输</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">userIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ModelAndView mv = <span class="keyword">new</span> ModelAndView(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">    String info=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    mv.addObject(<span class="string">&quot;logInfo&quot;</span>, info);</span><br><span class="line">    <span class="keyword">return</span> mv;</span><br><span class="line">    <span class="comment">//return &quot;user&quot;;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>Spring Boot with Docker</title>
     <url>/2021/04/26/Spring-Boot-with-Docker/</url>
     <content><![CDATA[<ol>
@@ -2389,6 +2381,14 @@
       <tags>
         <tag>Docker</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Spring Boot fthl</title>
+    <url>/2021/06/01/Spring-Boot-fthl/</url>
+    <content><![CDATA[<p>数据传输</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">userIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ModelAndView mv = <span class="keyword">new</span> ModelAndView(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">    String info=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    mv.addObject(<span class="string">&quot;logInfo&quot;</span>, info);</span><br><span class="line">    <span class="keyword">return</span> mv;</span><br><span class="line">    <span class="comment">//return &quot;user&quot;;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>Spring Boot 前端</title>
@@ -2595,6 +2595,64 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Spring注解是怎么工作的</title>
+    <url>/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/</url>
+    <content><![CDATA[<p>版本说明：Spring 5.2.9 </p>
+<p>本文侧重于源码的解读</p>
+<p>这里以@Autowired为例</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br><span class="line"><span class="class"><span class="keyword">implements</span> <span class="title">SmartInstantiationAwareBeanPostProcessor</span>, <span class="title">MergedBeanDefinitionPostProcessor</span>, <span class="title">PriorityOrdered</span>, <span class="title">BeanFactoryAware</span></span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanPostProcessor.html"><code>BeanPostProcessor</code></a> implementation that autowires annotated fields, setter methods, and arbitrary config methods. Such members to be injected are detected through annotations: by default, Spring’s <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html"><code>@Autowired</code></a> and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html"><code>@Value</code></a> annotations.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processInjection</span><span class="params">(Object bean)</span> <span class="keyword">throws</span> BeanCreationException </span>&#123;</span><br><span class="line">		Class&lt;?&gt; clazz = bean.getClass();</span><br><span class="line">		InjectionMetadata metadata = findAutowiringMetadata(clazz.getName(), clazz, <span class="keyword">null</span>);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			metadata.inject(bean, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (BeanCreationException ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> ex;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (Throwable ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> BeanCreationException(</span><br><span class="line">					<span class="string">&quot;Injection of autowired dependencies failed for class [&quot;</span> + clazz + <span class="string">&quot;]&quot;</span>, ex);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>获取AutowiringMetadata后，做inject</p>
+<p>其中的AutowiringMetadata，简单的说就是@Autowired</p>
+<blockquote>
+<p>an <strong>annotation</strong> is a form of syntactic <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a> that can be added to Java <a href="https://en.wikipedia.org/wiki/Source_code">source code</a>.</p>
+</blockquote>
+<p>这是维基百科上的解释</p>
+<p>那Spring又是怎么确定是否存在@Autowired的呢</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> MergedAnnotation&lt;?&gt; findAutowiredAnnotation(AccessibleObject ao) &#123;</span><br><span class="line">	MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br><span class="line">	<span class="keyword">for</span> (Class&lt;? extends Annotation&gt; type : <span class="keyword">this</span>.autowiredAnnotationTypes) &#123;</span><br><span class="line">		MergedAnnotation&lt;?&gt; annotation = annotations.get(type);</span><br><span class="line">		<span class="keyword">if</span> (annotation.isPresent()) &#123;</span><br><span class="line">			<span class="keyword">return</span> annotation;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中的</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Set&lt;Class&lt;? extends Annotation&gt;&gt; autowiredAnnotationTypes = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.autowiredAnnotationTypes</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Autowired.class);</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Value.class);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">this</span>.autowiredAnnotationTypes.add((Class&lt;? extends Annotation&gt;)</span><br><span class="line">					ClassUtils.forName(<span class="string">&quot;javax.inject.Inject&quot;</span>, AutowiredAnnotationBeanPostProcessor.class.getClassLoader()));</span><br><span class="line">			logger.trace(<span class="string">&quot;JSR-330 &#x27;javax.inject.Inject&#x27; annotation found and supported for autowiring&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (ClassNotFoundException ex) &#123;</span><br><span class="line">			<span class="comment">// JSR-330 API not available - simply skip.</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>已经很清晰了，存放了Autowired.class</p>
+<p>则回到findAutowiredAnnotation()中，如果</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MergedAnnotations</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Iterable</span>&lt;<span class="title">MergedAnnotation</span>&lt;<span class="title">Annotation</span>&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Provides access to a collection of merged annotations, usually obtained from a source such as a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true"><code>Class</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true"><code>Method</code></a>.</p>
+<p>获取这个Bean 的Annotations</p>
+<p>然后看其中是否存在Autowired</p>
+<p>那么确定是否有Autowired的问题解决了，之后就是inject了</p>
+<hr>
+<p>首先来看看调用inject()的InjectionMetadata</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InjectionMetadata</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br></pre></td></tr></table></figure>
+
+<p>Internal class for managing injection metadata. Not intended for direct use in applications.</p>
+<p>对的，这个就是依赖注入里的inject</p>
+<p>不过，我暂时没有想法去了解，有兴趣的同学可以继续往下了解</p>
+<hr>
+<p><a href="http://www.avajava.com/tutorials/lessons/how-do-i-list-the-declared-fields-of-a-class.html">Field</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring1重构</title>
     <url>/2020/11/05/Spring1%E9%87%8D%E6%9E%84/</url>
     <content><![CDATA[<p>​    1.javax 是由Tomcat提供的</p>
@@ -2653,64 +2711,6 @@
       </categories>
       <tags>
         <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring注解是怎么工作的</title>
-    <url>/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/</url>
-    <content><![CDATA[<p>版本说明：Spring 5.2.9 </p>
-<p>本文侧重于源码的解读</p>
-<p>这里以@Autowired为例</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br><span class="line"><span class="class"><span class="keyword">implements</span> <span class="title">SmartInstantiationAwareBeanPostProcessor</span>, <span class="title">MergedBeanDefinitionPostProcessor</span>, <span class="title">PriorityOrdered</span>, <span class="title">BeanFactoryAware</span></span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanPostProcessor.html"><code>BeanPostProcessor</code></a> implementation that autowires annotated fields, setter methods, and arbitrary config methods. Such members to be injected are detected through annotations: by default, Spring’s <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html"><code>@Autowired</code></a> and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html"><code>@Value</code></a> annotations.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processInjection</span><span class="params">(Object bean)</span> <span class="keyword">throws</span> BeanCreationException </span>&#123;</span><br><span class="line">		Class&lt;?&gt; clazz = bean.getClass();</span><br><span class="line">		InjectionMetadata metadata = findAutowiringMetadata(clazz.getName(), clazz, <span class="keyword">null</span>);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			metadata.inject(bean, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (BeanCreationException ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> ex;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (Throwable ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> BeanCreationException(</span><br><span class="line">					<span class="string">&quot;Injection of autowired dependencies failed for class [&quot;</span> + clazz + <span class="string">&quot;]&quot;</span>, ex);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>获取AutowiringMetadata后，做inject</p>
-<p>其中的AutowiringMetadata，简单的说就是@Autowired</p>
-<blockquote>
-<p>an <strong>annotation</strong> is a form of syntactic <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a> that can be added to Java <a href="https://en.wikipedia.org/wiki/Source_code">source code</a>.</p>
-</blockquote>
-<p>这是维基百科上的解释</p>
-<p>那Spring又是怎么确定是否存在@Autowired的呢</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> MergedAnnotation&lt;?&gt; findAutowiredAnnotation(AccessibleObject ao) &#123;</span><br><span class="line">	MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br><span class="line">	<span class="keyword">for</span> (Class&lt;? extends Annotation&gt; type : <span class="keyword">this</span>.autowiredAnnotationTypes) &#123;</span><br><span class="line">		MergedAnnotation&lt;?&gt; annotation = annotations.get(type);</span><br><span class="line">		<span class="keyword">if</span> (annotation.isPresent()) &#123;</span><br><span class="line">			<span class="keyword">return</span> annotation;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中的</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Set&lt;Class&lt;? extends Annotation&gt;&gt; autowiredAnnotationTypes = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.autowiredAnnotationTypes</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Autowired.class);</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Value.class);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">this</span>.autowiredAnnotationTypes.add((Class&lt;? extends Annotation&gt;)</span><br><span class="line">					ClassUtils.forName(<span class="string">&quot;javax.inject.Inject&quot;</span>, AutowiredAnnotationBeanPostProcessor.class.getClassLoader()));</span><br><span class="line">			logger.trace(<span class="string">&quot;JSR-330 &#x27;javax.inject.Inject&#x27; annotation found and supported for autowiring&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (ClassNotFoundException ex) &#123;</span><br><span class="line">			<span class="comment">// JSR-330 API not available - simply skip.</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>已经很清晰了，存放了Autowired.class</p>
-<p>则回到findAutowiredAnnotation()中，如果</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MergedAnnotations</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Iterable</span>&lt;<span class="title">MergedAnnotation</span>&lt;<span class="title">Annotation</span>&gt;&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Provides access to a collection of merged annotations, usually obtained from a source such as a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true"><code>Class</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true"><code>Method</code></a>.</p>
-<p>获取这个Bean 的Annotations</p>
-<p>然后看其中是否存在Autowired</p>
-<p>那么确定是否有Autowired的问题解决了，之后就是inject了</p>
-<hr>
-<p>首先来看看调用inject()的InjectionMetadata</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InjectionMetadata</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br></pre></td></tr></table></figure>
-
-<p>Internal class for managing injection metadata. Not intended for direct use in applications.</p>
-<p>对的，这个就是依赖注入里的inject</p>
-<p>不过，我暂时没有想法去了解，有兴趣的同学可以继续往下了解</p>
-<hr>
-<p><a href="http://www.avajava.com/tutorials/lessons/how-do-i-list-the-declared-fields-of-a-class.html">Field</a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -3006,17 +3006,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Vue js</title>
-    <url>/2021/06/12/Vue-js/</url>
-    <content><![CDATA[<h4 id="Vue-页面加载时执行函数"><a href="#Vue-页面加载时执行函数" class="headerlink" title="Vue 页面加载时执行函数"></a>Vue 页面加载时执行函数</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;Redirect&#39;,</span><br><span class="line">  mounted: function () &#123;</span><br><span class="line">    this.$router.push(&#39;&#x2F;&#39;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Vue error</title>
     <url>/2021/06/09/Vue-error/</url>
     <content><![CDATA[<blockquote>
@@ -3027,6 +3016,17 @@
 
 <hr>
 <h4 id="vue-没有错误信息"><a href="#vue-没有错误信息" class="headerlink" title="vue 没有错误信息"></a>vue 没有错误信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run build  //可以显示详细信息</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue js</title>
+    <url>/2021/06/12/Vue-js/</url>
+    <content><![CDATA[<h4 id="Vue-页面加载时执行函数"><a href="#Vue-页面加载时执行函数" class="headerlink" title="Vue 页面加载时执行函数"></a>Vue 页面加载时执行函数</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#39;Redirect&#39;,</span><br><span class="line">  mounted: function () &#123;</span><br><span class="line">    this.$router.push(&#39;&#x2F;&#39;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 ]]></content>
   </entry>
@@ -3188,6 +3188,14 @@
 ]]></content>
   </entry>
   <entry>
+    <title>WSL Basic</title>
+    <url>/2021/03/27/WSL-Basic/</url>
+    <content><![CDATA[<p>switch to root</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>WSL Mysql</title>
     <url>/2021/03/27/WSL-Mysql/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
@@ -3201,14 +3209,6 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root</span><br><span class="line">root</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>WSL Basic</title>
-    <url>/2021/03/27/WSL-Basic/</url>
-    <content><![CDATA[<p>switch to root</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -3360,11 +3360,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>js 页面跳转</title>
-    <url>/2021/06/18/js-%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>js 请求</title>
     <url>/2021/06/18/js-%E8%AF%B7%E6%B1%82/</url>
     <content><![CDATA[<h4 id="POST-请求"><a href="#POST-请求" class="headerlink" title="POST 请求"></a>POST 请求</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> username = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;username&#x27;</span>).value</span><br><span class="line">       <span class="keyword">let</span> password = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;password&#x27;</span>).value</span><br><span class="line">       <span class="keyword">var</span> httpRequest = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">       httpRequest.open(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;http://localhost:8080/user/login_frontend&#x27;</span>, <span class="literal">true</span>)</span><br><span class="line">       <span class="keyword">var</span> formData = <span class="keyword">new</span> FormData()</span><br><span class="line">       formData.append(<span class="string">&quot;username&quot;</span>,username)</span><br><span class="line">       formData.append(<span class="string">&quot;password&quot;</span>,password)</span><br><span class="line">       httpRequest.send(formData);</span><br></pre></td></tr></table></figure>
@@ -3385,6 +3380,11 @@
 <p>通过插入script标签实现GET请求（不可POST）</p>
 <p>src为请求地址，可携带params</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>js 页面跳转</title>
+    <url>/2021/06/18/js-%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>lms docker</title>
@@ -3508,6 +3508,9 @@
 <p>设计到sec的奇数次积分可参考</p>
 <h4 id="利用奇偶性求解二重积分"><a href="#利用奇偶性求解二重积分" class="headerlink" title="利用奇偶性求解二重积分"></a>利用奇偶性求解二重积分</h4><h4 id="二重积分法"><a href="#二重积分法" class="headerlink" title="二重积分法"></a>二重积分法</h4><p>先积的是x，则提出无关的y，就容易了</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706155710893.png" alt="image-20210706155710893"></p>
+<h4 id="二重积分比较大小"><a href="#二重积分比较大小" class="headerlink" title="二重积分比较大小"></a>二重积分比较大小</h4><p>当积分限一样时，比较被积函数的大小即可</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707171633757.png" alt="image-20210707171633757"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707172634058.png" alt="image-20210707172634058"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3603,20 +3606,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>多元函数极值</title>
-    <url>/2021/07/05/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E6%9E%81%E5%80%BC/</url>
-    <content><![CDATA[<h4 id="无约束"><a href="#无约束" class="headerlink" title="无约束"></a>无约束</h4><p>直接法</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705162324894.png" alt="image-20210705162324894"></p>
-<p>例题</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163856913.png" alt="image-20210705163856913"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163830043.png" alt="image-20210705163830043"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163841762.png" alt="image-20210705163841762"></p>
-<h4 id="存在约束条件"><a href="#存在约束条件" class="headerlink" title="存在约束条件"></a>存在约束条件</h4><h5 id="拉格朗日乘数法"><a href="#拉格朗日乘数法" class="headerlink" title="拉格朗日乘数法"></a>拉格朗日乘数法</h5><p>例题</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164056311.png" alt="image-20210705164056311"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164107005.png" alt="image-20210705164107005"></p>
-<p>这种五元方程一定要验算！！！！</p>
-<p>尤其时算出莫名其妙的分数</p>
-]]></content>
-  </entry>
-  <entry>
     <title>定积分</title>
     <url>/2021/06/23/%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
     <content><![CDATA[<h4 id="导定积分"><a href="#导定积分" class="headerlink" title="导定积分"></a>导定积分</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/IMG_0219.png" alt="IMG_0219"></p>
@@ -3697,6 +3686,48 @@
 ]]></content>
   </entry>
   <entry>
+    <title>微分方程</title>
+    <url>/2021/07/07/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<h4 id="什么是微分方程"><a href="#什么是微分方程" class="headerlink" title="什么是微分方程"></a>什么是微分方程</h4><p>表示未知函数的导数和自变量关系的方程</p>
+<h4 id="微分方程的阶"><a href="#微分方程的阶" class="headerlink" title="微分方程的阶"></a>微分方程的阶</h4><p>最高阶导数的阶数</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094811726.png" alt="image-20210707094811726"></p>
+<h4 id="通解和特解"><a href="#通解和特解" class="headerlink" title="通解和特解"></a>通解和特解</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094325973.png" alt="image-20210707094325973"></p>
+<p>#####　通解的例子</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094952450.png" alt="image-20210707094952450"></p>
+<p>(1-3)是(1-1)的通解</p>
+<h5 id="特解和通解之间的关系"><a href="#特解和通解之间的关系" class="headerlink" title="特解和通解之间的关系"></a>特解和通解之间的关系</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095141686.png" alt="image-20210707095141686"></p>
+<p>例子</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095244171.png" alt="image-20210707095244171"></p>
+<hr>
+<h4 id="齐次方程"><a href="#齐次方程" class="headerlink" title="齐次方程"></a>齐次方程</h4><p>能用y/x表示导数</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095617452.png" alt="image-20210707095617452"></p>
+<h4 id="常系数非齐次线性微分方程"><a href="#常系数非齐次线性微分方程" class="headerlink" title="常系数非齐次线性微分方程"></a>常系数非齐次线性微分方程</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101330325.png" alt="image-20210707101330325"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101649488.png" alt="image-20210707101649488"></p>
+<p>Ps：</p>
+<p>特解中的λ和特征方程的解无关，而是与f(x)联系</p>
+<p>“k为特征方程含根λ的重复次数”解释：在f(x)中得到λ的值，再看特征方程的解中有几个和λ值相等的解</p>
+<p>“Q(x)与P(x)同次”解释：若P(x)中有x，则设Q(x)=b0x+b1</p>
+<p>具体看例题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707103234211.png" alt="image-20210707103234211"></p>
+<p>还有一种更简单的，不含ex（即λ=0）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707103328214.png" alt="image-20210707103328214"></p>
+<p>真题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101901899.png" alt="image-20210707101901899"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101850780.png" alt="image-20210707101850780"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>成都信息工程大学</title>
+    <url>/2021/05/30/%E6%88%90%E9%83%BD%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092023694.png" alt="image-20210530092023694"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092044306.png" alt="image-20210530092044306"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092106506.png" alt="image-20210530092106506"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092202161.png" alt="image-20210530092202161"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091910920.png" alt="image-20210530091910920"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091926951.png" alt="image-20210530091926951"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>导数和微分</title>
     <url>/2021/07/04/%E5%AF%BC%E6%95%B0%E5%92%8C%E5%BE%AE%E5%88%86/</url>
     <content><![CDATA[<h4 id="常用导数公式"><a href="#常用导数公式" class="headerlink" title="常用导数公式"></a>常用导数公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706175938655.png" alt="image-20210706175938655"></p>
@@ -3715,17 +3746,15 @@
 <p>易错题</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706181858166.png" alt="image-20210706181858166"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706181850242.png" alt="image-20210706181850242"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>成都信息工程大学</title>
-    <url>/2021/05/30/%E6%88%90%E9%83%BD%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092023694.png" alt="image-20210530092023694"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092044306.png" alt="image-20210530092044306"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092106506.png" alt="image-20210530092106506"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092202161.png" alt="image-20210530092202161"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091910920.png" alt="image-20210530091910920"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091926951.png" alt="image-20210530091926951"></p>
+<h4 id="导数定义式易错点"><a href="#导数定义式易错点" class="headerlink" title="导数定义式易错点"></a>导数定义式易错点</h4><h5 id="导数定义式配凑"><a href="#导数定义式配凑" class="headerlink" title="导数定义式配凑"></a>导数定义式配凑</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707174505197.png" alt="image-20210707174505197"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707175835450.png" alt="image-20210707175835450"></p>
+<p>还是老老实实用定义式的配凑（我那套求f‘’(a)的方法不管用，解释看红字）</p>
+<p>Ps：</p>
+<p>上式中的分母(x-a)^2不可以直接当作(x-a)来带进定义式</p>
+<p>因为这是x逼近与a，(x-a)的值不能直接当0处理</p>
+<p>正确打开上式的方式的是洛必达</p>
+<p>很容易忽略的一点，已知条件为相切，除了告知导数值相等外，该点的函数值也是相等的</p>
+<p>但是等值代换确是可以</p>
 ]]></content>
   </entry>
   <entry>
@@ -3745,6 +3774,20 @@
     <content><![CDATA[<p>d暴力构造法</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704133409946.png" alt="image-20210704133409946"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704133856494.png" alt="image-20210704133856494"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>多元函数极值</title>
+    <url>/2021/07/05/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E6%9E%81%E5%80%BC/</url>
+    <content><![CDATA[<h4 id="无约束"><a href="#无约束" class="headerlink" title="无约束"></a>无约束</h4><p>直接法</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705162324894.png" alt="image-20210705162324894"></p>
+<p>例题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163856913.png" alt="image-20210705163856913"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163830043.png" alt="image-20210705163830043"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163841762.png" alt="image-20210705163841762"></p>
+<h4 id="存在约束条件"><a href="#存在约束条件" class="headerlink" title="存在约束条件"></a>存在约束条件</h4><h5 id="拉格朗日乘数法"><a href="#拉格朗日乘数法" class="headerlink" title="拉格朗日乘数法"></a>拉格朗日乘数法</h5><p>例题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164056311.png" alt="image-20210705164056311"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164107005.png" alt="image-20210705164107005"></p>
+<p>这种五元方程一定要验算！！！！</p>
+<p>尤其时算出莫名其妙的分数</p>
 ]]></content>
   </entry>
   <entry>
@@ -3793,6 +3836,13 @@
 ]]></content>
   </entry>
   <entry>
+    <title>曲率</title>
+    <url>/2021/07/07/%E6%9B%B2%E7%8E%87/</url>
+    <content><![CDATA[<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707173612864.png" alt="image-20210707173612864"></p>
+<p>两函数再x0处的一阶二阶导相等则在x0处它们曲率相等</p>
+]]></content>
+  </entry>
+  <entry>
     <title>极限</title>
     <url>/2021/06/30/%E6%9E%81%E9%99%90/</url>
     <content><![CDATA[<h3 id="求极限的方法总结"><a href="#求极限的方法总结" class="headerlink" title="求极限的方法总结"></a>求极限的方法总结</h3><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094814469.png" alt="image-20210630094814469"></p>
@@ -3838,15 +3888,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>泰勒公式</title>
-    <url>/2021/07/04/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[<h4 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704093245996.png" alt="image-20210704093245996"></p>
-<p>x0取0时即麦克劳林公式</p>
-<p>而对sin来说</p>
-<p>sin0=0故跳着取奇数项</p>
-]]></content>
-  </entry>
-  <entry>
     <title>渐近线</title>
     <url>/2021/07/05/%E6%B8%90%E8%BF%91%E7%BA%BF/</url>
     <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105324896.png" alt="image-20210705105324896"></p>
@@ -3856,13 +3897,6 @@
 <p>Ps</p>
 <p>这类极限一般都是极限的易错类型，即“等价无穷小是乘除时代换”</p>
 <p>遇到x趋于∞，一般是化出1/x得到趋于0然后求解</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>物理层</title>
-    <url>/2021/06/23/%E7%89%A9%E7%90%86%E5%B1%82/</url>
-    <content><![CDATA[<p>x香农公式：</p>
-<p>奈氏准则</p>
 ]]></content>
   </entry>
   <entry>
@@ -3928,9 +3962,20 @@
 ]]></content>
   </entry>
   <entry>
-    <title>腾讯防水墙</title>
-    <url>/2021/06/19/%E8%85%BE%E8%AE%AF%E9%98%B2%E6%B0%B4%E5%A2%99/</url>
-    <content><![CDATA[]]></content>
+    <title>泰勒公式</title>
+    <url>/2021/07/04/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/</url>
+    <content><![CDATA[<h4 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704093245996.png" alt="image-20210704093245996"></p>
+<p>x0取0时即麦克劳林公式</p>
+<p>而对sin来说</p>
+<p>sin0=0故跳着取奇数项</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>物理层</title>
+    <url>/2021/06/23/%E7%89%A9%E7%90%86%E5%B1%82/</url>
+    <content><![CDATA[<p>x香农公式：</p>
+<p>奈氏准则</p>
+]]></content>
   </entry>
   <entry>
     <title>西南科技大学</title>
@@ -3944,6 +3989,11 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530195405472.png" alt="image-20210530195405472"></p>
 <p><img src="/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/Users\Jimmy\AppData\Roaming\Typora\typora-user-images\image-20210530195428120.png" alt="image-20210530195422207"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>腾讯防水墙</title>
+    <url>/2021/06/19/%E8%85%BE%E8%AE%AF%E9%98%B2%E6%B0%B4%E5%A2%99/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>计算机网络期末复习</title>
