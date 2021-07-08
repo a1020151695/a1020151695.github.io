@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="什么是微分方程表示未知函数的导数和自变量关系的方程 微分方程的阶最高阶导数的阶数  通解和特解 #####　通解的例子  (1-3)是(1-1)的通解 特解和通解之间的关系 例子   齐次方程能用y&#x2F;x表示导数  常系数非齐次线性微分方程  Ps： 特解中的λ和特征方程的解无关，而是与f(x)联系 “k为特征方程含根λ的重复次数”解释：在f(x)中得到λ的值，再看特征方程的解中有几个和λ值相等的解">
+  <meta name="description" content="什么是微分方程表示未知函数的导数和自变量关系的方程 微分方程的阶最高阶导数的阶数  通解和特解 通解的例子 (1-3)是(1-1)的通解 特解和通解之间的关系 例子   齐次方程能用y&#x2F;x表示导数  常系数齐次线性微分方程 常系数非齐次线性微分方程 Ps： 特解中的λ和特征方程的解无关，而是与f(x)联系 “k为特征方程含根λ的重复次数”解释：在f(x)中得到λ的值，再看特征方程的解中有几个和λ值">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微分方程">
 <meta property="og:url" content="http://example.com/2021/07/07/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/index.html">
 <meta property="og:site_name" content="藏经阁">
-<meta property="og:description" content="什么是微分方程表示未知函数的导数和自变量关系的方程 微分方程的阶最高阶导数的阶数  通解和特解 #####　通解的例子  (1-3)是(1-1)的通解 特解和通解之间的关系 例子   齐次方程能用y&#x2F;x表示导数  常系数非齐次线性微分方程  Ps： 特解中的λ和特征方程的解无关，而是与f(x)联系 “k为特征方程含根λ的重复次数”解释：在f(x)中得到λ的值，再看特征方程的解中有几个和λ值相等的解">
+<meta property="og:description" content="什么是微分方程表示未知函数的导数和自变量关系的方程 微分方程的阶最高阶导数的阶数  通解和特解 通解的例子 (1-3)是(1-1)的通解 特解和通解之间的关系 例子   齐次方程能用y&#x2F;x表示导数  常系数齐次线性微分方程 常系数非齐次线性微分方程 Ps： 特解中的λ和特征方程的解无关，而是与f(x)联系 “k为特征方程含根λ的重复次数”解释：在f(x)中得到λ的值，再看特征方程的解中有几个和λ值">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210707094811726.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210707094325973.png">
@@ -36,11 +36,12 @@
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210707101330325.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210707101649488.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210707103234211.png">
+<meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210708101658924.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210707103328214.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210707101901899.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210707101850780.png">
 <meta property="article:published_time" content="2021-07-07T01:42:28.000Z">
-<meta property="article:modified_time" content="2021-07-07T02:33:47.037Z">
+<meta property="article:modified_time" content="2021-07-08T02:49:49.992Z">
 <meta property="article:author" content="FreeJim">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -215,10 +216,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-07-07 09:42:28 / Modified: 10:33:47" itemprop="dateCreated datePublished" datetime="2021-07-07T09:42:28+08:00">2021-07-07</time>
+              <time title="Created: 2021-07-07 09:42:28" itemprop="dateCreated datePublished" datetime="2021-07-07T09:42:28+08:00">2021-07-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-07-08 10:49:49" itemprop="dateModified" datetime="2021-07-08T10:49:49+08:00">2021-07-08</time>
+              </span>
 
           
 
@@ -235,8 +242,7 @@
 <h4 id="微分方程的阶"><a href="#微分方程的阶" class="headerlink" title="微分方程的阶"></a>微分方程的阶</h4><p>最高阶导数的阶数</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094811726.png" alt="image-20210707094811726"></p>
 <h4 id="通解和特解"><a href="#通解和特解" class="headerlink" title="通解和特解"></a>通解和特解</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094325973.png" alt="image-20210707094325973"></p>
-<p>#####　通解的例子</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094952450.png" alt="image-20210707094952450"></p>
+<h5 id="通解的例子"><a href="#通解的例子" class="headerlink" title="通解的例子"></a>通解的例子</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094952450.png" alt="image-20210707094952450"></p>
 <p>(1-3)是(1-1)的通解</p>
 <h5 id="特解和通解之间的关系"><a href="#特解和通解之间的关系" class="headerlink" title="特解和通解之间的关系"></a>特解和通解之间的关系</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095141686.png" alt="image-20210707095141686"></p>
 <p>例子</p>
@@ -244,19 +250,25 @@
 <hr>
 <h4 id="齐次方程"><a href="#齐次方程" class="headerlink" title="齐次方程"></a>齐次方程</h4><p>能用y/x表示导数</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095617452.png" alt="image-20210707095617452"></p>
-<h4 id="常系数非齐次线性微分方程"><a href="#常系数非齐次线性微分方程" class="headerlink" title="常系数非齐次线性微分方程"></a>常系数非齐次线性微分方程</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101330325.png" alt="image-20210707101330325"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101649488.png" alt="image-20210707101649488"></p>
+<h4 id="常系数齐次线性微分方程"><a href="#常系数齐次线性微分方程" class="headerlink" title="常系数齐次线性微分方程"></a>常系数齐次线性微分方程</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101330325.png" alt="image-20210707101330325"></p>
+<h4 id="常系数非齐次线性微分方程"><a href="#常系数非齐次线性微分方程" class="headerlink" title="常系数非齐次线性微分方程"></a>常系数非齐次线性微分方程</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101649488.png" alt="image-20210707101649488"></p>
 <p>Ps：</p>
 <p>特解中的λ和特征方程的解无关，而是与f(x)联系</p>
 <p>“k为特征方程含根λ的重复次数”解释：在f(x)中得到λ的值，再看特征方程的解中有几个和λ值相等的解</p>
 <p>“Q(x)与P(x)同次”解释：若P(x)中有x，则设Q(x)=b0x+b1</p>
 <p>具体看例题</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707103234211.png" alt="image-20210707103234211"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707103234211.png" alt="image-20210707103234211"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708101658924.png" alt="image-20210708101658924"></p>
+<p>Ps：</p>
+<p>NM，这特解代入走一遍我人没了</p>
+<hr>
 <p>还有一种更简单的，不含ex（即λ=0）</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707103328214.png" alt="image-20210707103328214"></p>
 <p>真题</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101901899.png" alt="image-20210707101901899"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101850780.png" alt="image-20210707101850780"></p>
+<p>Ps：</p>
+<p>给出的通解其实告知了我们特解为ex</p>
+<p>则把特解代入原式即可求解c的值</p>
 
     </div>
 
@@ -337,7 +349,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">什么是微分方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E9%98%B6"><span class="nav-number">2.</span> <span class="nav-text">微分方程的阶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%A7%A3%E5%92%8C%E7%89%B9%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">通解和特解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%89%B9%E8%A7%A3%E5%92%8C%E9%80%9A%E8%A7%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">3.1.</span> <span class="nav-text">特解和通解之间的关系</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BD%90%E6%AC%A1%E6%96%B9%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">齐次方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E7%B3%BB%E6%95%B0%E9%9D%9E%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">常系数非齐次线性微分方程</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">什么是微分方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E9%98%B6"><span class="nav-number">2.</span> <span class="nav-text">微分方程的阶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%A7%A3%E5%92%8C%E7%89%B9%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">通解和特解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%A7%A3%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="nav-number">3.1.</span> <span class="nav-text">通解的例子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%89%B9%E8%A7%A3%E5%92%8C%E9%80%9A%E8%A7%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">3.2.</span> <span class="nav-text">特解和通解之间的关系</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BD%90%E6%AC%A1%E6%96%B9%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">齐次方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E7%B3%BB%E6%95%B0%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">常系数齐次线性微分方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E7%B3%BB%E6%95%B0%E9%9D%9E%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-number">6.</span> <span class="nav-text">常系数非齐次线性微分方程</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

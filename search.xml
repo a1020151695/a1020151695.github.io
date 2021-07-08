@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Ajax Tutorial</title>
-    <url>/2021/05/11/Ajax-Tutorial/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">            type: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line">            url: <span class="string">&quot;http://localhost:8080/getRecord?area=&quot;</span>+area,</span><br><span class="line">            dataType: <span class="string">&quot;json&quot;</span>,</span><br><span class="line">            jsonp: <span class="string">&quot;callback&quot;</span>,</span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">json</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(json);</span><br><span class="line">                <span class="keyword">let</span> mainBody = <span class="built_in">document</span>.getElementById(<span class="string">&quot;main-body&quot;</span>);</span><br><span class="line">                <span class="keyword">let</span> table = <span class="string">&quot;&lt;table class=&#x27;table&#x27;&gt;&quot;</span>;</span><br><span class="line">                <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> key <span class="keyword">in</span> json</span>)</span>&#123;</span><br><span class="line">                    table += <span class="string">&quot;&lt;tr&gt;&lt;td&gt;&quot;</span>+key+<span class="string">&quot;&lt;/td&gt;&lt;td&gt;&quot;</span>+json[key]+<span class="string">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">                table+=<span class="string">&quot;&lt;/table&gt;&quot;</span></span><br><span class="line">                mainBody.innerHTML=table;</span><br><span class="line">            &#125;,</span><br><span class="line">            error: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                alert(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h4 id="ajax不发送请求"><a href="#ajax不发送请求" class="headerlink" title="ajax不发送请求"></a>ajax不发送请求</h4><p>原因：没有正确引入jquery</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>虽然某些别的js脚本也有引入jquery</p>
-<p>但是那个版本可能不支持ajax</p>
-<p>以导致ajax失效</p>
-]]></content>
-  </entry>
-  <entry>
     <title>802.11ax Wi-Fi</title>
     <url>/2021/03/13/802-11ax-Wi-Fi/</url>
     <content><![CDATA[<p><a href="https://en.wikipedia.org/wiki/IEEE_802.11ax">Wikipedia</a></p>
@@ -98,6 +80,50 @@
       </tags>
   </entry>
   <entry>
+    <title>Ajax Tutorial</title>
+    <url>/2021/05/11/Ajax-Tutorial/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">            type: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line">            url: <span class="string">&quot;http://localhost:8080/getRecord?area=&quot;</span>+area,</span><br><span class="line">            dataType: <span class="string">&quot;json&quot;</span>,</span><br><span class="line">            jsonp: <span class="string">&quot;callback&quot;</span>,</span><br><span class="line">            success: <span class="function"><span class="keyword">function</span> (<span class="params">json</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(json);</span><br><span class="line">                <span class="keyword">let</span> mainBody = <span class="built_in">document</span>.getElementById(<span class="string">&quot;main-body&quot;</span>);</span><br><span class="line">                <span class="keyword">let</span> table = <span class="string">&quot;&lt;table class=&#x27;table&#x27;&gt;&quot;</span>;</span><br><span class="line">                <span class="function"><span class="title">for</span>(<span class="params"><span class="keyword">const</span> key <span class="keyword">in</span> json</span>)</span>&#123;</span><br><span class="line">                    table += <span class="string">&quot;&lt;tr&gt;&lt;td&gt;&quot;</span>+key+<span class="string">&quot;&lt;/td&gt;&lt;td&gt;&quot;</span>+json[key]+<span class="string">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">                table+=<span class="string">&quot;&lt;/table&gt;&quot;</span></span><br><span class="line">                mainBody.innerHTML=table;</span><br><span class="line">            &#125;,</span><br><span class="line">            error: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                alert(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h4 id="ajax不发送请求"><a href="#ajax不发送请求" class="headerlink" title="ajax不发送请求"></a>ajax不发送请求</h4><p>原因：没有正确引入jquery</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>虽然某些别的js脚本也有引入jquery</p>
+<p>但是那个版本可能不支持ajax</p>
+<p>以导致ajax失效</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Android Bundle</title>
+    <url>/2021/01/04/Android-Bundle/</url>
+    <content><![CDATA[<p>Bundle can be  use for transport data between Fragment</p>
+<p>Send</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Bundle()</span><br><span class="line">bundle.putString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;GFG :- Main Activity&quot;</span>)</span><br><span class="line">NavUtil.navController?.navigate(R.id.signStateForStudent,bundle)</span><br><span class="line"><span class="comment">// When you use navigation</span></span><br></pre></td></tr></table></figure>
+
+<p>Get</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Intent.getExtras()</span><br><span class="line">bundle.getString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;Default&quot;</span>) </span><br><span class="line"><span class="comment">// arg2 will be return when &quot;key1&quot; can&#x27;t be foud in bundle</span></span><br></pre></td></tr></table></figure>
+
+<p>But it can just be transported one time ! !</p>
+<p>When you back to the fragment, the bundle will gone </p>
+<p>Bundle just can be use for the “one-time” issue</p>
+<hr>
+<p>For the data you need to use many time </p>
+<p>You can use companion object {} to solve that problem</p>
+<p>All fragments can get the data directly from the companion object {} within an activity</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Transport Data</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Add Views</title>
     <url>/2021/01/06/Android-Add-Views/</url>
     <content><![CDATA[<p>Example</p>
@@ -137,32 +163,6 @@
       <tags>
         <tag>Android</tag>
         <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Bundle</title>
-    <url>/2021/01/04/Android-Bundle/</url>
-    <content><![CDATA[<p>Bundle can be  use for transport data between Fragment</p>
-<p>Send</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Bundle()</span><br><span class="line">bundle.putString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;GFG :- Main Activity&quot;</span>)</span><br><span class="line">NavUtil.navController?.navigate(R.id.signStateForStudent,bundle)</span><br><span class="line"><span class="comment">// When you use navigation</span></span><br></pre></td></tr></table></figure>
-
-<p>Get</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> bundle = Intent.getExtras()</span><br><span class="line">bundle.getString(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;Default&quot;</span>) </span><br><span class="line"><span class="comment">// arg2 will be return when &quot;key1&quot; can&#x27;t be foud in bundle</span></span><br></pre></td></tr></table></figure>
-
-<p>But it can just be transported one time ! !</p>
-<p>When you back to the fragment, the bundle will gone </p>
-<p>Bundle just can be use for the “one-time” issue</p>
-<hr>
-<p>For the data you need to use many time </p>
-<p>You can use companion object {} to solve that problem</p>
-<p>All fragments can get the data directly from the companion object {} within an activity</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Transport Data</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -468,6 +468,25 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Android Swip Refresh</title>
+    <url>/2021/01/06/Android-Swip-Refresh/</url>
+    <content><![CDATA[<p>XML</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">&quot;@+id/location_swipe_for_student&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">&quot;100dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Config</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configSwipeRefresh</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> swipe =</span><br><span class="line">        view?.findViewById&lt;SwipeRefreshLayout&gt;(R.id.location_swipe_for_student)</span><br><span class="line">    swipe?.setOnRefreshListener &#123;</span><br><span class="line">        MapUtil.mLocationClient?.startLocation()</span><br><span class="line">        refreshActivity()</span><br><span class="line">        swipe.isRefreshing = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Thread</title>
     <url>/2021/01/04/Android-Thread/</url>
     <content><![CDATA[]]></content>
@@ -482,25 +501,6 @@
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configBackButton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">val</span> backBtn = view?.findViewById&lt;Toolbar&gt;(R.id.tool_bar_for_student_signState)</span><br><span class="line">    backBtn?.setNavigationOnClickListener &#123;</span><br><span class="line">        SignDataForStudent.DISPLAY_TYPE = SignDataForStudent.DISPLAY_SIGN_FIRST</span><br><span class="line">        StudentActivity.tabSegment?.selectTab(<span class="number">1</span>)</span><br><span class="line">        NavUtil.navController?.popBackStack()</span><br><span class="line">        NavUtil.navController?.navigate(R.id.signDataForStudent)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Swip Refresh</title>
-    <url>/2021/01/06/Android-Swip-Refresh/</url>
-    <content><![CDATA[<p>XML</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:id</span>=<span class="string">&quot;@+id/location_swipe_for_student&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">	<span class="attr">android:layout_height</span>=<span class="string">&quot;100dp&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.swiperefreshlayout.widget.SwipeRefreshLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Config</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">configSwipeRefresh</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> swipe =</span><br><span class="line">        view?.findViewById&lt;SwipeRefreshLayout&gt;(R.id.location_swipe_for_student)</span><br><span class="line">    swipe?.setOnRefreshListener &#123;</span><br><span class="line">        MapUtil.mLocationClient?.startLocation()</span><br><span class="line">        refreshActivity()</span><br><span class="line">        swipe.isRefreshing = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -854,31 +854,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Blockchain In Python</title>
-    <url>/2021/03/20/Blockchain-In-Python/</url>
-    <content><![CDATA[<p>Hash a object</p>
-<p>Wrong example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(<span class="built_in">len</span>(sha256(<span class="built_in">str</span>(t()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()))  <span class="comment"># wrong!</span></span><br><span class="line">													 <span class="comment"># str(t()) is just a address</span></span><br></pre></td></tr></table></figure>
-
-<p>Correct example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256  <span class="comment"># need string</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>  </span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">print(sha256(<span class="built_in">str</span>(t().__hash__()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()) <span class="comment"># display in hex</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">output:   &#x2F;&#x2F; string length &#x3D; 64</span><br><span class="line">58c32e31cc29e9164710dc7571d83200d5f6ff044170e4b299ed8096b4de529e  </span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Bootstrap Tutorial</title>
-    <url>/2021/05/11/Bootstrap-Tutorial/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Blockchain Transaction</title>
     <url>/2021/03/22/Blockchain-Transaction/</url>
     <content><![CDATA[<p>UTXO(unspend transaction output)</p>
@@ -909,6 +884,31 @@
 
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Transaction outputs consist of two parts:</span><br><span class="line"></span><br><span class="line">An amount of bitcoin, denominated in satoshis, the smallest bitcoin unit</span><br><span class="line">A cryptographic puzzle that determines the conditions required to spend the output</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Blockchain In Python</title>
+    <url>/2021/03/20/Blockchain-In-Python/</url>
+    <content><![CDATA[<p>Hash a object</p>
+<p>Wrong example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(<span class="built_in">len</span>(sha256(<span class="built_in">str</span>(t()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()))  <span class="comment"># wrong!</span></span><br><span class="line">													 <span class="comment"># str(t()) is just a address</span></span><br></pre></td></tr></table></figure>
+
+<p>Correct example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256  <span class="comment"># need string</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>  </span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">print(sha256(<span class="built_in">str</span>(t().__hash__()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()) <span class="comment"># display in hex</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">output:   &#x2F;&#x2F; string length &#x3D; 64</span><br><span class="line">58c32e31cc29e9164710dc7571d83200d5f6ff044170e4b299ed8096b4de529e  </span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Bootstrap Tutorial</title>
+    <url>/2021/05/11/Bootstrap-Tutorial/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js&quot;</span> <span class="attr">integrity</span>=<span class="string">&quot;sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8&quot;</span> <span class="attr">crossorigin</span>=<span class="string">&quot;anonymous&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
   </entry>
@@ -1011,6 +1011,29 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Dockerfile Error</title>
+    <url>/2021/03/28/Dockerfile-Error/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Temporary failure resolving ‘archive.ubuntu.com’</span><br></pre></td></tr></table></figure>
+
+<p><strong>快速解决方法：</strong></p>
+<p>修改/etc/default/docker文件，取消如下行前边的注释：</p>
+<blockquote>
+<p>DOCKER_OPTS=”–dns 8.8.8.8 –dns 8.8.4.4”</p>
+</blockquote>
+<p>结果：</p>
+<p>修改配置并重新启动docker服务后，docker build命令正常。</p>
+<blockquote>
+<p>service docker restart</p>
+</blockquote>
+<hr>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">when docker build error</span><br><span class="line">when you fix it</span><br><span class="line">it will continue, not from begining</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker Basic</title>
     <url>/2021/03/28/Docker-Basic/</url>
     <content><![CDATA[<p>start docker daemon</p>
@@ -1063,51 +1086,6 @@
 
 <hr>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Dockerfile Error</title>
-    <url>/2021/03/28/Dockerfile-Error/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Temporary failure resolving ‘archive.ubuntu.com’</span><br></pre></td></tr></table></figure>
-
-<p><strong>快速解决方法：</strong></p>
-<p>修改/etc/default/docker文件，取消如下行前边的注释：</p>
-<blockquote>
-<p>DOCKER_OPTS=”–dns 8.8.8.8 –dns 8.8.4.4”</p>
-</blockquote>
-<p>结果：</p>
-<p>修改配置并重新启动docker服务后，docker build命令正常。</p>
-<blockquote>
-<p>service docker restart</p>
-</blockquote>
-<hr>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">when docker build error</span><br><span class="line">when you fix it</span><br><span class="line">it will continue, not from begining</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flask Cors</title>
-    <url>/2021/01/02/Flask-Cors/</url>
-    <content><![CDATA[<p>Cors solution</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask_cors import *</span><br><span class="line">CORS(app, supports_credentials&#x3D;True)</span><br></pre></td></tr></table></figure>
-
-<p>Then Note ! ! !</p>
-<p>Flask default listen on localhost</p>
-<p>if you want to use Flask to deploy an application</p>
-<p>do the thing below :</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">5000</span>, debug=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Config</category>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Config</tag>
-        <tag>Python</tag>
-      </tags>
   </entry>
   <entry>
     <title>ECC</title>
@@ -1216,6 +1194,28 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Flask Cors</title>
+    <url>/2021/01/02/Flask-Cors/</url>
+    <content><![CDATA[<p>Cors solution</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask_cors import *</span><br><span class="line">CORS(app, supports_credentials&#x3D;True)</span><br></pre></td></tr></table></figure>
+
+<p>Then Note ! ! !</p>
+<p>Flask default listen on localhost</p>
+<p>if you want to use Flask to deploy an application</p>
+<p>do the thing below :</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">5000</span>, debug=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Config</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Config</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Funny code</title>
     <url>/2021/03/20/Funny-code/</url>
     <content><![CDATA[<p>Python</p>
@@ -1226,25 +1226,6 @@
 
 
 ]]></content>
-  </entry>
-  <entry>
-    <title>Git Fix Conflict</title>
-    <url>/2021/01/04/Git-Fix-Conflict/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
-
-<p>Generally, you just need to delete the origin content , and use the new content</p>
-<p>Strongly recommend you to use “Github Desktop”</p>
-<p>It will clearly display all conflicts and you can fix them directly</p>
-]]></content>
-      <categories>
-        <category>Git</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-        <tag>Git</tag>
-        <tag>Github</tag>
-      </tags>
   </entry>
   <entry>
     <title>Git Basic Commands</title>
@@ -1291,6 +1272,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Git Fix Conflict</title>
+    <url>/2021/01/04/Git-Fix-Conflict/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the origin content</span><br><span class="line"></span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line"></span><br><span class="line">xxxxxx &#x2F;&#x2F; here is the content you pull</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;j43jk2293i23jk2n3</span><br></pre></td></tr></table></figure>
+
+<p>Generally, you just need to delete the origin content , and use the new content</p>
+<p>Strongly recommend you to use “Github Desktop”</p>
+<p>It will clearly display all conflicts and you can fix them directly</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github Basic Config</title>
     <url>/2021/01/04/Github-Basic-Config/</url>
     <content><![CDATA[<p>1.Usage of “.gitignore “ file</p>
@@ -1323,17 +1323,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Google E-mail Gmail</title>
-    <url>/2021/03/08/Google-E-mail-Gmail/</url>
-    <content><![CDATA[<p>QQ邮箱中选择gmail注册</p>
-<p>中国的电话号码前加+86</p>
+    <title>HTML Input</title>
+    <url>/2021/05/11/HTML-Input/</url>
+    <content><![CDATA[<p>get content</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> area = <span class="built_in">document</span>.getElementById(<span class="string">&quot;area&quot;</span>).value;</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
-      <categories>
-        <category>Google</category>
-      </categories>
-      <tags>
-        <tag>Tutorial</tag>
-      </tags>
   </entry>
   <entry>
     <title>Github SSH Deploy Key</title>
@@ -1370,14 +1367,17 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML Input</title>
-    <url>/2021/05/11/HTML-Input/</url>
-    <content><![CDATA[<p>get content</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> area = <span class="built_in">document</span>.getElementById(<span class="string">&quot;area&quot;</span>).value;</span><br></pre></td></tr></table></figure>
-
-
-
+    <title>Google E-mail Gmail</title>
+    <url>/2021/03/08/Google-E-mail-Gmail/</url>
+    <content><![CDATA[<p>QQ邮箱中选择gmail注册</p>
+<p>中国的电话号码前加+86</p>
 ]]></content>
+      <categories>
+        <category>Google</category>
+      </categories>
+      <tags>
+        <tag>Tutorial</tag>
+      </tags>
   </entry>
   <entry>
     <title>HTTP</title>
@@ -1580,6 +1580,11 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Java 重定向</title>
+    <url>/2021/05/25/Java-%E9%87%8D%E5%AE%9A%E5%90%91/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>JPA tutorial</title>
     <url>/2021/06/17/JPA-tutorial/</url>
     <content><![CDATA[<h4 id="Query"><a href="#Query" class="headerlink" title="@Query"></a>@Query</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatus</span><span class="params">(Integer status)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1 and u.name = ?2&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatusAndName</span><span class="params">(Integer status, String name)</span></span>;</span><br></pre></td></tr></table></figure>
@@ -1589,11 +1594,6 @@
 <h4 id="JPA-批量查询id"><a href="#JPA-批量查询id" class="headerlink" title="JPA 批量查询id"></a>JPA 批量查询id</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(value = &quot;select * from info where userid in ?1&quot;,nativeQuery = true)</span></span><br><span class="line"><span class="function">List&lt;Info&gt; <span class="title">getInfoByIds</span><span class="params">(List&lt;Integer&gt; userids)</span></span>;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
-  </entry>
-  <entry>
-    <title>Java 重定向</title>
-    <url>/2021/05/25/Java-%E9%87%8D%E5%AE%9A%E5%90%91/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Leetcode Rule</title>
@@ -1737,6 +1737,14 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Mysql bench tutorial</title>
+    <url>/2021/06/16/Mysql-bench-tutorial/</url>
+    <content><![CDATA[<h4 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h4><p>Alert好用</p>
+<hr>
+<h4 id="添加外键"><a href="#添加外键" class="headerlink" title="添加外键"></a>添加外键</h4><p>字段类型对不上是会报错的</p>
+]]></content>
+  </entry>
+  <entry>
     <title>N-TCP</title>
     <url>/2021/05/24/N-TCP/</url>
     <content><![CDATA[<p>Transmission Control Protocol</p>
@@ -1819,14 +1827,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Mysql bench tutorial</title>
-    <url>/2021/06/16/Mysql-bench-tutorial/</url>
-    <content><![CDATA[<h4 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h4><p>Alert好用</p>
-<hr>
-<h4 id="添加外键"><a href="#添加外键" class="headerlink" title="添加外键"></a>添加外键</h4><p>字段类型对不上是会报错的</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Network Layer</title>
     <url>/2021/03/14/Network-Layer/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">应用层（Application Layer），主要负责应用与网络之间的通信。</span><br><span class="line">运输层（Transport Layer），主要负责两台主机的进程间通信。</span><br><span class="line">网络层（Network Layer），主要负责网络中不同主机之间的通信。</span><br><span class="line">数据链路层（Data Link Layer），主要负责数据在链路中的传输。</span><br><span class="line">物理层（Physical Layer），主要负责数据与物理媒体之间转换。</span><br></pre></td></tr></table></figure>
@@ -1864,38 +1864,13 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Python Class</title>
-    <url>/2021/01/02/Python-Class/</url>
-    <content><![CDATA[<p>simple example: (within the same package)</p>
-<p>Speaker.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Speaker</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sayHello</span>():</span></span><br><span class="line">        print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+    <title>Python Dict</title>
+    <url>/2021/01/02/Python-Dict/</url>
+    <content><![CDATA[<p>Traverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
 
-<p>Test.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Speaker</span><br><span class="line">speaker = Speaker()</span><br><span class="line">speaker.sayHello()</span><br></pre></td></tr></table></figure>
-
-<p>If in different package:</p>
-<p>Test.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> packageName.Speaker <span class="keyword">import</span> Speaker</span><br><span class="line"></span><br><span class="line">speaker = Speaker()</span><br><span class="line">speaker.sayHello()</span><br></pre></td></tr></table></figure>
-
-
-
-<p>You can also build a Constructor to initialize the object</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Speaker</span>:</span></span><br><span class="line">	name = <span class="literal">None</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,name</span>):</span></span><br><span class="line">    	self.name = name</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sayHello</span>():</span></span><br><span class="line">        print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>Generally, we use import like this</p>
-<p>Lib.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span>():</span> <span class="comment"># this .py file do not have class, so do not need to instantiate</span></span><br><span class="line">    print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Test.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Lib</span><br><span class="line"></span><br><span class="line">Lib.hello() </span><br></pre></td></tr></table></figure>
-
-<p>How can we import a class</p>
-<p>A class Import other class and use that class’s function</p>
-<p>Test.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> packageName.Speaker <span class="keyword">import</span> Speaker</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>:</span></span><br><span class="line">	speaker = Speaker() <span class="comment"># you need to instantiate the object, so that you can use it</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">testSpeak</span>():</span></span><br><span class="line">        speaker.sayHello()</span><br></pre></td></tr></table></figure>
-
-
+<p>Reverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1956,13 +1931,38 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Dict</title>
-    <url>/2021/01/02/Python-Dict/</url>
-    <content><![CDATA[<p>Traverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+    <title>Python Class</title>
+    <url>/2021/01/02/Python-Class/</url>
+    <content><![CDATA[<p>simple example: (within the same package)</p>
+<p>Speaker.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Speaker</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sayHello</span>():</span></span><br><span class="line">        print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Reverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+<p>Test.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Speaker</span><br><span class="line">speaker = Speaker()</span><br><span class="line">speaker.sayHello()</span><br></pre></td></tr></table></figure>
+
+<p>If in different package:</p>
+<p>Test.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> packageName.Speaker <span class="keyword">import</span> Speaker</span><br><span class="line"></span><br><span class="line">speaker = Speaker()</span><br><span class="line">speaker.sayHello()</span><br></pre></td></tr></table></figure>
+
+
+
+<p>You can also build a Constructor to initialize the object</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Speaker</span>:</span></span><br><span class="line">	name = <span class="literal">None</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,name</span>):</span></span><br><span class="line">    	self.name = name</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sayHello</span>():</span></span><br><span class="line">        print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>Generally, we use import like this</p>
+<p>Lib.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span>():</span> <span class="comment"># this .py file do not have class, so do not need to instantiate</span></span><br><span class="line">    print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Test.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Lib</span><br><span class="line"></span><br><span class="line">Lib.hello() </span><br></pre></td></tr></table></figure>
+
+<p>How can we import a class</p>
+<p>A class Import other class and use that class’s function</p>
+<p>Test.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> packageName.Speaker <span class="keyword">import</span> Speaker</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>:</span></span><br><span class="line">	speaker = Speaker() <span class="comment"># you need to instantiate the object, so that you can use it</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">testSpeak</span>():</span></span><br><span class="line">        speaker.sayHello()</span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -2239,17 +2239,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RSA加密</title>
-    <url>/2021/06/08/RSA%E5%8A%A0%E5%AF%86/</url>
-    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/48249182">解释</a></p>
-<p><a href="https://blog.csdn.net/weixin_43461520/article/details/107941983">demo</a></p>
-<h4 id="生成RSA文件"><a href="#生成RSA文件" class="headerlink" title="生成RSA文件"></a>生成RSA文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Refactor Notes</title>
     <url>/2021/01/03/Refactor-Notes/</url>
     <content><![CDATA[<p>1.</p>
@@ -2268,9 +2257,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot Cofiguration</title>
-    <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
-    <content><![CDATA[]]></content>
+    <title>RSA加密</title>
+    <url>/2021/06/08/RSA%E5%8A%A0%E5%AF%86/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/48249182">解释</a></p>
+<p><a href="https://blog.csdn.net/weixin_43461520/article/details/107941983">demo</a></p>
+<h4 id="生成RSA文件"><a href="#生成RSA文件" class="headerlink" title="生成RSA文件"></a>生成RSA文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>Spring Boot Lib</title>
@@ -2284,6 +2279,11 @@
 
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210330112109868.png" alt="image-20210330112109868"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot Cofiguration</title>
+    <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Spring Boot Return</title>
@@ -2354,6 +2354,14 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Spring Boot fthl</title>
+    <url>/2021/06/01/Spring-Boot-fthl/</url>
+    <content><![CDATA[<p>数据传输</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">userIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ModelAndView mv = <span class="keyword">new</span> ModelAndView(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">    String info=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    mv.addObject(<span class="string">&quot;logInfo&quot;</span>, info);</span><br><span class="line">    <span class="keyword">return</span> mv;</span><br><span class="line">    <span class="comment">//return &quot;user&quot;;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Spring Boot with Docker</title>
     <url>/2021/04/26/Spring-Boot-with-Docker/</url>
     <content><![CDATA[<ol>
@@ -2381,14 +2389,6 @@
       <tags>
         <tag>Docker</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Spring Boot fthl</title>
-    <url>/2021/06/01/Spring-Boot-fthl/</url>
-    <content><![CDATA[<p>数据传输</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">userIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ModelAndView mv = <span class="keyword">new</span> ModelAndView(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">    String info=<span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    mv.addObject(<span class="string">&quot;logInfo&quot;</span>, info);</span><br><span class="line">    <span class="keyword">return</span> mv;</span><br><span class="line">    <span class="comment">//return &quot;user&quot;;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
   </entry>
   <entry>
     <title>Spring Boot 前端</title>
@@ -2595,64 +2595,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Spring注解是怎么工作的</title>
-    <url>/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/</url>
-    <content><![CDATA[<p>版本说明：Spring 5.2.9 </p>
-<p>本文侧重于源码的解读</p>
-<p>这里以@Autowired为例</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br><span class="line"><span class="class"><span class="keyword">implements</span> <span class="title">SmartInstantiationAwareBeanPostProcessor</span>, <span class="title">MergedBeanDefinitionPostProcessor</span>, <span class="title">PriorityOrdered</span>, <span class="title">BeanFactoryAware</span></span></span><br></pre></td></tr></table></figure>
-
-<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanPostProcessor.html"><code>BeanPostProcessor</code></a> implementation that autowires annotated fields, setter methods, and arbitrary config methods. Such members to be injected are detected through annotations: by default, Spring’s <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html"><code>@Autowired</code></a> and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html"><code>@Value</code></a> annotations.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processInjection</span><span class="params">(Object bean)</span> <span class="keyword">throws</span> BeanCreationException </span>&#123;</span><br><span class="line">		Class&lt;?&gt; clazz = bean.getClass();</span><br><span class="line">		InjectionMetadata metadata = findAutowiringMetadata(clazz.getName(), clazz, <span class="keyword">null</span>);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			metadata.inject(bean, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (BeanCreationException ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> ex;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (Throwable ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> BeanCreationException(</span><br><span class="line">					<span class="string">&quot;Injection of autowired dependencies failed for class [&quot;</span> + clazz + <span class="string">&quot;]&quot;</span>, ex);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>获取AutowiringMetadata后，做inject</p>
-<p>其中的AutowiringMetadata，简单的说就是@Autowired</p>
-<blockquote>
-<p>an <strong>annotation</strong> is a form of syntactic <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a> that can be added to Java <a href="https://en.wikipedia.org/wiki/Source_code">source code</a>.</p>
-</blockquote>
-<p>这是维基百科上的解释</p>
-<p>那Spring又是怎么确定是否存在@Autowired的呢</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> MergedAnnotation&lt;?&gt; findAutowiredAnnotation(AccessibleObject ao) &#123;</span><br><span class="line">	MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br><span class="line">	<span class="keyword">for</span> (Class&lt;? extends Annotation&gt; type : <span class="keyword">this</span>.autowiredAnnotationTypes) &#123;</span><br><span class="line">		MergedAnnotation&lt;?&gt; annotation = annotations.get(type);</span><br><span class="line">		<span class="keyword">if</span> (annotation.isPresent()) &#123;</span><br><span class="line">			<span class="keyword">return</span> annotation;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中的</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Set&lt;Class&lt;? extends Annotation&gt;&gt; autowiredAnnotationTypes = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.autowiredAnnotationTypes</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Autowired.class);</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Value.class);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">this</span>.autowiredAnnotationTypes.add((Class&lt;? extends Annotation&gt;)</span><br><span class="line">					ClassUtils.forName(<span class="string">&quot;javax.inject.Inject&quot;</span>, AutowiredAnnotationBeanPostProcessor.class.getClassLoader()));</span><br><span class="line">			logger.trace(<span class="string">&quot;JSR-330 &#x27;javax.inject.Inject&#x27; annotation found and supported for autowiring&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (ClassNotFoundException ex) &#123;</span><br><span class="line">			<span class="comment">// JSR-330 API not available - simply skip.</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>已经很清晰了，存放了Autowired.class</p>
-<p>则回到findAutowiredAnnotation()中，如果</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MergedAnnotations</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Iterable</span>&lt;<span class="title">MergedAnnotation</span>&lt;<span class="title">Annotation</span>&gt;&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Provides access to a collection of merged annotations, usually obtained from a source such as a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true"><code>Class</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true"><code>Method</code></a>.</p>
-<p>获取这个Bean 的Annotations</p>
-<p>然后看其中是否存在Autowired</p>
-<p>那么确定是否有Autowired的问题解决了，之后就是inject了</p>
-<hr>
-<p>首先来看看调用inject()的InjectionMetadata</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InjectionMetadata</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br></pre></td></tr></table></figure>
-
-<p>Internal class for managing injection metadata. Not intended for direct use in applications.</p>
-<p>对的，这个就是依赖注入里的inject</p>
-<p>不过，我暂时没有想法去了解，有兴趣的同学可以继续往下了解</p>
-<hr>
-<p><a href="http://www.avajava.com/tutorials/lessons/how-do-i-list-the-declared-fields-of-a-class.html">Field</a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring1重构</title>
     <url>/2020/11/05/Spring1%E9%87%8D%E6%9E%84/</url>
     <content><![CDATA[<p>​    1.javax 是由Tomcat提供的</p>
@@ -2711,6 +2653,64 @@
       </categories>
       <tags>
         <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring注解是怎么工作的</title>
+    <url>/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/</url>
+    <content><![CDATA[<p>版本说明：Spring 5.2.9 </p>
+<p>本文侧重于源码的解读</p>
+<p>这里以@Autowired为例</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br><span class="line"><span class="class"><span class="keyword">implements</span> <span class="title">SmartInstantiationAwareBeanPostProcessor</span>, <span class="title">MergedBeanDefinitionPostProcessor</span>, <span class="title">PriorityOrdered</span>, <span class="title">BeanFactoryAware</span></span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanPostProcessor.html"><code>BeanPostProcessor</code></a> implementation that autowires annotated fields, setter methods, and arbitrary config methods. Such members to be injected are detected through annotations: by default, Spring’s <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html"><code>@Autowired</code></a> and <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Value.html"><code>@Value</code></a> annotations.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">processInjection</span><span class="params">(Object bean)</span> <span class="keyword">throws</span> BeanCreationException </span>&#123;</span><br><span class="line">		Class&lt;?&gt; clazz = bean.getClass();</span><br><span class="line">		InjectionMetadata metadata = findAutowiringMetadata(clazz.getName(), clazz, <span class="keyword">null</span>);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			metadata.inject(bean, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (BeanCreationException ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> ex;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (Throwable ex) &#123;</span><br><span class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> BeanCreationException(</span><br><span class="line">					<span class="string">&quot;Injection of autowired dependencies failed for class [&quot;</span> + clazz + <span class="string">&quot;]&quot;</span>, ex);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>获取AutowiringMetadata后，做inject</p>
+<p>其中的AutowiringMetadata，简单的说就是@Autowired</p>
+<blockquote>
+<p>an <strong>annotation</strong> is a form of syntactic <a href="https://en.wikipedia.org/wiki/Metadata">metadata</a> that can be added to Java <a href="https://en.wikipedia.org/wiki/Source_code">source code</a>.</p>
+</blockquote>
+<p>这是维基百科上的解释</p>
+<p>那Spring又是怎么确定是否存在@Autowired的呢</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> MergedAnnotation&lt;?&gt; findAutowiredAnnotation(AccessibleObject ao) &#123;</span><br><span class="line">	MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br><span class="line">	<span class="keyword">for</span> (Class&lt;? extends Annotation&gt; type : <span class="keyword">this</span>.autowiredAnnotationTypes) &#123;</span><br><span class="line">		MergedAnnotation&lt;?&gt; annotation = annotations.get(type);</span><br><span class="line">		<span class="keyword">if</span> (annotation.isPresent()) &#123;</span><br><span class="line">			<span class="keyword">return</span> annotation;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中的</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Set&lt;Class&lt;? extends Annotation&gt;&gt; autowiredAnnotationTypes = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.autowiredAnnotationTypes</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AutowiredAnnotationBeanPostProcessor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Autowired.class);</span><br><span class="line">		<span class="keyword">this</span>.autowiredAnnotationTypes.add(Value.class);</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">this</span>.autowiredAnnotationTypes.add((Class&lt;? extends Annotation&gt;)</span><br><span class="line">					ClassUtils.forName(<span class="string">&quot;javax.inject.Inject&quot;</span>, AutowiredAnnotationBeanPostProcessor.class.getClassLoader()));</span><br><span class="line">			logger.trace(<span class="string">&quot;JSR-330 &#x27;javax.inject.Inject&#x27; annotation found and supported for autowiring&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (ClassNotFoundException ex) &#123;</span><br><span class="line">			<span class="comment">// JSR-330 API not available - simply skip.</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>已经很清晰了，存放了Autowired.class</p>
+<p>则回到findAutowiredAnnotation()中，如果</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">MergedAnnotations annotations = MergedAnnotations.from(ao);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MergedAnnotations</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Iterable</span>&lt;<span class="title">MergedAnnotation</span>&lt;<span class="title">Annotation</span>&gt;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Provides access to a collection of merged annotations, usually obtained from a source such as a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true"><code>Class</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html?is-external=true"><code>Method</code></a>.</p>
+<p>获取这个Bean 的Annotations</p>
+<p>然后看其中是否存在Autowired</p>
+<p>那么确定是否有Autowired的问题解决了，之后就是inject了</p>
+<hr>
+<p>首先来看看调用inject()的InjectionMetadata</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InjectionMetadata</span></span></span><br><span class="line"><span class="class"><span class="keyword">extends</span> <span class="title">Object</span></span></span><br></pre></td></tr></table></figure>
+
+<p>Internal class for managing injection metadata. Not intended for direct use in applications.</p>
+<p>对的，这个就是依赖注入里的inject</p>
+<p>不过，我暂时没有想法去了解，有兴趣的同学可以继续往下了解</p>
+<hr>
+<p><a href="http://www.avajava.com/tutorials/lessons/how-do-i-list-the-declared-fields-of-a-class.html">Field</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -2885,11 +2885,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Vue Spring Security 整合</title>
-    <url>/2021/06/12/Vue-Spring-Security-%E6%95%B4%E5%90%88/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Vue Tutorial</title>
     <url>/2021/06/01/Vue-Tutorial/</url>
     <content><![CDATA[<p><a href="https://blog.jetbrains.com/webstorm/2019/03/get-started-building-apps-with-vue-js-in-webstorm/">官方介绍</a></p>
@@ -3006,6 +3001,11 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Vue Spring Security 整合</title>
+    <url>/2021/06/12/Vue-Spring-Security-%E6%95%B4%E5%90%88/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Vue error</title>
     <url>/2021/06/09/Vue-error/</url>
     <content><![CDATA[<blockquote>
@@ -3031,6 +3031,14 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Vue model</title>
+    <url>/2021/06/07/Vue-model/</url>
+    <content><![CDATA[<blockquote>
+<p>子组件和父组件数据的双向绑定</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
     <title>Vue localhost</title>
     <url>/2021/06/06/Vue-localhost/</url>
     <content><![CDATA[<h2 id="只能通过localhost访问"><a href="#只能通过localhost访问" class="headerlink" title="只能通过localhost访问"></a>只能通过localhost访问</h2><p>解决:</p>
@@ -3039,14 +3047,6 @@
 <p>Note</p>
 <blockquote>
 <p>别忘了把防火墙给关了</p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
-    <title>Vue model</title>
-    <url>/2021/06/07/Vue-model/</url>
-    <content><![CDATA[<blockquote>
-<p>子组件和父组件数据的双向绑定</p>
 </blockquote>
 ]]></content>
   </entry>
@@ -3221,18 +3221,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>WSL conflict</title>
-    <url>/2021/03/08/WSL-conflict/</url>
-    <content><![CDATA[<p>“cmd” with “administrator”</p>
-<p>(Some simulator(e.g. Android simulator ) need to close hp-v virtual machine in win10)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
-
-<p>open WSL(WSL base on hp-v virtual machine in win10)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>X86,ARM and M1</title>
     <url>/2021/03/13/X86-ARM-and-M1/</url>
     <content><![CDATA[<p>simple instruction set</p>
@@ -3249,6 +3237,18 @@
         <tag>Apple</tag>
         <tag>Intel</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>WSL conflict</title>
+    <url>/2021/03/08/WSL-conflict/</url>
+    <content><![CDATA[<p>“cmd” with “administrator”</p>
+<p>(Some simulator(e.g. Android simulator ) need to close hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
+
+<p>open WSL(WSL base on hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>axois</title>
@@ -3335,15 +3335,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>html width</title>
-    <url>/2021/06/06/html-width/</url>
-    <content><![CDATA[<p>有些标签自带width属性，可以直接设置</p>
-<p>但是有些标签需要借助style才可以设置宽度</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:400px;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>docker tutorial</title>
     <url>/2021/06/19/docker-tutorial/</url>
     <content><![CDATA[<h4 id="docker-install"><a href="#docker-install" class="headerlink" title="docker install"></a>docker install</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">DRY_RUN=1 sh ./get-docker.sh</span><br><span class="line">sudo sh get-docker.sh</span><br></pre></td></tr></table></figure>
@@ -3379,6 +3370,15 @@
 
 <p>通过插入script标签实现GET请求（不可POST）</p>
 <p>src为请求地址，可携带params</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>html width</title>
+    <url>/2021/06/06/html-width/</url>
+    <content><![CDATA[<p>有些标签自带width属性，可以直接设置</p>
+<p>但是有些标签需要借助style才可以设置宽度</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:400px;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
@@ -3425,6 +3425,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>三角函数日常</title>
+    <url>/2021/05/30/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%97%A5%E5%B8%B8/</url>
+    <content><![CDATA[<h4 id="sec和tan"><a href="#sec和tan" class="headerlink" title="sec和tan"></a>sec和tan</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205142002.png"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205300517.png" alt="image-20210702205300517"></p>
+<h4 id="万能公式"><a href="#万能公式" class="headerlink" title="万能公式"></a>万能公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205643797.png" alt="image-20210702205643797"></p>
+<h4 id="降幂公式"><a href="#降幂公式" class="headerlink" title="降幂公式"></a>降幂公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210012319.png" alt="image-20210702210012319"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>vue 版本</title>
     <url>/2021/06/19/vue-%E7%89%88%E6%9C%AC/</url>
     <content><![CDATA[<p>安装新的版本前，需要先把之前安装的版本卸载掉。</p>
@@ -3439,15 +3448,6 @@
 
 
 <p>vue版本查看：vue -V<br>————————————————<br>版权声明：本文为CSDN博主「IT_ms」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/IT_moshang/article/details/106470754">https://blog.csdn.net/IT_moshang/article/details/106470754</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>三角函数日常</title>
-    <url>/2021/05/30/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%97%A5%E5%B8%B8/</url>
-    <content><![CDATA[<h4 id="sec和tan"><a href="#sec和tan" class="headerlink" title="sec和tan"></a>sec和tan</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205142002.png"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205300517.png" alt="image-20210702205300517"></p>
-<h4 id="万能公式"><a href="#万能公式" class="headerlink" title="万能公式"></a>万能公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205643797.png" alt="image-20210702205643797"></p>
-<h4 id="降幂公式"><a href="#降幂公式" class="headerlink" title="降幂公式"></a>降幂公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210012319.png" alt="image-20210702210012319"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3534,18 +3534,18 @@
 ]]></content>
   </entry>
   <entry>
-    <title>全微分</title>
-    <url>/2021/07/05/%E5%85%A8%E5%BE%AE%E5%88%86/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705104345546.png" alt="image-20210705104345546"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705104337662.png" alt="image-20210705104337662"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>函数的连续性</title>
     <url>/2021/06/30/%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/</url>
     <content><![CDATA[<h4 id="重要定理"><a href="#重要定理" class="headerlink" title="重要定理"></a>重要定理</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630170017286.png" alt="image-20210630170017286"></p>
 <h4 id="间断点"><a href="#间断点" class="headerlink" title="间断点"></a>间断点</h4><p>参考</p>
 <h4 id="证明函数在某点连续"><a href="#证明函数在某点连续" class="headerlink" title="证明函数在某点连续"></a>证明函数在某点连续</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705110107690.png" alt="image-20210705110107690"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>全微分</title>
+    <url>/2021/07/05/%E5%85%A8%E5%BE%AE%E5%88%86/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705104345546.png" alt="image-20210705104345546"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705104337662.png" alt="image-20210705104337662"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3559,7 +3559,9 @@
   <entry>
     <title>反三角函数</title>
     <url>/2021/06/30/%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h4 id="反三角函数图像"><a href="#反三角函数图像" class="headerlink" title="反三角函数图像"></a>反三角函数图像</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630200552384.png" alt="image-20210630200552384"></p>
+    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708122202956.png" alt="image-20210708122202956"></p>
+<p>Ps：arctan根号3=60°</p>
+<h4 id="反三角函数图像"><a href="#反三角函数图像" class="headerlink" title="反三角函数图像"></a>反三角函数图像</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630200552384.png" alt="image-20210630200552384"></p>
 <p>（翻面再转90度）</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630200612832.png" alt="image-20210630200612832"></p>
 <p>如果没有纸的话</p>
@@ -3603,6 +3605,20 @@
 <h4 id="导数与偏导数"><a href="#导数与偏导数" class="headerlink" title="导数与偏导数"></a>导数与偏导数</h4><p>可导指的是偏导数存在,即沿x轴,y轴方向的导数存在</p>
 <p>Ps：</p>
 <p>多元函数才有偏导的概念</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>多元函数极值</title>
+    <url>/2021/07/05/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E6%9E%81%E5%80%BC/</url>
+    <content><![CDATA[<h4 id="无约束"><a href="#无约束" class="headerlink" title="无约束"></a>无约束</h4><p>直接法</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705162324894.png" alt="image-20210705162324894"></p>
+<p>例题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163856913.png" alt="image-20210705163856913"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163830043.png" alt="image-20210705163830043"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163841762.png" alt="image-20210705163841762"></p>
+<h4 id="存在约束条件"><a href="#存在约束条件" class="headerlink" title="存在约束条件"></a>存在约束条件</h4><h5 id="拉格朗日乘数法"><a href="#拉格朗日乘数法" class="headerlink" title="拉格朗日乘数法"></a>拉格朗日乘数法</h5><p>例题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164056311.png" alt="image-20210705164056311"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164107005.png" alt="image-20210705164107005"></p>
+<p>这种五元方程一定要验算！！！！</p>
+<p>尤其时算出莫名其妙的分数</p>
 ]]></content>
   </entry>
   <entry>
@@ -3686,48 +3702,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>微分方程</title>
-    <url>/2021/07/07/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/</url>
-    <content><![CDATA[<h4 id="什么是微分方程"><a href="#什么是微分方程" class="headerlink" title="什么是微分方程"></a>什么是微分方程</h4><p>表示未知函数的导数和自变量关系的方程</p>
-<h4 id="微分方程的阶"><a href="#微分方程的阶" class="headerlink" title="微分方程的阶"></a>微分方程的阶</h4><p>最高阶导数的阶数</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094811726.png" alt="image-20210707094811726"></p>
-<h4 id="通解和特解"><a href="#通解和特解" class="headerlink" title="通解和特解"></a>通解和特解</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094325973.png" alt="image-20210707094325973"></p>
-<p>#####　通解的例子</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094952450.png" alt="image-20210707094952450"></p>
-<p>(1-3)是(1-1)的通解</p>
-<h5 id="特解和通解之间的关系"><a href="#特解和通解之间的关系" class="headerlink" title="特解和通解之间的关系"></a>特解和通解之间的关系</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095141686.png" alt="image-20210707095141686"></p>
-<p>例子</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095244171.png" alt="image-20210707095244171"></p>
-<hr>
-<h4 id="齐次方程"><a href="#齐次方程" class="headerlink" title="齐次方程"></a>齐次方程</h4><p>能用y/x表示导数</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095617452.png" alt="image-20210707095617452"></p>
-<h4 id="常系数非齐次线性微分方程"><a href="#常系数非齐次线性微分方程" class="headerlink" title="常系数非齐次线性微分方程"></a>常系数非齐次线性微分方程</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101330325.png" alt="image-20210707101330325"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101649488.png" alt="image-20210707101649488"></p>
-<p>Ps：</p>
-<p>特解中的λ和特征方程的解无关，而是与f(x)联系</p>
-<p>“k为特征方程含根λ的重复次数”解释：在f(x)中得到λ的值，再看特征方程的解中有几个和λ值相等的解</p>
-<p>“Q(x)与P(x)同次”解释：若P(x)中有x，则设Q(x)=b0x+b1</p>
-<p>具体看例题</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707103234211.png" alt="image-20210707103234211"></p>
-<p>还有一种更简单的，不含ex（即λ=0）</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707103328214.png" alt="image-20210707103328214"></p>
-<p>真题</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101901899.png" alt="image-20210707101901899"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101850780.png" alt="image-20210707101850780"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>成都信息工程大学</title>
-    <url>/2021/05/30/%E6%88%90%E9%83%BD%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092023694.png" alt="image-20210530092023694"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092044306.png" alt="image-20210530092044306"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092106506.png" alt="image-20210530092106506"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092202161.png" alt="image-20210530092202161"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091910920.png" alt="image-20210530091910920"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091926951.png" alt="image-20210530091926951"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>导数和微分</title>
     <url>/2021/07/04/%E5%AF%BC%E6%95%B0%E5%92%8C%E5%BE%AE%E5%88%86/</url>
     <content><![CDATA[<h4 id="常用导数公式"><a href="#常用导数公式" class="headerlink" title="常用导数公式"></a>常用导数公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706175938655.png" alt="image-20210706175938655"></p>
@@ -3758,6 +3732,53 @@
 ]]></content>
   </entry>
   <entry>
+    <title>微分方程</title>
+    <url>/2021/07/07/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<h4 id="什么是微分方程"><a href="#什么是微分方程" class="headerlink" title="什么是微分方程"></a>什么是微分方程</h4><p>表示未知函数的导数和自变量关系的方程</p>
+<h4 id="微分方程的阶"><a href="#微分方程的阶" class="headerlink" title="微分方程的阶"></a>微分方程的阶</h4><p>最高阶导数的阶数</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094811726.png" alt="image-20210707094811726"></p>
+<h4 id="通解和特解"><a href="#通解和特解" class="headerlink" title="通解和特解"></a>通解和特解</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094325973.png" alt="image-20210707094325973"></p>
+<h5 id="通解的例子"><a href="#通解的例子" class="headerlink" title="通解的例子"></a>通解的例子</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707094952450.png" alt="image-20210707094952450"></p>
+<p>(1-3)是(1-1)的通解</p>
+<h5 id="特解和通解之间的关系"><a href="#特解和通解之间的关系" class="headerlink" title="特解和通解之间的关系"></a>特解和通解之间的关系</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095141686.png" alt="image-20210707095141686"></p>
+<p>例子</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095244171.png" alt="image-20210707095244171"></p>
+<hr>
+<h4 id="齐次方程"><a href="#齐次方程" class="headerlink" title="齐次方程"></a>齐次方程</h4><p>能用y/x表示导数</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707095617452.png" alt="image-20210707095617452"></p>
+<h4 id="常系数齐次线性微分方程"><a href="#常系数齐次线性微分方程" class="headerlink" title="常系数齐次线性微分方程"></a>常系数齐次线性微分方程</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101330325.png" alt="image-20210707101330325"></p>
+<h4 id="常系数非齐次线性微分方程"><a href="#常系数非齐次线性微分方程" class="headerlink" title="常系数非齐次线性微分方程"></a>常系数非齐次线性微分方程</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101649488.png" alt="image-20210707101649488"></p>
+<p>Ps：</p>
+<p>特解中的λ和特征方程的解无关，而是与f(x)联系</p>
+<p>“k为特征方程含根λ的重复次数”解释：在f(x)中得到λ的值，再看特征方程的解中有几个和λ值相等的解</p>
+<p>“Q(x)与P(x)同次”解释：若P(x)中有x，则设Q(x)=b0x+b1</p>
+<p>具体看例题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707103234211.png" alt="image-20210707103234211"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708101658924.png" alt="image-20210708101658924"></p>
+<p>Ps：</p>
+<p>NM，这特解代入走一遍我人没了</p>
+<hr>
+<p>还有一种更简单的，不含ex（即λ=0）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707103328214.png" alt="image-20210707103328214"></p>
+<p>真题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101901899.png" alt="image-20210707101901899"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707101850780.png" alt="image-20210707101850780"></p>
+<p>Ps：</p>
+<p>给出的通解其实告知了我们特解为ex</p>
+<p>则把特解代入原式即可求解c的值</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>成都信息工程大学</title>
+    <url>/2021/05/30/%E6%88%90%E9%83%BD%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092023694.png" alt="image-20210530092023694"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092044306.png" alt="image-20210530092044306"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092106506.png" alt="image-20210530092106506"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530092202161.png" alt="image-20210530092202161"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091910920.png" alt="image-20210530091910920"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091926951.png" alt="image-20210530091926951"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>成都理工大学</title>
     <url>/2021/05/30/%E6%88%90%E9%83%BD%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6/</url>
     <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530090057651.png" alt="image-20210530090057651"></p>
@@ -3774,20 +3795,6 @@
     <content><![CDATA[<p>d暴力构造法</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704133409946.png" alt="image-20210704133409946"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704133856494.png" alt="image-20210704133856494"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>多元函数极值</title>
-    <url>/2021/07/05/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E6%9E%81%E5%80%BC/</url>
-    <content><![CDATA[<h4 id="无约束"><a href="#无约束" class="headerlink" title="无约束"></a>无约束</h4><p>直接法</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705162324894.png" alt="image-20210705162324894"></p>
-<p>例题</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163856913.png" alt="image-20210705163856913"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163830043.png" alt="image-20210705163830043"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705163841762.png" alt="image-20210705163841762"></p>
-<h4 id="存在约束条件"><a href="#存在约束条件" class="headerlink" title="存在约束条件"></a>存在约束条件</h4><h5 id="拉格朗日乘数法"><a href="#拉格朗日乘数法" class="headerlink" title="拉格朗日乘数法"></a>拉格朗日乘数法</h5><p>例题</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164056311.png" alt="image-20210705164056311"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164107005.png" alt="image-20210705164107005"></p>
-<p>这种五元方程一定要验算！！！！</p>
-<p>尤其时算出莫名其妙的分数</p>
 ]]></content>
   </entry>
   <entry>
@@ -3811,7 +3818,14 @@
 <h5 id="曲面体积分和立体分割"><a href="#曲面体积分和立体分割" class="headerlink" title="曲面体积分和立体分割"></a>曲面体积分和立体分割</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706153801574.png" alt="image-20210706153801574"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706154421591.png" alt="image-20210706154421591"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706155034325.png" alt="image-20210706155034325"></p>
-<p>Ps：曲面体的处理值得学习</p>
+<p>这里我自己的解法更容易理解，把旋转体分成两部分</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708121701240.png" alt="image-20210708121701240"></p>
+<p>然后利用底d高积分</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708122117803.png" alt="image-20210708122117803"></p>
+<p>Ps：</p>
+<p>arctan根号3=60°</p>
+<p>三角函数更多可参考</p>
+<p>画出区域后乱积都</p>
 ]]></content>
   </entry>
   <entry>
@@ -3850,7 +3864,17 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094820296.png" alt="image-20210630094820296"></p>
 <p>泰勒公式参考</p>
 <p>单看是没用的，要通过做题熟练才可以</p>
-<h4 id="等价无穷小"><a href="#等价无穷小" class="headerlink" title="等价无穷小"></a>等价无穷小</h4><p>1-cosx</p>
+<h4 id="等价无穷小"><a href="#等价无穷小" class="headerlink" title="等价无穷小"></a>等价无穷小</h4><p><font color="red" size="5">原则说的其实是加减不能”实际代换“</font></p>
+<p><font color="red" size="5">但事实其极限就是无穷小的代换</font></p>
+<p><font color="red" size="5">只是说绝大多数的题目你代换了后，式子是无意义的，你求不出最终值</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708200455540.png"></p>
+<p><font color="red" size="5">利用洛必达或其他方式则可以避开最后得到0/0的情况</font></p>
+<p><font color="blue" size="5">进阶(遇到加减一般要提公因式)</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706100125599.png" alt="image-20210706100125599"></p>
+<p><font color="blue" size="5">如果确认分式的极限趋于0，则可以当成x趋于0使用局部无穷小代换</font></p>
+<p><font color="green" size="5">x趋于无穷时，常化出1/x得趋于0，然后用等价无穷小代换</font></p>
+<hr>
+<p>1-cosx</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094450777.png" alt="image-20210630094450777"></p>
 <p>（其实可以利用上面常用结论中的绿色部分）</p>
 <hr>
@@ -3888,15 +3912,34 @@
 ]]></content>
   </entry>
   <entry>
+    <title>泰勒公式</title>
+    <url>/2021/07/04/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/</url>
+    <content><![CDATA[<h4 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704093245996.png" alt="image-20210704093245996"></p>
+<p>x0取0时即麦克劳林公式</p>
+<p>而对sin来说</p>
+<p>sin0=0故跳着取奇数项</p>
+]]></content>
+  </entry>
+  <entry>
     <title>渐近线</title>
     <url>/2021/07/05/%E6%B8%90%E8%BF%91%E7%BA%BF/</url>
     <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105324896.png" alt="image-20210705105324896"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105339153.png" alt="image-20210705105339153"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105312578.png" alt="image-20210705105312578"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105402144.png" alt="image-20210705105402144"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105433499.png" alt="image-20210705105433499"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105312578.png" alt="image-20210705105312578"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105402144.png" alt="image-20210705105402144"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708201953059.png" alt="image-20210708201953059"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706100125599.png" alt="image-20210706100125599"></p>
 <p>Ps</p>
 <p>这类极限一般都是极限的易错类型，即“等价无穷小是乘除时代换”</p>
+<p><font color="red" size="5">此原则只是说不能”实际代换“，但事实其极限就是无穷小的代换</font></p>
+<p><font color="red" size="5">只是说你代换了后，式子是无意义的，你求不出最终值</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708200455540.png" alt="image-20210708200455540"></p>
 <p>遇到x趋于∞，一般是化出1/x得到趋于0然后求解</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>物理层</title>
+    <url>/2021/06/23/%E7%89%A9%E7%90%86%E5%B1%82/</url>
+    <content><![CDATA[<p>x香农公式：</p>
+<p>奈氏准则</p>
 ]]></content>
   </entry>
   <entry>
@@ -3962,20 +4005,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>泰勒公式</title>
-    <url>/2021/07/04/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[<h4 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704093245996.png" alt="image-20210704093245996"></p>
-<p>x0取0时即麦克劳林公式</p>
-<p>而对sin来说</p>
-<p>sin0=0故跳着取奇数项</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>物理层</title>
-    <url>/2021/06/23/%E7%89%A9%E7%90%86%E5%B1%82/</url>
-    <content><![CDATA[<p>x香农公式：</p>
-<p>奈氏准则</p>
-]]></content>
+    <title>腾讯防水墙</title>
+    <url>/2021/06/19/%E8%85%BE%E8%AE%AF%E9%98%B2%E6%B0%B4%E5%A2%99/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>西南科技大学</title>
@@ -3989,11 +4021,6 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530195405472.png" alt="image-20210530195405472"></p>
 <p><img src="/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/Users\Jimmy\AppData\Roaming\Typora\typora-user-images\image-20210530195428120.png" alt="image-20210530195422207"></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>腾讯防水墙</title>
-    <url>/2021/06/19/%E8%85%BE%E8%AE%AF%E9%98%B2%E6%B0%B4%E5%A2%99/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>计算机网络期末复习</title>

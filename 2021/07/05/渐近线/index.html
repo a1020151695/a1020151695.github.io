@@ -20,21 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Ps 这类极限一般都是极限的易错类型，即“等价无穷小是乘除时代换” 遇到x趋于∞，一般是化出1&#x2F;x得到趋于0然后求解">
+  <meta name="description" content="Ps 这类极限一般都是极限的易错类型，即“等价无穷小是乘除时代换” 此原则只是说不能”实际代换“，但事实其极限就是无穷小的代换 只是说你代换了后，式子是无意义的，你求不出最终值  遇到x趋于∞，一般是化出1&#x2F;x得到趋于0然后求解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="渐近线">
 <meta property="og:url" content="http://example.com/2021/07/05/%E6%B8%90%E8%BF%91%E7%BA%BF/index.html">
 <meta property="og:site_name" content="藏经阁">
-<meta property="og:description" content="Ps 这类极限一般都是极限的易错类型，即“等价无穷小是乘除时代换” 遇到x趋于∞，一般是化出1&#x2F;x得到趋于0然后求解">
+<meta property="og:description" content="Ps 这类极限一般都是极限的易错类型，即“等价无穷小是乘除时代换” 此原则只是说不能”实际代换“，但事实其极限就是无穷小的代换 只是说你代换了后，式子是无意义的，你求不出最终值  遇到x趋于∞，一般是化出1&#x2F;x得到趋于0然后求解">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210705105324896.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210705105339153.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210705105312578.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210705105402144.png">
-<meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210705105433499.png">
+<meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210708201953059.png">
 <meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210706100125599.png">
+<meta property="og:image" content="https://gitee.com/simple_one1/pic/raw/master/image-20210708200455540.png">
 <meta property="article:published_time" content="2021-07-05T02:52:49.000Z">
-<meta property="article:modified_time" content="2021-07-06T02:01:40.275Z">
+<meta property="article:modified_time" content="2021-07-08T12:23:28.638Z">
 <meta property="article:author" content="FreeJim">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -217,7 +218,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-06 10:01:40" itemprop="dateModified" datetime="2021-07-06T10:01:40+08:00">2021-07-06</time>
+                <time title="Modified: 2021-07-08 20:23:28" itemprop="dateModified" datetime="2021-07-08T20:23:28+08:00">2021-07-08</time>
               </span>
 
           
@@ -233,10 +234,13 @@
       
         <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105324896.png" alt="image-20210705105324896"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105339153.png" alt="image-20210705105339153"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105312578.png" alt="image-20210705105312578"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105402144.png" alt="image-20210705105402144"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105433499.png" alt="image-20210705105433499"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105312578.png" alt="image-20210705105312578"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705105402144.png" alt="image-20210705105402144"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708201953059.png" alt="image-20210708201953059"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706100125599.png" alt="image-20210706100125599"></p>
 <p>Ps</p>
 <p>这类极限一般都是极限的易错类型，即“等价无穷小是乘除时代换”</p>
+<p><font color="red" size="5">此原则只是说不能”实际代换“，但事实其极限就是无穷小的代换</font></p>
+<p><font color="red" size="5">只是说你代换了后，式子是无意义的，你求不出最终值</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708200455540.png" alt="image-20210708200455540"></p>
 <p>遇到x趋于∞，一般是化出1/x得到趋于0然后求解</p>
 
     </div>
