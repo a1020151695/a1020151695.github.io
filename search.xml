@@ -80,6 +80,13 @@
       </tags>
   </entry>
   <entry>
+    <title>914见识</title>
+    <url>/2021/07/11/914%E8%A7%81%E8%AF%86/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711100530715.png" alt="image-20210711100530715"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711100545396.png" alt="image-20210711100545396"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Ajax Tutorial</title>
     <url>/2021/05/11/Ajax-Tutorial/</url>
     <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -96,6 +103,24 @@
 <p>但是那个版本可能不支持ajax</p>
 <p>以导致ajax失效</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Android Add Views</title>
+    <url>/2021/01/06/Android-Add-Views/</url>
+    <content><![CDATA[<p>Example</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
   </entry>
   <entry>
     <title>Android Bundle</title>
@@ -121,24 +146,6 @@
       </categories>
       <tags>
         <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android Add Views</title>
-    <url>/2021/01/06/Android-Add-Views/</url>
-    <content><![CDATA[<p>Example</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line">signDataView = SuperTextView(requireContext())</span><br><span class="line">buildSignDataView(signDataView, signData)</span><br><span class="line">activity?.runOnUiThread &#123;</span><br><span class="line">	signDataListLayout?.addView(signDataView)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -376,44 +383,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Android Navigation Tutorial</title>
-    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
-    <content><![CDATA[<p>1.New A Navigation</p>
-<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
-<p>Give your navigation a name, then click “OK”</p>
-<p>Then you will got a xml file of your navigation</p>
-<p>2.Add A NavHost To Your Activity</p>
-<p>Go to the xml file of your activity</p>
-<p>Use “Design” model </p>
-<p>“Palette” – “Container” – “NavHostFragment”</p>
-<p>Drag it to the phone</p>
-<p>And choose a navigation xml file for the container</p>
-<p>Then we finish the basic of navigation</p>
-<p>3.Add Fragments To Navigation</p>
-<p>Go to the xml file of your navigation </p>
-<p>Still use “Design” model</p>
-<p>Then “New Destination”</p>
-<p>4.Use Navigation</p>
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
-
-<p>Then you will be navigate to a fragment named “hello”</p>
-<hr>
-<p>supportFragmentManager</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Tutorial</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
-        <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android Request</title>
     <url>/2021/01/04/Android-Request/</url>
     <content><![CDATA[<p>How get data by request in Android?</p>
@@ -458,6 +427,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Android Navigation Tutorial</title>
+    <url>/2021/01/06/Android-Navigation-Tutorial/</url>
+    <content><![CDATA[<p>1.New A Navigation</p>
+<p>“res” – “New” – “Android Resource File” – “Resource Type” – “Navigation”</p>
+<p>Give your navigation a name, then click “OK”</p>
+<p>Then you will got a xml file of your navigation</p>
+<p>2.Add A NavHost To Your Activity</p>
+<p>Go to the xml file of your activity</p>
+<p>Use “Design” model </p>
+<p>“Palette” – “Container” – “NavHostFragment”</p>
+<p>Drag it to the phone</p>
+<p>And choose a navigation xml file for the container</p>
+<p>Then we finish the basic of navigation</p>
+<p>3.Add Fragments To Navigation</p>
+<p>Go to the xml file of your navigation </p>
+<p>Still use “Design” model</p>
+<p>Then “New Destination”</p>
+<p>4.Use Navigation</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> navHostFragment =supportFragmentManager?.findFragmentById(R.id.fragment) <span class="keyword">as</span> NavHostFragment</span><br><span class="line"><span class="keyword">val</span> navController = navHostFragment?.navController</span><br><span class="line">navController.navigate(R.id.hello)</span><br></pre></td></tr></table></figure>
+
+<p>Then you will be navigate to a fragment named “hello”</p>
+<hr>
+<p>supportFragmentManager</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the FragmentManager for interacting with fragments associated with this activity.</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android Studio SDK config</title>
     <url>/2021/03/08/Android-Studio-SDK-config/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Emulator: emulator: ERROR: Unknown AVD name [Pixel_2_API_29], use -list-avds</span><br></pre></td></tr></table></figure>
@@ -466,6 +473,11 @@
 
 <p>出现这种情况一般是.android文件不在ANDROID_SDK_HOME目录下<br>只需要将系统默认的存放文件的地方：C:/用户/***/.android 复制到你ANDROID_SDK_HOME所指目录下即可</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Android Thread</title>
+    <url>/2021/01/04/Android-Thread/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Android Swip Refresh</title>
@@ -485,11 +497,6 @@
         <tag>Android</tag>
         <tag>Tutorial</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Android Thread</title>
-    <url>/2021/01/04/Android-Thread/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Android Tool Bar (On Top)</title>
@@ -578,43 +585,6 @@
       <tags>
         <tag>Android</tag>
         <tag>Tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android px dp sp</title>
-    <url>/2021/01/04/Android-px-dp-sp/</url>
-    <content><![CDATA[<p>px is for the general unit</p>
-<p>Note !</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
-
-
-
-<p>dp is usually use for layout</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Note </p>
-<p>You can pass context as a parameter</p>
-<blockquote>
-<p>dpi: Dots Per Inch</p>
-</blockquote>
-<p>sp is usually use for text size</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Android</category>
-        <category>Layout</category>
-      </categories>
-      <tags>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -798,6 +768,43 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Android px dp sp</title>
+    <url>/2021/01/04/Android-px-dp-sp/</url>
+    <content><![CDATA[<p>px is for the general unit</p>
+<p>Note !</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">devices only know px</span><br><span class="line">dp and sp is just use for display the appropriate views on different screen</span><br></pre></td></tr></table></figure>
+
+
+
+<p>dp is usually use for layout</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">density-independent pixels (dip,dp)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">px &#x3D; dp * (dpi &#x2F; 160)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">dip2px</span><span class="params">(context: <span class="type">Context</span>?, dpValue: <span class="type">Float</span>)</span></span>: <span class="built_in">Int</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> scale = context?.resources?.displayMetrics?.density</span><br><span class="line">    <span class="keyword">return</span> (dpValue * scale!! + <span class="number">0.5f</span>).toInt()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note </p>
+<p>You can pass context as a parameter</p>
+<blockquote>
+<p>dpi: Dots Per Inch</p>
+</blockquote>
+<p>sp is usually use for text size</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scale-independent pixels</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Android</category>
+        <category>Layout</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blockchain Example In JS</title>
     <url>/2021/03/11/Blockchain-Example-In-JS/</url>
     <content><![CDATA[<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h4 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Open source developers from every continent use npm to share and borrow packages</span><br></pre></td></tr></table></figure>
@@ -844,6 +851,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Blockchain In Python</title>
+    <url>/2021/03/20/Blockchain-In-Python/</url>
+    <content><![CDATA[<p>Hash a object</p>
+<p>Wrong example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(<span class="built_in">len</span>(sha256(<span class="built_in">str</span>(t()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()))  <span class="comment"># wrong!</span></span><br><span class="line">													 <span class="comment"># str(t()) is just a address</span></span><br></pre></td></tr></table></figure>
+
+<p>Correct example</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256  <span class="comment"># need string</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>  </span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">print(sha256(<span class="built_in">str</span>(t().__hash__()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()) <span class="comment"># display in hex</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">output:   &#x2F;&#x2F; string length &#x3D; 64</span><br><span class="line">58c32e31cc29e9164710dc7571d83200d5f6ff044170e4b299ed8096b4de529e  </span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>Blockchain Reference</title>
     <url>/2021/03/20/Blockchain-Reference/</url>
     <content><![CDATA[<p><a href="https://github.com/chaozh/awesome-blockchain-cn">Github1</a></p>
@@ -884,22 +907,6 @@
 
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Transaction outputs consist of two parts:</span><br><span class="line"></span><br><span class="line">An amount of bitcoin, denominated in satoshis, the smallest bitcoin unit</span><br><span class="line">A cryptographic puzzle that determines the conditions required to spend the output</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Blockchain In Python</title>
-    <url>/2021/03/20/Blockchain-In-Python/</url>
-    <content><![CDATA[<p>Hash a object</p>
-<p>Wrong example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(<span class="built_in">len</span>(sha256(<span class="built_in">str</span>(t()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()))  <span class="comment"># wrong!</span></span><br><span class="line">													 <span class="comment"># str(t()) is just a address</span></span><br></pre></td></tr></table></figure>
-
-<p>Correct example</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256  <span class="comment"># need string</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">t</span>():</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>  </span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">print(sha256(<span class="built_in">str</span>(t().__hash__()).encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()) <span class="comment"># display in hex</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">output:   &#x2F;&#x2F; string length &#x3D; 64</span><br><span class="line">58c32e31cc29e9164710dc7571d83200d5f6ff044170e4b299ed8096b4de529e  </span><br></pre></td></tr></table></figure>
-
-
 
 ]]></content>
   </entry>
@@ -983,55 +990,38 @@
       </tags>
   </entry>
   <entry>
+    <title>C语言常用函数</title>
+    <url>/2021/07/09/C%E8%AF%AD%E8%A8%80%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>C语言语法</title>
+    <url>/2021/07/09/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h4 id="define"><a href="#define" class="headerlink" title="#define"></a>#define</h4><blockquote>
+<p>以“#”开头的均为预处理指令</p>
+</blockquote>
+<p>定义的标识符不占内存，只是一个临时的符号，预处理后这个符号就不存在了。</p>
+<h4 id="C程序编译运行的流程"><a href="#C程序编译运行的流程" class="headerlink" title="C程序编译运行的流程"></a>C程序编译运行的流程</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210709202536371.png" alt="image-20210709202536371"></p>
+<h4 id="Typeof"><a href="#Typeof" class="headerlink" title="Typeof"></a>Typeof</h4><p>标识符</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Books</span> &#123;</span></span><br><span class="line">   <span class="keyword">char</span> title[<span class="number">50</span>];</span><br><span class="line">   <span class="keyword">char</span> author[<span class="number">50</span>];</span><br><span class="line">   <span class="keyword">char</span> subject[<span class="number">100</span>];</span><br><span class="line">   <span class="keyword">int</span> book_id;</span><br><span class="line">&#125; Book;</span><br></pre></td></tr></table></figure>
+
+<p>之后，把这个结构体命名成Book，以便之后直接使用</p>
+<p>原结构体使用语法</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Books</span> <span class="title">bookA</span> =</span> &#123;<span class="string">&quot;C 语言&quot;</span>, <span class="string">&quot;RUNOOB&quot;</span>, <span class="string">&quot;编程语言&quot;</span>, <span class="number">123456</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>而后</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Book bookA = &#123;<span class="string">&quot;C 语言&quot;</span>, <span class="string">&quot;RUNOOB&quot;</span>, <span class="string">&quot;编程语言&quot;</span>, <span class="number">123456</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="初始化语句"><a href="#初始化语句" class="headerlink" title="初始化语句"></a>初始化语句</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a,b=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>只是给b赋值了，a的还是声明，其值是随机的</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Daily Doubt</title>
     <url>/2021/03/22/Daily-Doubt/</url>
     <content><![CDATA[<p>bash is different env with cmd</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Dockerfile Basic</title>
-    <url>/2021/03/28/Dockerfile-Basic/</url>
-    <content><![CDATA[<p>new a file named “Dockerfile”</p>
-<p>then</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build .  &#x2F;&#x2F; will exec the dockerfile auto</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
-
-<p>will show the container id and container  name</p>
-<p>with name, you can start the container</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start container_name</span><br></pre></td></tr></table></figure>
-
-<p>then</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker stop container_name</span><br><span class="line">docker restart container_name</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Dockerfile Error</title>
-    <url>/2021/03/28/Dockerfile-Error/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Temporary failure resolving ‘archive.ubuntu.com’</span><br></pre></td></tr></table></figure>
-
-<p><strong>快速解决方法：</strong></p>
-<p>修改/etc/default/docker文件，取消如下行前边的注释：</p>
-<blockquote>
-<p>DOCKER_OPTS=”–dns 8.8.8.8 –dns 8.8.4.4”</p>
-</blockquote>
-<p>结果：</p>
-<p>修改配置并重新启动docker服务后，docker build命令正常。</p>
-<blockquote>
-<p>service docker restart</p>
-</blockquote>
-<hr>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">when docker build error</span><br><span class="line">when you fix it</span><br><span class="line">it will continue, not from begining</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
   </entry>
   <entry>
     <title>Docker Basic</title>
@@ -1086,6 +1076,51 @@
 
 <hr>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Dockerfile Basic</title>
+    <url>/2021/03/28/Dockerfile-Basic/</url>
+    <content><![CDATA[<p>new a file named “Dockerfile”</p>
+<p>then</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker build .  &#x2F;&#x2F; will exec the dockerfile auto</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<p>will show the container id and container  name</p>
+<p>with name, you can start the container</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker start container_name</span><br></pre></td></tr></table></figure>
+
+<p>then</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker stop container_name</span><br><span class="line">docker restart container_name</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Dockerfile Error</title>
+    <url>/2021/03/28/Dockerfile-Error/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Temporary failure resolving ‘archive.ubuntu.com’</span><br></pre></td></tr></table></figure>
+
+<p><strong>快速解决方法：</strong></p>
+<p>修改/etc/default/docker文件，取消如下行前边的注释：</p>
+<blockquote>
+<p>DOCKER_OPTS=”–dns 8.8.8.8 –dns 8.8.4.4”</p>
+</blockquote>
+<p>结果：</p>
+<p>修改配置并重新启动docker服务后，docker build命令正常。</p>
+<blockquote>
+<p>service docker restart</p>
+</blockquote>
+<hr>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">when docker build error</span><br><span class="line">when you fix it</span><br><span class="line">it will continue, not from begining</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
   </entry>
   <entry>
     <title>ECC</title>
@@ -1323,16 +1358,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML Input</title>
-    <url>/2021/05/11/HTML-Input/</url>
-    <content><![CDATA[<p>get content</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> area = <span class="built_in">document</span>.getElementById(<span class="string">&quot;area&quot;</span>).value;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
     <title>Github SSH Deploy Key</title>
     <url>/2021/01/04/Github-SSH-Deploy-Key/</url>
     <content><![CDATA[<p>With Deploy key you can push directly, do not need to input username and password every time</p>
@@ -1378,6 +1403,16 @@
       <tags>
         <tag>Tutorial</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>HTML Input</title>
+    <url>/2021/05/11/HTML-Input/</url>
+    <content><![CDATA[<p>get content</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> area = <span class="built_in">document</span>.getElementById(<span class="string">&quot;area&quot;</span>).value;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>HTTP</title>
@@ -1580,11 +1615,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Java 重定向</title>
-    <url>/2021/05/25/Java-%E9%87%8D%E5%AE%9A%E5%90%91/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>JPA tutorial</title>
     <url>/2021/06/17/JPA-tutorial/</url>
     <content><![CDATA[<h4 id="Query"><a href="#Query" class="headerlink" title="@Query"></a>@Query</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatus</span><span class="params">(Integer status)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Query(&quot;SELECT u FROM User u WHERE u.status = ?1 and u.name = ?2&quot;)</span></span><br><span class="line"><span class="function">User <span class="title">findUserByStatusAndName</span><span class="params">(Integer status, String name)</span></span>;</span><br></pre></td></tr></table></figure>
@@ -1594,6 +1624,11 @@
 <h4 id="JPA-批量查询id"><a href="#JPA-批量查询id" class="headerlink" title="JPA 批量查询id"></a>JPA 批量查询id</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Query(value = &quot;select * from info where userid in ?1&quot;,nativeQuery = true)</span></span><br><span class="line"><span class="function">List&lt;Info&gt; <span class="title">getInfoByIds</span><span class="params">(List&lt;Integer&gt; userids)</span></span>;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Java 重定向</title>
+    <url>/2021/05/25/Java-%E9%87%8D%E5%AE%9A%E5%90%91/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Leetcode Rule</title>
@@ -1629,14 +1664,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux nodejs</title>
-    <url>/2021/06/19/Linux-nodejs/</url>
-    <content><![CDATA[<h4 id="Linux-nodejs-安装"><a href="#Linux-nodejs-安装" class="headerlink" title="Linux nodejs 安装"></a>Linux nodejs 安装</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install nodejs</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install npm</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
     <title>Linux Basic</title>
     <url>/2021/03/27/Linux-Basic/</url>
     <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unzip wwwroot.zip</span><br></pre></td></tr></table></figure>
@@ -1659,6 +1686,14 @@
 <p>pip to pip3</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alias pip&#x3D;pip3</span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>Linux nodejs</title>
+    <url>/2021/06/19/Linux-nodejs/</url>
+    <content><![CDATA[<h4 id="Linux-nodejs-安装"><a href="#Linux-nodejs-安装" class="headerlink" title="Linux nodejs 安装"></a>Linux nodejs 安装</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install nodejs</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install npm</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
   <entry>
@@ -1864,13 +1899,38 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Python Dict</title>
-    <url>/2021/01/02/Python-Dict/</url>
-    <content><![CDATA[<p>Traverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
+    <title>Python Class</title>
+    <url>/2021/01/02/Python-Class/</url>
+    <content><![CDATA[<p>simple example: (within the same package)</p>
+<p>Speaker.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Speaker</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sayHello</span>():</span></span><br><span class="line">        print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Reverse</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
+<p>Test.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Speaker</span><br><span class="line">speaker = Speaker()</span><br><span class="line">speaker.sayHello()</span><br></pre></td></tr></table></figure>
+
+<p>If in different package:</p>
+<p>Test.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> packageName.Speaker <span class="keyword">import</span> Speaker</span><br><span class="line"></span><br><span class="line">speaker = Speaker()</span><br><span class="line">speaker.sayHello()</span><br></pre></td></tr></table></figure>
+
+
+
+<p>You can also build a Constructor to initialize the object</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Speaker</span>:</span></span><br><span class="line">	name = <span class="literal">None</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,name</span>):</span></span><br><span class="line">    	self.name = name</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sayHello</span>():</span></span><br><span class="line">        print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>Generally, we use import like this</p>
+<p>Lib.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span>():</span> <span class="comment"># this .py file do not have class, so do not need to instantiate</span></span><br><span class="line">    print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Test.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Lib</span><br><span class="line"></span><br><span class="line">Lib.hello() </span><br></pre></td></tr></table></figure>
+
+<p>How can we import a class</p>
+<p>A class Import other class and use that class’s function</p>
+<p>Test.py</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> packageName.Speaker <span class="keyword">import</span> Speaker</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>:</span></span><br><span class="line">	speaker = Speaker() <span class="comment"># you need to instantiate the object, so that you can use it</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">testSpeak</span>():</span></span><br><span class="line">        speaker.sayHello()</span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -1910,15 +1970,13 @@
       </tags>
   </entry>
   <entry>
-    <title>Python File Operation</title>
-    <url>/2021/01/02/Python-File-Operation/</url>
-    <content><![CDATA[<p>Add content to file</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
+    <title>Python Dict</title>
+    <url>/2021/01/02/Python-Dict/</url>
+    <content><![CDATA[<p>Traverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;<span class="string">&#x27;a&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;b&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;c&#x27;</span>: <span class="string">&#x27;3&#x27;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> key <span class="keyword">in</span> a:</span><br><span class="line">       print(key+<span class="string">&#x27;:&#x27;</span>+a[key])</span><br><span class="line"></span><br><span class="line">output:</span><br><span class="line">a:<span class="number">1</span></span><br><span class="line">b:<span class="number">2</span></span><br><span class="line">c:<span class="number">3</span></span><br></pre></td></tr></table></figure>
 
-<p>Read content</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
-
-
+<p>Reverse</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">range</span>(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">reversed</span>(a):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">-1</span>,<span class="number">-1</span>):</span><br><span class="line">print(i)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4 3 2 1 0</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1931,36 +1989,13 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Class</title>
-    <url>/2021/01/02/Python-Class/</url>
-    <content><![CDATA[<p>simple example: (within the same package)</p>
-<p>Speaker.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Speaker</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sayHello</span>():</span></span><br><span class="line">        print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+    <title>Python File Operation</title>
+    <url>/2021/01/02/Python-File-Operation/</url>
+    <content><![CDATA[<p>Add content to file</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">file = <span class="built_in">open</span>(<span class="string">&#x27;xxx.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="comment"># &#x27;a&#x27; mean append</span></span><br></pre></td></tr></table></figure>
 
-<p>Test.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Speaker</span><br><span class="line">speaker = Speaker()</span><br><span class="line">speaker.sayHello()</span><br></pre></td></tr></table></figure>
-
-<p>If in different package:</p>
-<p>Test.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> packageName.Speaker <span class="keyword">import</span> Speaker</span><br><span class="line"></span><br><span class="line">speaker = Speaker()</span><br><span class="line">speaker.sayHello()</span><br></pre></td></tr></table></figure>
-
-
-
-<p>You can also build a Constructor to initialize the object</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Speaker</span>:</span></span><br><span class="line">	name = <span class="literal">None</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,name</span>):</span></span><br><span class="line">    	self.name = name</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sayHello</span>():</span></span><br><span class="line">        print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>Generally, we use import like this</p>
-<p>Lib.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span>():</span> <span class="comment"># this .py file do not have class, so do not need to instantiate</span></span><br><span class="line">    print(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Test.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> Lib</span><br><span class="line"></span><br><span class="line">Lib.hello() </span><br></pre></td></tr></table></figure>
-
-<p>How can we import a class</p>
-<p>A class Import other class and use that class’s function</p>
-<p>Test.py</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> packageName.Speaker <span class="keyword">import</span> Speaker</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>:</span></span><br><span class="line">	speaker = Speaker() <span class="comment"># you need to instantiate the object, so that you can use it</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">testSpeak</span>():</span></span><br><span class="line">        speaker.sayHello()</span><br></pre></td></tr></table></figure>
+<p>Read content</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">text = file.read() <span class="comment"># read the whole file</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -2085,11 +2120,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python Project</title>
-    <url>/2021/03/27/Python-Project/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Python String</title>
     <url>/2021/01/02/Python-String/</url>
     <content><![CDATA[<p>List to String</p>
@@ -2109,6 +2139,11 @@
         <tag>Tutorial</tag>
         <tag>Python</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Python Project</title>
+    <url>/2021/03/27/Python-Project/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Python module version</title>
@@ -2239,6 +2274,17 @@
       </tags>
   </entry>
   <entry>
+    <title>RSA加密</title>
+    <url>/2021/06/08/RSA%E5%8A%A0%E5%AF%86/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/48249182">解释</a></p>
+<p><a href="https://blog.csdn.net/weixin_43461520/article/details/107941983">demo</a></p>
+<h4 id="生成RSA文件"><a href="#生成RSA文件" class="headerlink" title="生成RSA文件"></a>生成RSA文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>Refactor Notes</title>
     <url>/2021/01/03/Refactor-Notes/</url>
     <content><![CDATA[<p>1.</p>
@@ -2257,15 +2303,9 @@
       </tags>
   </entry>
   <entry>
-    <title>RSA加密</title>
-    <url>/2021/06/08/RSA%E5%8A%A0%E5%AF%86/</url>
-    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/48249182">解释</a></p>
-<p><a href="https://blog.csdn.net/weixin_43461520/article/details/107941983">demo</a></p>
-<h4 id="生成RSA文件"><a href="#生成RSA文件" class="headerlink" title="生成RSA文件"></a>生成RSA文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
+    <title>Spring Boot Cofiguration</title>
+    <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Spring Boot Lib</title>
@@ -2279,11 +2319,6 @@
 
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210330112109868.png" alt="image-20210330112109868"></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Spring Boot Cofiguration</title>
-    <url>/2021/03/30/Spring-Boot-Cofiguration/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Spring Boot Return</title>
@@ -2327,6 +2362,13 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Spring Boot_exp2</title>
+    <url>/2021/04/28/Spring-Boot-exp2/</url>
+    <content><![CDATA[<p>list元素重复</p>
+<p>list元素数量不对</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Spring Boot cmd</title>
     <url>/2021/03/30/Spring-Boot-cmd/</url>
     <content><![CDATA[<p>run app</p>
@@ -2344,13 +2386,6 @@
 
 
 
-]]></content>
-  </entry>
-  <entry>
-    <title>Spring Boot_exp2</title>
-    <url>/2021/04/28/Spring-Boot-exp2/</url>
-    <content><![CDATA[<p>list元素重复</p>
-<p>list元素数量不对</p>
 ]]></content>
   </entry>
   <entry>
@@ -2422,18 +2457,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Spring Boot 部署</title>
-    <url>/2021/06/19/Spring-Boot-%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<h4 id="Spring-Boot打包"><a href="#Spring-Boot打包" class="headerlink" title="Spring Boot打包"></a>Spring Boot打包</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><a href="http://freejim.icu/2021/04/26/Spring-Boot-with-Docker/">Docker Spring Boot</a></p>
-<h4 id="Spring-Boot-云服务器-Mysql"><a href="#Spring-Boot-云服务器-Mysql" class="headerlink" title="Spring Boot 云服务器 Mysql"></a>Spring Boot 云服务器 Mysql</h4><p>docker拉镜像建立MySQL方便</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Spring MVC Tutorial</title>
     <url>/2021/01/07/Spring-MVC-Tutorial/</url>
     <content><![CDATA[<p>1.New a Empty Maven project</p>
@@ -2488,6 +2511,18 @@
 <h4 id="Security-拦截多请求"><a href="#Security-拦截多请求" class="headerlink" title="Security 拦截多请求"></a>Security 拦截多请求</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">http.antMatcher(<span class="string">&quot;/user/**&quot;</span>).antMatcher(<span class="string">&quot;/login/dgut&quot;</span>).authorizeRequests()...</span><br></pre></td></tr></table></figure>
 
 <p>xxxxxxxxxxxxxxxxxx</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring Boot 部署</title>
+    <url>/2021/06/19/Spring-Boot-%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h4 id="Spring-Boot打包"><a href="#Spring-Boot打包" class="headerlink" title="Spring Boot打包"></a>Spring Boot打包</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn package</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><a href="http://freejim.icu/2021/04/26/Spring-Boot-with-Docker/">Docker Spring Boot</a></p>
+<h4 id="Spring-Boot-云服务器-Mysql"><a href="#Spring-Boot-云服务器-Mysql" class="headerlink" title="Spring Boot 云服务器 Mysql"></a>Spring Boot 云服务器 Mysql</h4><p>docker拉镜像建立MySQL方便</p>
 ]]></content>
   </entry>
   <entry>
@@ -2656,6 +2691,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Tensorflow Error Messages</title>
+    <url>/2021/01/03/Tensorflow-Error-Messages/</url>
+    <content><![CDATA[<p>1.</p>
+<p>Error</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: (&#39;Error when checking model target: expected no data, but got:&#39;, array([&#39;6947&#39;, &#39;7232&#39;, &#39;7967&#39;, ..., &#39;5646&#39;, &#39;3554&#39;, &#39;4656&#39;], dtype&#x3D;&#39;&lt;U4&#39;))</span><br></pre></td></tr></table></figure>
+
+<p>Reason</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">When using model.fit() the training data is not matching to the label array</span><br><span class="line">In other words, the length of training data array should be the same as label array</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.</p>
+<p>Error</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: Please provide as model inputs either a single array or a list of arrays.</span><br></pre></td></tr></table></figure>
+
+<p>Solution</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">training_data&#x3D;np.array(training_ataset)</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Machine Learn</category>
+        <category>Tensorflow</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Machine Learn</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring注解是怎么工作的</title>
     <url>/2020/11/05/Spring%E6%B3%A8%E8%A7%A3%E6%98%AF%E6%80%8E%E4%B9%88%E5%B7%A5%E4%BD%9C%E7%9A%84/</url>
     <content><![CDATA[<p>版本说明：Spring 5.2.9 </p>
@@ -2711,37 +2777,6 @@
       <tags>
         <tag>Spring</tag>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Tensorflow Error Messages</title>
-    <url>/2021/01/03/Tensorflow-Error-Messages/</url>
-    <content><![CDATA[<p>1.</p>
-<p>Error</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: (&#39;Error when checking model target: expected no data, but got:&#39;, array([&#39;6947&#39;, &#39;7232&#39;, &#39;7967&#39;, ..., &#39;5646&#39;, &#39;3554&#39;, &#39;4656&#39;], dtype&#x3D;&#39;&lt;U4&#39;))</span><br></pre></td></tr></table></figure>
-
-<p>Reason</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">When using model.fit() the training data is not matching to the label array</span><br><span class="line">In other words, the length of training data array should be the same as label array</span><br></pre></td></tr></table></figure>
-
-
-
-<p>2.</p>
-<p>Error</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ValueError: Please provide as model inputs either a single array or a list of arrays.</span><br></pre></td></tr></table></figure>
-
-<p>Solution</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">training_data&#x3D;np.array(training_ataset)</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Machine Learn</category>
-        <category>Tensorflow</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Machine Learn</tag>
       </tags>
   </entry>
   <entry>
@@ -2880,8 +2915,48 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Vscode 编译运行C/C++</title>
+    <url>/2021/07/09/Vscode-%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8CC-C/</url>
+    <content><![CDATA[<p>（Ps：该插件本质只是代替用户输入指令，多文件则不支持）</p>
+<h4 id="下载编译器"><a href="#下载编译器" class="headerlink" title="下载编译器"></a>下载编译器</h4><p> <a href="https://osdn.net/projects/mingw/">MinGW 官网</a></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210709200912198.png" alt="image-20210709200912198"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210709200926441.png" alt="image-20210709200926441"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210709200939142.png" alt="image-20210709200939142"></p>
+<p>然后把MinGW下的bin加到环境变量中</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc -V</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><ol>
+<li>C/C++</li>
+<li>Code Runner</li>
+</ol>
+<h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><ul>
+<li>To run code:<ul>
+<li>use shortcut <code>Ctrl+Alt+N</code></li>
+<li>or press <code>F1</code> and then select/type <code>Run Code</code>,</li>
+<li>or right click the Text Editor and then click <code>Run Code</code> in editor context menu</li>
+<li>or click <code>Run Code</code> button in editor title menu</li>
+<li>or click <code>Run Code</code> button in context menu of file explorer</li>
+</ul>
+</li>
+<li>To stop the running code:<ul>
+<li>use shortcut <code>Ctrl+Alt+M</code></li>
+<li>or press <code>F1</code> and then select/type <code>Stop Code Run</code></li>
+<li>or right click the Output Channel and then click <code>Stop Code Run</code> in context menu</li>
+</ul>
+</li>
+</ul>
+<h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><p>增加断点</p>
+<p>F5开始调试</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Vue Cookie</title>
     <url>/2021/06/11/Vue-Cookie/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Vue Spring Security 整合</title>
+    <url>/2021/06/12/Vue-Spring-Security-%E6%95%B4%E5%90%88/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -3001,11 +3076,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Vue Spring Security 整合</title>
-    <url>/2021/06/12/Vue-Spring-Security-%E6%95%B4%E5%90%88/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Vue error</title>
     <url>/2021/06/09/Vue-error/</url>
     <content><![CDATA[<blockquote>
@@ -3031,14 +3101,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Vue model</title>
-    <url>/2021/06/07/Vue-model/</url>
-    <content><![CDATA[<blockquote>
-<p>子组件和父组件数据的双向绑定</p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
     <title>Vue localhost</title>
     <url>/2021/06/06/Vue-localhost/</url>
     <content><![CDATA[<h2 id="只能通过localhost访问"><a href="#只能通过localhost访问" class="headerlink" title="只能通过localhost访问"></a>只能通过localhost访问</h2><p>解决:</p>
@@ -3047,6 +3109,14 @@
 <p>Note</p>
 <blockquote>
 <p>别忘了把防火墙给关了</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue model</title>
+    <url>/2021/06/07/Vue-model/</url>
+    <content><![CDATA[<blockquote>
+<p>子组件和父组件数据的双向绑定</p>
 </blockquote>
 ]]></content>
   </entry>
@@ -3167,6 +3237,14 @@
 ]]></content>
   </entry>
   <entry>
+    <title>WSL Basic</title>
+    <url>/2021/03/27/WSL-Basic/</url>
+    <content><![CDATA[<p>switch to root</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Vue-项目创建-VsCode</title>
     <url>/2021/06/06/Vue-%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA-VsCode/</url>
     <content><![CDATA[<p>所需插件：</p>
@@ -3184,14 +3262,6 @@
 
 <hr>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">You seem to be using old vue-cli and </span><br><span class="line">scaffolded your project using vue init webpack &lt;project-name&gt;.</span><br><span class="line"></span><br><span class="line">Since it all evolved into vue cli 3</span><br><span class="line">old vue-cli is deprecated</span><br><span class="line">we are now using @vue&#x2F;cli</span><br><span class="line">vue create &lt;project-name&gt; for scaffolding out projects.</span><br><span class="line"></span><br><span class="line">It&#39;s perfectly fine for you to use the old way(and I still do sometimes)</span><br><span class="line">vue.config.js is the global configuration file for your project </span><br><span class="line">when you are using @vue&#x2F;cli. Check more about it here.</span><br><span class="line"></span><br><span class="line">For webpack configurations when using vue-cli</span><br><span class="line">in projects scaffolded using npm init command</span><br><span class="line">check the &#x2F;build directory in the root of the project folder.</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>WSL Basic</title>
-    <url>/2021/03/27/WSL-Basic/</url>
-    <content><![CDATA[<p>switch to root</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">su</span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -3221,6 +3291,18 @@
 ]]></content>
   </entry>
   <entry>
+    <title>WSL conflict</title>
+    <url>/2021/03/08/WSL-conflict/</url>
+    <content><![CDATA[<p>“cmd” with “administrator”</p>
+<p>(Some simulator(e.g. Android simulator ) need to close hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
+
+<p>open WSL(WSL base on hp-v virtual machine in win10)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>X86,ARM and M1</title>
     <url>/2021/03/13/X86-ARM-and-M1/</url>
     <content><![CDATA[<p>simple instruction set</p>
@@ -3237,18 +3319,6 @@
         <tag>Apple</tag>
         <tag>Intel</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>WSL conflict</title>
-    <url>/2021/03/08/WSL-conflict/</url>
-    <content><![CDATA[<p>“cmd” with “administrator”</p>
-<p>(Some simulator(e.g. Android simulator ) need to close hp-v virtual machine in win10)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype off</span><br></pre></td></tr></table></figure>
-
-<p>open WSL(WSL base on hp-v virtual machine in win10)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bcdedit &#x2F;set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
-
-]]></content>
   </entry>
   <entry>
     <title>axois</title>
@@ -3351,6 +3421,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>html width</title>
+    <url>/2021/06/06/html-width/</url>
+    <content><![CDATA[<p>有些标签自带width属性，可以直接设置</p>
+<p>但是有些标签需要借助style才可以设置宽度</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:400px;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>js 请求</title>
     <url>/2021/06/18/js-%E8%AF%B7%E6%B1%82/</url>
     <content><![CDATA[<h4 id="POST-请求"><a href="#POST-请求" class="headerlink" title="POST 请求"></a>POST 请求</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> username = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;username&#x27;</span>).value</span><br><span class="line">       <span class="keyword">let</span> password = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;password&#x27;</span>).value</span><br><span class="line">       <span class="keyword">var</span> httpRequest = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">       httpRequest.open(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;http://localhost:8080/user/login_frontend&#x27;</span>, <span class="literal">true</span>)</span><br><span class="line">       <span class="keyword">var</span> formData = <span class="keyword">new</span> FormData()</span><br><span class="line">       formData.append(<span class="string">&quot;username&quot;</span>,username)</span><br><span class="line">       formData.append(<span class="string">&quot;password&quot;</span>,password)</span><br><span class="line">       httpRequest.send(formData);</span><br></pre></td></tr></table></figure>
@@ -3370,15 +3449,6 @@
 
 <p>通过插入script标签实现GET请求（不可POST）</p>
 <p>src为请求地址，可携带params</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>html width</title>
-    <url>/2021/06/06/html-width/</url>
-    <content><![CDATA[<p>有些标签自带width属性，可以直接设置</p>
-<p>但是有些标签需要借助style才可以设置宽度</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width:400px;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 ]]></content>
   </entry>
   <entry>
@@ -3425,15 +3495,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>三角函数日常</title>
-    <url>/2021/05/30/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%97%A5%E5%B8%B8/</url>
-    <content><![CDATA[<h4 id="sec和tan"><a href="#sec和tan" class="headerlink" title="sec和tan"></a>sec和tan</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205142002.png"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205300517.png" alt="image-20210702205300517"></p>
-<h4 id="万能公式"><a href="#万能公式" class="headerlink" title="万能公式"></a>万能公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205643797.png" alt="image-20210702205643797"></p>
-<h4 id="降幂公式"><a href="#降幂公式" class="headerlink" title="降幂公式"></a>降幂公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210012319.png" alt="image-20210702210012319"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>vue 版本</title>
     <url>/2021/06/19/vue-%E7%89%88%E6%9C%AC/</url>
     <content><![CDATA[<p>安装新的版本前，需要先把之前安装的版本卸载掉。</p>
@@ -3451,17 +3512,85 @@
 ]]></content>
   </entry>
   <entry>
+    <title>三角函数日常</title>
+    <url>/2021/05/30/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E6%97%A5%E5%B8%B8/</url>
+    <content><![CDATA[<h4 id="sec和tan"><a href="#sec和tan" class="headerlink" title="sec和tan"></a>sec和tan</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205142002.png"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205300517.png" alt="image-20210702205300517"></p>
+<h4 id="万能公式"><a href="#万能公式" class="headerlink" title="万能公式"></a>万能公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702205643797.png" alt="image-20210702205643797"></p>
+<h4 id="降幂公式"><a href="#降幂公式" class="headerlink" title="降幂公式"></a>降幂公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210012319.png" alt="image-20210702210012319"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>不定积分</title>
     <url>/2021/05/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
-    <content><![CDATA[<p><strong>二类换元</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">x&#x3D;sint</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><strong>一类换元</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">其实就是直接法，只是重在观察</span><br><span class="line">主要针对对数，三角函数</span><br></pre></td></tr></table></figure>
-
-<p>对数</p>
-<p>三角函数</p>
+    <content><![CDATA[<h4 id="常用积分公式"><a href="#常用积分公式" class="headerlink" title="常用积分公式"></a>常用积分公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710191205817.png" alt="image-20210710191205817"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710191219867.png" alt="image-20210710191219867"></p>
+<h2 id="定积分的基本方法"><a href="#定积分的基本方法" class="headerlink" title="定积分的基本方法"></a>定积分的基本方法</h2><h3 id="换元积分（提上去，一类换元）"><a href="#换元积分（提上去，一类换元）" class="headerlink" title="换元积分（提上去，一类换元）"></a>换元积分（提上去，一类换元）</h3><h4 id="x型"><a href="#x型" class="headerlink" title="x型"></a>x型</h4><p><strong>因为常为分式的形式，故要熟练掌握反三角函数的积分</strong></p>
+<p>1+1/(x^2)</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702112814733.png" alt="image-20210702112814733"></p>
+<p>x高次</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702112730971.png" alt="image-20210702112730971"></p>
+<p>括号高次</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702112759624.png" alt="image-20210702112759624"></p>
+<p>根号x作分母</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113755970.png" alt="image-20210702113755970"></p>
+<p>平分差</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113837273.png" alt="image-20210702113837273"></p>
+<h4 id="三角函数换元（也叫二类换元，一类换元解决不了时可考虑）"><a href="#三角函数换元（也叫二类换元，一类换元解决不了时可考虑）" class="headerlink" title="三角函数换元（也叫二类换元，一类换元解决不了时可考虑）"></a>三角函数换元（也叫二类换元，一类换元解决不了时可考虑）</h4><p>减法换sin</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114031386.png" alt="image-20210702114031386"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114142648.png" alt="image-20210702114142648"></p>
+<p>加法换tan（接sec）</p>
+<p>参考</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114106450.png" alt="image-20210702114106450"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114157944.png" alt="image-20210702114157944"></p>
+<h4 id="指数型（灵活变换指数）"><a href="#指数型（灵活变换指数）" class="headerlink" title="指数型（灵活变换指数）"></a>指数型（灵活变换指数）</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113025510.png" alt="image-20210702113025510"></p>
+<h4 id="对数ln型"><a href="#对数ln型" class="headerlink" title="对数ln型"></a>对数ln型</h4><p>1/x</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113206839.png" alt="image-20210702113206839"></p>
+<p>1+lnx</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113217696.png" alt="image-20210702113217696"></p>
+<p>1-lnx</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113255441.png" alt="image-20210702113255441"></p>
+<h4 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h4><p>sin和cos</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113352468.png" alt="image-20210702113352468"></p>
+<p>反三角函数</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113416362.png" alt="image-20210702113416362"></p>
+<h4 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h4><h5 id="定积分的分部积分"><a href="#定积分的分部积分" class="headerlink" title="定积分的分部积分"></a>定积分的分部积分</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710184752866.png" alt="image-20210710184752866"></p>
+<h5 id="x乘指数"><a href="#x乘指数" class="headerlink" title="x乘指数"></a>x乘指数</h5><p>x乘ex（e的指数为一次）这是最简单的分部积分</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702201749367.png" alt="image-20210702201749367"></p>
+<p>e的指数不为1（无法直接分部，要把e的指数换元成一次后才可）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702201900509.png" alt="image-20210702201900509"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702201904005.png" alt="image-20210702201904005"></p>
+<p>#####　x乘对数</p>
+<p>和指数型相反，这需要把ln留下，让他被动上去，然后把他导掉</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702202628850.png" alt="image-20210702202628850"></p>
+<h5 id="x乘三角函数"><a href="#x乘三角函数" class="headerlink" title="x乘三角函数"></a>x乘三角函数</h5><p>先把三角函数的幂降到一次（降幂公式），然后分部把三角函数提上去就解决了</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203111988.png" alt="image-20210702203111988"></p>
+<p><font color="red">区分是三角函数的平方还是x的平方</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710185533795.png" alt="image-20210710185533795"></p>
+<p>若三角函数在分母，则借助sec或者csc，不过还得熟悉tan和cot的积分</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203230575.png" alt="image-20210702203230575"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203814033.png" alt="image-20210702203814033"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203836515.png" alt="image-20210702203836515"></p>
+<h5 id="x乘反三角函数"><a href="#x乘反三角函数" class="headerlink" title="x乘反三角函数"></a>x乘反三角函数</h5><p>使反三角函数被动上，然后化乘x的式子后再继续积分</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702204034476.png" alt="image-20210702204034476"></p>
+<p>贴一个离谱到死的积分，长长见识就好了</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210653840.png" alt="image-20210702210653840"></p>
+<p>如果x无法直接上则试试拆项</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702204201018.png" alt="image-20210702204201018"></p>
+<p>反三角函数高次，则利用分部来降幂</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210525733.png" alt="image-20210702210525733"></p>
+<h5 id="指数乘三角函数"><a href="#指数乘三角函数" class="headerlink" title="指数乘三角函数"></a>指数乘三角函数</h5><p>多次提三角轮回</p>
+<p>Ps：还是要做一遍，最后关于I的处理要注意</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210756849.png" alt="image-20210702210756849"></p>
+<p>若三角函数为高次则需要降幂</p>
+<p>参考</p>
+<p>（指数如果不为一次则估计需要换元）</p>
+<p>千万要注意常数项，要实操</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210805245.png" alt="image-20210702210805245"></p>
+<h5 id="sec的奇数次方"><a href="#sec的奇数次方" class="headerlink" title="sec的奇数次方"></a>sec的奇数次方</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702212324510.png" alt="image-20210702212324510"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702212259649.png" alt="image-20210702212259649"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706165003721.png" alt="image-20210706165003721"></p>
+<h5 id="分部积分处理两重积分"><a href="#分部积分处理两重积分" class="headerlink" title="分部积分处理两重积分"></a>分部积分处理两重积分</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710184953550.png" alt="image-20210710184953550"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710185005392.png" alt="image-20210710185005392"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3472,7 +3601,8 @@
 <p>Ps：</p>
 <p>ab不一定取端点</p>
 <h4 id="介值定理"><a href="#介值定理" class="headerlink" title="介值定理"></a>介值定理</h4><p>如果定义域为[a，b]的连续函数f，那么在区间内的某个点，它可以在f（a）和f（b）之间取任何值</p>
-<p><a href="https://zhuanlan.zhihu.com/p/132668736">积分中值定理</a></p>
+<h4 id="积分中值定理"><a href="#积分中值定理" class="headerlink" title="积分中值定理"></a>积分中值定理</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210709100116752.png" alt="image-20210709100116752"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210709100138348.png" alt="image-20210709100138348"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3534,6 +3664,13 @@
 ]]></content>
   </entry>
   <entry>
+    <title>全微分</title>
+    <url>/2021/07/05/%E5%85%A8%E5%BE%AE%E5%88%86/</url>
+    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705104345546.png" alt="image-20210705104345546"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705104337662.png" alt="image-20210705104337662"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>函数的连续性</title>
     <url>/2021/06/30/%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/</url>
     <content><![CDATA[<h4 id="重要定理"><a href="#重要定理" class="headerlink" title="重要定理"></a>重要定理</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630170017286.png" alt="image-20210630170017286"></p>
@@ -3542,18 +3679,22 @@
 ]]></content>
   </entry>
   <entry>
-    <title>全微分</title>
-    <url>/2021/07/05/%E5%85%A8%E5%BE%AE%E5%88%86/</url>
-    <content><![CDATA[<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705104345546.png" alt="image-20210705104345546"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705104337662.png" alt="image-20210705104337662"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>分段函数</title>
     <url>/2021/06/28/%E5%88%86%E6%AE%B5%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p>连接处的左右导数是否相等来判断是否可导</p>
 <h4 id="分段函数与连续性"><a href="#分段函数与连续性" class="headerlink" title="分段函数与连续性"></a>分段函数与连续性</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704132147882.png" alt="image-20210704132147882"></p>
 <p>分段函数三个式子把(0,0)代入，结果都是0，即表示连续，而且lim=0</p>
+<p><font color="red" size="5">分段函数对极限其实很友好</font></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>交换排序</title>
+    <url>/2021/07/11/%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<h4 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h4><p>通过比较对换位置</p>
+<p>####　冒泡排序</p>
+<p><font color="red">子序列一路换上去(即冒泡)</font></p>
+<p><font color="blue">直接插入排序是先挪好位置然后把目标元素插入</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711220546498.png" alt="image-20210711220546498"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3608,6 +3749,49 @@
 ]]></content>
   </entry>
   <entry>
+    <title>哈希表</title>
+    <url>/2021/07/12/%E5%93%88%E5%B8%8C%E8%A1%A8/</url>
+    <content><![CDATA[<h4 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h4><p><font color="red">根据Key来计算存储位置的计算规则我们称之为哈希函数</font></p>
+<p>假如我们有一组数据,某位工程师每年的收入情况</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">2017 -- 100000</span><br><span class="line">2018 -- 130000</span><br><span class="line">2019 -- 140000</span><br><span class="line">2020 -- 200000</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. 新建一个长度为2020的数组array[]</span><br><span class="line">2. 根据H(x) = x 计算存储位置，将数据放入数组中。</span><br><span class="line">   array[2017] = 100000</span><br><span class="line">   array[2018] = 130000</span><br><span class="line">   array[2019] = 140000</span><br><span class="line">   array[2020] = 200000</span><br><span class="line">3. 查询2019年收入情况时，通过H(x) = x 计算出存储位置，直接取出数据array[2019]</span><br></pre></td></tr></table></figure>
+
+<h5 id="直接定址法"><a href="#直接定址法" class="headerlink" title="直接定址法"></a>直接定址法</h5><p><strong>Hash（Key）= A*Key + B</strong>。<br>优点：简单、均匀<br>缺点：需要事先知道关键字的分布情况(<font color="red">判断其对应关系是否为线性</font>)</p>
+<h5 id="除留余数法"><a href="#除留余数法" class="headerlink" title="除留余数法"></a>除留余数法</h5><p><strong>Hash( key ) = key % p ( p &lt;= m)</strong></p>
+<p>m为地址数</p>
+<p>p为一个不大于m，但最接近或者等于m的质数</p>
+<h4 id="哈希冲突"><a href="#哈希冲突" class="headerlink" title="哈希冲突"></a>哈希冲突</h4><p>哈希函数算出来的位置已有元素, 即为冲突</p>
+<h4 id="冲突处理"><a href="#冲突处理" class="headerlink" title="冲突处理"></a>冲突处理</h4><h5 id="线性探查法"><a href="#线性探查法" class="headerlink" title="线性探查法"></a>线性探查法</h5><p><font color="red">产生冲突，依次查看其后的下一个桶，如果发现空位置插入新元素</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210712101645062.png" alt="image-20210712101645062"></p>
+<h5 id="平方探测法-二次探测法"><a href="#平方探测法-二次探测法" class="headerlink" title="平方探测法(二次探测法)"></a>平方探测法(二次探测法)</h5><p>相对比上面的i+1, 平方探测法为 i+(平方序列)</p>
+<p><font color="red">平方序列: </font>1, -1, 4, -4, 9, -9</p>
+<p>线性探测容易聚集，二次探测聚集情况较线性探测要好</p>
+<p>散列表长度是某个4k＋3形式的素数时，平方探测法就可以探查到整个散列表空间</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210712104248398.png" alt="image-20210712104248398"></p>
+<h4 id="载荷因子"><a href="#载荷因子" class="headerlink" title="载荷因子"></a>载荷因子</h4><p><strong>散列表的载荷因子：a = 插入元素个数 / 散列表的长度</strong></p>
+<p>a是散列表装满程度的标志因子。对于开放地址法，载荷因子非常重要，应严格限制在 0.7~0.8 以下。超过 0.8 ，查表时的CPU缓存按照指数曲线上升。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>图</title>
+    <url>/2021/07/11/%E5%9B%BE/</url>
+    <content><![CDATA[<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><h5 id="连通图"><a href="#连通图" class="headerlink" title="连通图"></a>连通图</h5><p>图中任意两个点有路连通的叫做连通图</p>
+<p>否则为非连通图</p>
+<p><font color="red">要使n个顶点的无向图连接，至少需要(n-1)(n-2)/2+1条边</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711104607959.png" alt="image-20210711104607959"></p>
+<p>n=4时，(3x2)/2+1=4，即最少有4条边就可构造连通图</p>
+<p>当边的数量小于4时，都是非连通图</p>
+<h6 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h6><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711104328154.png" alt="image-20210711104328154"></p>
+<p>当n=7时，连通图最小边数为(6x5)/2+1 = 16</p>
+<p>28&gt;16故，G必为连通图，不符合题意，排除</p>
+<p>当n=8时，连通图最小边数为(7x6)/2+1 = 22</p>
+<p>28&gt;22故，G必为连通图，不符合题意，排除</p>
+<p>当n=9时，连通图最小边数为(8x7)/2+1 = 29</p>
+<p>29&gt;28故，G可为无向非连通图，符合题意，故选C</p>
+]]></content>
+  </entry>
+  <entry>
     <title>多元函数极值</title>
     <url>/2021/07/05/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E6%9E%81%E5%80%BC/</url>
     <content><![CDATA[<h4 id="无约束"><a href="#无约束" class="headerlink" title="无约束"></a>无约束</h4><p>直接法</p>
@@ -3619,6 +3803,18 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164056311.png" alt="image-20210705164056311"><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210705164107005.png" alt="image-20210705164107005"></p>
 <p>这种五元方程一定要验算！！！！</p>
 <p>尤其时算出莫名其妙的分数</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>复合函数</title>
+    <url>/2021/07/10/%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h4 id="复合函数的导"><a href="#复合函数的导" class="headerlink" title="复合函数的导"></a>复合函数的导</h4><p>易错题：</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710173742807.png" alt="image-20210710173742807"></p>
+<p>错误解法</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710173840693.png" alt="image-20210710173840693"></p>
+<p><font color="red" size="5">答案稀奇古怪时记得多个心眼</font></p>
+<p>正确解法</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710173758243.png" alt="image-20210710173758243"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3637,68 +3833,19 @@
 <p>其中还要熟悉三角函数常见的积分，变形</p>
 <p>如：二次sec的积分、sin扔到后面变cos</p>
 <h4 id="周期函数"><a href="#周期函数" class="headerlink" title="周期函数"></a>周期函数</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210623181735432.png" alt="image-20210623181735432"></p>
-<h2 id="定积分的基本方法"><a href="#定积分的基本方法" class="headerlink" title="定积分的基本方法"></a>定积分的基本方法</h2><h3 id="换元积分（提上去，一类换元）"><a href="#换元积分（提上去，一类换元）" class="headerlink" title="换元积分（提上去，一类换元）"></a>换元积分（提上去，一类换元）</h3><h4 id="x型"><a href="#x型" class="headerlink" title="x型"></a>x型</h4><p><strong>因为常为分式的形式，故要熟练掌握反三角函数的积分</strong></p>
-<p>1+1/(x^2)</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702112814733.png" alt="image-20210702112814733"></p>
-<p>x高次</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702112730971.png" alt="image-20210702112730971"></p>
-<p>括号高次</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702112759624.png" alt="image-20210702112759624"></p>
-<p>根号x作分母</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113755970.png" alt="image-20210702113755970"></p>
-<p>平分差</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113837273.png" alt="image-20210702113837273"></p>
-<h4 id="三角函数换元（也叫二类换元，一类换元解决不了时可考虑）"><a href="#三角函数换元（也叫二类换元，一类换元解决不了时可考虑）" class="headerlink" title="三角函数换元（也叫二类换元，一类换元解决不了时可考虑）"></a>三角函数换元（也叫二类换元，一类换元解决不了时可考虑）</h4><p>减法换sin</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114031386.png" alt="image-20210702114031386"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114142648.png" alt="image-20210702114142648"></p>
-<p>加法换tan（接sec）</p>
-<p>参考</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114106450.png" alt="image-20210702114106450"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702114157944.png" alt="image-20210702114157944"></p>
-<h4 id="指数型（灵活变换指数）"><a href="#指数型（灵活变换指数）" class="headerlink" title="指数型（灵活变换指数）"></a>指数型（灵活变换指数）</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113025510.png" alt="image-20210702113025510"></p>
-<h4 id="对数ln型"><a href="#对数ln型" class="headerlink" title="对数ln型"></a>对数ln型</h4><p>1/x</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113206839.png" alt="image-20210702113206839"></p>
-<p>1+lnx</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113217696.png" alt="image-20210702113217696"></p>
-<p>1-lnx</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113255441.png" alt="image-20210702113255441"></p>
-<h4 id="三角函数-1"><a href="#三角函数-1" class="headerlink" title="三角函数"></a>三角函数</h4><p>sin和cos</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113352468.png" alt="image-20210702113352468"></p>
-<p>反三角函数</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702113416362.png" alt="image-20210702113416362"></p>
-<h4 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h4><h5 id="x乘指数"><a href="#x乘指数" class="headerlink" title="x乘指数"></a>x乘指数</h5><p>x乘ex（e的指数为一次）这是最简单的分部积分</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702201749367.png" alt="image-20210702201749367"></p>
-<p>e的指数不为1（无法直接分部，要把e的指数换元成一次后才可）</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702201900509.png" alt="image-20210702201900509"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702201904005.png" alt="image-20210702201904005"></p>
-<p>#####　x乘对数</p>
-<p>和指数型相反，这需要把ln留下，让他被动上去，然后把他导掉</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702202628850.png" alt="image-20210702202628850"></p>
-<h5 id="x乘三角函数"><a href="#x乘三角函数" class="headerlink" title="x乘三角函数"></a>x乘三角函数</h5><p>先把三角函数的幂降到一次（降幂公式），然后分部把三角函数提上去就解决了</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203111988.png" alt="image-20210702203111988"></p>
-<p>若三角函数在分母，则借助sec或者csc，不过还得熟悉tan和cot的积分</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203230575.png" alt="image-20210702203230575"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203814033.png" alt="image-20210702203814033"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702203836515.png" alt="image-20210702203836515"></p>
-<h5 id="x乘反三角函数"><a href="#x乘反三角函数" class="headerlink" title="x乘反三角函数"></a>x乘反三角函数</h5><p>使反三角函数被动上，然后化乘x的式子后再继续积分</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702204034476.png" alt="image-20210702204034476"></p>
-<p>贴一个离谱到死的积分，长长见识就好了</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210653840.png" alt="image-20210702210653840"></p>
-<p>如果x无法直接上则试试拆项</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702204201018.png" alt="image-20210702204201018"></p>
-<p>反三角函数高次，则利用分部来降幂</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210525733.png" alt="image-20210702210525733"></p>
-<h5 id="指数乘三角函数"><a href="#指数乘三角函数" class="headerlink" title="指数乘三角函数"></a>指数乘三角函数</h5><p>多次提三角轮回</p>
-<p>Ps：还是要做一遍，最后关于I的处理要注意</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210756849.png" alt="image-20210702210756849"></p>
-<p>若三角函数为高次则需要降幂</p>
-<p>参考</p>
-<p>（指数如果不为一次则估计需要换元）</p>
-<p>千万要注意常数项，要实操</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702210805245.png" alt="image-20210702210805245"></p>
-<h5 id="sec的奇数次方"><a href="#sec的奇数次方" class="headerlink" title="sec的奇数次方"></a>sec的奇数次方</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702212324510.png" alt="image-20210702212324510"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210702212259649.png" alt="image-20210702212259649"></p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210706165003721.png" alt="image-20210706165003721"></p>
+<h2 id><a href="#" class="headerlink" title></a></h2>]]></content>
+  </entry>
+  <entry>
+    <title>对数</title>
+    <url>/2021/07/10/%E5%AF%B9%E6%95%B0/</url>
+    <content><![CDATA[<h4 id="对数与极限"><a href="#对数与极限" class="headerlink" title="对数与极限"></a>对数与极限</h4><p><font color="red" size="5">一般是出eln后再洛就好了</font>（有无穷小代换的话那更ok）</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101418183.png" alt="image-20210630101418183"></p>
+<h4 id="等价无穷小代换易错题"><a href="#等价无穷小代换易错题" class="headerlink" title="等价无穷小代换易错题"></a>等价无穷小代换易错题</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710171337995.png" alt="image-20210710171337995"></p>
+<p>错误解法</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710171609403.png" alt="image-20210710171609403"></p>
+<p>正确解法</p>
+<p><font color="red" size="5">eln后洛</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710171811759.png" alt="image-20210710171811759"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3790,11 +3937,50 @@
 ]]></content>
   </entry>
   <entry>
+    <title>排序</title>
+    <url>/2021/07/11/%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><p>未排序的元素插入已排序的序列</p>
+<h4 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h4><p>通过比较对换位置</p>
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><p>遍历一遍然后调整位置</p>
+<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><h4 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h4>]]></content>
+  </entry>
+  <entry>
+    <title>插入排序</title>
+    <url>/2021/07/11/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<h4 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h4><h4 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h4><h5 id="核心思想-1"><a href="#核心思想-1" class="headerlink" title="核心思想"></a>核心思想</h5><p><font color="red">新建子序列，不断挪位置, 然后最后把目标元素插入正确位置</font></p>
+<p>Ps :</p>
+<p>这和冒泡排序有所不同,冒泡排序是一路对换位置, 换上去</p>
+<p><font color="red">而直接插入排序是先挪好位置然后把目标元素插入</font></p>
+<p>(当前代码的排序规则是从小到大)</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711213712300.png" alt="image-20210711213712300"></p>
+<h4 id="折半插入排序"><a href="#折半插入排序" class="headerlink" title="折半插入排序"></a>折半插入排序</h4><h4 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h4>]]></content>
+  </entry>
+  <entry>
     <title>数学应试</title>
     <url>/2021/07/04/%E6%95%B0%E5%AD%A6%E5%BA%94%E8%AF%95/</url>
-    <content><![CDATA[<p>d暴力构造法</p>
+    <content><![CDATA[<h4 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a>选择题</h4><p>暴力构造法</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704133409946.png" alt="image-20210704133409946"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704133856494.png" alt="image-20210704133856494"></p>
+<h4 id="习惯"><a href="#习惯" class="headerlink" title="习惯"></a>习惯</h4><p>不急于求成，一步步稳扎稳打，草稿工整（以备验算）</p>
+<p><font color="red">如何有效验算呢</font></p>
+<p>答案稀奇古怪时记得多个心眼</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>数学答题规范</title>
+    <url>/2021/07/10/%E6%95%B0%E5%AD%A6%E7%AD%94%E9%A2%98%E8%A7%84%E8%8C%83/</url>
+    <content><![CDATA[<h4 id="填空题"><a href="#填空题" class="headerlink" title="填空题"></a>填空题</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710172509452.png" alt="image-20210710172509452"></p>
+<p>这种答案不要把他合并起来</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>数据结构应试</title>
+    <url>/2021/07/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%BA%94%E8%AF%95/</url>
+    <content><![CDATA[<h4 id="真的是有傻逼题"><a href="#真的是有傻逼题" class="headerlink" title="真的是有傻逼题"></a>真的是有傻逼题</h4><p><font color="red">不要一昧相信自己的经验，根据具体情况分析</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711100128939.png" alt="image-20210711100128939"></p>
+<hr>
+<h4 id="暴力法"><a href="#暴力法" class="headerlink" title="暴力法"></a>暴力法</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711105236884.png" alt="image-20210711105236884"></p>
+<p>n=2,n=3,n=4 枚举带入选项</p>
 ]]></content>
   </entry>
   <entry>
@@ -3850,10 +4036,25 @@
 ]]></content>
   </entry>
   <entry>
+    <title>时间复杂度</title>
+    <url>/2021/07/09/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>曲率</title>
     <url>/2021/07/07/%E6%9B%B2%E7%8E%87/</url>
     <content><![CDATA[<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210707173612864.png" alt="image-20210707173612864"></p>
 <p>两函数再x0处的一阶二阶导相等则在x0处它们曲率相等</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>曲线弧长</title>
+    <url>/2021/07/10/%E6%9B%B2%E7%BA%BF%E5%BC%A7%E9%95%BF/</url>
+    <content><![CDATA[<p>所属定积分的应用</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710185903042.png" alt="image-20210710185903042"></p>
+<p>例题</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710191017134.png" alt="image-20210710191017134"></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710191028539.png" alt="image-20210710191028539"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3862,7 +4063,7 @@
     <content><![CDATA[<h3 id="求极限的方法总结"><a href="#求极限的方法总结" class="headerlink" title="求极限的方法总结"></a>求极限的方法总结</h3><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094814469.png" alt="image-20210630094814469"></p>
 <p>常用结论绿色部分，证明利用指数型无穷小代换（转化成eln 下面有相关题目）</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094820296.png" alt="image-20210630094820296"></p>
-<p>泰勒公式参考</p>
+<p><a href="http://freejim.icu/2021/07/04/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/">泰勒公式参考</a></p>
 <p>单看是没用的，要通过做题熟练才可以</p>
 <h4 id="等价无穷小"><a href="#等价无穷小" class="headerlink" title="等价无穷小"></a>等价无穷小</h4><p><font color="red" size="5">原则说的其实是加减不能”实际代换“</font></p>
 <p><font color="red" size="5">但事实其极限就是无穷小的代换</font></p>
@@ -3874,32 +4075,30 @@
 <p><font color="blue" size="5">如果确认分式的极限趋于0，则可以当成x趋于0使用局部无穷小代换</font></p>
 <p><font color="green" size="5">x趋于无穷时，常化出1/x得趋于0，然后用等价无穷小代换</font></p>
 <hr>
-<p>1-cosx</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094450777.png" alt="image-20210630094450777"></p>
+<h5 id="1-cosx"><a href="#1-cosx" class="headerlink" title="1-cosx"></a>1-cosx</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094450777.png" alt="image-20210630094450777"></p>
 <p>（其实可以利用上面常用结论中的绿色部分）</p>
 <hr>
-<p>arcsin，ln，ex</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100304066.png" alt="image-20210630100304066"></p>
-<p>x-sinx</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101158640.png" alt="image-20210630101158640"></p>
+<h4 id="arcsin，ln，ex"><a href="#arcsin，ln，ex" class="headerlink" title="arcsin，ln，ex"></a>arcsin，ln，ex</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100304066.png" alt="image-20210630100304066"></p>
+<h5 id="x-sinx"><a href="#x-sinx" class="headerlink" title="x-sinx"></a>x-sinx</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101158640.png" alt="image-20210630101158640"></p>
 <p>注意1/6*x^3里的x是代指</p>
 <hr>
-<p>指数型求极限，tan</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101418183.png" alt="image-20210630101418183"></p>
+<h5 id="指数型求极限，tan"><a href="#指数型求极限，tan" class="headerlink" title="指数型求极限，tan"></a>指数型求极限，tan</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630101418183.png" alt="image-20210630101418183"></p>
 <p>淦，ln里的根号也是可以提出来的</p>
 <hr>
-<p>指数型，ln</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630102311236.png" alt="image-20210630102311236"></p>
+<h5 id="指数型，ln"><a href="#指数型，ln" class="headerlink" title="指数型，ln"></a>指数型，ln</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630102311236.png" alt="image-20210630102311236"></p>
 <p>这里是上面常用结论绿色部分的解析</p>
 <hr>
-<p>x作幂（指数型），括号内2化为1</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630102717834.png" alt="image-20210630102717834"></p>
-<p>配凑，ex，1-cosx，arcsin</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100343710.png" alt="image-20210630100343710"></p>
+<h5 id="x作幂（指数型），括号内2化为1"><a href="#x作幂（指数型），括号内2化为1" class="headerlink" title="x作幂（指数型），括号内2化为1"></a>x作幂（指数型），括号内2化为1</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630102717834.png" alt="image-20210630102717834"></p>
+<h5 id="配凑，ex，1-cosx，arcsin"><a href="#配凑，ex，1-cosx，arcsin" class="headerlink" title="配凑，ex，1-cosx，arcsin"></a>配凑，ex，1-cosx，arcsin</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100343710.png" alt="image-20210630100343710"></p>
 <p>等价无穷小代换条件：乘除</p>
-<p>易错题:</p>
-<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100140805.png" alt="image-20210630100140805"></p>
+<h5 id="易错题"><a href="#易错题" class="headerlink" title="易错题:"></a>易错题:</h5><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100140805.png" alt="image-20210630100140805"></p>
 <p>提tanx</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710171337995.png" alt="image-20210710171337995"></p>
+<p>错误解法</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710171609403.png" alt="image-20210710171609403"></p>
+<p>正确解法</p>
+<p><font color="red" size="5">eln后洛</font></p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210710171811759.png" alt="image-20210710171811759"></p>
 <hr>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630100209423.png" alt="image-20210630100209423"></p>
 <h4 id="直接法"><a href="#直接法" class="headerlink" title="直接法"></a>直接法</h4><p>复杂式+根号</p>
@@ -3909,15 +4108,6 @@
 <h4 id="两个重要的极限求极限"><a href="#两个重要的极限求极限" class="headerlink" title="两个重要的极限求极限"></a>两个重要的极限求极限</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630092642627.png" alt="image-20210630092642627"></p>
 <p>内容其实包含在上面求极限的方法里了</p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630094804589.png" alt="image-20210630094804589"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>泰勒公式</title>
-    <url>/2021/07/04/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[<h4 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704093245996.png" alt="image-20210704093245996"></p>
-<p>x0取0时即麦克劳林公式</p>
-<p>而对sin来说</p>
-<p>sin0=0故跳着取奇数项</p>
 ]]></content>
   </entry>
   <entry>
@@ -3933,6 +4123,16 @@
 <p><font color="red" size="5">只是说你代换了后，式子是无意义的，你求不出最终值</font></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210708200455540.png" alt="image-20210708200455540"></p>
 <p>遇到x趋于∞，一般是化出1/x得到趋于0然后求解</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>泰勒公式</title>
+    <url>/2021/07/04/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/</url>
+    <content><![CDATA[<h4 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210704093245996.png" alt="image-20210704093245996"></p>
+<p>x0取0时即麦克劳林公式</p>
+<p>而对sin来说</p>
+<p>sin0=0故跳着取奇数项</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210709104008555.png" alt="image-20210709104008555"></p>
 ]]></content>
   </entry>
   <entry>
@@ -4020,6 +4220,17 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530091431085.png" alt="image-20210530091431085"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210530195405472.png" alt="image-20210530195405472"></p>
 <p><img src="/2021/05/30/%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6/Users\Jimmy\AppData\Roaming\Typora\typora-user-images\image-20210530195428120.png" alt="image-20210530195422207"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>计组-存储系统</title>
+    <url>/2021/05/29/%E8%AE%A1%E7%BB%84-%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<p>RAM和ROM</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Random Access Memory</span><br><span class="line">Read-Only Memory</span><br><span class="line"></span><br><span class="line">此外，还有一种串行访问存储器，分为两类：顺序存取存储器（磁带）和直接存取存储器（磁盘）</span><br></pre></td></tr></table></figure>
+
+<p>SRAM和DRAM</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Static</span><br><span class="line">——常作Cache</span><br><span class="line">——触发器</span><br><span class="line"></span><br><span class="line">Dynamic</span><br><span class="line">——常作主存</span><br><span class="line">——电容</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
@@ -4221,14 +4432,26 @@
 ]]></content>
   </entry>
   <entry>
-    <title>计组-存储系统</title>
-    <url>/2021/05/29/%E8%AE%A1%E7%BB%84-%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<p>RAM和ROM</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Random Access Memory</span><br><span class="line">Read-Only Memory</span><br><span class="line"></span><br><span class="line">此外，还有一种串行访问存储器，分为两类：顺序存取存储器（磁带）和直接存取存储器（磁盘）</span><br></pre></td></tr></table></figure>
+    <title>选择排序</title>
+    <url>/2021/07/11/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<h4 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h4><p>遍历一遍然后调整位置</p>
+<h4 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h4><p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711213238436.png" alt="image-20210711213238436"></p>
+<h4 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h4><p>大根堆即根元素(父节点)为最大值</p>
+<p>小根堆反之</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711105626574.png" alt="image-20210711105626574"></p>
+<p>构造过程</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711111417247.png" alt="image-20210711111417247"></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OriginRoot 0</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">buildMaxHeap</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> root=len/<span class="number">2</span>;root&gt;<span class="number">0</span>;root--)&#123;</span><br><span class="line">        HeadAdjust(A,root,len);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">HeadAdjust</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> root,<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    A[OriginRoot]=A[root];  <span class="comment">// OriginRoot备份起来是为了将其送到子树最大值处（即交换位置）</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=root*<span class="number">2</span>;i&lt;=len;i*=<span class="number">2</span>)&#123;  <span class="comment">// root*2 即移动到该root的左儿子节点</span></span><br><span class="line">        <span class="keyword">if</span>(i&lt;len&amp;&amp;A[i]&lt;A[i+<span class="number">1</span>])&#123;  <span class="comment">// 比较左儿子和右儿子谁的值更大</span></span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(A[OriginRoot]&gt;=A[i])&#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            A[root]=A[i];  <span class="comment">// 这里则是迭代中的调整交换，即除了OriginRoot和子树最大值的交换，其余的调整都是在这进行</span></span><br><span class="line">            root=i;  <span class="comment">// 若目标节点还有子树，则往下继续调整</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    A[root]=A[OriginRoot];  <span class="comment">// 一次调整只交换原root和目标节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>SRAM和DRAM</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Static</span><br><span class="line">——常作Cache</span><br><span class="line">——触发器</span><br><span class="line"></span><br><span class="line">Dynamic</span><br><span class="line">——常作主存</span><br><span class="line">——电容</span><br></pre></td></tr></table></figure>
 
+
+<p>图8.5的步骤有一些小错误下面是说明</p>
+<p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210711113721928.png" alt="image-20210711113721928"></p>
+<p>根据所提供的算法，这里的87和53并没有实际交换位置</p>
+<p>而是将78和OriginRoot（即记录了原root值53）进行比较</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(A[OriginRoot]&gt;=A[i])&#123;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    A[root]=A[i];  </span><br><span class="line">    root=i;  <span class="comment">// 算法实际只是对root下标进行了更新迭代</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font color="red">作者应该是为了方便读者理解才这么画的图</font></p>
 ]]></content>
   </entry>
   <entry>
@@ -4262,6 +4485,11 @@
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210630192544080.png" alt="image-20210630192544080"></p>
 <p><img src="https://gitee.com/simple_one1/pic/raw/master/image-20210703232721763.png" alt="image-20210703232721763"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>顺序表</title>
+    <url>/2021/07/11/%E9%A1%BA%E5%BA%8F%E8%A1%A8/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>高数-第三章-微分中值定理</title>
